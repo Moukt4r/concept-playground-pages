@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Case Files: The Lady Vanishes</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ethical disclaimer overlay -->
+  <div id="disclaimer-overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
+    <div class="overlay-card">
+      <div class="stamp">CASE FILE</div>
+      <h1 id="disclaimer-title">The Lady Vanishes</h1>
+      <p class="subtitle">Et kildebasert etterforskningsspill</p>
+      <div class="disclaimer-text">
+        <p><strong>Før du begynner:</strong> Marion Barter var et virkelig menneske, og familien lever med en uløst sak. Denne prototypen bygger på offentlige coronerfunn og kildeførte saksdokumenter. Den er en <strong>dramatisert rekonstruksjon</strong>, ikke en erstatning for primærkildene.</p>
+        <p>NSW-coroneren fant 29. februar 2024 at Marion er død og trolig døde en gang etter 15. oktober 1997. Levningene er ikke funnet. Sted, årsak og dødsmåte kunne ikke fastslås.</p>
+        <p>Ric Blum omtales kun som <strong>person av interesse</strong>. Han er ikke tiltalt i saken, og coroneren fant ikke at han forårsaket Marions død. Spillet ber deg vurdere bevis og systemsvikt — aldri gjette en gjerningsperson.</p>
+        <p class="proto-label">Prototype v0.2 · Norsk · kilde- og læringsorientert</p>
+      </div>
+      <button id="disclaimer-accept" class="btn btn-primary" autofocus>Åpne saksmappen</button>
+    </div>
+  </div>
+
+  <!-- Main app shell -->
+  <div id="app" class="app hidden" aria-hidden="true">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="topbar-title">The Lady Vanishes</h1>
+        <span class="proto-badge">v0.2 prototype</span>
+      </div>
+      <nav class="topbar-nav" aria-label="Hovedseksjoner">
+        <button class="tab-btn active" data-tab="directory" aria-selected="true">Register</button>
+        <button class="tab-btn" data-tab="map" aria-selected="false">Kart</button>
+        <button class="tab-btn" data-tab="documents" aria-selected="false">Dokumenter</button>
+        <button class="tab-btn" data-tab="notebook" aria-selected="false">Notatbok</button>
+        <button class="tab-btn" data-tab="debrief" aria-selected="false">Debrief</button>
+      </nav>
+      <div class="topbar-right">
+        <span id="lead-budget-display" class="budget-display" title="Leads used / budget"></span>
+        <button id="episode-select-btn" class="btn btn-small">Episode</button>
+        <button id="sources-btn" class="btn btn-small" title="Kilder og henvisninger">Kilder</button>
+        <button id="save-btn" class="btn btn-small" title="Lagre fremdrift">💾</button>
+        <button id="reset-btn" class="btn btn-small btn-danger" title="Nullstill all fremdrift">Nullstill</button>
+      </div>
+    </header>
+
+    <!-- Episode selector drawer -->
+    <div id="episode-drawer" class="drawer hidden" role="dialog" aria-label="Select episode">
+      <div class="drawer-content">
+        <h2>Episoder</h2>
+        <ul id="episode-list" class="episode-list"></ul>
+        <button class="btn btn-small drawer-close">Lukk</button>
+      </div>
+    </div>
+
+    <!-- Source citations drawer -->
+    <div id="sources-drawer" class="drawer hidden" role="dialog" aria-label="Source citations">
+      <div class="drawer-content">
+        <h2>Kilder og henvisninger</h2>
+        <div id="sources-list" class="sources-list"></div>
+        <button class="btn btn-small drawer-close">Lukk</button>
+      </div>
+    </div>
+
+    <!-- Tab panels -->
+    <main class="main-content">
+      <!-- DIRECTORY -->
+      <section id="panel-directory" class="panel active" role="tabpanel" aria-label="Lead directory">
+        <div class="panel-header">
+          <h2>Åpent sporregister</h2>
+          <p class="panel-desc">Velg fritt hva du vil undersøke. Hvert nytt spor bruker kapasitet, men du kan fortsette etter budsjettet.</p>
+          <div class="directory-controls">
+            <input type="search" id="lead-search" placeholder="Søk i spor…" aria-label="Søk i spor" class="search-input">
+            <select id="lead-filter" aria-label="Filtrer spor" class="filter-select">
+              <option value="all">Alle spor</option>
+              <option value="available">Ikke undersøkt</option>
+              <option value="investigated">Undersøkt</option>
+            </select>
+          </div>
+        </div>
+        <div id="leads-grid" class="leads-grid"></div>
+      </section>
+
+      <!-- MAP -->
+      <section id="panel-map" class="panel" role="tabpanel" aria-label="Schematic map" hidden>
+        <div class="panel-header">
+          <h2>Skjematisk sakskart</h2>
+          <p class="panel-desc">Nøkkelsteder i materialet. Kartet viser sammenhenger, ikke målestokk.</p>
+        </div>
+        <div id="map-container" class="map-container">
+          <svg id="map-svg" class="map-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" aria-label="Investigation map"></svg>
+        </div>
+        <div id="map-info" class="map-info hidden"></div>
+      </section>
+
+      <!-- DOCUMENTS -->
+      <section id="panel-documents" class="panel" role="tabpanel" aria-label="Document archive" hidden>
+        <div class="panel-header">
+          <h2>Dokumentarkiv</h2>
+          <p class="panel-desc">Dokumenter åpnes når relevante spor undersøkes. Senere arkivfunn er tydelig merket.</p>
+        </div>
+        <div id="documents-grid" class="documents-grid"></div>
+        <div id="document-viewer" class="document-viewer hidden" role="dialog" aria-label="Document viewer">
+          <div class="document-viewer-inner">
+            <button class="btn btn-small document-close">✕ Lukk</button>
+            <div id="document-content"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOTEBOOK -->
+      <section id="panel-notebook" class="panel" role="tabpanel" aria-label="Evidence notebook" hidden>
+        <div class="panel-header">
+          <h2>Bevisnotatbok</h2>
+          <p class="panel-desc">Fest påstander, skriv egne notater og koble bevis til forsiktige hypoteser.</p>
+        </div>
+        <div class="notebook-layout">
+          <div class="notebook-claims">
+            <h3>Festede påstander</h3>
+            <div id="pinned-claims" class="pinned-claims"></div>
+            <h3>Tilgjengelige påstander</h3>
+            <div id="available-claims" class="available-claims"></div>
+          </div>
+          <div class="notebook-notes">
+            <h3>Dine notater</h3>
+            <textarea id="free-notes" class="free-notes" placeholder="Skriv observasjoner, usikkerhet og resonnement her…" aria-label="Frie notater"></textarea>
+            <h3>Hypoteser <span class="hint">(koble to festede påstander)</span></h3>
+            <div class="hypothesis-builder">
+              <select id="hyp-claim-a" aria-label="Første påstand" class="hyp-select"><option value="">— Påstand A —</option></select>
+              <span class="thread-icon" aria-hidden="true">🔗</span>
+              <select id="hyp-claim-b" aria-label="Andre påstand" class="hyp-select"><option value="">— Påstand B —</option></select>
+              <input type="text" id="hyp-reasoning" placeholder="Hvorfor hører de sammen?" class="hyp-reasoning" aria-label="Hypoteseresonnement">
+              <button id="hyp-add" class="btn btn-small">Legg til kobling</button>
+            </div>
+            <div id="hypotheses-list" class="hypotheses-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEBRIEF -->
+      <section id="panel-debrief" class="panel" role="tabpanel" aria-label="Debrief" hidden>
+        <div class="panel-header">
+          <h2>Debrief</h2>
+          <p class="panel-desc">Test kildeforståelsen din. Du vurderes ikke på å «løse» saken.</p>
+        </div>
+        <div id="debrief-efficiency" class="debrief-efficiency"></div>
+        <div id="debrief-questions" class="debrief-questions"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="case-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
