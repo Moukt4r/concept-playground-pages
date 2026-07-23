@@ -8,147 +8,128 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Ethical disclaimer overlay -->
   <div id="disclaimer-overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
     <div class="overlay-card">
       <div class="stamp">CASE FILE</div>
       <h1 id="disclaimer-title">The Lady Vanishes</h1>
-      <p class="subtitle">Et kildebasert etterforskningsspill</p>
+      <p class="subtitle">Et kildebasert deduksjonsspill</p>
       <div class="disclaimer-text">
-        <p><strong>Før du begynner:</strong> Marion Barter var et virkelig menneske, og familien lever med en uløst sak. Denne prototypen bygger på offentlige coronerfunn og kildeførte saksdokumenter. Den er en <strong>dramatisert rekonstruksjon</strong>, ikke en erstatning for primærkildene.</p>
-        <p>NSW-coroneren fant 29. februar 2024 at Marion er død og trolig døde en gang etter 15. oktober 1997. Levningene er ikke funnet. Sted, årsak og dødsmåte kunne ikke fastslås.</p>
-        <p>Ric Blum omtales kun som <strong>person av interesse</strong>. Han er ikke tiltalt i saken, og coroneren fant ikke at han forårsaket Marions død. Spillet ber deg vurdere bevis og systemsvikt — aldri gjette en gjerningsperson.</p>
-        <p class="proto-label">Prototype v0.2 · Norsk · kilde- og læringsorientert</p>
+        <p><strong>Dette bygger på en virkelig, uløst sak.</strong> Marion Barter var et virkelig menneske. Spillet dramatiserer undersøkelser, men skal ikke brukes til å anklage noen.</p>
+        <p>Du begynner ved en <strong>historisk kunnskapsgrense</strong>: bare det familien rimeligvis kunne vite i 1997 vises i selve etterforskningen. Senere funn og dagens saksstatus holdes tilbake til debriefen.</p>
+        <p>Dokumentbildene er tydelig merkede <strong>faksimile-rekonstruksjoner</strong>, aldri originaldokumenter. Der full ordlyd ikke er offentlig kjent, er innholdet redigert eller utelatt — ikke oppdiktet.</p>
+        <p>Flere katalogoppslag er nøytrale spillrekonstruksjoner av mulige henvendelser. De hevder ikke at familien eller politiet faktisk foretok akkurat disse handlingene.</p>
+        <p class="proto-label">Prototype v0.3 · historisk modus · norsk</p>
       </div>
       <button id="disclaimer-accept" class="btn btn-primary" autofocus>Åpne saksmappen</button>
     </div>
   </div>
 
-  <!-- Main app shell -->
   <div id="app" class="app hidden" aria-hidden="true">
-    <!-- Top bar -->
     <header class="topbar">
       <div class="topbar-left">
         <h1 class="topbar-title">The Lady Vanishes</h1>
-        <span class="proto-badge">v0.2 prototype</span>
+        <span class="proto-badge">v0.3</span>
       </div>
       <nav class="topbar-nav" aria-label="Hovedseksjoner">
         <button class="tab-btn active" data-tab="directory" aria-selected="true">Register</button>
         <button class="tab-btn" data-tab="map" aria-selected="false">Kart</button>
-        <button class="tab-btn" data-tab="documents" aria-selected="false">Dokumenter</button>
+        <button class="tab-btn" data-tab="documents" aria-selected="false">Saksmappe</button>
         <button class="tab-btn" data-tab="notebook" aria-selected="false">Notatbok</button>
-        <button class="tab-btn" data-tab="debrief" aria-selected="false">Debrief</button>
+        <button class="tab-btn hidden" id="debrief-tab" data-tab="debrief" aria-selected="false">Debrief</button>
       </nav>
       <div class="topbar-right">
-        <span id="lead-budget-display" class="budget-display" title="Leads used / budget"></span>
-        <button id="episode-select-btn" class="btn btn-small">Episode</button>
-        <button id="sources-btn" class="btn btn-small" title="Kilder og henvisninger">Kilder</button>
-        <button id="save-btn" class="btn btn-small" title="Lagre fremdrift">💾</button>
-        <button id="reset-btn" class="btn btn-small btn-danger" title="Nullstill all fremdrift">Nullstill</button>
+        <span id="lead-budget-display" class="budget-display" title="Brukte handlinger"></span>
+        <button id="sources-btn" class="btn btn-small" title="Kildeinformasjon">Kilder</button>
+        <button id="finish-btn" class="btn btn-small btn-finish" title="Avslutt etterforskningen og gå til debrief">Avslutt</button>
+        <button id="save-btn" class="btn btn-small" title="Lagre lokalt">Lagre</button>
+        <button id="reset-btn" class="btn btn-small btn-danger" title="Nullstill fremdrift">Nullstill</button>
       </div>
     </header>
 
-    <!-- Episode selector drawer -->
-    <div id="episode-drawer" class="drawer hidden" role="dialog" aria-label="Select episode">
+    <div id="sources-drawer" class="drawer hidden" role="dialog" aria-label="Kildeinformasjon">
       <div class="drawer-content">
-        <h2>Episoder</h2>
-        <ul id="episode-list" class="episode-list"></ul>
-        <button class="btn btn-small drawer-close">Lukk</button>
-      </div>
-    </div>
-
-    <!-- Source citations drawer -->
-    <div id="sources-drawer" class="drawer hidden" role="dialog" aria-label="Source citations">
-      <div class="drawer-content">
-        <h2>Kilder og henvisninger</h2>
+        <h2>Kildeinformasjon</h2>
         <div id="sources-list" class="sources-list"></div>
         <button class="btn btn-small drawer-close">Lukk</button>
       </div>
     </div>
 
-    <!-- Tab panels -->
     <main class="main-content">
-      <!-- DIRECTORY -->
-      <section id="panel-directory" class="panel active" role="tabpanel" aria-label="Lead directory">
-        <div class="panel-header">
-          <h2>Åpent sporregister</h2>
-          <p class="panel-desc">Velg fritt hva du vil undersøke. Hvert nytt spor bruker kapasitet, men du kan fortsette etter budsjettet.</p>
+      <section id="panel-directory" class="panel active" role="tabpanel" aria-label="Åpent register">
+        <div class="episode-brief">
+          <div class="brief-stamp">EPISODE 1 · 1997</div>
+          <h2 id="episode-title"></h2>
+          <div id="episode-brief"></div>
+        </div>
+        <div class="panel-header compact-header">
+          <div>
+            <h2>Gold Coast-registeret</h2>
+            <p class="panel-desc">Du kan oppsøke hvem som helst. Et nytt oppslag koster én handling. Registeret forteller ikke hva som er relevant.</p>
+          </div>
           <div class="directory-controls">
-            <input type="search" id="lead-search" placeholder="Søk i spor…" aria-label="Søk i spor" class="search-input">
-            <select id="lead-filter" aria-label="Filtrer spor" class="filter-select">
-              <option value="all">Alle spor</option>
-              <option value="available">Ikke undersøkt</option>
-              <option value="investigated">Undersøkt</option>
+            <input type="search" id="lead-search" placeholder="Søk etter navn, sted eller kode …" aria-label="Søk i registeret" class="search-input">
+            <select id="lead-filter" aria-label="Filtrer registeret" class="filter-select">
+              <option value="all">Alle oppføringer</option>
+              <option value="unvisited">Ikke besøkt</option>
+              <option value="visited">Besøkt</option>
+              <option value="pinned">Festet i notatbok</option>
             </select>
           </div>
         </div>
+        <div id="directory-count" class="directory-count" aria-live="polite"></div>
         <div id="leads-grid" class="leads-grid"></div>
       </section>
 
-      <!-- MAP -->
-      <section id="panel-map" class="panel" role="tabpanel" aria-label="Schematic map" hidden>
+      <section id="panel-map" class="panel" role="tabpanel" aria-label="Sakskart" hidden>
         <div class="panel-header">
-          <h2>Skjematisk sakskart</h2>
-          <p class="panel-desc">Nøkkelsteder i materialet. Kartet viser sammenhenger, ikke målestokk.</p>
+          <h2>Sakskart</h2>
+          <p class="panel-desc">Kartet er skjematisk. Alle registeroppføringer vises likt; kartet røper ikke hvilke som gir resultater.</p>
         </div>
         <div id="map-container" class="map-container">
-          <svg id="map-svg" class="map-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" aria-label="Investigation map"></svg>
+          <svg id="map-svg" class="map-svg" viewBox="0 0 1000 620" preserveAspectRatio="xMidYMid meet" aria-label="Skjematisk kart over registeroppføringer"></svg>
         </div>
         <div id="map-info" class="map-info hidden"></div>
       </section>
 
-      <!-- DOCUMENTS -->
-      <section id="panel-documents" class="panel" role="tabpanel" aria-label="Document archive" hidden>
+      <section id="panel-documents" class="panel" role="tabpanel" aria-label="Saksmappe" hidden>
         <div class="panel-header">
-          <h2>Dokumentarkiv</h2>
-          <p class="panel-desc">Dokumenter åpnes når relevante spor undersøkes. Senere arkivfunn er tydelig merket.</p>
+          <h2>Saksmappe</h2>
+          <p class="panel-desc">Bare materialet du faktisk har funnet vises. Dokumentene forklarer ikke sin egen betydning.</p>
         </div>
         <div id="documents-grid" class="documents-grid"></div>
-        <div id="document-viewer" class="document-viewer hidden" role="dialog" aria-label="Document viewer">
+        <div id="document-viewer" class="document-viewer hidden" role="dialog" aria-modal="true" aria-label="Dokumentviser">
           <div class="document-viewer-inner">
-            <button class="btn btn-small document-close">✕ Lukk</button>
+            <button class="btn btn-small document-close">Lukk</button>
             <div id="document-content"></div>
           </div>
         </div>
       </section>
 
-      <!-- NOTEBOOK -->
-      <section id="panel-notebook" class="panel" role="tabpanel" aria-label="Evidence notebook" hidden>
+      <section id="panel-notebook" class="panel" role="tabpanel" aria-label="Notatbok" hidden>
         <div class="panel-header">
-          <h2>Bevisnotatbok</h2>
-          <p class="panel-desc">Fest påstander, skriv egne notater og koble bevis til forsiktige hypoteser.</p>
+          <h2>Din notatbok</h2>
+          <p class="panel-desc">Spillet trekker ikke ut fakta for deg. Skriv ned det du selv mener er viktig.</p>
         </div>
         <div class="notebook-layout">
-          <div class="notebook-claims">
-            <h3>Festede påstander</h3>
-            <div id="pinned-claims" class="pinned-claims"></div>
-            <h3>Tilgjengelige påstander</h3>
-            <div id="available-claims" class="available-claims"></div>
+          <div class="notebook-paper">
+            <label for="free-notes">Løpende notater</label>
+            <textarea id="free-notes" class="free-notes" placeholder="Datoer, navn, motsigelser, spørsmål …"></textarea>
           </div>
-          <div class="notebook-notes">
-            <h3>Dine notater</h3>
-            <textarea id="free-notes" class="free-notes" placeholder="Skriv observasjoner, usikkerhet og resonnement her…" aria-label="Frie notater"></textarea>
-            <h3>Hypoteser <span class="hint">(koble to festede påstander)</span></h3>
-            <div class="hypothesis-builder">
-              <select id="hyp-claim-a" aria-label="Første påstand" class="hyp-select"><option value="">— Påstand A —</option></select>
-              <span class="thread-icon" aria-hidden="true">🔗</span>
-              <select id="hyp-claim-b" aria-label="Andre påstand" class="hyp-select"><option value="">— Påstand B —</option></select>
-              <input type="text" id="hyp-reasoning" placeholder="Hvorfor hører de sammen?" class="hyp-reasoning" aria-label="Hypoteseresonnement">
-              <button id="hyp-add" class="btn btn-small">Legg til kobling</button>
-            </div>
-            <div id="hypotheses-list" class="hypotheses-list"></div>
+          <div class="notebook-pins">
+            <h3>Festede referanser</h3>
+            <div id="pinned-items"></div>
           </div>
         </div>
       </section>
 
-      <!-- DEBRIEF -->
       <section id="panel-debrief" class="panel" role="tabpanel" aria-label="Debrief" hidden>
         <div class="panel-header">
           <h2>Debrief</h2>
-          <p class="panel-desc">Test kildeforståelsen din. Du vurderes ikke på å «løse» saken.</p>
+          <p class="panel-desc">Når du leverer, låses svarene og den senere kildefasiten åpnes. Ingen spørsmål handler om å utpeke en gjerningsperson.</p>
         </div>
-        <div id="debrief-efficiency" class="debrief-efficiency"></div>
-        <div id="debrief-questions" class="debrief-questions"></div>
+        <div id="debrief-summary" class="debrief-summary"></div>
+        <form id="debrief-form" class="debrief-questions"></form>
+        <div id="current-status" class="current-status hidden"></div>
       </section>
     </main>
   </div>

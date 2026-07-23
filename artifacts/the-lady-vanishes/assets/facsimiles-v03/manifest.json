@@ -1,0 +1,147 @@
+[
+  {
+    "id": "doc01",
+    "title": "Salget av huset i Southport",
+    "file": "assets/facsimiles-v03/doc01-house-sale-record.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-timeline-compiled"
+    ],
+    "accuracyNote": "Fields use values reported in public findings; full registry wording omitted.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc02",
+    "title": "Oppsigelsesbrev til The Southport School",
+    "file": "assets/facsimiles-v03/doc02-school-resignation-letter.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-timeline-compiled"
+    ],
+    "accuracyNote": "Known actions are typeset; unknown original wording and signature are redacted.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc03",
+    "title": "Utreisekort og flyregistrering",
+    "file": "assets/facsimiles-v03/doc03-departure-card.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-evidence-compiled",
+      "src-analysis-compiled"
+    ],
+    "accuracyNote": "Only fields described in public findings are populated.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc04",
+    "title": "Hotel Nikko Narita-brevet",
+    "file": "assets/facsimiles-v03/doc04-narita-stationery-letter.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-evidence-compiled",
+      "src-parallel-compiled"
+    ],
+    "accuracyNote": "Stationery and postal facts are reconstructed; letter body is redacted because full wording is unavailable.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc05",
+    "title": "Postkortene fra Sussex-området",
+    "file": "assets/facsimiles-v03/doc05-sussex-postcards.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-timeline-compiled"
+    ],
+    "accuracyNote": "Only the three reported postcard locations are shown; messages and addresses are redacted.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc06",
+    "title": "Innreisekortet 2. august 1997",
+    "file": "assets/facsimiles-v03/doc06-arrival-card.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-evidence-compiled",
+      "src-analysis-compiled"
+    ],
+    "accuracyNote": "Only reported card fields are populated; signature and unknown fields omitted.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc10",
+    "title": "Transaksjonsmønsteret august–oktober 1997",
+    "file": "assets/facsimiles-v03/doc10-bank-transaction-sheet.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-evidence-compiled"
+    ],
+    "accuracyNote": "Reconstructed chronology, not a bank statement; uncertainty around the October transaction is preserved.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc08",
+    "title": "Graham Childs' notatbokinnførsel",
+    "file": "assets/facsimiles-v03/doc08-police-notebook.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-timeline-compiled"
+    ],
+    "accuracyNote": "Paraphrased from public findings; not verbatim police notebook text.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc11",
+    "title": "Queensland Missing Persons Bureau-notat",
+    "file": "assets/facsimiles-v03/doc11-queensland-safe-and-well-note.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-witnesses-compiled"
+    ],
+    "accuracyNote": "Exact reported safe-and-well phrase shown; unavailable working notes redacted.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc12",
+    "title": "Salvation Army-brevet til John Wilson",
+    "file": "assets/facsimiles-v03/doc12-salvation-army-letter.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024",
+      "src-witnesses-compiled"
+    ],
+    "accuracyNote": "Reported substance only; full wording, names and signature omitted.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  },
+  {
+    "id": "doc14",
+    "title": "Coronerens formelle funn",
+    "file": "assets/facsimiles-v03/doc14-coroner-findings-extract.png",
+    "width": 1400,
+    "height": 1800,
+    "sourceIds": [
+      "src-coroner-2024"
+    ],
+    "accuracyNote": "Condensed extract of findings, not the filed PDF.",
+    "label": "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT"
+  }
+]

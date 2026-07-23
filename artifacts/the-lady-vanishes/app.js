@@ -2,72 +2,53 @@
   "use strict";
 
   const DATA = window.CASE_DATA;
-
-  // Reconstruction image manifest (inline for zero-fetch startup)
-  const DOC_RECONSTRUCTIONS = {
-    doc02: { file: "assets/reconstructions/doc02-oppsigelsesbrev.png", alt: "Rekonstruert dokumentsammendrag av oppsigelsesbrevet til The Southport School, 20. juni 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." },
-    doc03: { file: "assets/reconstructions/doc03-utreisekort.png", alt: "Rekonstruert dokumentsammendrag av utreisekort og flyregistrering, 22. juni 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." },
-    doc04: { file: "assets/reconstructions/doc04-narita-brevet.png", alt: "Rekonstruert dokumentsammendrag av Hotel Nikko Narita-brevet, mottatt 30. juni 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." },
-    doc06: { file: "assets/reconstructions/doc06-innreisekortet.png", alt: "Rekonstruert dokumentsammendrag av innreisekortet, 2. august 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." }
-  };
-
-  // Context illustration manifest (inline for zero-fetch startup)
-  const LEAD_ILLUSTRATIONS = [
-    { file: "assets/illustrations-flux2/southport-house-1997.webp", leadIds: ["lead02"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Southport, våren 1997" },
-    { file: "assets/illustrations-flux2/brisbane-airport-1997.webp", leadIds: ["lead07", "lead08"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Brisbane Airport, 22. juni 1997" },
-    { file: "assets/illustrations-flux2/southport-bus-station-1997.webp", leadIds: ["lead01"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Southport busstasjon, 22. juni 1997" },
-    { file: "assets/illustrations-flux2/coronial-inquest-2024.webp", leadIds: [], documentIds: ["doc14"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Coronial inquest, 2024" }
-  ];
-  const STORAGE_KEY = "case-files-lady-vanishes-v02";
-  const TAG_LABELS = {
-    fact: "FAKTA",
-    inferred: "SLUTNING",
-    theory: "TEORI",
-    lead: "ÅPENT SPOR"
-  };
-
-  if (!DATA || !Array.isArray(DATA.episodes) || DATA.episodes.length === 0) {
-    document.body.innerHTML = '<main class="fatal-error">Kunne ikke laste den offentlige innholdspakken.</main>';
-    return;
-  }
-
+  const STORAGE_KEY = "case-files-lady-vanishes-v03";
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
   })[char]);
 
-  const episode = () => DATA.episodes.find((item) => item.id === state.episodeId) || DATA.episodes[0];
-  const claim = (id) => DATA.claims[id];
+  if (!DATA || !DATA.episode || !Array.isArray(DATA.directory)) {
+    document.body.innerHTML = '<main class="fatal-error">Kunne ikke laste den offentlige innholdspakken.</main>';
+    return;
+  }
+
+  const leadById = (id) => DATA.directory.find((item) => item.id === id);
   const documentById = (id) => DATA.documents.find((item) => item.id === id);
   const sourceById = (id) => DATA.sources.find((item) => item.id === id);
   const locationById = (id) => DATA.locations.find((item) => item.id === id);
 
-  const freshState = () => ({
-    accepted: false,
-    episodeId: DATA.episodes[0].id,
-    activeTab: "directory",
-    investigated: [],
-    discoveredClaims: [...(DATA.episodes[0].initialClaimIds || [])],
-    discoveredDocs: [],
-    pinnedClaims: [],
-    notes: "",
-    hypotheses: [],
-    answers: {},
-    debriefSubmitted: false
-  });
+  function freshState() {
+    return {
+      accepted: false,
+      activeTab: "directory",
+      visited: [],
+      foundDocuments: [...(DATA.episode.initialDocumentIds || [])],
+      pins: [],
+      notes: "",
+      pinNotes: {},
+      answers: {},
+      answerNotes: {},
+      investigationEnded: false,
+      debriefSubmitted: false,
+      submittedAt: null
+    };
+  }
 
   function loadState() {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
       if (!saved || typeof saved !== "object") return freshState();
       const base = freshState();
-      const merged = { ...base, ...saved };
-      ["investigated", "discoveredClaims", "discoveredDocs", "pinnedClaims", "hypotheses"].forEach((key) => {
-        if (!Array.isArray(merged[key])) merged[key] = base[key];
+      const state = { ...base, ...saved };
+      ["visited", "foundDocuments", "pins"].forEach((key) => {
+        if (!Array.isArray(state[key])) state[key] = base[key];
       });
-      if (!merged.answers || typeof merged.answers !== "object") merged.answers = {};
-      return merged;
+      ["pinNotes", "answers", "answerNotes"].forEach((key) => {
+        if (!state[key] || typeof state[key] !== "object") state[key] = {};
+      });
+      return state;
     } catch {
       return freshState();
     }
@@ -77,26 +58,13 @@
 
   function saveState(showConfirmation = false) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    if (showConfirmation) toast("Fremdriften er lagret lokalt i nettleseren.");
+    if (showConfirmation) toast("Fremdriften er lagret lokalt i denne nettleseren.");
   }
 
-  function uniquePush(array, values) {
+  function uniquePush(target, values) {
     values.forEach((value) => {
-      if (value && !array.includes(value)) array.push(value);
+      if (value && !target.includes(value)) target.push(value);
     });
-  }
-
-  function usedBudget() {
-    const leadMap = new Map(episode().leads.map((item) => [item.id, item]));
-    return state.investigated.reduce((total, id) => total + Number(leadMap.get(id)?.cost || 0), 0);
-  }
-
-  function sourceRefs(ids = []) {
-    if (!ids.length) return "Ingen kilde oppgitt";
-    return ids.map((id) => {
-      const item = sourceById(id);
-      return item ? item.title : id;
-    }).join(" · ");
   }
 
   function toast(message) {
@@ -112,7 +80,7 @@
     node.textContent = message;
     node.classList.add("show");
     clearTimeout(toast.timer);
-    toast.timer = setTimeout(() => node.classList.remove("show"), 2200);
+    toast.timer = setTimeout(() => node.classList.remove("show"), 2300);
   }
 
   function showApp() {
@@ -121,6 +89,10 @@
     app.classList.remove("hidden");
     app.setAttribute("aria-hidden", "false");
     renderAll();
+  }
+
+  function usedActions() {
+    return state.visited.reduce((total, id) => total + Number(leadById(id)?.cost || 1), 0);
   }
 
   function switchTab(tabName) {
@@ -143,8 +115,11 @@
   }
 
   function renderAll() {
+    $("#episode-title").textContent = DATA.episode.title;
+    $("#episode-brief").innerHTML = (DATA.episode.brief || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+    $("#debrief-tab").classList.toggle("hidden", !state.investigationEnded);
+    $("#finish-btn").classList.toggle("hidden", state.investigationEnded);
     renderBudget();
-    renderEpisodes();
     renderSources();
     renderDirectory();
     renderMap();
@@ -155,31 +130,25 @@
   }
 
   function renderBudget() {
-    const used = usedBudget();
-    const budget = episode().leadBudget || 0;
+    const used = usedActions();
+    const budget = Number(DATA.episode.actionBudget || 14);
     const display = $("#lead-budget-display");
-    display.textContent = `${used}/${budget} kapasitet`;
+    display.textContent = `${used}/${budget} handlinger`;
     display.classList.toggle("over-budget", used > budget);
     display.title = used > budget
-      ? "Du er over veiledende kapasitet, men kan fortsette etterforskningen."
-      : "Brukt kapasitet / veiledende kapasitet";
-  }
-
-  function renderEpisodes() {
-    const items = [
-      ...DATA.episodes.map((item) => ({ ...item, status: "playable" })),
-      ...(DATA.meta.futureEpisodes || [])
-    ];
-    $("#episode-list").innerHTML = items.map((item) => {
-      const playable = item.status === "playable";
-      return `<li class="${item.id === state.episodeId ? "active" : ""} ${playable ? "" : "locked-episode"}" ${playable ? `data-episode="${escapeHtml(item.id)}" tabindex="0"` : ""}>
-        <div class="ep-title">${playable ? "ÅPEN" : "ARKIVERT SENERE"} · ${escapeHtml(item.title)}</div>
-        <div class="ep-intro">${escapeHtml(item.period || "")} ${playable ? `— ${escapeHtml(item.premise || "")}` : "— kommer i en senere prototype"}</div>
-      </li>`;
-    }).join("");
+      ? "Du er over den veiledende rammen. Du kan fortsette, men effektiviteten faller."
+      : "Brukte handlinger / veiledende ramme";
   }
 
   function renderSources() {
+    if (!state.debriefSubmitted) {
+      $("#sources-list").innerHTML = `<div class="method-note">
+        <p><strong>Kildene er skjult under etterforskningen.</strong> Titler og senere datoer kan røpe svar som ikke var tilgjengelige i 1997.</p>
+        <p>Alt historisk innhold bygger på offentlige coronerfunn og kildeførte saksoversikter. Kataloghenvendelser uten dokumentert historisk resultat er tydelig omtalt som spillrekonstruksjoner.</p>
+        <p>Full kildeoversikt åpnes når debriefen leveres.</p>
+      </div>`;
+      return;
+    }
     $("#sources-list").innerHTML = DATA.sources.map((item) => `<article class="source-item">
       <div class="source-id">${escapeHtml(item.id)} <span class="source-type">${escapeHtml(item.kind)}</span></div>
       <strong>${escapeHtml(item.title)}</strong>
@@ -188,297 +157,312 @@
     </article>`).join("");
   }
 
-  function ensureCategoryOptions() {
-    const select = $("#lead-filter");
-    const existing = new Set($$("option", select).map((option) => option.value));
-    [...new Set(episode().leads.map((item) => item.category).filter(Boolean))].sort().forEach((category) => {
-      const value = `category:${category}`;
-      if (existing.has(value)) return;
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = `Kategori: ${category}`;
-      select.append(option);
-    });
-  }
-
   function renderDirectory() {
-    ensureCategoryOptions();
     const search = ($("#lead-search").value || "").trim().toLocaleLowerCase("nb-NO");
     const filter = $("#lead-filter").value;
-    const investigated = new Set(state.investigated);
-    const leads = episode().leads.filter((item) => {
-      const haystack = `${item.code} ${item.title} ${item.summary} ${item.category}`.toLocaleLowerCase("nb-NO");
+    const visited = new Set(state.visited);
+    const pinned = new Set(state.pins);
+    const entries = DATA.directory.filter((item) => {
+      const location = locationById(item.locationId);
+      const haystack = `${item.code} ${item.name} ${item.address || ""} ${location?.name || ""}`.toLocaleLowerCase("nb-NO");
       if (search && !haystack.includes(search)) return false;
-      if (filter === "available" && investigated.has(item.id)) return false;
-      if (filter === "investigated" && !investigated.has(item.id)) return false;
-      if (filter.startsWith("category:") && item.category !== filter.slice(9)) return false;
+      if (filter === "visited" && !visited.has(item.id)) return false;
+      if (filter === "unvisited" && visited.has(item.id)) return false;
+      if (filter === "pinned" && !pinned.has(`lead:${item.id}`)) return false;
       return true;
     });
 
-    const introParagraphs = Array.isArray(episode().intro) ? episode().intro : [episode().intro].filter(Boolean);
-    const intro = `<article class="episode-brief">
-      <div class="brief-stamp">EPISODE 1 · ${escapeHtml(episode().period)}</div>
-      <h3>${escapeHtml(episode().title)}</h3>
-      <p>${escapeHtml(episode().premise)}</p>
-      ${introParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-      <p class="brief-caution">${escapeHtml(DATA.meta.currentFrame)} ${escapeHtml(DATA.meta.caution)}</p>
-    </article>`;
-
-    const cards = leads.length ? leads.map((item) => {
-      const done = investigated.has(item.id);
+    $("#directory-count").textContent = `${entries.length} av ${DATA.directory.length} oppføringer`;
+    $("#leads-grid").innerHTML = entries.map((item) => {
+      const done = visited.has(item.id);
       const location = locationById(item.locationId);
-      return `<button class="lead-card ${done ? "investigated" : ""}" data-lead-id="${escapeHtml(item.id)}">
+      const locked = state.investigationEnded && !done;
+      return `<button class="lead-card ${done ? "investigated" : ""} ${locked ? "ended-lock" : ""}" data-lead-id="${escapeHtml(item.id)}" ${locked ? "disabled" : ""}>
         <div class="lead-code">${escapeHtml(item.code)}</div>
-        <div class="lead-title">${escapeHtml(item.title)}</div>
-        <div class="lead-desc">${escapeHtml(item.summary)}</div>
-        <div class="lead-meta">
-          <span class="lead-tag">${escapeHtml(item.category)}</span>
-          ${location ? `<span class="lead-tag">${escapeHtml(location.name)}</span>` : ""}
-          <span class="lead-tag">${Number(item.cost || 0)} kapasitet</span>
-        </div>
+        <div class="lead-title">${escapeHtml(item.name)}</div>
+        <div class="lead-address">${escapeHtml(item.address || location?.name || "Adresse ikke oppført")}</div>
+        <div class="lead-status">${done ? "BESØKT" : locked ? "IKKE BESØKT · ETTERFORSKNING AVSLUTTET" : "IKKE BESØKT"}</div>
       </button>`;
-    }).join("") : '<p class="empty-state">Ingen spor matcher søket.</p>';
-
-    $("#leads-grid").innerHTML = intro + cards;
+    }).join("") || '<p class="empty-state">Ingen oppføringer matcher søket.</p>';
   }
 
-  function claimMarkup(id) {
-    const item = claim(id);
-    if (!item) return "";
-    return `<li><span class="epistemic-stamp tag-${escapeHtml(item.tag)}">${escapeHtml(TAG_LABELS[item.tag] || item.tag)}</span>
-      <strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.text)}</p>
-      <small>${escapeHtml(item.confidence)} konfidens · kjent fra: ${escapeHtml(item.knownFrom)}</small></li>`;
-  }
-
-  function openLead(leadId) {
-    const item = episode().leads.find((lead) => lead.id === leadId);
-    if (!item) return;
-    const already = state.investigated.includes(item.id);
-    // Check for atmospheric illustration
-    const illustration = LEAD_ILLUSTRATIONS.find((ill) => (ill.leadIds || []).includes(item.id));
-    const illHtml = illustration ? `<figure class="lead-illustration">
-      <img src="${escapeHtml(illustration.file)}" alt="${escapeHtml(illustration.label + ': ' + illustration.title)}" loading="lazy" class="lead-ill-img" onerror="this.parentElement.style.display='none'">
-    </figure>` : "";
-
+  function createLeadModal(item, mode) {
     const modal = document.createElement("div");
     modal.className = "lead-detail-overlay";
     modal.setAttribute("role", "dialog");
     modal.setAttribute("aria-modal", "true");
-    modal.innerHTML = `<article class="lead-detail-card">
-      ${illHtml}
-      <div class="lead-code">${escapeHtml(item.code)} · ${escapeHtml(item.category)}</div>
-      <h3>${escapeHtml(item.title)}</h3>
-      ${item.poiCaution ? `<div class="poi-caution">${escapeHtml(item.poiCaution)}</div>` : ""}
-      <div class="lead-full-text">${(item.body || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
-      ${item.availabilityNote ? `<p class="availability-note">${escapeHtml(item.availabilityNote)}</p>` : ""}
-      <div class="claims-revealed"><h4>Opplysninger i dette sporet</h4><ul>${(item.claimIds || []).map(claimMarkup).join("") || "<li>Ingen ny påstand.</li>"}</ul></div>
-      ${(item.documentIds || []).length ? `<div class="documents-revealed"><h4>Dokumenter</h4><p>${item.documentIds.map((id) => escapeHtml(documentById(id)?.title || id)).join(" · ")}</p></div>` : ""}
-      <p class="source-line"><strong>Kilder:</strong> ${escapeHtml(sourceRefs(item.sourceIds))}</p>
-      <div class="modal-actions">
-        <button class="btn btn-primary visit-lead" data-lead-id="${escapeHtml(item.id)}">${already ? "Sporet er undersøkt" : `Undersøk · ${Number(item.cost || 0)} kapasitet`}</button>
-        <button class="btn close-modal">Lukk</button>
-      </div>
-    </article>`;
-    document.body.append(modal);
-    $(".close-modal", modal).addEventListener("click", () => modal.remove());
-    modal.addEventListener("click", (event) => { if (event.target === modal) modal.remove(); });
-    $(".visit-lead", modal).addEventListener("click", () => {
-      if (!already) investigateLead(item);
-      modal.remove();
-    });
-    $(".close-modal", modal).focus({ preventScroll: true });
+    const location = locationById(item.locationId);
+    const close = () => modal.remove();
+
+    if (mode === "confirm") {
+      modal.innerHTML = `<article class="lead-detail-card visit-confirmation">
+        <div class="lead-code">${escapeHtml(item.code)}</div>
+        <h3>${escapeHtml(item.name)}</h3>
+        <p class="directory-address">${escapeHtml(item.address || location?.name || "Adresse ikke oppført")}</p>
+        <div class="action-warning">
+          <strong>Oppslaget koster ${Number(item.cost || 1)} handling.</strong>
+          <p>Du får ikke vite på forhånd om oppføringen inneholder et nytt spor.</p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary confirm-visit">Oppsøk</button>
+          <button class="btn close-modal">Avbryt</button>
+        </div>
+      </article>`;
+      document.body.append(modal);
+      $(".close-modal", modal).addEventListener("click", close);
+      $(".confirm-visit", modal).addEventListener("click", () => {
+        uniquePush(state.visited, [item.id]);
+        uniquePush(state.foundDocuments, item.documentIds || []);
+        saveState();
+        renderAll();
+        modal.remove();
+        createLeadModal(item, "result");
+      });
+    } else {
+      const pinned = state.pins.includes(`lead:${item.id}`);
+      const illustration = item.illustration ? `<figure class="lead-illustration">
+        <img src="${escapeHtml(item.illustration.file)}" alt="${escapeHtml(item.illustration.alt)}" class="lead-ill-img">
+      </figure>` : "";
+      const foundDocs = (item.documentIds || []).map(documentById).filter(Boolean);
+      const documents = foundDocs.length ? `<div class="documents-found">
+        <div class="result-label">LAGT I SAKSMAPPEN</div>
+        ${foundDocs.map((doc) => `<button class="document-link" data-open-document="${escapeHtml(doc.id)}">${escapeHtml(doc.title)}</button>`).join("")}
+      </div>` : "";
+      modal.innerHTML = `<article class="lead-detail-card">
+        ${illustration}
+        <div class="lead-code">${escapeHtml(item.code)}</div>
+        <h3>${escapeHtml(item.name)}</h3>
+        <p class="directory-address">${escapeHtml(item.address || location?.name || "")}</p>
+        <div class="lead-full-text">${(item.result || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
+        ${documents}
+        <p class="simulation-note">${escapeHtml(DATA.meta.actionDisclaimer)}</p>
+        ${state.debriefSubmitted ? `<p class="source-line"><strong>Kilde-ID:</strong> ${escapeHtml((item.sourceIds || []).join(" · ") || "metode-rekonstruksjon")}</p>` : ""}
+        <div class="modal-actions">
+          <button class="btn pin-lead">${pinned ? "Fjern fra notatbok" : "Fest i notatbok"}</button>
+          <button class="btn close-modal">Lukk</button>
+        </div>
+      </article>`;
+      document.body.append(modal);
+      $(".pin-lead", modal).addEventListener("click", () => {
+        togglePin(`lead:${item.id}`);
+        modal.remove();
+        createLeadModal(item, "result");
+      });
+      $$('[data-open-document]', modal).forEach((button) => button.addEventListener("click", () => {
+        modal.remove();
+        openDocument(button.dataset.openDocument);
+      }));
+      $(".close-modal", modal).addEventListener("click", close);
+    }
+
+    modal.addEventListener("click", (event) => { if (event.target === modal) close(); });
+    const focusTarget = $(mode === "confirm" ? ".confirm-visit" : ".close-modal", modal);
+    focusTarget?.focus({ preventScroll: true });
     $(".lead-detail-card", modal).scrollTop = 0;
   }
 
-  function investigateLead(item) {
-    uniquePush(state.investigated, [item.id]);
-    uniquePush(state.discoveredClaims, item.claimIds || []);
-    uniquePush(state.discoveredDocs, item.documentIds || []);
-    saveState();
-    renderAll();
-    const used = usedBudget();
-    const budget = episode().leadBudget || 0;
-    toast(used > budget ? "Sporet er logget. Du er over veiledende kapasitet, men kan fortsette." : "Sporet, påstandene og dokumentene er logget.");
-  }
-
-  function projectLocation(item, index) {
-    const schematic = {
-      "loc-southport": { x: 690, y: 300 },
-      "loc-merinda-court": { x: 785, y: 345 },
-      "loc-ashmore": { x: 650, y: 370 },
-      "loc-tss": { x: 825, y: 280 },
-      "loc-brisbane-airport": { x: 530, y: 255 },
-      "loc-burleigh-heads": { x: 875, y: 405 },
-      "loc-byron-bay": { x: 805, y: 485 },
-      "loc-ballina": { x: 875, y: 540 },
-      "loc-wollongbar": { x: 705, y: 520 },
-      "loc-grafton": { x: 505, y: 515 },
-      "loc-narita": { x: 830, y: 115 },
-      "loc-tunbridge-wells": { x: 105, y: 145 },
-      "loc-rye": { x: 205, y: 205 },
-      "loc-hastings": { x: 105, y: 235 }
-    };
-    if (schematic[item.id]) return schematic[item.id];
-    return { x: 360 + (index % 4) * 80, y: 100 + (index % 3) * 60 };
-  }
-
-  function renderMap() {
-    const svg = $("#map-svg");
-    const investigated = new Set(state.investigated);
-    const zones = `
-      <rect class="map-bg" x="20" y="20" width="960" height="560" rx="3" />
-      <rect class="map-zone" x="45" y="65" width="275" height="205" /><text class="region-label" x="60" y="90">STORBRITANNIA · 1997</text>
-      <rect class="map-zone" x="410" y="190" width="540" height="355" /><text class="region-label" x="430" y="218">AUSTRALIA · ØSTKYSTEN</text>
-      <rect class="map-zone" x="745" y="55" width="205" height="110" /><text class="region-label" x="760" y="80">JAPAN · DOKUMENTSPOR</text>`;
-    const pins = DATA.locations.map((item, index) => {
-      const point = projectLocation(item, index);
-      const related = episode().leads.filter((lead) => lead.locationId === item.id);
-      const visited = related.some((lead) => investigated.has(lead.id));
-      return `<g class="loc-pin ${visited ? "visited" : ""}" data-location-id="${escapeHtml(item.id)}" tabindex="0" role="button" aria-label="${escapeHtml(item.name)}" transform="translate(${point.x} ${point.y})">
-        <circle class="loc-dot" r="${visited ? 8 : 6}"></circle>
-        <text class="loc-label" x="11" y="4">${escapeHtml(item.name)}</text>
-      </g>`;
-    }).join("");
-    svg.innerHTML = zones + pins;
-  }
-
-  function showMapInfo(locationId) {
-    const item = locationById(locationId);
+  function openLead(leadId) {
+    const item = leadById(leadId);
     if (!item) return;
-    const related = episode().leads.filter((lead) => lead.locationId === item.id);
-    const info = $("#map-info");
-    info.classList.remove("hidden");
-    info.innerHTML = `<h4>${escapeHtml(item.name)}</h4><p>${escapeHtml(item.note)}</p>
-      <p><strong>Region:</strong> ${escapeHtml(item.region)}, ${escapeHtml(item.country)}</p>
-      <p><strong>Tilknyttede spor:</strong> ${related.map((lead) => escapeHtml(lead.title)).join(" · ") || "Ingen i denne episoden"}</p>
-      <p class="source-line"><strong>Kilder:</strong> ${escapeHtml(sourceRefs(item.sourceIds))}</p>`;
+    const visited = state.visited.includes(item.id);
+    if (state.investigationEnded && !visited) {
+      toast("Etterforskningen er avsluttet. Bare besøkte oppføringer kan åpnes igjen.");
+      return;
+    }
+    createLeadModal(item, visited ? "result" : "confirm");
   }
 
   function renderDocuments() {
-    const discovered = new Set(state.discoveredDocs);
-    $("#documents-grid").innerHTML = DATA.documents.map((item) => {
-      const open = discovered.has(item.id);
-      return `<button class="doc-card ${open ? "" : "locked"}" ${open ? `data-document-id="${escapeHtml(item.id)}"` : "disabled"}>
-        <span class="doc-stamp">${open ? "ÅPNET" : escapeHtml(item.lockedUntil || "SPOR KREVES")}</span>
+    const documents = state.foundDocuments.map(documentById).filter(Boolean);
+    $("#documents-grid").innerHTML = documents.length ? documents.map((item) => {
+      const pinned = state.pins.includes(`doc:${item.id}`);
+      return `<button class="doc-card" data-document-id="${escapeHtml(item.id)}">
+        <span class="doc-stamp">FUNNET</span>
         <div class="doc-title">${escapeHtml(item.title)}</div>
-        <div class="doc-type">${escapeHtml(item.kind)} · ${escapeHtml(item.date || item.knownFrom || "")}</div>
-        ${!open ? `<p class="locked-note">${escapeHtml(item.knownFrom || "Åpnes via et relevant spor")}</p>` : ""}
+        <div class="doc-type">${escapeHtml(item.dateLabel || item.date || "Dato ukjent")}</div>
+        ${pinned ? '<div class="pinned-mark">FESTET</div>' : ""}
       </button>`;
-    }).join("");
+    }).join("") : `<div class="empty-state dossier-empty">
+      <div class="empty-folder" aria-hidden="true">▱</div>
+      <p>Saksmappen er tom.</p>
+      <p>Dokumenttitler vises ikke før du faktisk finner dem.</p>
+    </div>`;
   }
 
   function openDocument(documentId) {
     const item = documentById(documentId);
-    if (!item || !state.discoveredDocs.includes(item.id)) return;
-    const recon = DOC_RECONSTRUCTIONS[item.id];
-    const reconHtml = recon ? `<figure class="doc-reconstruction">
-      <img src="${escapeHtml(recon.file)}" alt="${escapeHtml(recon.alt)}" loading="lazy" class="doc-recon-img">
-      <figcaption class="recon-caption">${escapeHtml(recon.caption)}</figcaption>
-    </figure>` : "";
-    const illustration = LEAD_ILLUSTRATIONS.find((ill) => (ill.documentIds || []).includes(item.id));
-    const illustrationHtml = illustration ? `<figure class="lead-illustration">
-      <img src="${escapeHtml(illustration.file)}" alt="${escapeHtml(illustration.label + ': ' + illustration.title)}" loading="lazy" class="lead-ill-img" onerror="this.parentElement.style.display='none'">
-    </figure>` : "";
-    $("#document-content").innerHTML = `<div class="doc-eyebrow">${escapeHtml(item.eyebrow || item.kind)}</div>
+    if (!item || !state.foundDocuments.includes(item.id)) return;
+    switchTab("documents");
+    const pinned = state.pins.includes(`doc:${item.id}`);
+    const sourceLine = state.debriefSubmitted
+      ? `<p class="source-line"><strong>Kilde-ID:</strong> ${escapeHtml((item.sourceIds || []).join(" · "))}</p>`
+      : "";
+    $("#document-content").innerHTML = `<div class="doc-eyebrow">SAKSMATERIALE · ${escapeHtml(item.dateLabel || item.date || "UDATERT")}</div>
       <h3>${escapeHtml(item.title)}</h3>
-      <p><strong>Dato/kunnskapstid:</strong> ${escapeHtml(item.date || item.knownFrom || "Ukjent")}</p>
-      ${reconHtml}
-      ${illustrationHtml}
-      <div class="doc-body">${(item.body || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
-      <div class="document-claims"><h4>Dokumentet støtter</h4><ul>${(item.claimIds || []).map(claimMarkup).join("")}</ul></div>
-      <p class="doc-source-ref"><strong>Kilder:</strong> ${escapeHtml(sourceRefs(item.sourceIds))}</p>`;
+      <figure class="document-facsimile">
+        <a href="${escapeHtml(item.facsimile)}" target="_blank" rel="noopener" title="Åpne dokumentbildet i full størrelse">
+          <img src="${escapeHtml(item.facsimile)}" alt="${escapeHtml(item.alt)}" class="doc-facsimile-img">
+        </a>
+      </figure>
+      <p class="facsimile-note">${escapeHtml(item.accuracyNote || "Rekonstruksjon basert på offentlig kildegrunnlag.")}</p>
+      ${sourceLine}
+      <button class="btn pin-document">${pinned ? "Fjern fra notatbok" : "Fest i notatbok"}</button>`;
     $("#document-viewer").classList.remove("hidden");
-    $(".document-close").focus();
+    $(".pin-document").addEventListener("click", () => {
+      togglePin(`doc:${item.id}`);
+      openDocument(item.id);
+    });
+    $(".document-close").focus({ preventScroll: true });
+    $(".document-viewer-inner").scrollTop = 0;
+  }
+
+  function pinLabel(ref) {
+    const [kind, id] = ref.split(":");
+    if (kind === "lead") {
+      const item = leadById(id);
+      return item ? `${item.code} · ${item.name}` : ref;
+    }
+    const item = documentById(id);
+    return item ? `Dokument · ${item.title}` : ref;
+  }
+
+  function togglePin(ref) {
+    if (state.pins.includes(ref)) {
+      state.pins = state.pins.filter((item) => item !== ref);
+      delete state.pinNotes[ref];
+    } else {
+      state.pins.push(ref);
+    }
+    saveState();
+    renderDirectory();
+    renderDocuments();
+    renderNotebook();
   }
 
   function renderNotebook() {
-    const discovered = state.discoveredClaims.map(claim).filter(Boolean);
-    const pinned = new Set(state.pinnedClaims);
-    const chip = (item, isPinned) => `<button class="claim-chip ${isPinned ? "pinned" : ""}" data-claim-id="${escapeHtml(item.id)}" title="${isPinned ? "Løsne" : "Fest"} påstanden">
-      <span class="pin-icon">${isPinned ? "📌" : "○"}</span>
-      <span>${escapeHtml(item.title)}</span>
-      <span class="claim-epistemic">${escapeHtml(TAG_LABELS[item.tag] || item.tag)}</span>
-    </button>`;
-    $("#pinned-claims").innerHTML = discovered.filter((item) => pinned.has(item.id)).map((item) => chip(item, true)).join("") || '<p class="empty-state compact">Ingen festede påstander.</p>';
-    $("#available-claims").innerHTML = discovered.filter((item) => !pinned.has(item.id)).map((item) => chip(item, false)).join("") || '<p class="empty-state compact">Undersøk flere spor for å åpne påstander.</p>';
     $("#free-notes").value = state.notes || "";
-
-    const options = state.pinnedClaims.map((id) => claim(id)).filter(Boolean).map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(item.title)}</option>`).join("");
-    $("#hyp-claim-a").innerHTML = `<option value="">— Påstand A —</option>${options}`;
-    $("#hyp-claim-b").innerHTML = `<option value="">— Påstand B —</option>${options}`;
-    $("#hypotheses-list").innerHTML = state.hypotheses.map((item, index) => `<article class="hypothesis-item">
-      <button class="hyp-remove" data-hyp-index="${index}" aria-label="Fjern kobling">✕</button>
-      <div class="hyp-link">${escapeHtml(claim(item.a)?.title || item.a)} ↔ ${escapeHtml(claim(item.b)?.title || item.b)}</div>
-      <div class="hyp-text">${escapeHtml(item.reasoning)}</div>
-    </article>`).join("") || '<p class="empty-state compact">Ingen hypotesekoblinger ennå.</p>';
+    $("#pinned-items").innerHTML = state.pins.length ? state.pins.map((ref) => `<article class="pinned-reference" data-pin-ref="${escapeHtml(ref)}">
+      <div class="pin-heading">
+        <strong>${escapeHtml(pinLabel(ref))}</strong>
+        <button class="pin-remove" data-remove-pin="${escapeHtml(ref)}" aria-label="Fjern festet referanse">×</button>
+      </div>
+      <textarea class="pin-note" data-pin-note="${escapeHtml(ref)}" placeholder="Hvorfor kan dette være relevant?">${escapeHtml(state.pinNotes[ref] || "")}</textarea>
+    </article>`).join("") : '<p class="empty-state compact">Fest oppføringer eller dokumenter fra saksmappen. Spillet foreslår ingen forbindelser for deg.</p>';
   }
 
-  function togglePinned(claimId) {
-    if (!state.discoveredClaims.includes(claimId)) return;
-    if (state.pinnedClaims.includes(claimId)) {
-      state.pinnedClaims = state.pinnedClaims.filter((id) => id !== claimId);
-      state.hypotheses = state.hypotheses.filter((item) => item.a !== claimId && item.b !== claimId);
-    } else {
-      state.pinnedClaims.push(claimId);
-    }
-    saveState();
-    renderNotebook();
+  function projectLead(item) {
+    const [group, numberText] = item.code.split("-");
+    const number = Math.max(1, Number(numberText || 1)) - 1;
+    if (group === "SP") return { x: 390 + (number % 4) * 48, y: 125 + Math.floor(number / 4) * 38 };
+    if (group === "GC") return { x: 590 + (number % 4) * 48, y: 125 + Math.floor(number / 4) * 38 };
+    if (group === "NS") return { x: 445 + (number % 6) * 82, y: 350 + Math.floor(number / 6) * 82 };
+    if (group === "XR" && number < 7) return { x: 90 + (number % 3) * 92, y: 135 + Math.floor(number / 3) * 85 };
+    return { x: 740 + ((number - 7) % 3) * 82, y: 135 + Math.floor((number - 7) / 3) * 85 };
   }
 
-  function addHypothesis() {
-    const a = $("#hyp-claim-a").value;
-    const b = $("#hyp-claim-b").value;
-    const reasoning = $("#hyp-reasoning").value.trim();
-    if (!a || !b || a === b || !reasoning) {
-      toast("Velg to ulike påstander og skriv et resonnement.");
-      return;
-    }
-    state.hypotheses.push({ a, b, reasoning, createdAt: new Date().toISOString() });
-    $("#hyp-reasoning").value = "";
-    saveState();
-    renderNotebook();
+  function renderMap() {
+    const zones = `<rect class="map-bg" x="20" y="20" width="960" height="580" rx="3" />
+      <rect class="map-zone" x="45" y="70" width="280" height="230"/><text class="region-label" x="60" y="94">STORBRITANNIA</text>
+      <rect class="map-zone" x="350" y="70" width="355" height="230"/><text class="region-label" x="365" y="94">SOUTHPORT / BRISBANE / GOLD COAST</text>
+      <rect class="map-zone" x="350" y="320" width="590" height="235"/><text class="region-label" x="365" y="344">NORTHERN NSW</text>
+      <rect class="map-zone" x="725" y="70" width="215" height="230"/><text class="region-label" x="740" y="94">ØVRIGE REGISTRE</text>`;
+    const visited = new Set(state.visited);
+    const pins = DATA.directory.map((item) => {
+      const point = projectLead(item);
+      return `<g class="loc-pin ${visited.has(item.id) ? "visited" : ""}" data-map-lead="${escapeHtml(item.id)}" tabindex="0" role="button" aria-label="${escapeHtml(item.code + " " + item.name)}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})">
+        <circle class="loc-dot" r="6"></circle><text class="loc-code" x="9" y="3">${escapeHtml(item.code)}</text>
+      </g>`;
+    }).join("");
+    $("#map-svg").innerHTML = zones + pins;
+  }
+
+  function showMapInfo(leadId) {
+    const item = leadById(leadId);
+    if (!item) return;
+    const location = locationById(item.locationId);
+    const info = $("#map-info");
+    info.classList.remove("hidden");
+    info.innerHTML = `<div><span class="lead-code">${escapeHtml(item.code)}</span><h4>${escapeHtml(item.name)}</h4>
+      <p>${escapeHtml(item.address || location?.name || "Adresse ikke oppført")}</p></div>
+      <button class="btn btn-small map-open-lead" data-lead-id="${escapeHtml(item.id)}">${state.visited.includes(item.id) ? "Åpne igjen" : "Oppsøk"}</button>`;
   }
 
   function renderDebrief() {
-    const used = usedBudget();
-    const budget = episode().leadBudget || 0;
-    const within = used <= budget;
-    $("#debrief-efficiency").innerHTML = `<div class="eff-label">Etterforskningsdebrief</div>
-      <p>Du har undersøkt <strong>${state.investigated.length}</strong> av ${episode().leads.length} spor, åpnet <strong>${state.discoveredDocs.length}</strong> dokumenter og brukt <strong>${used}</strong> av ${budget} veiledende kapasitet.</p>
-      <p>${within ? "Du holdt deg innenfor den veiledende rammen." : "Du fortsatte etter at den veiledende rammen var brukt opp. Det er tillatt — dette er refleksjon, ikke en highscore."}</p>
-      <p class="brief-caution">Ingen debrief vurderer skyld. Den tester bare om du skiller dokumenterte fakta fra slutninger, teorier og åpne spørsmål.</p>`;
+    const used = usedActions();
+    const budget = Number(DATA.episode.actionBudget || 14);
+    const correct = state.debriefSubmitted
+      ? DATA.episode.questions.filter((item) => state.answers[item.id] === item.correct).length
+      : 0;
+    $("#debrief-summary").innerHTML = `<div class="eff-label">ETTERFORSKNINGSSTATUS</div>
+      <p>Besøkt: <strong>${state.visited.length}</strong> av ${DATA.directory.length} registeroppføringer · handlinger: <strong>${used}</strong> av ${budget} · dokumenter: <strong>${state.foundDocuments.length}</strong>.</p>
+      ${state.debriefSubmitted ? `<p>Dokumentforståelse: <strong>${correct} av ${DATA.episode.questions.length}</strong>. Dette måler kildeforståelse, ikke skyld.</p>` : `<p>Du kan levere når som helst. Svarene og dagens saksstatus åpnes da permanent for denne gjennomspillingen.</p>`}`;
 
-    $("#debrief-questions").innerHTML = episode().questions.map((item, index) => {
-      const related = (item.claimIds || []).map(claim).filter(Boolean);
-      const reflection = state.debriefSubmitted ? `<div class="debrief-reflection"><strong>Relevant kildegrunnlag:</strong><ul>${related.map((entry) => `<li><span class="epistemic-stamp tag-${escapeHtml(entry.tag)}">${escapeHtml(TAG_LABELS[entry.tag] || entry.tag)}</span> ${escapeHtml(entry.text)}</li>`).join("")}</ul></div>` : "";
-      return `<article class="debrief-q"><h4>${index + 1}. ${escapeHtml(item.prompt)}</h4>
-        <textarea data-question-id="${escapeHtml(item.id)}" ${state.debriefSubmitted ? "readonly" : ""}>${escapeHtml(state.answers[item.id] || "")}</textarea>${reflection}</article>`;
-    }).join("") + `<button id="submit-debrief" class="btn btn-primary" ${state.debriefSubmitted ? "disabled" : ""}>${state.debriefSubmitted ? "Debrief levert" : "Lever debrief og vis kildegrunnlag"}</button>`;
+    $("#debrief-form").innerHTML = DATA.episode.questions.map((item, index) => {
+      const options = item.options.map((option) => `<label class="answer-option ${state.debriefSubmitted && option.value === item.correct ? "correct-answer" : ""}">
+        <input type="radio" name="${escapeHtml(item.id)}" value="${escapeHtml(option.value)}" ${state.answers[item.id] === option.value ? "checked" : ""} ${state.debriefSubmitted ? "disabled" : ""}>
+        <span>${escapeHtml(option.label)}</span>
+      </label>`).join("");
+      const feedback = state.debriefSubmitted ? `<div class="answer-feedback ${state.answers[item.id] === item.correct ? "is-correct" : "is-wrong"}">
+        <strong>${state.answers[item.id] === item.correct ? "Riktig." : "Ikke helt."}</strong> ${escapeHtml(item.explanation)}
+        <div class="source-line">Kilde-ID: ${escapeHtml((item.sourceIds || []).join(" · "))}</div>
+      </div>` : "";
+      return `<fieldset class="debrief-q"><legend>${index + 1}. ${escapeHtml(item.prompt)}</legend>${options}
+        <label class="reasoning-label">Din begrunnelse (valgfri)
+          <textarea data-answer-note="${escapeHtml(item.id)}" ${state.debriefSubmitted ? "readonly" : ""}>${escapeHtml(state.answerNotes[item.id] || "")}</textarea>
+        </label>${feedback}</fieldset>`;
+    }).join("") + `<button type="submit" class="btn btn-primary" ${state.debriefSubmitted ? "disabled" : ""}>${state.debriefSubmitted ? "Debrief levert" : "Lever og åpne senere funn"}</button>`;
+
+    const status = $("#current-status");
+    status.classList.toggle("hidden", !state.debriefSubmitted);
+    status.innerHTML = state.debriefSubmitted ? `<div class="status-stamp">SENERE KUNNSKAP · IKKE TILGJENGELIG I 1997</div>
+      <h3>Dagens saksstatus</h3>
+      ${(DATA.meta.currentStatus || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+      <p class="poi-caution">${escapeHtml(DATA.meta.poiCaution)}</p>` : "";
   }
 
-  function submitDebrief() {
-    $$("[data-question-id]").forEach((textarea) => { state.answers[textarea.dataset.questionId] = textarea.value.trim(); });
-    state.debriefSubmitted = true;
+  function finishInvestigation() {
+    if (state.investigationEnded) return;
+    const used = usedActions();
+    const message = `Avslutte etterforskningen etter ${used} handlinger? Du kan fortsatt lese besøkte oppføringer og dokumenter, men ikke oppsøke nye steder.`;
+    if (!window.confirm(message)) return;
+    state.investigationEnded = true;
+    state.activeTab = "debrief";
     saveState();
-    renderDebrief();
-    toast("Debrief lagret. Kildegrunnlaget er nå synlig.");
+    renderAll();
+    toast("Etterforskningen er avsluttet. Debriefen er åpnet.");
   }
 
-  function setDrawer(drawerId, open) {
-    ["episode-drawer", "sources-drawer"].forEach((id) => {
-      const drawer = $(`#${id}`);
-      drawer.classList.toggle("hidden", id !== drawerId || !open);
-    });
+  function submitDebrief(event) {
+    event.preventDefault();
+    if (state.debriefSubmitted) return;
+    const missing = DATA.episode.questions.filter((item) => !state.answers[item.id]);
+    if (missing.length) {
+      toast(`Svar på alle ${DATA.episode.questions.length} spørsmål før du leverer.`);
+      $("#debrief-form").querySelector(`input[name="${missing[0].id}"]`)?.focus();
+      return;
+    }
+    state.debriefSubmitted = true;
+    state.submittedAt = new Date().toISOString();
+    uniquePush(state.foundDocuments, DATA.episode.debriefDocumentIds || []);
+    saveState();
+    renderSources();
+    renderDocuments();
+    renderDebrief();
+    toast("Debrief levert. Senere kildefunn er nå åpnet.");
+  }
+
+  function setSourcesOpen(open) {
+    $("#sources-drawer").classList.toggle("hidden", !open);
   }
 
   function resetProgress() {
-    if (!window.confirm("Nullstille alle lokale notater, spor og koblinger for denne prototypen?")) return;
+    if (!window.confirm("Nullstille alle besøk, dokumenter, notater og debriefsvar for v0.3?")) return;
     localStorage.removeItem(STORAGE_KEY);
     state = freshState();
     state.accepted = true;
     saveState();
     renderAll();
-    toast("Lokal fremdrift er nullstilt.");
+    toast("Den lokale saksmappen er nullstilt.");
   }
 
   function bindEvents() {
@@ -488,42 +472,51 @@
       showApp();
     });
     $$(".tab-btn").forEach((button) => button.addEventListener("click", () => switchTab(button.dataset.tab)));
-    $("#episode-select-btn").addEventListener("click", () => setDrawer("episode-drawer", true));
-    $("#sources-btn").addEventListener("click", () => setDrawer("sources-drawer", true));
-    $$(".drawer-close").forEach((button) => button.addEventListener("click", () => setDrawer("", false)));
-    $$(".drawer").forEach((drawer) => drawer.addEventListener("click", (event) => { if (event.target === drawer) setDrawer("", false); }));
+    $("#sources-btn").addEventListener("click", () => setSourcesOpen(true));
+    $("#finish-btn").addEventListener("click", finishInvestigation);
+    $(".drawer-close").addEventListener("click", () => setSourcesOpen(false));
+    $("#sources-drawer").addEventListener("click", (event) => { if (event.target.id === "sources-drawer") setSourcesOpen(false); });
     $("#save-btn").addEventListener("click", () => saveState(true));
     $("#reset-btn").addEventListener("click", resetProgress);
     $("#lead-search").addEventListener("input", renderDirectory);
     $("#lead-filter").addEventListener("change", renderDirectory);
     $("#free-notes").addEventListener("input", (event) => { state.notes = event.target.value; saveState(); });
-    $("#hyp-add").addEventListener("click", addHypothesis);
     $(".document-close").addEventListener("click", () => $("#document-viewer").classList.add("hidden"));
     $("#document-viewer").addEventListener("click", (event) => { if (event.target.id === "document-viewer") event.currentTarget.classList.add("hidden"); });
+    $("#debrief-form").addEventListener("submit", submitDebrief);
 
     document.addEventListener("click", (event) => {
       const leadCard = event.target.closest("[data-lead-id]");
-      if (leadCard && !leadCard.classList.contains("visit-lead")) openLead(leadCard.dataset.leadId);
+      if (leadCard) openLead(leadCard.dataset.leadId);
       const docCard = event.target.closest("[data-document-id]");
       if (docCard) openDocument(docCard.dataset.documentId);
-      const claimChip = event.target.closest("[data-claim-id]");
-      if (claimChip) togglePinned(claimChip.dataset.claimId);
-      const remove = event.target.closest("[data-hyp-index]");
-      if (remove) {
-        state.hypotheses.splice(Number(remove.dataset.hypIndex), 1);
+      const mapPin = event.target.closest("[data-map-lead]");
+      if (mapPin) showMapInfo(mapPin.dataset.mapLead);
+      const removePin = event.target.closest("[data-remove-pin]");
+      if (removePin) togglePin(removePin.dataset.removePin);
+    });
+
+    document.addEventListener("change", (event) => {
+      if (event.target.matches('#debrief-form input[type="radio"]')) {
+        state.answers[event.target.name] = event.target.value;
         saveState();
-        renderNotebook();
       }
-      const pin = event.target.closest("[data-location-id]");
-      if (pin) showMapInfo(pin.dataset.locationId);
-      if (event.target.id === "submit-debrief") submitDebrief();
-      const episodeItem = event.target.closest("[data-episode]");
-      if (episodeItem) setDrawer("", false);
+    });
+
+    document.addEventListener("input", (event) => {
+      if (event.target.matches("[data-pin-note]")) {
+        state.pinNotes[event.target.dataset.pinNote] = event.target.value;
+        saveState();
+      }
+      if (event.target.matches("[data-answer-note]")) {
+        state.answerNotes[event.target.dataset.answerNote] = event.target.value;
+        saveState();
+      }
     });
 
     document.addEventListener("keydown", (event) => {
       if (event.key !== "Escape") return;
-      setDrawer("", false);
+      setSourcesOpen(false);
       $$(".lead-detail-overlay").forEach((node) => node.remove());
       $("#document-viewer").classList.add("hidden");
     });
