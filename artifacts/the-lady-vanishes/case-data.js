@@ -24,7 +24,7 @@
   window.CASE_DATA = {
     meta: {
       title: "The Case Files: The Lady Vanishes",
-      version: "0.7-two-act",
+      version: "0.10-delayed-japan",
       actionDisclaimer: "",
       currentStatus: [
         "NSW-coroneren fant 29. februar 2024 at Marion Barter er død og trolig døde en gang etter 15. oktober 1997.",
@@ -67,6 +67,7 @@
       { id: "loc-hastings", name: "Hastings", region: "East Sussex", map: { x: 120, y: 220 } },
       { id: "loc-london", name: "London", region: "United Kingdom", map: { x: 245, y: 115 } },
       { id: "loc-narita", name: "Narita", region: "Japan", map: { x: 775, y: 135 } },
+      { id: "loc-seoul", name: "Seoul / transitt", region: "Sør-Korea", map: { x: 820, y: 245 } },
       { id: "loc-overseas", name: "Utenlandske registre", region: "Internasjonalt", map: { x: 865, y: 155 } }
     ],
 
@@ -126,6 +127,7 @@
         }
       ],
       referenceLeadIds: ["sp05", "gc02", "gc03", "gc06", "gc08", "gc09", "ns01", "ns02", "ns04", "ns11", "ns13", "xr01", "xr07", "xr10", "xr11", "xr12"],
+      referenceTravelUnits: 6,
       brief: [
         "Det er oktober 1997. Marion dro fra Southport på en lang reise fire måneder tidligere. Familien har mottatt brev og postkort, men den siste telefonsamtalen ble brutt — og nå svarer hun ikke.",
         "Sally har oppdaget bankaktivitet hun ikke forstår. Du får et åpent register, et kart og de dokumentene familien allerede har. Det finnes ingen handlingsgrense; hvert oppslag registreres bare slik at du kan sammenligne etterforskningsstrategier.",
@@ -381,7 +383,10 @@
       quiet("ns17", "NS-17", "Bankenes sentrale arkivkontor", "New South Wales", "loc-nsw", { result: "Ingen komplett bankdokumentkjede blir sikret gjennom dette oppslaget. Senere tap av arkivmateriale gjør at flere spørsmål ikke kan kontrolleres fullt ut.", sourceIds: ["src-coroner-2024", "src-case-hub"] }),
       quiet("ns18", "NS-18", "Northern Star / lokale aviser", "Northern Rivers, New South Wales", "loc-nsw"),
 
-      quiet("xr01", "XR-01", "Hotel Nikko Narita", "Narita, Japan", "loc-narita", { result: "En reisende under navnet Richard Lloyd Westbury passerte Japan 17. juni 1997 og oppga senere at transitthotellet sannsynligvis var Hotel Nikko Narita. Ingen gjesteliste er bevart. Brevpapir fra samme hotell finnes i Marions brev fra England.", sourceIds: ["src-coroner-2024", "src-parallel-compiled"], act: 2, lookupTerms: ["Hotel Nikko Narita", "Richard Lloyd Westbury", "17 June 1997"] }),
+      quiet("xr13", "XR-13", "Hotel Nikko Narita – gjestearkiv", "Narita, Japan", "loc-narita", { result: "Brevpapiret kan knyttes til Hotel Nikko Narita, men ingen offentlig bevart gjesteliste identifiserer Marion eller forklarer hvordan papiret kom til England. Oppslaget gir ingen ny personforbindelse i 1997-materialet.", sourceIds: ["src-coroner-2024", "src-evidence-compiled"], lookupTerms: ["Hotel Nikko Narita", "Narita", "Japan"] }),
+      quiet("xr01", "XR-01", "Hotel Nikko Narita – Westbury-kryssjekk", "Narita, Japan", "loc-narita", { result: "En reisende under navnet Richard Lloyd Westbury passerte Japan 17. juni 1997 og oppga senere at transitthotellet sannsynligvis var Hotel Nikko Narita. Ingen gjesteliste er bevart. Brevpapir fra samme hotell finnes i Marions brev fra England.", sourceIds: ["src-coroner-2024", "src-parallel-compiled"], act: 2, lookupTerms: ["Hotel Nikko Narita", "Richard Lloyd Westbury", "17 June 1997"] }),
+      quiet("xr14", "XR-14", "Korean Air – transittarkiv", "Seoul, Sør-Korea", "loc-seoul", { result: "Flyregistreringen bekrefter Korean Airlines som transportør, men ingen offentlig bevart transittlogg viser hvor lenge Marion var i Sør-Korea, om hun forlot flyplassen eller hvem hun eventuelt møtte.", sourceIds: ["src-coroner-2024", "src-evidence-compiled"], lookupTerms: ["Korean Air", "Korean Airlines", "S/Korea", "South Korea", "Seoul"] }),
+      quiet("xr15", "XR-15", "Sørkoreansk innreise- og transittregister", "Seoul, Sør-Korea", "loc-seoul", { result: "Det finnes ingen offentlig bevart registerkjede som kan bekrefte en innreise, et hotellopphold eller et møte i Sør-Korea. Feltet på utreisekortet dokumenterer et reisepunkt, ikke hva Marion gjorde der.", sourceIds: ["src-coroner-2024", "src-evidence-compiled"], lookupTerms: ["S/Korea", "South Korea", "Sør-Korea", "Seoul", "transit"] }),
       entry("xr02", "XR-02", "Royal Tunbridge Wells Post Office", "Kent, England", "loc-tunbridge", [
         "Familien mottok et postkort fra Tunbridge Wells sommeren 1997.",
         "Kortet dokumenterer kontakt og et poststed, men sier ikke hvem Marion var sammen med eller hvor lenge hun oppholdt seg der."

@@ -115,7 +115,13 @@
       panel.classList.toggle("active", active);
       panel.hidden = !active;
     });
-    if (tabName === "map") renderMap();
+    if (tabName === "map") {
+      renderMap();
+      requestAnimationFrame(() => {
+        const container = $(".map-container");
+        if (container && window.innerWidth <= 768) container.scrollLeft = Math.max(0, (container.scrollWidth - container.clientWidth) / 2);
+      });
+    }
     if (tabName === "documents") renderDocuments();
     if (tabName === "notebook") renderNotebook();
     if (tabName === "debrief") renderDebrief();
@@ -460,41 +466,116 @@
     }).join("") : `<p class="empty-state compact">${identities.length < 2 ? "Finn flere identiteter i arkivene før du kan koble dem." : "Ingen identiteter er koblet ennå."}</p>`;
   }
 
-  function projectLead(item) {
-    const [group, numberText] = item.code.split("-");
-    const number = Math.max(1, Number(numberText || 1)) - 1;
-    if (group === "SP") return { x: 390 + (number % 4) * 48, y: 125 + Math.floor(number / 4) * 38 };
-    if (group === "GC") return { x: 590 + (number % 4) * 48, y: 125 + Math.floor(number / 4) * 38 };
-    if (group === "NS") return { x: 445 + (number % 6) * 82, y: 350 + Math.floor(number / 6) * 82 };
-    if (group === "XR" && number < 7) return { x: 90 + (number % 3) * 92, y: 135 + Math.floor(number / 3) * 85 };
-    return { x: 740 + ((number - 7) % 3) * 82, y: 135 + Math.floor((number - 7) / 3) * 85 };
+  const MAP_POINTS = {
+    "loc-london": [78, 108],
+    "loc-tunbridge": [178, 122],
+    "loc-rye": [230, 185],
+    "loc-hastings": [118, 220],
+    "loc-brisbane": [420, 92],
+    "loc-tss": [500, 112],
+    "loc-southport": [555, 148],
+    "loc-merinda": [625, 165],
+    "loc-ashmore": [490, 195],
+    "loc-burleigh": [590, 225],
+    "loc-tweed": [680, 300],
+    "loc-byron": [635, 355],
+    "loc-ballina": [595, 415],
+    "loc-lismore": [495, 425],
+    "loc-grafton": [530, 515],
+    "loc-nsw": [690, 505],
+    "loc-narita": [805, 120],
+    "loc-seoul": [835, 245],
+    "loc-overseas": [905, 185]
+  };
+
+  const MAP_LABELS = {
+    "loc-london": [-22, -21, "London"],
+    "loc-tunbridge": [-72, -19, "Tunbridge Wells"],
+    "loc-rye": [16, 20, "Rye"],
+    "loc-hastings": [-56, 23, "Hastings"],
+    "loc-southport": [18, -10, "Southport"],
+    "loc-merinda": [18, 20, "Merinda Ct"],
+    "loc-tss": [-18, -22, "TSS"],
+    "loc-brisbane": [-48, -20, "Brisbane"],
+    "loc-ashmore": [-58, 23, "Ashmore"],
+    "loc-burleigh": [18, 23, "Burleigh"],
+    "loc-byron": [18, -10, "Byron Bay"],
+    "loc-ballina": [18, 22, "Ballina"],
+    "loc-lismore": [-58, 23, "Lismore"],
+    "loc-grafton": [18, 22, "Grafton"],
+    "loc-tweed": [18, -10, "Tweed"],
+    "loc-nsw": [18, 22, "NSW archive"],
+    "loc-narita": [-35, -20, "Narita"],
+    "loc-seoul": [16, 5, "Seoul / transitt"],
+    "loc-overseas": [-28, 25, "Europe"]
+  };
+
+  function availableDirectory() {
+    return DATA.directory.filter((item) => Number(item.act || 1) <= Number(state.currentAct));
   }
 
   function renderMap() {
-    const zones = `<rect class="map-bg" x="20" y="20" width="960" height="580" rx="3" />
-      <rect class="map-zone" x="45" y="70" width="280" height="230"/><text class="region-label" x="60" y="94">STORBRITANNIA</text>
-      <rect class="map-zone" x="350" y="70" width="355" height="230"/><text class="region-label" x="365" y="94">SOUTHPORT / BRISBANE / GOLD COAST</text>
-      <rect class="map-zone" x="350" y="320" width="590" height="235"/><text class="region-label" x="365" y="344">NORTHERN NSW</text>
-      <rect class="map-zone" x="725" y="70" width="215" height="230"/><text class="region-label" x="740" y="94">ØVRIGE REGISTRE</text>`;
+    const available = availableDirectory();
     const visited = new Set(state.visited);
-    const pins = DATA.directory.filter((item) => Number(item.act || 1) <= Number(state.currentAct)).map((item) => {
-      const point = projectLead(item);
-      return `<g class="loc-pin ${visited.has(item.id) ? "visited" : ""}" data-map-lead="${escapeHtml(item.id)}" tabindex="0" role="button" aria-label="${escapeHtml(item.code + " " + item.name)}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})">
-        <circle class="loc-dot" r="6"></circle><text class="loc-code" x="9" y="3">${escapeHtml(item.code)}</text>
+    const groups = DATA.locations.map((location) => ({
+      location,
+      entries: available.filter((item) => item.locationId === location.id)
+    })).filter((group) => group.entries.length);
+
+    const base = `<rect class="map-bg" x="18" y="18" width="964" height="584" rx="12" />
+      <path class="map-land" d="M42 74 C92 46 198 48 275 78 C306 111 294 220 244 265 C186 291 90 280 48 232 C24 183 24 111 42 74 Z" />
+      <path class="map-land" d="M355 52 C430 35 571 42 660 91 C711 161 730 250 716 338 C700 433 660 539 603 580 L374 580 C395 489 403 407 395 326 C385 223 357 143 355 52 Z" />
+      <path class="map-coast" d="M622 67 C597 116 597 178 621 231 C648 289 654 349 632 413 C616 463 586 516 559 565" />
+      <path class="map-land" d="M758 66 C816 40 927 43 966 88 C982 137 964 233 915 266 C855 285 784 253 755 210 C739 162 739 103 758 66 Z" />
+      <text class="map-region-label" x="55" y="58">STORBRITANNIA</text>
+      <text class="map-region-label" x="372" y="47">AUSTRALIA · ØSTKYSTEN</text>
+      <text class="map-region-label" x="770" y="56">INTERNASJONALT</text>
+      <path class="map-route" d="M420 92 C555 38 744 130 835 245" />
+      <path class="map-route" d="M835 245 C654 505 360 365 178 122" />
+      <path class="map-route return" d="M178 122 C286 284 362 230 420 92" />
+      <text class="map-route-label" x="620" y="202">MARION · UT 22. JUNI</text>
+      <text class="map-route-label" x="300" y="292">TILBAKE 2. AUGUST</text>
+      ${state.foundDocuments.includes("doc18") || state.foundDocuments.includes("doc20") ? `<path class="map-route archive" d="M420 92 C555 2 704 24 805 120" />
+        <path class="map-route archive" d="M805 120 C620 16 360 24 178 122" />
+        <text class="map-route-label archive" x="585" y="73">WESTBURY · 17. JUNI</text>` : ""}
+      <g class="map-legend" transform="translate(765 535)">
+        <circle class="legend-unvisited" cx="0" cy="0" r="7"/><text x="12" y="4">ikke besøkt</text>
+        <circle class="legend-partial" cx="92" cy="0" r="7"/><text x="104" y="4">delvis</text>
+        <circle class="legend-complete" cx="160" cy="0" r="7"/><text x="172" y="4">fullført</text>
+      </g>`;
+
+    const nodes = groups.map(({ location, entries }) => {
+      const override = MAP_POINTS[location.id];
+      const point = override ? { x: override[0], y: override[1] } : (location.map || { x: 500, y: 300 });
+      const done = entries.filter((item) => visited.has(item.id)).length;
+      const status = done === 0 ? "unvisited" : done === entries.length ? "complete" : "partial";
+      const [dx, dy, label] = MAP_LABELS[location.id] || [12, -12, location.name];
+      return `<g class="map-location ${status}" data-map-location="${escapeHtml(location.id)}" tabindex="0" role="button" aria-label="${escapeHtml(location.name)}, ${entries.length} oppslag, ${done} besøkt" transform="translate(${point.x} ${point.y})">
+        <circle class="map-location-dot" r="15"></circle>
+        <text class="map-location-count" text-anchor="middle" y="4">${entries.length}</text>
+        <text class="map-location-label" x="${dx}" y="${dy}">${escapeHtml(label)}</text>
+        <title>${escapeHtml(location.name)} · ${done}/${entries.length} besøkt</title>
       </g>`;
     }).join("");
-    $("#map-svg").innerHTML = zones + pins;
+    $("#map-svg").innerHTML = base + nodes;
   }
 
-  function showMapInfo(leadId) {
-    const item = leadById(leadId);
-    if (!item) return;
-    const location = locationById(item.locationId);
+  function showMapInfo(locationId) {
+    const location = locationById(locationId);
+    if (!location) return;
+    const visited = new Set(state.visited);
+    const entries = availableDirectory().filter((item) => item.locationId === locationId);
     const info = $("#map-info");
     info.classList.remove("hidden");
-    info.innerHTML = `<div><span class="lead-code">${escapeHtml(item.code)}</span><h4>${escapeHtml(item.name)}</h4>
-      <p>${escapeHtml(item.address || location?.name || "Adresse ikke oppført")}</p></div>
-      <button class="btn btn-small map-open-lead" data-lead-id="${escapeHtml(item.id)}">${state.visited.includes(item.id) ? "Åpne igjen" : "Oppsøk"}</button>`;
+    info.innerHTML = `<div class="map-location-heading">
+        <div><span class="lead-code">${escapeHtml(location.region || "SAKSKART")}</span><h4>${escapeHtml(location.name)}</h4></div>
+        <span>${entries.filter((item) => visited.has(item.id)).length}/${entries.length} besøkt</span>
+      </div>
+      <div class="map-entry-list">${entries.map((item) => `<button class="map-entry-button ${visited.has(item.id) ? "visited" : ""}" data-lead-id="${escapeHtml(item.id)}">
+        <span class="lead-code">${escapeHtml(item.code)}</span>
+        <strong>${escapeHtml(item.name)}</strong>
+        <small>${visited.has(item.id) ? "Besøkt" : "Ikke besøkt"}</small>
+      </button>`).join("")}</div>`;
   }
 
   function renderDebrief() {
@@ -672,8 +753,8 @@
       }
       const docCard = event.target.closest("[data-document-id]");
       if (docCard) openDocument(docCard.dataset.documentId);
-      const mapPin = event.target.closest("[data-map-lead]");
-      if (mapPin) showMapInfo(mapPin.dataset.mapLead);
+      const mapLocation = event.target.closest("[data-map-location]");
+      if (mapLocation) showMapInfo(mapLocation.dataset.mapLocation);
       const removePin = event.target.closest("[data-remove-pin]");
       if (removePin) togglePin(removePin.dataset.removePin);
       const removeIdentity = event.target.closest("[data-remove-identity-link]");
@@ -704,10 +785,10 @@
     });
 
     document.addEventListener("keydown", (event) => {
-      const mapPin = event.target.closest?.("[data-map-lead]");
-      if (mapPin && (event.key === "Enter" || event.key === " ")) {
+      const mapLocation = event.target.closest?.("[data-map-location]");
+      if (mapLocation && (event.key === "Enter" || event.key === " ")) {
         event.preventDefault();
-        showMapInfo(mapPin.dataset.mapLead);
+        showMapInfo(mapLocation.dataset.mapLocation);
         return;
       }
 

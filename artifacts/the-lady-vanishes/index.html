@@ -6,6 +6,7 @@
   <title>The Case Files: The Lady Vanishes</title>
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="travel.css">
 </head>
 <body>
   <div id="disclaimer-overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
@@ -16,6 +17,7 @@
       <div class="disclaimer-text">
         <p><strong>Dette bygger på en virkelig, uløst sak.</strong> Marion Barter var et virkelig menneske. Spillet dramatiserer undersøkelser, men skal ikke brukes til å anklage noen.</p>
         <p>Det er oktober 1997. Marion er registrert tilbake i Australia, men familien får ikke lenger kontakt med henne. Du bestemmer hvilke spor som skal følges — og når de senere arkivene skal åpnes.</p>
+        <p>Du starter i Australia. Lokale oppslag krever at du befinner deg i landet, mens fjernoppslag kan undersøkes overalt. Internasjonale reiser koster etterforskningsenheter, men det finnes ingen hard handlingsgrense.</p>
         <p class="global-provenance">Dokumentbildene er laget for spillet fra offentlige saksopplysninger. Kildelisten åpnes etter saken.</p>
       </div>
       <button id="disclaimer-accept" class="btn btn-primary" autofocus>Åpne saksmappen</button>
@@ -35,7 +37,7 @@
         <button class="tab-btn hidden" id="debrief-tab" data-tab="debrief" aria-selected="false">Sluttoppgjør</button>
       </nav>
       <div class="topbar-right">
-        <span id="lead-budget-display" class="budget-display" title="Brukte handlinger"></span>
+        <span id="lead-budget-display" class="budget-display" title="Brukte etterforskningsenheter"></span>
         <button id="sources-btn" class="btn btn-small" title="Kildeinformasjon">Kilder</button>
         <button id="finish-btn" class="btn btn-small btn-finish" title="Avslutt etterforskningen og åpne sluttspørsmålene">Avslutt</button>
         <button id="reset-btn" class="btn btn-small btn-danger" title="Nullstill fremdrift">Nullstill</button>
@@ -59,8 +61,8 @@
         </div>
         <div class="panel-header compact-header">
           <div>
-            <h2>Gold Coast-registeret</h2>
-            <p class="panel-desc">Du kan oppsøke hvem som helst og fortsette så lenge du vil. Hvert nytt oppslag registreres. Referansestien bruker 16 oppslag, og hvert ekstra oppslag trekker 5 poeng — men det finnes ingen handlingsgrense. Registeret forteller ikke hva som er relevant.</p>
+            <h2>Etterforskningsregisteret</h2>
+            <p class="panel-desc">Registeret viser oppslag som kan gjøres fra landet du befinner deg i. Fjernoppslag er alltid tilgjengelige; lokale oppslag krever reise. Referanseruten bruker 16 oppslag og 6 reiseenheter, men ingenting låses permanent.</p>
           </div>
           <div class="directory-controls">
             <input type="search" id="lead-search" placeholder="Søk etter navn, sted eller kode …" aria-label="Søk i registeret" class="search-input">
@@ -78,9 +80,10 @@
 
       <section id="panel-map" class="panel" role="tabpanel" aria-label="Sakskart" hidden>
         <div class="panel-header">
-          <h2>Sakskart</h2>
-          <p class="panel-desc">Kartet er skjematisk. Alle registeroppføringer vises likt; kartet røper ikke hvilke som gir resultater.</p>
+          <h2>Sakskart og reiserute</h2>
+          <p class="panel-desc">Kartet er skjematisk. Bare dokumenterte reisemål vises. Reis mellom land for å åpne lokale oppslag; fjernregistre kan undersøkes uansett posisjon.</p>
         </div>
+        <section id="travel-console" class="travel-console" aria-label="Reiseplanlegging" aria-live="polite"></section>
         <div id="map-container" class="map-container">
           <svg id="map-svg" class="map-svg" viewBox="0 0 1000 620" preserveAspectRatio="xMidYMid meet" aria-label="Skjematisk kart over registeroppføringer"></svg>
         </div>
@@ -143,6 +146,7 @@
   </div>
 
   <script src="case-data.js"></script>
+  <script src="travel-system.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
