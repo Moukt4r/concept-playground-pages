@@ -1230,3 +1230,27 @@ body {
   cursor: pointer;
 }
 .criterion-score strong { color: var(--olive-dark); font-family: var(--font-mono); }
+
+/* ===== V0.7 ACTS & PROVENANCE ===== */
+.global-provenance {
+  margin-top: .75rem !important;
+  color: var(--ink-light);
+  font-size: .72rem;
+  line-height: 1.45;
+}
+.comparison-controls {
+  display: flex;
+  gap: .45rem;
+  flex-wrap: wrap;
+  margin: 0 0 .8rem;
+}
+.comparison-controls .active {
+  background: var(--stamp-blue);
+  color: white;
+  border-color: var(--stamp-blue);
+}
+@media (max-width: 768px) {
+  .comparison-grid.compare-departure figure:nth-child(2) { display: none; }
+  .comparison-grid.compare-arrival figure:nth-child(1) { display: none; }
+  .comparison-controls { position: sticky; top: 0; z-index: 2; background: var(--paper); padding: .35rem 0; }
+}

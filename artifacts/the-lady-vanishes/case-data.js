@@ -9,18 +9,22 @@
     documentIds: extra.documentIds || [],
     sourceIds: extra.sourceIds || [],
     illustration: extra.illustration || null,
-    era: extra.era || "historical"
+    era: extra.era || "historical",
+    act: extra.act || 1,
+    lookupTerms: extra.lookupTerms || []
   });
   const entry = (id, code, name, address, locationId, result, documentIds, sourceIds, extra = {}) => ({
     id, code, name, address, locationId, cost: 1, result, documentIds, sourceIds,
     illustration: extra.illustration || null,
-    era: extra.era || "historical"
+    era: extra.era || "historical",
+    act: extra.act || 1,
+    lookupTerms: extra.lookupTerms || []
   });
 
   window.CASE_DATA = {
     meta: {
       title: "The Case Files: The Lady Vanishes",
-      version: "0.6-alias-deduction",
+      version: "0.7-two-act",
       actionDisclaimer: "",
       currentStatus: [
         "NSW-coroneren fant 29. februar 2024 at Marion Barter er død og trolig døde en gang etter 15. oktober 1997.",
@@ -88,19 +92,39 @@
       { id: "doc11", title: "Queensland-notatet", date: "1997-12-01", dateLabel: "1. desember 1997", facsimile: "assets/facsimiles-v05/doc11-queensland-safe-and-well-note.png", alt: "Queensland-notat om Marion Barter.", transcript: ["Queensland Missing Persons Bureau; filnotat datert 1. desember 1997; emne Marion Barter.", "Synlig konklusjon: «Missing person located safe and well, whereabouts not to be disclosed.»", "De foregående arbeidsnotatene er redigert og var ikke tilgjengelige i det senere offentlige materialet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
       { id: "doc12", title: "Salvation Army-brevet", date: "1998-03-18", dateLabel: "18. mars 1998 · senere materiale", facsimile: "assets/facsimiles-v05/doc12-salvation-army-letter.png", alt: "Brev fra The Salvation Army til familien.", transcript: ["The Salvation Army, Family Tracing correspondence; 18. mars 1998; adressert til Mr Wilson.", "Brevet sier at Marion hadde tatt ut de resterende pengene og ville begynne et nytt liv.", "En senere coroner-gjennomgang stilte spørsmål ved den rapporterte henvisningen til en bankansatt innen sikkerhet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
       { id: "doc14", title: "Coronerens funn", date: "2024-02-29", dateLabel: "29. februar 2024 · senere materiale", facsimile: "assets/facsimiles-v05/doc14-coroner-findings-extract.png", alt: "Utdrag fra coronerens formelle funn.", transcript: ["State Coroner's Court, New South Wales; funn datert 29. februar 2024.", "Marion Barter er død og døde trolig en gang etter 15. oktober 1997.", "Levningene er ikke funnet.", "Sted, årsak og dødsmåte kunne ikke fastslås.", "Funnene fastslo ikke at en identifisert person forårsaket døden."], sourceIds: ["src-coroner-2024"] }
-      ,{ id: "doc16", title: "Kontaktannonsen", date: "1994-12-10", dateLabel: "10. desember 1994", facsimile: "assets/alias-v06/doc16-contact-ad.png", alt: "Kontaktannonse under navnet M.F. Remakel.", transcript: ["M.F. Remakel, 47 år og ugift, søker et varig forhold eller ekteskap.", "Kontakt: Box L51, Lennox Head og telefon (066) 864 788."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
-      { id: "doc17", title: "Selskapsutskrift – Ballina Coin Investments", date: "1994-09-02", dateLabel: "2. september 1994", facsimile: "assets/alias-v06/doc17-company-extract.png", alt: "Selskapsutskrift for Ballina Coin Investments.", transcript: ["Direktører: Frederick David De Hedervary og Diane De Hedervary.", "Adresse: Suite 9, 48 Tamar Street, Ballina.", "Telefon: (066) 864 788; postadresse PO Box 624, Ballina."], sourceIds: ["src-coroner-2024", "src-blum-finance-compiled"] },
-      { id: "doc18", title: "Internasjonalt reiseregister", date: "1997-06/07", dateLabel: "17. juni–31. juli 1997", facsimile: "assets/alias-v06/doc18-movement-record.png", alt: "Reiseregister for Richard Lloyd Westbury.", transcript: ["Richard Lloyd Westbury forlot Australia 17. juni 1997 med Japan som første destinasjon.", "Han returnerte til Australia 31. juli 1997.", "Reisedokumentet var utstedt i Westbury-navnet."], sourceIds: ["src-coroner-2024", "src-parallel-compiled"] },
-      { id: "doc19", title: "Immigrasjons- og statsborgerskapsfil", date: "1969/1976", dateLabel: "1969–1976", facsimile: "assets/alias-v06/doc19-migration-name-file.png", alt: "Immigrasjons- og statsborgerskapsfil med navnene Willy Wouters og Frederick De Hedervary.", transcript: ["Willy Wouters ankom Australia med Ilona Kinczel 24. mai 1969.", "Australsk statsborgerskap ble innvilget i 1976.", "Diane forklarte at mannen hun kjente som Willy Wouters senere brukte navnet Frederick De Hedervary."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
-      { id: "doc20", title: "Passkryssregister", date: "1997", dateLabel: "1997", facsimile: "assets/alias-v06/doc20-passport-cross-index.png", alt: "Passkryssregister som kobler De Hedervary- og Westbury-navnene.", transcript: ["Frederick David De Hedervary og Richard Lloyd Westbury er indeksert til samme reisendefil.", "Westbury-navnet ble brukt på passet under reisen 17. juni–31. juli 1997."], sourceIds: ["src-coroner-2024", "src-parallel-compiled"] },
-      { id: "doc21", title: "Intervju om fødsels- og familienavn", date: "2022", dateLabel: "forklaring under inquest", facsimile: "assets/alias-v06/doc21-birth-interview.png", alt: "Intervjuutdrag med navnene Willy Coppenolle og Willy Wouters.", transcript: ["Intervjupersonen sa at fødselsregisteret oppførte Willy Coppenolle.", "Han forklarte at moren senere giftet seg med Abel Florent Wouters, og at han brukte navnet Willy Wouters."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
-      { id: "doc22", title: "Luxembourg – vitnefil", date: "circa 1980", dateLabel: "omkring 1980", facsimile: "assets/alias-v06/doc22-luxembourg-witness-note.png", alt: "Vitnefil om Monique Cornelius, Fernand Remakel og Frederick De Hedervary.", transcript: ["Monique Cornelius var tidligere gift med Fernand Remakel.", "Hun korresponderte omkring 1980 med en mann som brukte navnet Frederick De Hedervary.", "Den virkelige Fernand Remakel er en separat person."], sourceIds: ["src-coroner-2024", "src-remakel-compiled"] }
+      ,{ id: "doc16", title: "Kontaktannonsen", date: "1994-12-10", dateLabel: "10. desember 1994", facsimile: "assets/alias-v07/doc16-contact-ad.png", alt: "Kontaktannonse under navnet M.F. Remakel.", transcript: ["M.F. Remakel, 47 år og ugift, søker et varig forhold eller ekteskap.", "Kontakt: Box L51, Lennox Head og telefon (066) 864 788."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
+      { id: "doc17", title: "Selskapsutskrift – Ballina Coin Investments", date: "1994-09-02", dateLabel: "2. september 1994", facsimile: "assets/alias-v07/doc17-company-extract.png", alt: "Selskapsutskrift for Ballina Coin Investments.", transcript: ["Direktører: Frederick David De Hedervary og Diane De Hedervary.", "Adresse: Suite 9, 48 Tamar Street, Ballina.", "Telefon: (066) 864 788; postadresse PO Box 624, Ballina."], sourceIds: ["src-coroner-2024", "src-blum-finance-compiled"] },
+      { id: "doc18", title: "Internasjonalt reiseregister", date: "1997-06/07", dateLabel: "17. juni–31. juli 1997", facsimile: "assets/alias-v07/doc18-movement-record.png", alt: "Reiseregister for Richard Lloyd Westbury.", transcript: ["Richard Lloyd Westbury forlot Australia 17. juni 1997 med Japan som første destinasjon.", "Han returnerte til Australia 31. juli 1997.", "Reisedokumentet var utstedt i Westbury-navnet."], sourceIds: ["src-coroner-2024", "src-parallel-compiled"] },
+      { id: "doc19", title: "Immigrasjons- og statsborgerskapsfil", date: "1969/1976", dateLabel: "1969–1976", facsimile: "assets/alias-v07/doc19-migration-name-file.png", alt: "Immigrasjons- og statsborgerskapsfil med navnene Willy Wouters og Frederick De Hedervary.", transcript: ["Ankomstfil 24. mai 1969: Willy Wouters, født 9. juli 1939, sammen med Ilona Kinczel.", "Statsborgerskapsfil 1976: Frederick De Hedervary, født 9. juli 1939; ektefelle Diane.", "Begge oppføringene ligger i samme historiske immigrasjonsmappe."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
+      { id: "doc20", title: "Passregisterutdrag", date: "1997", dateLabel: "1997", facsimile: "assets/alias-v07/doc20-passport-cross-index.png", alt: "To passregisteroppføringer i De Hedervary- og Westbury-navnene.", transcript: ["Oppføring A: Frederick David De Hedervary, født 9. juli 1939.", "Oppføring B: Richard Lloyd Westbury, født 9. juli 1939; brukt på reisen 17. juni–31. juli 1997.", "Oppføringene deler dokumentreferanse og signaturprøve."], sourceIds: ["src-coroner-2024", "src-parallel-compiled"] },
+      { id: "doc21", title: "Intervju om fødsels- og familienavn", date: "2022", dateLabel: "forklaring under inquest", facsimile: "assets/alias-v07/doc21-birth-interview.png", alt: "Intervjuutdrag med navnene Willy Coppenolle og Willy Wouters.", transcript: ["Intervjupersonen sa at fødselsregisteret oppførte Willy Coppenolle.", "Han forklarte at moren senere giftet seg med Abel Florent Wouters, og at han brukte navnet Willy Wouters."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
+      { id: "doc22", title: "Luxembourg – vitnefil", date: "circa 1980", dateLabel: "omkring 1980", facsimile: "assets/alias-v07/doc22-luxembourg-witness-note.png", alt: "Vitnefil om Monique Cornelius, Fernand Remakel og Frederick De Hedervary.", transcript: ["Monique Cornelius var tidligere gift med Fernand Remakel.", "Hun korresponderte omkring 1980 med en mann som brukte navnet Frederick De Hedervary.", "Den virkelige Fernand Remakel er en separat person."], sourceIds: ["src-coroner-2024", "src-remakel-compiled"] }
     ],
 
     episode: {
       id: "ep1",
       title: "Mor tar ikke telefonen",
       period: "juni–desember 1997",
+      acts: [
+        {
+          id: 1,
+          stamp: "AKT I · 1997",
+          title: "Mor tar ikke telefonen",
+          brief: [
+            "Det er oktober 1997. Marion dro fra Southport fire måneder tidligere. Familien har mottatt brev og postkort, men den siste telefonsamtalen ble brutt — og nå svarer hun ikke.",
+            "Undersøk reisen, økonomien og myndighetenes behandling. Når du mener 1997-sporet er uttømt, kan du åpne de senere arkivene."
+          ]
+        },
+        {
+          id: 2,
+          stamp: "AKT II · ARKIVET",
+          title: "Mannen med mange navn",
+          brief: [
+            "Årene går. Nye registre, vitneforklaringer og inquest-materiale åpner en annen del av saken.",
+            "Navn som først så ut til å tilhøre forskjellige mennesker begynner å krysse de samme telefonnumrene, datoene og dokumentene."
+          ]
+        }
+      ],
       referenceLeadIds: ["sp05", "gc02", "gc03", "gc06", "gc08", "gc09", "ns01", "ns02", "ns04", "ns11", "ns13", "xr01", "xr07", "xr10", "xr11", "xr12"],
       brief: [
         "Det er oktober 1997. Marion dro fra Southport på en lang reise fire måneder tidligere. Familien har mottatt brev og postkort, men den siste telefonsamtalen ble brutt — og nå svarer hun ikke.",
@@ -287,7 +311,7 @@
       quiet("gc01", "GC-01", "Brisbane Airport – informasjon", "Brisbane Airport", "loc-brisbane", { illustration: { file: "assets/illustrations-flux2/brisbane-airport-1997.webp", alt: "Brisbane Airport i 1997." } }),
       entry("gc02", "GC-02", "Korean Airlines – passasjerarkiv", "Brisbane Airport", "loc-brisbane", [
         "Flyregistreringen viser en avreise fra Brisbane 22. juni 1997 kl. 21:38 på Korean Airlines under navnet Florabella Remakel.",
-        "Utreisekortet inneholder tre felt som senere ble vurdert som skrevet av en annen hånd. Dokumentet identifiserer ikke den andre personen."
+        "Utreisekortet og de oppgitte reisefeltene er lagt i saksmappen."
       ], ["doc03"], ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"]),
       entry("gc03", "GC-03", "Cathay Pacific – passasjerarkiv", "Brisbane Airport", "loc-brisbane", [
         "En passasjer registrert som Florabella Remakel ankom Brisbane 2. august 1997 kl. 10:11 på Cathay Pacific.",
@@ -300,14 +324,14 @@
         "De mer detaljerte arbeidsarkene som skulle vise grunnlaget for setningen, finnes ikke i den senere dokumentkjeden."
       ], ["doc11"], ["src-coroner-2024", "src-witnesses-compiled"]),
       quiet("gc07", "GC-07", "Queensland Police – samband", "Brisbane, Queensland", "loc-brisbane", { result: RECORDS_GONE }),
-      entry("gc08", "GC-08", "Department of Immigration – historiske personfiler", "Brisbane, Queensland", "loc-brisbane", [
-        "En person ankom Australia som Willy Wouters i 1969. Etter statsborgerskap og ekteskap brukte den samme personen navnet Frederick De Hedervary.",
-        "Filen forklarer ikke andre navn som kan ha vært brukt senere."
-      ], ["doc19"], ["src-coroner-2024", "src-blum-alias-compiled"]),
-      entry("gc09", "GC-09", "Australian Passport Office – kryssregister", "Brisbane, Queensland", "loc-brisbane", [
-        "Et passkryssregister indekserer Frederick David De Hedervary og Richard Lloyd Westbury til samme reisendefil.",
-        "Westbury-navnet ble brukt under reisen 17. juni–31. juli 1997."
-      ], ["doc20"], ["src-coroner-2024", "src-parallel-compiled"]),
+      entry("gc08", "GC-08", "Department of Immigration", "Brisbane, Queensland", "loc-brisbane", [
+        "En ankomstfil fra 1969 gjelder Willy Wouters, født 9. juli 1939, som reiste med Ilona Kinczel.",
+        "En statsborgerskapsfil fra 1976 gjelder Frederick De Hedervary, samme fødselsdato, med ektefellen Diane."
+      ], ["doc19"], ["src-coroner-2024", "src-blum-alias-compiled"], { act: 2, lookupTerms: ["Willy Wouters", "Frederick De Hedervary", "Ilona Kinczel", "9 July 1939"] }),
+      entry("gc09", "GC-09", "Australian Passport Office", "Brisbane, Queensland", "loc-brisbane", [
+        "To passoppføringer gjelder Frederick David De Hedervary og Richard Lloyd Westbury. Begge oppgir 9. juli 1939 og deler dokumentreferanse.",
+        "Westbury-passet ble brukt 17. juni–31. juli 1997."
+      ], ["doc20"], ["src-coroner-2024", "src-parallel-compiled"], { act: 2, lookupTerms: ["Frederick De Hedervary", "Richard Lloyd Westbury", "9 July 1939", "passport"] }),
       quiet("gc10", "GC-10", "Australian Passport Office", "Brisbane, Queensland", "loc-brisbane", { result: "Det offentlige spillmaterialet gir ingen 1997-utskrift her. Et manglende treff på ett navn utelukker ikke bruk av et annet lovlig navn." }),
       quiet("gc11", "GC-11", "Republikken Koreas konsulat", "Brisbane, Queensland", "loc-brisbane"),
       quiet("gc12", "GC-12", "Japans konsulat", "Brisbane, Queensland", "loc-brisbane", { result: "Hotel Nikko Narita-brevpapiret er et dokumentert objekt, men denne henvendelsen gir ingen bevart hotell- eller innreiseregisterkobling." }),
@@ -342,12 +366,12 @@
       entry("ns11", "NS-11", "Australian Securities & Investments Commission – Ballina", "Ballina, New South Wales", "loc-ballina", [
         "Ballina Coin Investments ble registrert 2. september 1994 med Frederick og Diane De Hedervary som direktører.",
         "Selskapet brukte telefon (066) 864 788 og lokaler i Tamar Street, men har ingen registrert driftsinntekt."
-      ], ["doc17"], ["src-coroner-2024", "src-blum-finance-compiled"], { era: "later" }),
+      ], ["doc17"], ["src-coroner-2024", "src-blum-finance-compiled"], { era: "later", act: 2, lookupTerms: ["(066) 864 788", "066 864 788", "Ballina Coin Investments", "Frederick De Hedervary", "Diane De Hedervary", "48 Tamar Street"] }),
       quiet("ns12", "NS-12", "Bankfilialene i Ballina", "Ballina, New South Wales", "loc-ballina"),
       entry("ns13", "NS-13", "Telefon- og annonsearkivet – Northern Rivers", "Ballina / Wollongbar, New South Wales", "loc-lismore", [
         "En franskspråklig kontaktannonse fra 1994 sto under navnet M.F. Remakel.",
         "Annonsen brukte telefon (066) 864 788 og Box L51 i Lennox Head."
-      ], ["doc16"], ["src-coroner-2024", "src-blum-alias-compiled", "src-blum-finance-compiled"], { era: "later" }),
+      ], ["doc16"], ["src-coroner-2024", "src-blum-alias-compiled", "src-blum-finance-compiled"], { era: "later", act: 2, lookupTerms: ["M.F. Remakel", "MF Remakel", "(066) 864 788", "066 864 788", "Box L51", "Lennox Head"] }),
       quiet("ns14", "NS-14", "Lismore Police Station", "Lismore, New South Wales", "loc-lismore"),
       quiet("ns15", "NS-15", "Tweed Heads Hospital", "Tweed Heads, New South Wales", "loc-tweed"),
       entry("ns16", "NS-16", "NSW Missing Persons Unit", "New South Wales", "loc-nsw", [
@@ -357,7 +381,7 @@
       quiet("ns17", "NS-17", "Bankenes sentrale arkivkontor", "New South Wales", "loc-nsw", { result: "Ingen komplett bankdokumentkjede blir sikret gjennom dette oppslaget. Senere tap av arkivmateriale gjør at flere spørsmål ikke kan kontrolleres fullt ut.", sourceIds: ["src-coroner-2024", "src-case-hub"] }),
       quiet("ns18", "NS-18", "Northern Star / lokale aviser", "Northern Rivers, New South Wales", "loc-nsw"),
 
-      quiet("xr01", "XR-01", "Hotel Nikko Narita", "Narita, Japan", "loc-narita", { result: "Richard Lloyd Westbury reiste via Japan 17. juni 1997 og forklarte senere at transitthotellet sannsynligvis var Hotel Nikko Narita. Ingen gjesteliste er bevart. Brevpapir fra samme hotell dukker opp i Marions brev fra England.", sourceIds: ["src-coroner-2024", "src-parallel-compiled"] }),
+      quiet("xr01", "XR-01", "Hotel Nikko Narita", "Narita, Japan", "loc-narita", { result: "En reisende under navnet Richard Lloyd Westbury passerte Japan 17. juni 1997 og oppga senere at transitthotellet sannsynligvis var Hotel Nikko Narita. Ingen gjesteliste er bevart. Brevpapir fra samme hotell finnes i Marions brev fra England.", sourceIds: ["src-coroner-2024", "src-parallel-compiled"], act: 2, lookupTerms: ["Hotel Nikko Narita", "Richard Lloyd Westbury", "17 June 1997"] }),
       entry("xr02", "XR-02", "Royal Tunbridge Wells Post Office", "Kent, England", "loc-tunbridge", [
         "Familien mottok et postkort fra Tunbridge Wells sommeren 1997.",
         "Kortet dokumenterer kontakt og et poststed, men sier ikke hvem Marion var sammen med eller hvor lenge hun oppholdt seg der."
@@ -372,24 +396,24 @@
       ], ["doc05"], ["src-coroner-2024", "src-timeline-compiled"]),
       quiet("xr05", "XR-05", "Sussex Police – internasjonalt samband", "Sussex, England", "loc-london"),
       quiet("xr06", "XR-06", "Australian High Commission", "London, England", "loc-london"),
-      entry("xr07", "XR-07", "Home Affairs – internasjonale bevegelser", "Australia / Europa", "loc-overseas", [
+      entry("xr07", "XR-07", "Home Affairs – bevegelsesregister", "Australia / Europa", "loc-overseas", [
         "Richard Lloyd Westbury forlot Australia 17. juni 1997 med Japan som første destinasjon og returnerte 31. juli.",
         "Reisedatoene ligger fem dager før Marions avreise og to dager før hennes registrerte retur."
-      ], ["doc18"], ["src-coroner-2024", "src-parallel-compiled"]),
+      ], ["doc18"], ["src-coroner-2024", "src-parallel-compiled"], { act: 2, lookupTerms: ["Richard Lloyd Westbury", "Westbury", "Japan", "17 June 1997", "31 July 1997"] }),
       quiet("xr08", "XR-08", "Korean Air – internasjonalt arkiv", "Seoul / London", "loc-overseas", { result: "Utover den registrerte utreisen fra Brisbane gir oppslaget ingen bevart offentlig reiserute som forklarer alle mellomliggende stopp." }),
       quiet("xr09", "XR-09", "Japanske innreiseregistre", "Japan", "loc-narita", { result: RECORDS_GONE }),
       entry("xr10", "XR-10", "Public Record Office Victoria – personregister", "Melbourne, Victoria", "loc-overseas", [
         "Ilona Kinczel ankom Australia i 1969 sammen med en mann registrert som Willy Wouters. Hun døde i Melbourne i 1977.",
         "Arkivet fastslår ikke at dødsfallet skyldtes en forbrytelse eller at en annen person medvirket."
-      ], [], ["src-ilona-compiled", "src-blum-alias-compiled"], { era: "later" }),
+      ], [], ["src-ilona-compiled", "src-blum-alias-compiled"], { era: "later", act: 2, lookupTerms: ["Ilona Kinczel", "Willy Wouters", "Melbourne", "1977"] }),
       entry("xr11", "XR-11", "Luxembourg – folkeregister og vitnearkiv", "Luxembourg", "loc-overseas", [
         "Monique Cornelius var tidligere gift med den virkelige Fernand Remakel.",
         "Omkring 1980 korresponderte hun med en annen mann som brukte navnet Frederick De Hedervary. Fernand Remakel er en separat person."
-      ], ["doc22"], ["src-coroner-2024", "src-remakel-compiled", "src-blum-alias-compiled"], { era: "later" }),
+      ], ["doc22"], ["src-coroner-2024", "src-remakel-compiled", "src-blum-alias-compiled"], { era: "later", act: 2, lookupTerms: ["Fernand Remakel", "Monique Cornelius", "Frederick De Hedervary", "Luxembourg"] }),
       entry("xr12", "XR-12", "Europeisk identitetsarkiv", "Belgia / Luxembourg", "loc-overseas", [
         "Et intervju knytter navnene Willy Coppenolle og Willy Wouters til samme livshistorie, men fødselsnavnet bygger på personens egen forklaring.",
         "Arkivet skiller mellom dokumenterte navn og påstander om hvilket navn som var det opprinnelige."
-      ], ["doc21"], ["src-coroner-2024", "src-blum-alias-compiled"], { era: "later" })
+      ], ["doc21"], ["src-coroner-2024", "src-blum-alias-compiled"], { era: "later", act: 2, lookupTerms: ["Willy Coppenolle", "Willy Wouters", "Coppenolle", "Wouters", "Belgium"] })
     ]
   };
 })();

@@ -2,7 +2,7 @@
   "use strict";
 
   const DATA = window.CASE_DATA;
-  const STORAGE_KEY = "case-files-lady-vanishes-v06";
+  const STORAGE_KEY = "case-files-lady-vanishes-v07";
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({
@@ -34,6 +34,7 @@
       answerNotes: {},
       criterionChecks: {},
       identityLinks: [],
+      currentAct: 1,
       investigationEnded: false,
       debriefSubmitted: false,
       submittedAt: null
@@ -52,6 +53,7 @@
       ["pinNotes", "answers", "answerNotes", "criterionChecks"].forEach((key) => {
         if (!state[key] || typeof state[key] !== "object") state[key] = {};
       });
+      if (![1, 2].includes(Number(state.currentAct))) state.currentAct = 1;
       return state;
     } catch {
       return freshState();
@@ -121,10 +123,16 @@
   }
 
   function renderAll() {
-    $("#episode-title").textContent = DATA.episode.title;
-    $("#episode-brief").innerHTML = (DATA.episode.brief || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+    const act = (DATA.episode.acts || []).find((item) => Number(item.id) === Number(state.currentAct)) || DATA.episode.acts?.[0];
+    $("#act-stamp").textContent = act?.stamp || "AKT I · 1997";
+    $("#episode-title").textContent = act?.title || DATA.episode.title;
+    $("#episode-brief").innerHTML = (act?.brief || DATA.episode.brief || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
     $("#debrief-tab").classList.toggle("hidden", !state.investigationEnded);
     $("#finish-btn").classList.toggle("hidden", state.investigationEnded);
+    $("#finish-btn").textContent = Number(state.currentAct) === 1 ? "Åpne arkivene" : "Avslutt";
+    $("#finish-btn").title = Number(state.currentAct) === 1
+      ? "Avslutt 1997-sporet og åpne senere arkiver"
+      : "Avslutt etterforskningen og åpne sluttspørsmålene";
     renderBudget();
     renderSources();
     renderDirectory();
@@ -161,9 +169,13 @@
     const filter = $("#lead-filter").value;
     const visited = new Set(state.visited);
     const pinned = new Set(state.pins);
-    const entries = DATA.directory.filter((item) => {
+    const available = DATA.directory.filter((item) => Number(item.act || 1) <= Number(state.currentAct));
+    const entries = available.filter((item) => {
       const location = locationById(item.locationId);
-      const haystack = `${item.code} ${item.name} ${item.address || ""} ${location?.name || ""}`.toLocaleLowerCase("nb-NO");
+      const revealed = visited.has(item.id) ? (item.result || []).join(" ") : "";
+      const foundDocText = (item.documentIds || []).filter((id) => state.foundDocuments.includes(id)).map(documentById).filter(Boolean)
+        .flatMap((doc) => [doc.title, ...(doc.transcript || [])]).join(" ");
+      const haystack = `${item.code} ${item.name} ${item.address || ""} ${location?.name || ""} ${(item.lookupTerms || []).join(" ")} ${revealed} ${foundDocText}`.toLocaleLowerCase("nb-NO");
       if (search && !haystack.includes(search)) return false;
       if (filter === "visited" && !visited.has(item.id)) return false;
       if (filter === "unvisited" && visited.has(item.id)) return false;
@@ -171,7 +183,7 @@
       return true;
     });
 
-    $("#directory-count").textContent = `${entries.length} av ${DATA.directory.length} oppføringer`;
+    $("#directory-count").textContent = `${entries.length} av ${available.length} tilgjengelige oppføringer`;
     $("#leads-grid").innerHTML = entries.map((item) => {
       const done = visited.has(item.id);
       const location = locationById(item.locationId);
@@ -267,6 +279,10 @@
     const item = leadById(leadId);
     if (!item) return;
     const visited = state.visited.includes(item.id);
+    if (Number(item.act || 1) > Number(state.currentAct)) {
+      toast("Dette arkivet er ikke åpnet ennå.");
+      return;
+    }
     if (state.investigationEnded && !visited) {
       toast("Etterforskningen er avsluttet. Bare besøkte oppføringer kan åpnes igjen.");
       return;
@@ -344,7 +360,12 @@
     $(".document-viewer-inner").classList.add("comparison-open");
     $("#document-content").innerHTML = `<div class="doc-eyebrow">SAKSBORD</div>
       <h3>Utreise / innreise</h3>
-      <div class="comparison-grid">
+      <div class="comparison-controls" role="group" aria-label="Velg kortvisning">
+        <button class="btn btn-small" data-comparison-mode="departure">22. juni</button>
+        <button class="btn btn-small" data-comparison-mode="arrival">2. august</button>
+        <button class="btn btn-small active" data-comparison-mode="both">Begge</button>
+      </div>
+      <div class="comparison-grid compare-both">
         <figure>
           <figcaption>22. juni 1997</figcaption>
           <a href="${escapeHtml(departure.facsimile)}" target="_blank" rel="noopener">
@@ -456,7 +477,7 @@
       <rect class="map-zone" x="350" y="320" width="590" height="235"/><text class="region-label" x="365" y="344">NORTHERN NSW</text>
       <rect class="map-zone" x="725" y="70" width="215" height="230"/><text class="region-label" x="740" y="94">ØVRIGE REGISTRE</text>`;
     const visited = new Set(state.visited);
-    const pins = DATA.directory.map((item) => {
+    const pins = DATA.directory.filter((item) => Number(item.act || 1) <= Number(state.currentAct)).map((item) => {
       const point = projectLead(item);
       return `<g class="loc-pin ${visited.has(item.id) ? "visited" : ""}" data-map-lead="${escapeHtml(item.id)}" tabindex="0" role="button" aria-label="${escapeHtml(item.code + " " + item.name)}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})">
         <circle class="loc-dot" r="6"></circle><text class="loc-code" x="9" y="3">${escapeHtml(item.code)}</text>
@@ -540,7 +561,19 @@
   function finishInvestigation() {
     if (state.investigationEnded) return;
     const used = usedActions();
-    const message = `Avslutte etterforskningen etter ${used} oppslag? Du kan fortsatt lese besøkte oppføringer og dokumenter, men ikke oppsøke nye steder. De ti sluttspørsmålene blir synlige når du bekrefter.`;
+    if (Number(state.currentAct) === 1) {
+      const message = `Avslutte 1997-arbeidet etter ${used} oppslag og åpne de senere arkivene? Du kan fortsatt gå tilbake til alle besøkte og ubesøkte 1997-oppslag.`;
+      if (!window.confirm(message)) return;
+      state.currentAct = 2;
+      state.activeTab = "directory";
+      $("#lead-search").value = "";
+      $("#lead-filter").value = "all";
+      saveState();
+      renderAll();
+      toast("Arkivene er åpnet. Akt II er i gang.");
+      return;
+    }
+    const message = `Avslutte hele etterforskningen etter ${used} oppslag? Du kan fortsatt lese besøkte oppføringer og dokumenter, men ikke oppsøke nye steder.`;
     if (!window.confirm(message)) return;
     state.investigationEnded = true;
     state.activeTab = "debrief";
@@ -628,6 +661,15 @@
       if (leadCard) openLead(leadCard.dataset.leadId);
       const comparisonCard = event.target.closest("[data-compare-passenger-cards]");
       if (comparisonCard) openPassengerComparison();
+      const comparisonMode = event.target.closest("[data-comparison-mode]");
+      if (comparisonMode) {
+        const grid = $(".comparison-grid");
+        if (grid) {
+          grid.classList.remove("compare-departure", "compare-arrival", "compare-both");
+          grid.classList.add(`compare-${comparisonMode.dataset.comparisonMode}`);
+          $$('[data-comparison-mode]').forEach((button) => button.classList.toggle("active", button === comparisonMode));
+        }
+      }
       const docCard = event.target.closest("[data-document-id]");
       if (docCard) openDocument(docCard.dataset.documentId);
       const mapPin = event.target.closest("[data-map-lead]");
