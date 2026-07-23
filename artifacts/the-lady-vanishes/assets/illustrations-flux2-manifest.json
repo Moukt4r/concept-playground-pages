@@ -5,13 +5,16 @@
     "title": "Southport, våren 1997",
     "label": "ILLUSTRASJON – IKKE FOTOGRAFI",
     "leadIds": [
-      "lead02"
+      "sp01"
     ],
     "documentIds": [],
     "model": "FLUX.2 Dev FP8mixed",
     "seed": 19770622,
     "steps": 20,
     "guidance": 4.0,
+    "postprocess": "v0.3-final: 4:3 crop, matte 1997 print curve, restrained grain, paper mount",
+    "width": 1200,
+    "height": 900,
     "prompt": "A respectful, historically plausible documentary editorial context image of a modest detached suburban Queensland home in Southport, Australia, autumn 1997, seen from a quiet residential street, tropical garden, warm late-afternoon light, no signs or advertising, one period-appropriate parked car, no people, restrained natural colors, realistic 35mm documentary photography aesthetic, subtle film grain, no readable text, not a photograph of any specific real property, no crime-scene elements"
   },
   {
@@ -20,14 +23,16 @@
     "title": "Brisbane Airport – registrerte reisespor",
     "label": "ILLUSTRASJON – IKKE FOTOGRAFI",
     "leadIds": [
-      "lead07",
-      "lead08"
+      "gc01"
     ],
     "documentIds": [],
     "model": "FLUX.2 Dev FP8mixed",
     "seed": 19970802,
     "steps": 20,
     "guidance": 4.0,
+    "postprocess": "v0.3-final: 4:3 crop, matte 1997 print curve, restrained grain, paper mount",
+    "width": 1200,
+    "height": 900,
     "prompt": "A respectful documentary editorial context image inside Brisbane international airport in 1997, neutral departure and arrival concourse, wide composition, muted fluorescent light, period luggage trolleys and 1990s architecture, a few distant anonymous silhouettes with no identifiable faces, no person presented as Marion Barter, no readable signs, no airline logos, realistic 35mm documentary photography aesthetic, restrained factual mood, no crime-scene elements, no modern screens or smartphones"
   },
   {
@@ -36,41 +41,16 @@
     "title": "Southport busstasjon, 22. juni 1997",
     "label": "ILLUSTRASJON – IKKE FOTOGRAFI",
     "leadIds": [
-      "lead01"
+      "sp03"
     ],
     "documentIds": [],
     "model": "FLUX.2 Dev FP8mixed",
     "seed": 22061997,
     "steps": 20,
     "guidance": 4.0,
+    "postprocess": "v0.3-final: 4:3 crop, matte 1997 print curve, restrained grain, paper mount",
+    "width": 1200,
+    "height": 900,
     "prompt": "A respectful historically plausible documentary editorial context image of a modest regional bus station in Southport, Queensland, at winter dusk in June 1997, period benches and an unreadable timetable board, one travel suitcase beside a bench, two anonymous middle-aged women seen only as distant silhouettes from behind, no identifiable faces and no likeness claim, no implication of a crime, restrained natural colors, realistic 35mm documentary photography aesthetic, subtle film grain, no readable text, no modern vehicles or phones"
-  },
-  {
-    "id": "international-records-search",
-    "file": "assets/illustrations-flux2/international-records-search.webp",
-    "title": "Internasjonale registerspor",
-    "label": "ILLUSTRASJON – IKKE FOTOGRAFI",
-    "leadIds": [],
-    "documentIds": [],
-    "model": "FLUX.2 Dev FP8mixed",
-    "seed": 19971201,
-    "steps": 20,
-    "guidance": 4.0,
-    "prompt": "A respectful documentary editorial context image of a late-1990s international records-search desk, paper folders, neutral passport-control stamps, dot-matrix printouts, fax pages, microfiche reader and beige CRT computer, a world map pinned behind the desk, no readable names or text, no agency logos, no people, realistic archival photography aesthetic, cool institutional light, restrained investigative mood, not an actual evidence item, no mugshots, suspect boards, red circles or sensational crime imagery"
-  },
-  {
-    "id": "coronial-inquest-2024",
-    "file": "assets/illustrations-flux2/coronial-inquest-2024.webp",
-    "title": "Coronial inquest, 2024",
-    "label": "ILLUSTRASJON – IKKE FOTOGRAFI",
-    "leadIds": [],
-    "documentIds": [
-      "doc14"
-    ],
-    "model": "FLUX.2 Dev FP8mixed",
-    "seed": 29022024,
-    "steps": 20,
-    "guidance": 4.0,
-    "prompt": "A respectful documentary editorial context image of an empty Australian coronial courtroom in 2024 after a hearing, timber benches, witness stand, orderly stacks of neutral case folders, soft daylight, no court seals, no readable text, no people, dignified restrained realistic photography aesthetic, no defendant dock emphasis, no death-scene reconstruction, no sensationalism"
   }
 ]

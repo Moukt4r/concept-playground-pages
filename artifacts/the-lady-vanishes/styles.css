@@ -779,7 +779,7 @@ body {
 
 /* ===== LEAD ILLUSTRATIONS ===== */
 .lead-illustration { margin: 0 0 1rem 0; border-radius: 6px; overflow: hidden; position: relative; }
-.lead-ill-img { width: 100%; height: auto; display: block; max-height: 280px; object-fit: cover; filter: saturate(0.85); }
+.lead-ill-img { width: 100%; height: auto; aspect-ratio: 4 / 3; display: block; object-fit: cover; filter: none; }
 
 /* ===== V0.3 DEDUCTION PASS ===== */
 .compact-header {
