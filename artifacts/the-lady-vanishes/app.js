@@ -2,6 +2,22 @@
   "use strict";
 
   const DATA = window.CASE_DATA;
+
+  // Reconstruction image manifest (inline for zero-fetch startup)
+  const DOC_RECONSTRUCTIONS = {
+    doc02: { file: "assets/reconstructions/doc02-oppsigelsesbrev.png", alt: "Rekonstruert dokumentsammendrag av oppsigelsesbrevet til The Southport School, 20. juni 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." },
+    doc03: { file: "assets/reconstructions/doc03-utreisekort.png", alt: "Rekonstruert dokumentsammendrag av utreisekort og flyregistrering, 22. juni 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." },
+    doc04: { file: "assets/reconstructions/doc04-narita-brevet.png", alt: "Rekonstruert dokumentsammendrag av Hotel Nikko Narita-brevet, mottatt 30. juni 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." },
+    doc06: { file: "assets/reconstructions/doc06-innreisekortet.png", alt: "Rekonstruert dokumentsammendrag av innreisekortet, 2. august 1997. Kun fakta fra coronerfunn.", caption: "REKONSTRUKSJON – IKKE ORIGINALDOKUMENT. Faktasammendrag basert på offentlige coronerfunn 2024." }
+  };
+
+  // Context illustration manifest (inline for zero-fetch startup)
+  const LEAD_ILLUSTRATIONS = [
+    { file: "assets/illustrations-flux2/southport-house-1997.webp", leadIds: ["lead02"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Southport, våren 1997" },
+    { file: "assets/illustrations-flux2/brisbane-airport-1997.webp", leadIds: ["lead07", "lead08"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Brisbane Airport, 22. juni 1997" },
+    { file: "assets/illustrations-flux2/southport-bus-station-1997.webp", leadIds: ["lead01"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Southport busstasjon, 22. juni 1997" },
+    { file: "assets/illustrations-flux2/coronial-inquest-2024.webp", leadIds: [], documentIds: ["doc14"], label: "ILLUSTRASJON – IKKE FOTOGRAFI", title: "Coronial inquest, 2024" }
+  ];
   const STORAGE_KEY = "case-files-lady-vanishes-v02";
   const TAG_LABELS = {
     fact: "FAKTA",
@@ -238,11 +254,18 @@
     const item = episode().leads.find((lead) => lead.id === leadId);
     if (!item) return;
     const already = state.investigated.includes(item.id);
+    // Check for atmospheric illustration
+    const illustration = LEAD_ILLUSTRATIONS.find((ill) => (ill.leadIds || []).includes(item.id));
+    const illHtml = illustration ? `<figure class="lead-illustration">
+      <img src="${escapeHtml(illustration.file)}" alt="${escapeHtml(illustration.label + ': ' + illustration.title)}" loading="lazy" class="lead-ill-img" onerror="this.parentElement.style.display='none'">
+    </figure>` : "";
+
     const modal = document.createElement("div");
     modal.className = "lead-detail-overlay";
     modal.setAttribute("role", "dialog");
     modal.setAttribute("aria-modal", "true");
     modal.innerHTML = `<article class="lead-detail-card">
+      ${illHtml}
       <div class="lead-code">${escapeHtml(item.code)} · ${escapeHtml(item.category)}</div>
       <h3>${escapeHtml(item.title)}</h3>
       ${item.poiCaution ? `<div class="poi-caution">${escapeHtml(item.poiCaution)}</div>` : ""}
@@ -263,7 +286,8 @@
       if (!already) investigateLead(item);
       modal.remove();
     });
-    $(".close-modal", modal).focus();
+    $(".close-modal", modal).focus({ preventScroll: true });
+    $(".lead-detail-card", modal).scrollTop = 0;
   }
 
   function investigateLead(item) {
@@ -346,9 +370,20 @@
   function openDocument(documentId) {
     const item = documentById(documentId);
     if (!item || !state.discoveredDocs.includes(item.id)) return;
+    const recon = DOC_RECONSTRUCTIONS[item.id];
+    const reconHtml = recon ? `<figure class="doc-reconstruction">
+      <img src="${escapeHtml(recon.file)}" alt="${escapeHtml(recon.alt)}" loading="lazy" class="doc-recon-img">
+      <figcaption class="recon-caption">${escapeHtml(recon.caption)}</figcaption>
+    </figure>` : "";
+    const illustration = LEAD_ILLUSTRATIONS.find((ill) => (ill.documentIds || []).includes(item.id));
+    const illustrationHtml = illustration ? `<figure class="lead-illustration">
+      <img src="${escapeHtml(illustration.file)}" alt="${escapeHtml(illustration.label + ': ' + illustration.title)}" loading="lazy" class="lead-ill-img" onerror="this.parentElement.style.display='none'">
+    </figure>` : "";
     $("#document-content").innerHTML = `<div class="doc-eyebrow">${escapeHtml(item.eyebrow || item.kind)}</div>
       <h3>${escapeHtml(item.title)}</h3>
       <p><strong>Dato/kunnskapstid:</strong> ${escapeHtml(item.date || item.knownFrom || "Ukjent")}</p>
+      ${reconHtml}
+      ${illustrationHtml}
       <div class="doc-body">${(item.body || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
       <div class="document-claims"><h4>Dokumentet støtter</h4><ul>${(item.claimIds || []).map(claimMarkup).join("")}</ul></div>
       <p class="doc-source-ref"><strong>Kilder:</strong> ${escapeHtml(sourceRefs(item.sourceIds))}</p>`;

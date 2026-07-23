@@ -771,3 +771,12 @@ body {
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--desk); }
 ::-webkit-scrollbar-thumb { background: var(--desk-light); border-radius: 4px; }
+
+/* ===== DOCUMENT RECONSTRUCTIONS ===== */
+.doc-reconstruction { margin: 1.2rem 0; border: 2px solid #8b0000; border-radius: 6px; overflow: hidden; background: #f5f0e8; }
+.doc-recon-img { width: 100%; height: auto; display: block; max-height: 600px; object-fit: contain; }
+.recon-caption { padding: 0.6rem 1rem; background: #8b0000; color: #fff; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.03em; text-align: center; }
+
+/* ===== LEAD ILLUSTRATIONS ===== */
+.lead-illustration { margin: 0 0 1rem 0; border-radius: 6px; overflow: hidden; position: relative; }
+.lead-ill-img { width: 100%; height: auto; display: block; max-height: 280px; object-fit: cover; filter: saturate(0.85); }
