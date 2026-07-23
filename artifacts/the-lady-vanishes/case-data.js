@@ -7,7 +7,7 @@
     id, code, name, address, locationId, cost: 1,
     result: [extra.result || NO_PUBLIC_LINK],
     documentIds: extra.documentIds || [],
-    sourceIds: extra.sourceIds || ["src-method"],
+    sourceIds: extra.sourceIds || [],
     illustration: extra.illustration || null,
     era: extra.era || "historical"
   });
@@ -20,8 +20,8 @@
   window.CASE_DATA = {
     meta: {
       title: "The Case Files: The Lady Vanishes",
-      version: "0.4-open-investigation",
-      actionDisclaimer: "Alle oppslag presenteres som spillrekonstruksjoner. Historiske detaljer er kildeførte; selve henvendelsen hevdes ikke å ha skjedd akkurat slik.",
+      version: "0.5-handwriting",
+      actionDisclaimer: "",
       currentStatus: [
         "NSW-coroneren fant 29. februar 2024 at Marion Barter er død og trolig døde en gang etter 15. oktober 1997.",
         "Levningene er ikke funnet. Sted, årsak og dødsmåte kunne ikke fastslås.",
@@ -42,8 +42,7 @@
       { id: "src-remakel-compiled", title: "Fernand Remakel – identitetsoversikt", kind: "kildeført oversikt", date: "2026-07-20", note: "Den virkelige Fernand Remakel behandles som en uskyldig tredjepart. Enkelte biografiske detaljer har begrenset åpen primærkildestøtte." },
       { id: "src-blum-finance-compiled", title: "Ric Blum – pengespor og myntnettverk", kind: "kildeført oversikt", date: "2026-07-20", note: "Sammenstiller selskaps-, auksjons- og coroneropplysninger. Mønsteropplysninger er kontekst, ikke bevis for hva som skjedde med Marion." },
       { id: "src-blum-alias-compiled", title: "Ric Blum – skjemaer, aliaser og relasjoner", kind: "kildeført oversikt", date: "2026-07-20", note: "Skiller dokumenterte alias- og kontaktmønstre fra slutninger og ubekreftede teorier." },
-      { id: "src-marion-person-compiled", title: "Marion Barter – person- og yrkesoversikt", kind: "kildeført oversikt", date: "2026-07-20", note: "Kildebelagt bakgrunn om Marions familie, lærerkarriere og offentlige anerkjennelse." },
-      { id: "src-method", title: "V0.4 metode: åpen etterforskning og nøytrale kataloghenvendelser", kind: "spillmetode", date: "2026-07-23", note: "En oppføring uten kildeført resultat er en nøytral spillrekonstruksjon, ikke en påstand om at en historisk henvendelse fant sted. Selvskåringen er spillerens egen vurdering." }
+      { id: "src-marion-person-compiled", title: "Marion Barter – person- og yrkesoversikt", kind: "kildeført oversikt", date: "2026-07-20", note: "Bakgrunn om Marions familie, lærerkarriere og offentlige anerkjennelse." }
     ],
 
     locations: [
@@ -68,17 +67,18 @@
     ],
 
     documents: [
-      { id: "doc01", title: "Registrering av hussalget", date: "1997-04-25", dateLabel: "25. april 1997", facsimile: "assets/facsimiles-v03/doc01-house-sale-record.png", alt: "Rekonstruert registerutskrift for salget av huset i Southport.", accuracyNote: "Registrerte verdier er hentet fra offentlige funn. Full registerordlyd er utelatt.", transcript: ["Eiendom: Merinda Court, Southport.", "Registrert selger: Marion Barter.", "Salgsdato: 25. april 1997.", "Registrert salgssum: A$165 000; oppgitt prisantydning: A$175 000.", "Øvrig registertekst er redigert."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
-      { id: "doc02", title: "Oppsigelsesbrev til The Southport School", date: "1997-06-20", dateLabel: "20. juni 1997", facsimile: "assets/facsimiles-v03/doc02-school-resignation-letter.png", alt: "Rekonstruert oppsigelsesbrev med ukjent ordlyd redigert.", accuracyNote: "Bare handlinger beskrevet i offentlige funn er satt med lesbar tekst. Ukjent ordlyd og signatur er redigert.", transcript: ["Brevhode: The Southport School; dato: 20. juni 1997.", "Brevet gjelder oppsigelse med virkning fra 20. juni 1997.", "Det ber også om fornyelse av lærerregistrering for 1998.", "Lesley Lovedays adresse er oppført som kontaktadresse.", "Full ordlyd og signatur er redigert."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
-      { id: "doc03", title: "Utreisekort og flyregistrering", date: "1997-06-22", dateLabel: "22. juni 1997", facsimile: "assets/facsimiles-v03/doc03-departure-card.png", alt: "Rekonstruert australsk utreisekort med offentlig rapporterte felt.", accuracyNote: "Bare felt som er beskrevet i offentlige funn er fylt ut.", transcript: ["Navn: Florabella Remakel.", "Avreise: Brisbane, 22. juni 1997 kl. 21.38.", "Flyselskap: Korean Airlines.", "Synlige felt: «Europe», «Luxembourg» og «S/Korea».", "Øvrige kortfelt er redigert. Transkripsjonen sier ikke hvem som skrev de enkelte feltene."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"] },
-      { id: "doc04", title: "Brevet på Hotel Nikko Narita-papir", date: "1997-06-30", dateLabel: "mottatt 30. juni 1997", facsimile: "assets/facsimiles-v03/doc04-narita-stationery-letter.png", alt: "Rekonstruert brev på Hotel Nikko Narita-brevpapir med brevteksten redigert.", accuracyNote: "Brevpapir og postopplysninger er rekonstruert. Full brevtekst er ikke offentlig gjengitt og er derfor redigert.", transcript: ["Brevhode: Hotel Nikko Narita, Narita, Chiba, Japan.", "Hilsen: «Dear Sally»; datert juni 1997.", "Konvolutt-/postopplysning: postlagt fra England; mottatt av Sally 30. juni 1997.", "Full brevtekst og avslutning er redigert."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-parallel-compiled"] },
-      { id: "doc05", title: "Postkortene fra Sussex", date: "1997-07", dateLabel: "sommeren 1997", facsimile: "assets/facsimiles-v03/doc05-sussex-postcards.png", alt: "Rekonstruert postkortmappe for Tunbridge Wells, Rye og Hastings.", accuracyNote: "Bare de tre offentlig rapporterte stedene er vist. Meldinger, adresser og stempler er redigert.", transcript: ["Familiens postmappe, juli 1997.", "Tre synlige stedskort: Tunbridge Wells (Kent), Rye (East Sussex) og Hastings (East Sussex).", "Meldinger, mottakeradresser og poststempler er redigert."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
-      { id: "doc06", title: "Innreisekortet", date: "1997-08-02", dateLabel: "2. august 1997", facsimile: "assets/facsimiles-v03/doc06-arrival-card.png", alt: "Rekonstruert innreisekort med offentlig rapporterte felt.", accuracyNote: "Bare rapporterte felt er fylt ut. Ukjente felt og signatur er utelatt.", transcript: ["Navn: Florabella Remakel.", "Ankomst: Brisbane, 2. august 1997 kl. 10.11; Cathay Pacific.", "Oppgitt sivilstatus: gift; bostedsland: Luxembourg; yrke: home duties.", "Planlagt opphold: 8 dager; adresse i Australia: Novotel, Brisbane.", "Øvrige felt og signatur er redigert."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"] },
-      { id: "doc08", title: "Notatbokinnførselen ved Byron Bay Police", date: "1997-10-22", dateLabel: "22. oktober 1997", facsimile: "assets/facsimiles-v03/doc08-police-notebook.png", alt: "Rekonstruert politinotat basert på opplysninger gjengitt i senere funn.", accuracyNote: "Dette er en parafrase av offentlig gjengitte opplysninger, ikke ordrett politiordlyd.", transcript: ["Byron Bay, 22. oktober 1997.", "Sally og Chris møtte angående Marion Barter.", "Familien rapporterte retur til Australia 2. august og bankaktivitet i Byron Bay/Burleigh Heads.", "En større bevegelse omkring A$80 000 ble rapportert 15. oktober.", "Teksten er en rekonstruksjon, ikke ordrett notatboktekst."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
-      { id: "doc10", title: "Transaksjonsoversikten", date: "1997-08/10", dateLabel: "august–oktober 1997", facsimile: "assets/facsimiles-v03/doc10-bank-transaction-sheet.png", alt: "Rekonstruert kronologi over rapporterte banktransaksjoner.", accuracyNote: "Kronologien er rekonstruert og er ikke en kontoutskrift. Usikkerheten rundt oktobertransaksjonen er beholdt.", transcript: ["18. august: to uttak på A$500 i Byron Bay.", "21.–22. august: ett uttak på A$500 per dag i Burleigh Heads.", "23.–28. august: ett uttak på A$500 per dag i Byron Bay.", "15. oktober: omkring A$80 000, beskrevet som filialuttak eller mulig telegrafisk overføring.", "Destinasjonskontoen er ikke fastslått; arket er en rekonstruert kronologi, ikke en kontoutskrift."], sourceIds: ["src-coroner-2024", "src-evidence-compiled"] },
-      { id: "doc11", title: "Queensland-notatet", date: "1997-12-01", dateLabel: "1. desember 1997", facsimile: "assets/facsimiles-v03/doc11-queensland-safe-and-well-note.png", alt: "Rekonstruert Queensland-notat med den offentlig rapporterte safe-and-well-setningen.", accuracyNote: "Den rapporterte setningen er vist. Arbeidsnotatene som skulle forklare grunnlaget, er redigert fordi de ikke foreligger.", transcript: ["Queensland Missing Persons Bureau; filnotat datert 1. desember 1997; emne Marion Barter.", "Synlig konklusjon: «Missing person located safe and well, whereabouts not to be disclosed.»", "De foregående arbeidsnotatene er redigert og var ikke tilgjengelige i det senere offentlige materialet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
-      { id: "doc12", title: "Salvation Army-brevet", date: "1998-03-18", dateLabel: "18. mars 1998 · senere materiale", facsimile: "assets/facsimiles-v03/doc12-salvation-army-letter.png", alt: "Rekonstruert Salvation Army-brev med full ordlyd redigert.", accuracyNote: "Bare substans som er beskrevet i senere offentlige funn er satt med lesbar tekst.", transcript: ["The Salvation Army, Family Tracing correspondence; 18. mars 1998; adressert til Mr Wilson.", "Den offentlig beskrevne substansen er at Marion hadde tatt ut de resterende pengene og snakket om å begynne et nytt liv.", "Full ordlyd, navn og signatur er redigert.", "En senere coroner-gjennomgang stilte spørsmål ved den rapporterte henvisningen til en bankansatt innen sikkerhet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
-      { id: "doc14", title: "Coronerens funn", date: "2024-02-29", dateLabel: "29. februar 2024 · senere materiale", facsimile: "assets/facsimiles-v03/doc14-coroner-findings-extract.png", alt: "Kondensert rekonstruksjon av coronerens formelle funn.", accuracyNote: "Kondensert, kildefast utdrag; ikke en kopi av den innleverte PDF-en.", transcript: ["State Coroner's Court, New South Wales; funn datert 29. februar 2024.", "Marion Barter er død og døde trolig en gang etter 15. oktober 1997.", "Levningene er ikke funnet.", "Sted, årsak og dødsmåte kunne ikke fastslås.", "Funnene fastslo ikke at en identifisert person forårsaket døden."], sourceIds: ["src-coroner-2024"] }
+      { id: "doc01", title: "Registrering av hussalget", date: "1997-04-25", dateLabel: "25. april 1997", facsimile: "assets/facsimiles-v05/doc01-house-sale-record.png", alt: "Registrering av salget av huset i Southport.", transcript: ["Eiendom: Merinda Court, Southport.", "Registrert selger: Marion Barter.", "Salgsdato: 25. april 1997.", "Registrert salgssum: A$165 000; oppgitt prisantydning: A$175 000."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
+      { id: "doc15", title: "Første oppsigelsesbrev til The Southport School", date: "1997-04-13", dateLabel: "13. april 1997", facsimile: "assets/facsimiles-v05/doc15-first-resignation-letter.png", alt: "Marions første oppsigelsesbrev til The Southport School.", transcript: ["Datert 13. april 1997 og adressert til skolens ledelse.", "Marion skriver at hun sier opp med stor sorg og profesjonell motvilje, med virkning fra 14. juli 1997.", "Hun ønsker å diskutere de medvirkende årsakene og nevner planer om å reise til England."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
+      { id: "doc02", title: "Andre oppsigelsesbrev til The Southport School", date: "1997-06-16", dateLabel: "16. juni 1997", facsimile: "assets/facsimiles-v05/doc02-school-resignation-letter.png", alt: "Marions andre oppsigelsesbrev til The Southport School.", transcript: ["Datert 16. juni 1997 og adressert «Dear Sir / Madam».", "Marion skriver at hun vil reise utenlands på ubestemt tid og håper å undervise i England og Europa.", "Hun ber om fornyelse av lærerregistreringen for 1998 og bruker Lesley Lovedays adresse.", "Oppsigelsen skulle gjelde fra 20. juni 1997."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
+      { id: "doc03", title: "Utreisekort og flyregistrering", date: "1997-06-22", dateLabel: "22. juni 1997", facsimile: "assets/facsimiles-v05/doc03-departure-card.png", alt: "Australsk utreisekort utfylt for Florabella Remakel.", transcript: ["Navn: Florabella Remakel.", "Avreise: Brisbane, 22. juni 1997 kl. 21.38.", "Flyselskap: Korean Airlines.", "Synlige felt: «Europe», «Luxembourg» og «S/Korea»."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"] },
+      { id: "doc04", title: "Brevet til Sally", date: "1997-06-30", dateLabel: "mottatt 30. juni 1997", facsimile: "assets/facsimiles-v05/doc04-narita-stationery-letter.png", alt: "Marions brev til Sally på Hotel Nikko Narita-brevpapir.", transcript: ["Adressert til Sally og signert «Marion».", "Marion skriver at hun endelig har kommet til England etter et interessant besøk i øst, men at for mye bagasje gjorde reisen vanskeligere.", "Hun planlegger å bli i Tunbridge Wells noen dager før hun tar fatt på Europa.", "Konvolutten var poststemplet i Tunbridge Wells og brevet ble mottatt 30. juni 1997."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-parallel-compiled"] },
+      { id: "doc05", title: "Postkortene fra England", date: "1997-07", dateLabel: "sommeren 1997", facsimile: "assets/facsimiles-v05/doc05-sussex-postcards.png", alt: "Postkort fra Tunbridge Wells, Rye og Hastings.", transcript: ["Postkort sendt til familie og venner i Australia; de enkelte mottakerne er ikke fullt identifisert.", "Kortene er knyttet til Tunbridge Wells, Rye og Hastings.", "Alle er skrevet med samme hånd og signert «Marion»."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
+      { id: "doc06", title: "Innreisekortet", date: "1997-08-02", dateLabel: "2. august 1997", facsimile: "assets/facsimiles-v05/doc06-arrival-card.png", alt: "Innreisekort utfylt for Florabella Remakel.", transcript: ["Navn: Florabella Remakel.", "Ankomst: Brisbane, 2. august 1997 kl. 10.11; Cathay Pacific.", "Oppgitt sivilstatus: gift; bostedsland: Luxembourg; yrke: home duties.", "Planlagt opphold: 8 dager; adresse i Australia: Novotel, Brisbane."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"] },
+      { id: "doc08", title: "Notatbokinnførselen ved Byron Bay Police", date: "1997-10-22", dateLabel: "22. oktober 1997", facsimile: "assets/facsimiles-v05/doc08-police-notebook.png", alt: "Notatbokinnførsel fra Byron Bay Police.", transcript: ["Byron Bay, 22. oktober 1997.", "Sally og Chris møtte angående Marion Barter.", "Familien rapporterte retur til Australia 2. august og bankaktivitet i Byron Bay/Burleigh Heads.", "En større bevegelse omkring A$80 000 ble rapportert 15. oktober."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
+      { id: "doc10", title: "Transaksjonsoversikten", date: "1997-08/10", dateLabel: "august–oktober 1997", facsimile: "assets/facsimiles-v05/doc10-bank-transaction-sheet.png", alt: "Oversikt over banktransaksjoner fra august til oktober 1997.", transcript: ["18. august: to uttak på A$500 i Byron Bay.", "21.–22. august: ett uttak på A$500 per dag i Burleigh Heads.", "23.–28. august: ett uttak på A$500 per dag i Byron Bay.", "15. oktober: omkring A$80 000, beskrevet som filialuttak eller mulig telegrafisk overføring.", "Destinasjonskontoen er ikke fastslått."], sourceIds: ["src-coroner-2024", "src-evidence-compiled"] },
+      { id: "doc11", title: "Queensland-notatet", date: "1997-12-01", dateLabel: "1. desember 1997", facsimile: "assets/facsimiles-v05/doc11-queensland-safe-and-well-note.png", alt: "Queensland-notat om Marion Barter.", transcript: ["Queensland Missing Persons Bureau; filnotat datert 1. desember 1997; emne Marion Barter.", "Synlig konklusjon: «Missing person located safe and well, whereabouts not to be disclosed.»", "De foregående arbeidsnotatene er redigert og var ikke tilgjengelige i det senere offentlige materialet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
+      { id: "doc12", title: "Salvation Army-brevet", date: "1998-03-18", dateLabel: "18. mars 1998 · senere materiale", facsimile: "assets/facsimiles-v05/doc12-salvation-army-letter.png", alt: "Brev fra The Salvation Army til familien.", transcript: ["The Salvation Army, Family Tracing correspondence; 18. mars 1998; adressert til Mr Wilson.", "Brevet sier at Marion hadde tatt ut de resterende pengene og ville begynne et nytt liv.", "En senere coroner-gjennomgang stilte spørsmål ved den rapporterte henvisningen til en bankansatt innen sikkerhet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
+      { id: "doc14", title: "Coronerens funn", date: "2024-02-29", dateLabel: "29. februar 2024 · senere materiale", facsimile: "assets/facsimiles-v05/doc14-coroner-findings-extract.png", alt: "Utdrag fra coronerens formelle funn.", transcript: ["State Coroner's Court, New South Wales; funn datert 29. februar 2024.", "Marion Barter er død og døde trolig en gang etter 15. oktober 1997.", "Levningene er ikke funnet.", "Sted, årsak og dødsmåte kunne ikke fastslås.", "Funnene fastslo ikke at en identifisert person forårsaket døden."], sourceIds: ["src-coroner-2024"] }
     ],
 
     episode: {
@@ -149,7 +149,7 @@
           prompt: "Hvem var Ilona Kinczel i Ric Blums livshistorie, og hvorfor må dødsfallet hennes omtales med særlig varsomhet?",
           modelAnswer: [
             "Ilona Kinczel var Blums tredje kone og mor til datteren Evelyn. Hun døde ung i Melbourne i 1977.",
-            "Det finnes ikke offentlig bevis for at dødsfallet skyldtes en forbrytelse eller at Blum medvirket. Tangenten er bakgrunn og et mulig arkivspor, ikke et funn om skyld."
+            "Arkivet fastslår ikke at dødsfallet skyldtes en forbrytelse eller at Blum medvirket."
           ],
           rubric: ["Tredje kone og dødsåret.", "Ingen foul play presenteres som fakta.", "Fravær av offentlig bevis brukes til å avgrense, ikke insinuere."],
           sourceIds: ["src-ilona-compiled", "src-blum-alias-compiled"]
@@ -158,10 +158,10 @@
           id: "bonus-2", group: "bonus",
           prompt: "Hva forteller The Southport School-sporet om Marion rett før reisen, og hvilken motsigelse gjør sporet interessant?",
           modelAnswer: [
-            "Marion var en anerkjent lærer ved The Southport School og hadde mottatt en Queensland Teaching Excellence Award i 1996. Hun avsluttet stillingen med virkning fra 20. juni 1997.",
-            "Samtidig ba hun om fornyelse av lærerregistreringen for 1998 og brukte Lesley Lovedays adresse. Det passer dårlig med en enkel fortelling om et fullstendig og permanent brudd med yrkeslivet, men forklarer ikke alene hensikten hennes."
+            "Marion var en anerkjent lærer ved The Southport School og hadde mottatt en Queensland Teaching Excellence Award i 1996. Det første oppsigelsesbrevet 13. april satte fratreden til 14. juli; det andre 16. juni flyttet den frem til 20. juni.",
+            "I det andre brevet ba hun samtidig om fornyelse av lærerregistreringen for 1998 og brukte Lesley Lovedays adresse. Det passer dårlig med en enkel fortelling om et fullstendig og permanent brudd med yrkeslivet, men forklarer ikke alene hensikten hennes."
           ],
-          rubric: ["Skolen/lærerrollen og avslutningen i juni.", "Fornyelsen for 1998 eller den profesjonelle anerkjennelsen.", "Motsigelsen beskrives uten å dikte motiv."],
+          rubric: ["Begge oppsigelsesbrevene og endringen fra 14. juli til 20. juni.", "Fornyelsen for 1998 eller den profesjonelle anerkjennelsen.", "Motsigelsen beskrives uten å dikte motiv."],
           sourceIds: ["src-coroner-2024", "src-timeline-compiled", "src-marion-person-compiled"]
         },
         {
@@ -169,7 +169,7 @@
           prompt: "Hvem var den virkelige Fernand Remakel, hvordan kom navnet inn i nettverket, og hva må sies om hans rolle i Marion-saken?",
           modelAnswer: [
             "Fernand Remakel var en virkelig mann fra Luxembourg og Monique Cornelius' tidligere ektefelle. Offentlige funn og senere undersøkelser knytter Ric Blums kjennskap til navnet til forholdet med Cornelius; Blum brukte senere Remakel-identiteten.",
-            "Den virkelige Remakel er en uskyldig tredjepart og er ikke knyttet til Marions forsvinning. Enkelte åpne biografiske detaljer om ham er dessuten svakere kildebelagt enn selve identitetsforbindelsen."
+            "Den virkelige Remakel er en uskyldig tredjepart og er ikke knyttet til Marions forsvinning. Enkelte biografiske detaljer om ham er ikke like godt dokumentert som selve identitetsforbindelsen."
           ],
           rubric: ["Virkelig luxembourgsk person, ikke Blum.", "Monique Cornelius som identitetsbro.", "Uskyldig tredjepart og kildeforbehold."],
           sourceIds: ["src-coroner-2024", "src-remakel-compiled", "src-blum-alias-compiled"]
@@ -186,7 +186,7 @@
         },
         {
           id: "bonus-5", group: "bonus",
-          prompt: "Hvilket gjentakende mønster beskrev podkast- og arkivsporene rundt andre kvinner, aliaser og mynter — og hvorfor er et mønster fortsatt ikke en løsning på Marion-saken?",
+          prompt: "Hvilket gjentakende mønster viser arkivsporene rundt andre kvinner, aliaser og mynter — og hvorfor er et mønster fortsatt ikke en løsning på Marion-saken?",
           modelAnswer: [
             "Kildene beskriver gjentatt bruk av aliaser og kontaktannonser, relasjoner bygget rundt en kultivert europeisk identitet, økonomiske løfter eller tap, og mynter eller samlerobjekter som kontakt- og pengespor.",
             "Et slikt mønster kan prioritere dokumenter, vitner og økonomiske undersøkelser. Det kan ikke alene bevise at samme hendelsesforløp rammet Marion, at en bestemt person utførte en bestemt transaksjon, eller at noen forårsaket hennes død."
@@ -201,17 +201,17 @@
       entry("sp01", "SP-01", "Queensland Titles Office – Southport", "Merinda Court, Southport", "loc-merinda", [
         "Registeropplysningene viser at Marions hus ble solgt 25. april 1997 for A$165 000. Prisantydningen var A$175 000.",
         "Oppslaget sier ingenting om hvorfor prisen ble akseptert eller hva pengene senere ble brukt til."
-      ], ["doc01"], ["src-coroner-2024", "src-timeline-compiled"], { illustration: { file: "assets/illustrations-flux2/southport-house-1997.webp", alt: "Illustrasjon – ikke fotografi: et hus i Southport våren 1997." } }),
+      ], ["doc01"], ["src-coroner-2024", "src-timeline-compiled"], { illustration: { file: "assets/illustrations-flux2/southport-house-1997.webp", alt: "Et hus i Southport våren 1997." } }),
       quiet("sp02", "SP-02", "Gold Coast eiendomsmeglerforening", "Southport, Queensland", "loc-southport"),
       entry("sp03", "SP-03", "Lesley Loveday", "Southport, Queensland", "loc-southport", [
         "Lesley forklarer at hun kjørte Marion til busstasjonen i Southport 22. juni 1997.",
         "Dette er den siste ukontroversielle observasjonen før utenlandsreisen. Lesley beskriver også en plan om lang ferie og mulig undervisningsarbeid i England eller Europa."
-      ], [], ["src-coroner-2024", "src-witnesses-compiled"], { illustration: { file: "assets/illustrations-flux2/southport-bus-station-1997.webp", alt: "Illustrasjon – ikke fotografi: Southport busstasjon 22. juni 1997." } }),
+      ], [], ["src-coroner-2024", "src-witnesses-compiled"], { illustration: { file: "assets/illustrations-flux2/southport-bus-station-1997.webp", alt: "Southport busstasjon 22. juni 1997." } }),
       quiet("sp04", "SP-04", "Southport busstasjon", "Southport, Queensland", "loc-southport", { result: "Ingen bevart billett-, bagasje- eller vitnelogg fra busstasjonen gir et nytt sikkert spor. Lesley Lovedays forklaring står fortsatt alene." }),
       entry("sp05", "SP-05", "The Southport School – administrasjonen", "Winchester Street, Southport", "loc-tss", [
-        "Skolematerialet viser at Marion avsluttet stillingen med virkning fra 20. juni 1997.",
-        "Et bevart brev ber samtidig om fornyelse av lærerregistreringen for 1998 og bruker Lesley Lovedays adresse som kontaktpunkt."
-      ], ["doc02"], ["src-coroner-2024", "src-timeline-compiled"]),
+        "Marion leverte et første oppsigelsesbrev 13. april med fratreden 14. juli, og et nytt brev 16. juni som flyttet fratredelsen frem til 20. juni.",
+        "Det andre brevet sier at hun vil reise på ubestemt tid, håper å undervise i England eller Europa, ber om lærerregistrering for 1998 og bruker Lesley Lovedays adresse."
+      ], ["doc15", "doc02"], ["src-coroner-2024", "src-timeline-compiled"]),
       quiet("sp06", "SP-06", "Queensland Teacher Registration Board", "Queensland", "loc-southport", { result: "Oppslaget gir ingen ytterligere offentlig bevart 1997-korrespondanse utover opplysningen som allerede finnes i skolebrevet." }),
       entry("sp07", "SP-07", "Sally Leydon", "Familiens adresseoppføring", "loc-southport", [
         "Den siste direkte telefonsamtalen kom rundt 30. juli eller 1. august. Linjen falt ut.",
@@ -233,7 +233,7 @@
         "Anerkjennelsen og ønsket om fornyet lærerregistrering for 1998 viser en fortsatt profesjonell tilknytning, men forklarer ikke Narita-brevpapiret, bankaktiviteten eller stillheten senere på året."
       ], [], ["src-coroner-2024", "src-timeline-compiled"]),
 
-      quiet("gc01", "GC-01", "Brisbane Airport – informasjon", "Brisbane Airport", "loc-brisbane", { illustration: { file: "assets/illustrations-flux2/brisbane-airport-1997.webp", alt: "Illustrasjon – ikke fotografi: Brisbane Airport i 1997." } }),
+      quiet("gc01", "GC-01", "Brisbane Airport – informasjon", "Brisbane Airport", "loc-brisbane", { illustration: { file: "assets/illustrations-flux2/brisbane-airport-1997.webp", alt: "Brisbane Airport i 1997." } }),
       entry("gc02", "GC-02", "Korean Airlines – passasjerarkiv", "Brisbane Airport", "loc-brisbane", [
         "Flyregistreringen viser en avreise fra Brisbane 22. juni 1997 kl. 21:38 på Korean Airlines under navnet Florabella Remakel.",
         "Utreisekortet inneholder tre felt som senere ble vurdert som skrevet av en annen hånd. Dokumentet identifiserer ikke den andre personen."
@@ -317,7 +317,7 @@
       quiet("xr09", "XR-09", "Japanske innreiseregistre", "Japan", "loc-narita", { result: RECORDS_GONE }),
       entry("xr10", "XR-10", "Public Record Office Victoria – personregister", "Melbourne, Victoria", "loc-overseas", [
         "Arkivoversikten identifiserer Ilona Kinczel som Ric Blums tredje kone. Hun døde ung i Melbourne i 1977.",
-        "Ingen offentlig kilde i materialet fastslår at dødsfallet skyldtes en forbrytelse eller at Blum medvirket. Tangenten må derfor behandles som bakgrunn og et arkivspor, ikke en anklage."
+        "Ingen offentlig kilde i materialet fastslår at dødsfallet skyldtes en forbrytelse eller at Blum medvirket. Arkivet fastslår ikke at dødsfallet skyldtes en forbrytelse eller at Blum medvirket."
       ], [], ["src-ilona-compiled", "src-blum-alias-compiled"], { era: "later" }),
       entry("xr11", "XR-11", "Luxembourg – folkeregister og lokalarkiv", "Luxembourg", "loc-overseas", [
         "Fernand Remakel var en virkelig person fra Luxembourg og Monique Cornelius' tidligere ektefelle. Senere materiale beskriver Cornelius som forbindelsen som ga Blum kjennskap til navnet.",

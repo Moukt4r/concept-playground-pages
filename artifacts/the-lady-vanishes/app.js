@@ -2,7 +2,7 @@
   "use strict";
 
   const DATA = window.CASE_DATA;
-  const STORAGE_KEY = "case-files-lady-vanishes-v04";
+  const STORAGE_KEY = "case-files-lady-vanishes-v05";
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({
@@ -17,6 +17,7 @@
   const leadById = (id) => DATA.directory.find((item) => item.id === id);
   const documentById = (id) => DATA.documents.find((item) => item.id === id);
   const sourceById = (id) => DATA.sources.find((item) => item.id === id);
+  const sourceNames = (ids) => (ids || []).map(sourceById).filter(Boolean).map((item) => item.title);
   const locationById = (id) => DATA.locations.find((item) => item.id === id);
 
   function freshState() {
@@ -142,15 +143,11 @@
 
   function renderSources() {
     if (!state.debriefSubmitted) {
-      $("#sources-list").innerHTML = `<div class="method-note">
-        <p><strong>Kildene er skjult under etterforskningen.</strong> Titler og senere datoer kan røpe svar som ikke var tilgjengelige i 1997.</p>
-        <p>Alt historisk innhold bygger på offentlige coronerfunn og kildeførte saksoversikter. Kataloghenvendelser uten dokumentert historisk resultat er tydelig omtalt som spillrekonstruksjoner.</p>
-        <p>Full kildeoversikt åpnes når sluttsvarene leveres.</p>
-      </div>`;
+      $("#sources-list").innerHTML = `<div class="method-note"><p>Kildeoversikten åpnes etter at svarene er levert.</p></div>`;
       return;
     }
     $("#sources-list").innerHTML = DATA.sources.map((item) => `<article class="source-item">
-      <div class="source-id">${escapeHtml(item.id)} <span class="source-type">${escapeHtml(item.kind)}</span></div>
+      <div class="source-id"><span class="source-type">${escapeHtml(item.kind)}</span></div>
       <strong>${escapeHtml(item.title)}</strong>
       <div>${escapeHtml(item.date || "")}</div>
       <p>${escapeHtml(item.note || "")}</p>
@@ -224,7 +221,6 @@
       });
     } else {
       const pinned = state.pins.includes(`lead:${item.id}`);
-      const eraNote = item.era === "later" ? '<div class="later-archive-note">SENERE ARKIVSPOR · PODKAST-TANGENT</div>' : "";
       const illustration = item.illustration ? `<figure class="lead-illustration">
         <img src="${escapeHtml(item.illustration.file)}" alt="${escapeHtml(item.illustration.alt)}" class="lead-ill-img">
       </figure>` : "";
@@ -236,13 +232,11 @@
       modal.innerHTML = `<article class="lead-detail-card">
         ${illustration}
         <div class="lead-code">${escapeHtml(item.code)}</div>
-        ${eraNote}
         <h3>${escapeHtml(item.name)}</h3>
         <p class="directory-address">${escapeHtml(item.address || location?.name || "")}</p>
         <div class="lead-full-text">${(item.result || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
         ${documents}
-        <p class="simulation-note">${escapeHtml(DATA.meta.actionDisclaimer)}</p>
-        ${state.debriefSubmitted ? `<p class="source-line"><strong>Kilde-ID:</strong> ${escapeHtml((item.sourceIds || []).join(" · ") || "metode-rekonstruksjon")}</p>` : ""}
+        ${state.debriefSubmitted && sourceNames(item.sourceIds).length ? `<p class="source-line"><strong>Kilder:</strong> ${escapeHtml(sourceNames(item.sourceIds).join(" · "))}</p>` : ""}
         <div class="modal-actions">
           <button class="btn pin-lead">${pinned ? "Fjern fra notatbok" : "Fest i notatbok"}</button>
           <button class="btn close-modal">Lukk</button>
@@ -280,7 +274,21 @@
 
   function renderDocuments() {
     const documents = state.foundDocuments.map(documentById).filter(Boolean);
-    $("#documents-grid").innerHTML = documents.length ? documents.map((item) => {
+    if (!documents.length) {
+      $("#documents-grid").innerHTML = `<div class="empty-state dossier-empty">
+        <div class="empty-folder" aria-hidden="true">▱</div>
+        <p>Saksmappen er tom.</p>
+        <p>Dokumenttitler vises ikke før du faktisk finner dem.</p>
+      </div>`;
+      return;
+    }
+    const hasPassengerCards = state.foundDocuments.includes("doc03") && state.foundDocuments.includes("doc06");
+    const comparison = hasPassengerCards ? `<button class="doc-card comparison-card" data-compare-passenger-cards>
+      <span class="doc-stamp">BORD</span>
+      <div class="doc-title">Utreise / innreise</div>
+      <div class="doc-type">Legg kortene side om side</div>
+    </button>` : "";
+    $("#documents-grid").innerHTML = comparison + documents.map((item) => {
       const pinned = state.pins.includes(`doc:${item.id}`);
       return `<button class="doc-card" data-document-id="${escapeHtml(item.id)}">
         <span class="doc-stamp">FUNNET</span>
@@ -288,11 +296,7 @@
         <div class="doc-type">${escapeHtml(item.dateLabel || item.date || "Dato ukjent")}</div>
         ${pinned ? '<div class="pinned-mark">FESTET</div>' : ""}
       </button>`;
-    }).join("") : `<div class="empty-state dossier-empty">
-      <div class="empty-folder" aria-hidden="true">▱</div>
-      <p>Saksmappen er tom.</p>
-      <p>Dokumenttitler vises ikke før du faktisk finner dem.</p>
-    </div>`;
+    }).join("");
   }
 
   function openDocument(documentId) {
@@ -300,9 +304,10 @@
     if (!item || !state.foundDocuments.includes(item.id)) return;
     documentReturnId = item.id;
     switchTab("documents");
+    $(".document-viewer-inner").classList.remove("comparison-open");
     const pinned = state.pins.includes(`doc:${item.id}`);
-    const sourceLine = state.debriefSubmitted
-      ? `<p class="source-line"><strong>Kilde-ID:</strong> ${escapeHtml((item.sourceIds || []).join(" · "))}</p>`
+    const sourceLine = state.debriefSubmitted && sourceNames(item.sourceIds).length
+      ? `<p class="source-line"><strong>Kilder:</strong> ${escapeHtml(sourceNames(item.sourceIds).join(" · "))}</p>`
       : "";
     const transcript = (item.transcript || []).length ? `<details class="document-transcript" open>
       <summary>Tilgjengelig transkripsjon av synlig innhold</summary>
@@ -317,7 +322,6 @@
         </a>
       </figure>
       ${transcript}
-      <p class="facsimile-note">${escapeHtml(item.accuracyNote || "Rekonstruksjon basert på offentlig kildegrunnlag.")}</p>
       ${sourceLine}
       <button class="btn pin-document">${pinned ? "Fjern fra notatbok" : "Fest i notatbok"}</button>`;
     $("#document-viewer").classList.remove("hidden");
@@ -325,6 +329,34 @@
       togglePin(`doc:${item.id}`);
       openDocument(item.id);
     });
+    $(".document-close").focus({ preventScroll: true });
+    $(".document-viewer-inner").scrollTop = 0;
+  }
+
+  function openPassengerComparison() {
+    if (!state.foundDocuments.includes("doc03") || !state.foundDocuments.includes("doc06")) return;
+    const departure = documentById("doc03");
+    const arrival = documentById("doc06");
+    documentReturnId = "compare";
+    switchTab("documents");
+    $(".document-viewer-inner").classList.add("comparison-open");
+    $("#document-content").innerHTML = `<div class="doc-eyebrow">SAKSBORD</div>
+      <h3>Utreise / innreise</h3>
+      <div class="comparison-grid">
+        <figure>
+          <figcaption>22. juni 1997</figcaption>
+          <a href="${escapeHtml(departure.facsimile)}" target="_blank" rel="noopener">
+            <img src="${escapeHtml(departure.facsimile)}" alt="${escapeHtml(departure.alt)}">
+          </a>
+        </figure>
+        <figure>
+          <figcaption>2. august 1997</figcaption>
+          <a href="${escapeHtml(arrival.facsimile)}" target="_blank" rel="noopener">
+            <img src="${escapeHtml(arrival.facsimile)}" alt="${escapeHtml(arrival.alt)}">
+          </a>
+        </figure>
+      </div>`;
+    $("#document-viewer").classList.remove("hidden");
     $(".document-close").focus({ preventScroll: true });
     $(".document-viewer-inner").scrollTop = 0;
   }
@@ -421,16 +453,16 @@
       <p>Besøkt: <strong>${state.visited.length}</strong> av ${DATA.directory.length} registeroppføringer · dokumenter: <strong>${state.foundDocuments.length}</strong>.</p>
       <p>Du brukte <strong>${usedActions()}</strong> oppslag. Det finnes ingen fasit for hvor mange som er «riktig»; tallet lar deg sammenligne strategier mellom gjennomspillinger.</p>
       ${state.debriefSubmitted
-        ? `<div class="scoreboard"><span>Hovedspor <strong>${scoreFor(mainQuestions)}/10</strong></span><span>Tangenter <strong>${scoreFor(bonusQuestions)}/10</strong></span><span>Effektivitet <strong>${efficiencyScore}/10</strong></span><span>Totalt <strong>${totalScore}/30</strong></span></div><p>Poengene for svarene er din egen vurdering mot løsningsheftet. Effektiviteten sammenlignes med en kildebelagt referansesti på ${referenceActions} oppslag: hvert ekstra oppslag trekker ett bonuspoeng, men stopper aldri etterforskningen.</p><details class="reference-route"><summary>Vis referansestien (${referenceActions} oppslag)</summary><p>${escapeHtml(referenceLeads.map((item) => `${item.code} ${item.name}`).join(" · "))}</p><p>Dette er én effektiv rute, ikke den eneste gyldige løsningen.</p></details>`
+        ? `<div class="scoreboard"><span>Hovedspor <strong>${scoreFor(mainQuestions)}/10</strong></span><span>Sidespor <strong>${scoreFor(bonusQuestions)}/10</strong></span><span>Effektivitet <strong>${efficiencyScore}/10</strong></span><span>Totalt <strong>${totalScore}/30</strong></span></div><p>Poengene for svarene er din egen vurdering mot løsningsheftet. Effektiviteten sammenlignes med en referansesti på ${referenceActions} oppslag: hvert ekstra oppslag trekker ett bonuspoeng, men stopper aldri etterforskningen.</p><details class="reference-route"><summary>Vis referansestien (${referenceActions} oppslag)</summary><p>${escapeHtml(referenceLeads.map((item) => `${item.code} ${item.name}`).join(" · "))}</p><p>Dette er én effektiv rute, ikke den eneste gyldige løsningen.</p></details>`
         : `<p>Svar med egne ord. Først når alle ti svar leveres, åpnes løsningsheftet og senere kildekunnskap. Oppslagstelleren sammenlignes da med referansestien — den låser deg aldri ute.</p>`}`;
 
     const renderQuestion = (item, index) => {
       const answer = state.answers[item.id] || "";
       const solution = state.debriefSubmitted ? `<section class="solution-booklet">
-        <div class="solution-stamp">LØSNINGSHEFTE · KILDEBELAGT</div>
+        <div class="solution-stamp">LØSNINGSHEFTE</div>
         ${(item.modelAnswer || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
         <div class="rubric"><strong>Gi deg selv:</strong><ul>${(item.rubric || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul></div>
-        <div class="source-line">Kilde-ID: ${escapeHtml((item.sourceIds || []).join(" · "))}</div>
+        <div class="source-line">Kilder: ${escapeHtml(sourceNames(item.sourceIds).join(" · "))}</div>
         <fieldset class="self-score"><legend>Selvskåring for dette spørsmålet</legend>
           ${[
             [0, "0 · traff ikke hovedpoenget"],
@@ -440,14 +472,14 @@
         </fieldset>
       </section>` : "";
       return `<fieldset class="debrief-q ${item.group === "bonus" ? "bonus-q" : "main-q"}">
-        <legend><span class="question-kind">${item.group === "bonus" ? "PODKAST-TANGENT" : "HOVEDSPØRSMÅL"}</span>${index + 1}. ${escapeHtml(item.prompt)}</legend>
+        <legend><span class="question-kind">${item.group === "bonus" ? "SIDESPOR" : "HOVEDSPØRSMÅL"}</span>${index + 1}. ${escapeHtml(item.prompt)}</legend>
         <label class="reasoning-label">Ditt svar
           <textarea data-answer-text="${escapeHtml(item.id)}" ${state.debriefSubmitted ? "readonly" : ""} placeholder="Skriv hva bevisene støtter — og hva de ikke kan fastslå.">${escapeHtml(answer)}</textarea>
         </label>${solution}</fieldset>`;
     };
 
     $("#debrief-form").innerHTML = `<div class="question-section"><h3>Fem hovedspørsmål</h3><p>Marion-sakens dokumenterte kjerne.</p>${mainQuestions.map((item, index) => renderQuestion(item, index)).join("")}</div>
-      <div class="question-section bonus-section"><h3>Fem podkast-tangenter</h3><p>Sidehistorier som belønner nysgjerrighet, uten å gjøre mønster til bevis i Marion-saken.</p>${bonusQuestions.map((item, index) => renderQuestion(item, index)).join("")}</div>
+      <div class="question-section bonus-section"><h3>Fem sidespor</h3>${bonusQuestions.map((item, index) => renderQuestion(item, index)).join("")}</div>
       ${state.debriefSubmitted ? '<div class="booklet-complete">Løsningsheftet er åpnet. Juster selvskåringen når du har sammenlignet alle svarene.</div>' : '<button type="submit" class="btn btn-primary">Lever ti svar og åpne løsningsheftet</button>'}`;
 
     const status = $("#current-status");
@@ -505,12 +537,17 @@
 
   function closeDocumentViewer() {
     $("#document-viewer").classList.add("hidden");
-    if (documentReturnId) $(`[data-document-id="${documentReturnId}"]`)?.focus();
+    if (documentReturnId === "compare") {
+      $("[data-compare-passenger-cards]")?.focus();
+    } else if (documentReturnId) {
+      $(`[data-document-id="${documentReturnId}"]`)?.focus();
+    }
+    $(".document-viewer-inner").classList.remove("comparison-open");
     documentReturnId = null;
   }
 
   function resetProgress() {
-    if (!window.confirm("Nullstille alle besøk, dokumenter, notater og sluttsvar for v0.4?")) return;
+    if (!window.confirm("Nullstille alle besøk, dokumenter, notater og sluttsvar?")) return;
     localStorage.removeItem(STORAGE_KEY);
     state = freshState();
     state.accepted = true;
@@ -541,6 +578,8 @@
     document.addEventListener("click", (event) => {
       const leadCard = event.target.closest("[data-lead-id]");
       if (leadCard) openLead(leadCard.dataset.leadId);
+      const comparisonCard = event.target.closest("[data-compare-passenger-cards]");
+      if (comparisonCard) openPassengerComparison();
       const docCard = event.target.closest("[data-document-id]");
       if (docCard) openDocument(docCard.dataset.documentId);
       const mapPin = event.target.closest("[data-map-lead]");
