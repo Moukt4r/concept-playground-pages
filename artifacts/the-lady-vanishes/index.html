@@ -15,10 +15,10 @@
       <p class="subtitle">Et kildebasert deduksjonsspill</p>
       <div class="disclaimer-text">
         <p><strong>Dette bygger på en virkelig, uløst sak.</strong> Marion Barter var et virkelig menneske. Spillet dramatiserer undersøkelser, men skal ikke brukes til å anklage noen.</p>
-        <p>Du begynner ved en <strong>historisk kunnskapsgrense</strong>: bare det familien rimeligvis kunne vite i 1997 vises i selve etterforskningen. Senere funn og dagens saksstatus holdes tilbake til debriefen.</p>
+        <p>Hovedsporet begynner ved en <strong>historisk kunnskapsgrense</strong> i 1997. Enkelte nøytrale registeroppslag åpner kildebelagte sidehistorier som podkasten undersøkte senere; dagens saksstatus og løsningsheftet holdes tilbake til sluttoppgjøret.</p>
         <p>Dokumentbildene er tydelig merkede <strong>faksimile-rekonstruksjoner</strong>, aldri originaldokumenter. Der full ordlyd ikke er offentlig kjent, er innholdet redigert eller utelatt — ikke oppdiktet.</p>
         <p>Flere katalogoppslag er nøytrale spillrekonstruksjoner av mulige henvendelser. De hevder ikke at familien eller politiet faktisk foretok akkurat disse handlingene.</p>
-        <p class="proto-label">Prototype v0.3 · historisk modus · norsk</p>
+        <p class="proto-label">Prototype v0.4 · åpen etterforskning · norsk</p>
       </div>
       <button id="disclaimer-accept" class="btn btn-primary" autofocus>Åpne saksmappen</button>
     </div>
@@ -28,20 +28,19 @@
     <header class="topbar">
       <div class="topbar-left">
         <h1 class="topbar-title">The Lady Vanishes</h1>
-        <span class="proto-badge">v0.3</span>
+        <span class="proto-badge">v0.4</span>
       </div>
       <nav class="topbar-nav" aria-label="Hovedseksjoner">
         <button class="tab-btn active" data-tab="directory" aria-selected="true">Register</button>
         <button class="tab-btn" data-tab="map" aria-selected="false">Kart</button>
         <button class="tab-btn" data-tab="documents" aria-selected="false">Saksmappe</button>
         <button class="tab-btn" data-tab="notebook" aria-selected="false">Notatbok</button>
-        <button class="tab-btn hidden" id="debrief-tab" data-tab="debrief" aria-selected="false">Debrief</button>
+        <button class="tab-btn hidden" id="debrief-tab" data-tab="debrief" aria-selected="false">Sluttoppgjør</button>
       </nav>
       <div class="topbar-right">
         <span id="lead-budget-display" class="budget-display" title="Brukte handlinger"></span>
         <button id="sources-btn" class="btn btn-small" title="Kildeinformasjon">Kilder</button>
-        <button id="finish-btn" class="btn btn-small btn-finish" title="Avslutt etterforskningen og gå til debrief">Avslutt</button>
-        <button id="save-btn" class="btn btn-small" title="Lagre lokalt">Lagre</button>
+        <button id="finish-btn" class="btn btn-small btn-finish" title="Avslutt etterforskningen og åpne sluttspørsmålene">Avslutt</button>
         <button id="reset-btn" class="btn btn-small btn-danger" title="Nullstill fremdrift">Nullstill</button>
       </div>
     </header>
@@ -64,7 +63,7 @@
         <div class="panel-header compact-header">
           <div>
             <h2>Gold Coast-registeret</h2>
-            <p class="panel-desc">Du kan oppsøke hvem som helst. Et nytt oppslag koster én handling. Registeret forteller ikke hva som er relevant.</p>
+            <p class="panel-desc">Du kan oppsøke hvem som helst og fortsette så lenge du vil. Hvert nytt oppslag registreres. Referansestien bruker 16 oppslag, og hvert ekstra oppslag trekker ett av ti effektivitetspoeng — men det finnes ingen handlingsgrense. Registeret forteller ikke hva som er relevant.</p>
           </div>
           <div class="directory-controls">
             <input type="search" id="lead-search" placeholder="Søk etter navn, sted eller kode …" aria-label="Søk i registeret" class="search-input">
@@ -122,10 +121,10 @@
         </div>
       </section>
 
-      <section id="panel-debrief" class="panel" role="tabpanel" aria-label="Debrief" hidden>
+      <section id="panel-debrief" class="panel" role="tabpanel" aria-label="Sluttoppgjør" hidden>
         <div class="panel-header">
-          <h2>Debrief</h2>
-          <p class="panel-desc">Når du leverer, låses svarene og den senere kildefasiten åpnes. Ingen spørsmål handler om å utpeke en gjerningsperson.</p>
+          <h2>Sluttoppgjør</h2>
+          <p class="panel-desc">Ti åpne spørsmål vises først etter at etterforskningen er avsluttet. Når du leverer svarene, åpnes et kildebelagt løsningshefte for selvskåring. Ingen spørsmål ber deg utpeke en gjerningsperson.</p>
         </div>
         <div id="debrief-summary" class="debrief-summary"></div>
         <form id="debrief-form" class="debrief-questions"></form>
