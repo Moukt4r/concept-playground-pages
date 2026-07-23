@@ -59,7 +59,7 @@
         <div class="panel-header compact-header">
           <div>
             <h2>Gold Coast-registeret</h2>
-            <p class="panel-desc">Du kan oppsøke hvem som helst og fortsette så lenge du vil. Hvert nytt oppslag registreres. Referansestien bruker 16 oppslag, og hvert ekstra oppslag trekker ett av ti effektivitetspoeng — men det finnes ingen handlingsgrense. Registeret forteller ikke hva som er relevant.</p>
+            <p class="panel-desc">Du kan oppsøke hvem som helst og fortsette så lenge du vil. Hvert nytt oppslag registreres. Referansestien bruker 16 oppslag, og hvert ekstra oppslag trekker 5 poeng — men det finnes ingen handlingsgrense. Registeret forteller ikke hva som er relevant.</p>
           </div>
           <div class="directory-controls">
             <input type="search" id="lead-search" placeholder="Søk etter navn, sted eller kode …" aria-label="Søk i registeret" class="search-input">
@@ -113,6 +113,18 @@
           <div class="notebook-pins">
             <h3>Festede referanser</h3>
             <div id="pinned-items"></div>
+          </div>
+          <div class="notebook-identities">
+            <h3>Identiteter</h3>
+            <p class="identity-hint">Koble navn du mener tilhører samme person. Spillet bekrefter ikke teorien din før sluttoppgjøret.</p>
+            <div class="identity-builder">
+              <select id="identity-a" aria-label="Første identitet"></select>
+              <span aria-hidden="true">↔</span>
+              <select id="identity-b" aria-label="Andre identitet"></select>
+              <input id="identity-reason" type="text" placeholder="Hvilket bevis forbinder navnene?" aria-label="Begrunnelse for koblingen">
+              <button id="add-identity-link" type="button" class="btn btn-small">Koble</button>
+            </div>
+            <div id="identity-links"></div>
           </div>
         </div>
       </section>

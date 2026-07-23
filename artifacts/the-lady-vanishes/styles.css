@@ -1157,3 +1157,76 @@ body {
 @media (max-width: 768px) {
   .comparison-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== IDENTITY BOARD ===== */
+.notebook-identities {
+  grid-column: 1 / -1;
+  background: var(--paper);
+  border: 1px solid var(--paper-edge);
+  padding: 1rem;
+}
+.notebook-identities h3 {
+  font-size: .95rem;
+  border-bottom: 1px solid var(--paper-edge);
+  padding-bottom: .4rem;
+  margin-bottom: .45rem;
+}
+.identity-hint { color: var(--ink-light); font-size: .78rem; margin: 0 0 .8rem; }
+.identity-builder {
+  display: grid;
+  grid-template-columns: minmax(150px,1fr) auto minmax(150px,1fr) minmax(220px,2fr) auto;
+  align-items: center;
+  gap: .55rem;
+}
+.identity-builder select,
+.identity-builder input {
+  min-width: 0;
+  padding: .48rem .55rem;
+  border: 1px solid var(--paper-edge);
+  background: #fffdf5;
+  color: var(--ink);
+  font: .78rem var(--font-mono);
+}
+.identity-link {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: .7rem;
+  align-items: start;
+  margin-top: .7rem;
+  padding: .7rem .8rem;
+  border-left: 3px solid var(--red-thread);
+  background: var(--paper-dark);
+}
+.identity-link strong { font-size: .84rem; }
+.identity-link p { margin: .25rem 0 0; font-size: .76rem; color: var(--ink-light); }
+.identity-remove { border: 0; background: transparent; color: var(--stamp-red); cursor: pointer; font-size: 1rem; }
+@media (max-width: 768px) {
+  .identity-builder { grid-template-columns: 1fr auto 1fr; }
+  .identity-builder input { grid-column: 1 / -1; }
+  .identity-builder .btn { grid-column: 1 / -1; }
+}
+
+/* ===== FIXED QUESTION SCORING ===== */
+.criterion-score {
+  display: grid;
+  gap: .45rem;
+  margin-top: .85rem;
+  padding: .75rem;
+  border: 1px dashed var(--olive);
+}
+.criterion-score legend {
+  color: var(--olive-dark);
+  font: .68rem var(--font-mono);
+  letter-spacing: .05em;
+}
+.criterion-score label {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: .42rem;
+  align-items: start;
+  padding: .25rem 0;
+  font-size: .8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.criterion-score strong { color: var(--olive-dark); font-family: var(--font-mono); }

@@ -2,7 +2,7 @@
   "use strict";
 
   const DATA = window.CASE_DATA;
-  const STORAGE_KEY = "case-files-lady-vanishes-v05";
+  const STORAGE_KEY = "case-files-lady-vanishes-v06";
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({
@@ -19,6 +19,7 @@
   const sourceById = (id) => DATA.sources.find((item) => item.id === id);
   const sourceNames = (ids) => (ids || []).map(sourceById).filter(Boolean).map((item) => item.title);
   const locationById = (id) => DATA.locations.find((item) => item.id === id);
+  const identityById = (id) => (DATA.identities || []).find((item) => item.id === id);
 
   function freshState() {
     return {
@@ -31,7 +32,8 @@
       pinNotes: {},
       answers: {},
       answerNotes: {},
-      selfScores: {},
+      criterionChecks: {},
+      identityLinks: [],
       investigationEnded: false,
       debriefSubmitted: false,
       submittedAt: null
@@ -44,10 +46,10 @@
       if (!saved || typeof saved !== "object") return freshState();
       const base = freshState();
       const state = { ...base, ...saved };
-      ["visited", "foundDocuments", "pins"].forEach((key) => {
+      ["visited", "foundDocuments", "pins", "identityLinks"].forEach((key) => {
         if (!Array.isArray(state[key])) state[key] = base[key];
       });
-      ["pinNotes", "answers", "answerNotes", "selfScores"].forEach((key) => {
+      ["pinNotes", "answers", "answerNotes", "criterionChecks"].forEach((key) => {
         if (!state[key] || typeof state[key] !== "object") state[key] = {};
       });
       return state;
@@ -138,7 +140,7 @@
     const display = $("#lead-budget-display");
     display.textContent = `${used} ${used === 1 ? "oppslag" : "oppslag"}`;
     display.classList.remove("over-budget");
-    display.title = `Antall registeroppslag. Referansestien bruker ${(DATA.episode.referenceLeadIds || []).length || 16}; hvert ekstra oppslag trekker ett av ti effektivitetspoeng, men låser aldri registeret.`;
+    display.title = `Antall registeroppslag. Referansestien bruker ${(DATA.episode.referenceLeadIds || []).length || 16}; hvert ekstra oppslag trekker 5 poeng, men låser aldri registeret.`;
   }
 
   function renderSources() {
@@ -384,6 +386,31 @@
     renderNotebook();
   }
 
+  function discoveredIdentities() {
+    const found = new Set(state.foundDocuments);
+    return (DATA.identities || []).filter((item) => (item.documentIds || []).some((id) => found.has(id)));
+  }
+
+  function addIdentityLink() {
+    const a = $("#identity-a").value;
+    const b = $("#identity-b").value;
+    const reason = $("#identity-reason").value.trim();
+    const discovered = new Set(discoveredIdentities().map((item) => item.id));
+    if (!a || !b || a === b || !discovered.has(a) || !discovered.has(b)) {
+      toast("Velg to forskjellige identiteter du har funnet.");
+      return;
+    }
+    const pair = [a, b].sort().join(":");
+    if (state.identityLinks.some((item) => [item.a, item.b].sort().join(":") === pair)) {
+      toast("De identitetene er allerede koblet.");
+      return;
+    }
+    state.identityLinks.push({ a, b, reason });
+    saveState();
+    renderNotebook();
+    toast("Identitetsteorien er lagt på tavlen.");
+  }
+
   function renderNotebook() {
     $("#free-notes").value = state.notes || "";
     $("#pinned-items").innerHTML = state.pins.length ? state.pins.map((ref) => `<article class="pinned-reference" data-pin-ref="${escapeHtml(ref)}">
@@ -393,6 +420,23 @@
       </div>
       <textarea class="pin-note" data-pin-note="${escapeHtml(ref)}" placeholder="Hvorfor kan dette være relevant?">${escapeHtml(state.pinNotes[ref] || "")}</textarea>
     </article>`).join("") : '<p class="empty-state compact">Fest oppføringer eller dokumenter fra saksmappen. Spillet foreslår ingen forbindelser for deg.</p>';
+
+    const identities = discoveredIdentities();
+    const options = '<option value="">Velg navn</option>' + identities.map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(item.label)}</option>`).join("");
+    $("#identity-a").innerHTML = options;
+    $("#identity-b").innerHTML = options;
+    $("#identity-a").disabled = identities.length < 2;
+    $("#identity-b").disabled = identities.length < 2;
+    $("#identity-reason").disabled = identities.length < 2;
+    $("#add-identity-link").disabled = identities.length < 2;
+    $("#identity-links").innerHTML = state.identityLinks.length ? state.identityLinks.map((link, index) => {
+      const left = identityById(link.a)?.label || link.a;
+      const right = identityById(link.b)?.label || link.b;
+      return `<article class="identity-link">
+        <div><strong>${escapeHtml(left)} ↔ ${escapeHtml(right)}</strong>${link.reason ? `<p>${escapeHtml(link.reason)}</p>` : ""}</div>
+        <button class="identity-remove" data-remove-identity-link="${index}" aria-label="Fjern identitetskobling">×</button>
+      </article>`;
+    }).join("") : `<p class="empty-state compact">${identities.length < 2 ? "Finn flere identiteter i arkivene før du kan koble dem." : "Ingen identiteter er koblet ennå."}</p>`;
   }
 
   function projectLead(item) {
@@ -443,44 +487,47 @@
     const questions = DATA.episode.questions || [];
     const mainQuestions = questions.filter((item) => item.group === "main");
     const bonusQuestions = questions.filter((item) => item.group === "bonus");
-    const scoreFor = (items) => items.reduce((total, item) => total + Number(state.selfScores[item.id] || 0), 0);
+    const questionScore = (item) => (item.criteria || []).reduce((total, criterion, index) =>
+      total + (state.criterionChecks[`${item.id}:${index}`] ? Number(criterion.points || 0) : 0), 0);
+    const scoreFor = (items) => items.reduce((total, item) => total + questionScore(item), 0);
+    const maxFor = (items) => items.reduce((total, item) => total + Number(item.points || 0), 0);
     const referenceLeads = (DATA.episode.referenceLeadIds || []).map(leadById).filter(Boolean);
     const referenceActions = referenceLeads.length || 16;
-    const efficiencyScore = Math.max(0, 10 - Math.max(0, usedActions() - referenceActions));
-    const totalScore = scoreFor(questions) + efficiencyScore;
+    const routeAdjustment = Math.max(-50, Math.min(20, (referenceActions - usedActions()) * 5));
+    const answerScore = scoreFor(questions);
+    const totalScore = answerScore + routeAdjustment;
+    const signedRoute = routeAdjustment > 0 ? `+${routeAdjustment}` : String(routeAdjustment);
 
     $("#debrief-summary").innerHTML = `<div class="eff-label">ETTERFORSKNINGSSTATUS</div>
       <p>Besøkt: <strong>${state.visited.length}</strong> av ${DATA.directory.length} registeroppføringer · dokumenter: <strong>${state.foundDocuments.length}</strong>.</p>
-      <p>Du brukte <strong>${usedActions()}</strong> oppslag. Det finnes ingen fasit for hvor mange som er «riktig»; tallet lar deg sammenligne strategier mellom gjennomspillinger.</p>
+      <p>Du brukte <strong>${usedActions()}</strong> oppslag. Referansestien bruker ${referenceActions}; hvert ekstra oppslag trekker 5 poeng, og hvert spart oppslag gir 5 poeng (maks +20 / −50).</p>
       ${state.debriefSubmitted
-        ? `<div class="scoreboard"><span>Hovedspor <strong>${scoreFor(mainQuestions)}/10</strong></span><span>Sidespor <strong>${scoreFor(bonusQuestions)}/10</strong></span><span>Effektivitet <strong>${efficiencyScore}/10</strong></span><span>Totalt <strong>${totalScore}/30</strong></span></div><p>Poengene for svarene er din egen vurdering mot løsningsheftet. Effektiviteten sammenlignes med en referansesti på ${referenceActions} oppslag: hvert ekstra oppslag trekker ett bonuspoeng, men stopper aldri etterforskningen.</p><details class="reference-route"><summary>Vis referansestien (${referenceActions} oppslag)</summary><p>${escapeHtml(referenceLeads.map((item) => `${item.code} ${item.name}`).join(" · "))}</p><p>Dette er én effektiv rute, ikke den eneste gyldige løsningen.</p></details>`
-        : `<p>Svar med egne ord. Først når alle ti svar leveres, åpnes løsningsheftet og senere kildekunnskap. Oppslagstelleren sammenlignes da med referansestien — den låser deg aldri ute.</p>`}`;
+        ? `<div class="scoreboard"><span>Hovedsak <strong>${scoreFor(mainQuestions)}/${maxFor(mainQuestions)}</strong></span><span>Sidespor <strong>${scoreFor(bonusQuestions)}/${maxFor(bonusQuestions)}</strong></span><span>Rute <strong>${signedRoute}</strong></span><span>Sluttsum <strong>${totalScore}</strong></span></div><details class="reference-route"><summary>Vis referansestien (${referenceActions} oppslag)</summary><p>${escapeHtml(referenceLeads.map((item) => `${item.code} ${item.name}`).join(" · "))}</p><p>Dette er én effektiv rute, ikke den eneste gyldige løsningen.</p></details>`
+        : `<p>Svar med konkrete navn, datoer og dokumentkoblinger. Løsningsheftet viser faste poengkriterier etter innlevering.</p>`}`;
 
     const renderQuestion = (item, index) => {
       const answer = state.answers[item.id] || "";
       const solution = state.debriefSubmitted ? `<section class="solution-booklet">
-        <div class="solution-stamp">LØSNINGSHEFTE</div>
+        <div class="solution-stamp">LØSNINGSHEFTE · ${questionScore(item)}/${item.points} POENG</div>
         ${(item.modelAnswer || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-        <div class="rubric"><strong>Gi deg selv:</strong><ul>${(item.rubric || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul></div>
-        <div class="source-line">Kilder: ${escapeHtml(sourceNames(item.sourceIds).join(" · "))}</div>
-        <fieldset class="self-score"><legend>Selvskåring for dette spørsmålet</legend>
-          ${[
-            [0, "0 · traff ikke hovedpoenget"],
-            [1, "1 · delvis / mangler viktig forbehold"],
-            [2, "2 · dekket kjernen og usikkerheten"]
-          ].map(([value, label]) => `<label><input type="radio" name="score-${escapeHtml(item.id)}" data-self-score="${escapeHtml(item.id)}" value="${value}" ${Number(state.selfScores[item.id] || 0) === value ? "checked" : ""}> ${escapeHtml(label)}</label>`).join("")}
+        <fieldset class="criterion-score"><legend>Kryss av det svaret ditt inneholdt</legend>
+          ${(item.criteria || []).map((criterion, criterionIndex) => {
+            const key = `${item.id}:${criterionIndex}`;
+            return `<label><input type="checkbox" data-criterion-key="${escapeHtml(key)}" ${state.criterionChecks[key] ? "checked" : ""}> <strong>+${Number(criterion.points || 0)}</strong> ${escapeHtml(criterion.text)}</label>`;
+          }).join("")}
         </fieldset>
+        <div class="source-line">Kilder: ${escapeHtml(sourceNames(item.sourceIds).join(" · "))}</div>
       </section>` : "";
       return `<fieldset class="debrief-q ${item.group === "bonus" ? "bonus-q" : "main-q"}">
-        <legend><span class="question-kind">${item.group === "bonus" ? "SIDESPOR" : "HOVEDSPØRSMÅL"}</span>${index + 1}. ${escapeHtml(item.prompt)}</legend>
+        <legend><span class="question-kind">${item.group === "bonus" ? "SIDESPOR" : "HOVEDSPØRSMÅL"} · ${item.points} POENG</span>${index + 1}. ${escapeHtml(item.prompt)}</legend>
         <label class="reasoning-label">Ditt svar
-          <textarea data-answer-text="${escapeHtml(item.id)}" ${state.debriefSubmitted ? "readonly" : ""} placeholder="Skriv hva bevisene støtter — og hva de ikke kan fastslå.">${escapeHtml(answer)}</textarea>
+          <textarea data-answer-text="${escapeHtml(item.id)}" ${state.debriefSubmitted ? "readonly" : ""} placeholder="Navn, datoer, steder og dokumentkoblinger …">${escapeHtml(answer)}</textarea>
         </label>${solution}</fieldset>`;
     };
 
-    $("#debrief-form").innerHTML = `<div class="question-section"><h3>Fem hovedspørsmål</h3><p>Marion-sakens dokumenterte kjerne.</p>${mainQuestions.map((item, index) => renderQuestion(item, index)).join("")}</div>
-      <div class="question-section bonus-section"><h3>Fem sidespor</h3>${bonusQuestions.map((item, index) => renderQuestion(item, index)).join("")}</div>
-      ${state.debriefSubmitted ? '<div class="booklet-complete">Løsningsheftet er åpnet. Juster selvskåringen når du har sammenlignet alle svarene.</div>' : '<button type="submit" class="btn btn-primary">Lever ti svar og åpne løsningsheftet</button>'}`;
+    $("#debrief-form").innerHTML = `<div class="question-section"><h3>Fem hovedspørsmål · ${maxFor(mainQuestions)} poeng</h3>${mainQuestions.map((item, index) => renderQuestion(item, index)).join("")}</div>
+      <div class="question-section bonus-section"><h3>Fem sidespor · ${maxFor(bonusQuestions)} poeng</h3>${bonusQuestions.map((item, index) => renderQuestion(item, index)).join("")}</div>
+      ${state.debriefSubmitted ? '<div class="booklet-complete">Løsningsheftet er åpnet. Kryss av poengkriteriene som finnes i svarene dine.</div>' : '<button type="submit" class="btn btn-primary">Lever ti svar og åpne løsningsheftet</button>'}`;
 
     const status = $("#current-status");
     status.classList.toggle("hidden", !state.debriefSubmitted);
@@ -571,6 +618,7 @@
     $("#lead-search").addEventListener("input", renderDirectory);
     $("#lead-filter").addEventListener("change", renderDirectory);
     $("#free-notes").addEventListener("input", (event) => { state.notes = event.target.value; saveState(); });
+    $("#add-identity-link").addEventListener("click", addIdentityLink);
     $(".document-close").addEventListener("click", closeDocumentViewer);
     $("#document-viewer").addEventListener("click", (event) => { if (event.target.id === "document-viewer") closeDocumentViewer(); });
     $("#debrief-form").addEventListener("submit", submitDebrief);
@@ -586,11 +634,17 @@
       if (mapPin) showMapInfo(mapPin.dataset.mapLead);
       const removePin = event.target.closest("[data-remove-pin]");
       if (removePin) togglePin(removePin.dataset.removePin);
+      const removeIdentity = event.target.closest("[data-remove-identity-link]");
+      if (removeIdentity) {
+        state.identityLinks.splice(Number(removeIdentity.dataset.removeIdentityLink), 1);
+        saveState();
+        renderNotebook();
+      }
     });
 
     document.addEventListener("change", (event) => {
-      if (event.target.matches("[data-self-score]")) {
-        state.selfScores[event.target.dataset.selfScore] = Number(event.target.value);
+      if (event.target.matches("[data-criterion-key]")) {
+        state.criterionChecks[event.target.dataset.criterionKey] = event.target.checked;
         saveState();
         renderDebrief();
       }

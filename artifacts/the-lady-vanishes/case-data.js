@@ -20,7 +20,7 @@
   window.CASE_DATA = {
     meta: {
       title: "The Case Files: The Lady Vanishes",
-      version: "0.5-handwriting",
+      version: "0.6-alias-deduction",
       actionDisclaimer: "",
       currentStatus: [
         "NSW-coroneren fant 29. februar 2024 at Marion Barter er død og trolig døde en gang etter 15. oktober 1997.",
@@ -66,133 +66,184 @@
       { id: "loc-overseas", name: "Utenlandske registre", region: "Internasjonalt", map: { x: 865, y: 155 } }
     ],
 
+    identities: [
+      { id: "mf-remakel", label: "M.F. Remakel", documentIds: ["doc16"] },
+      { id: "de-hedervary", label: "Frederick De Hedervary", documentIds: ["doc17", "doc19", "doc20", "doc22"] },
+      { id: "westbury", label: "Richard Lloyd Westbury", documentIds: ["doc18", "doc20"] },
+      { id: "wouters", label: "Willy Wouters", documentIds: ["doc19", "doc21"] },
+      { id: "coppenolle", label: "Willy Coppenolle", documentIds: ["doc21"] },
+      { id: "real-remakel", label: "Fernand Remakel (Luxembourg)", documentIds: ["doc22"] }
+    ],
+
     documents: [
       { id: "doc01", title: "Registrering av hussalget", date: "1997-04-25", dateLabel: "25. april 1997", facsimile: "assets/facsimiles-v05/doc01-house-sale-record.png", alt: "Registrering av salget av huset i Southport.", transcript: ["Eiendom: Merinda Court, Southport.", "Registrert selger: Marion Barter.", "Salgsdato: 25. april 1997.", "Registrert salgssum: A$165 000; oppgitt prisantydning: A$175 000."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
       { id: "doc15", title: "Første oppsigelsesbrev til The Southport School", date: "1997-04-13", dateLabel: "13. april 1997", facsimile: "assets/facsimiles-v05/doc15-first-resignation-letter.png", alt: "Marions første oppsigelsesbrev til The Southport School.", transcript: ["Datert 13. april 1997 og adressert til skolens ledelse.", "Marion skriver at hun sier opp med stor sorg og profesjonell motvilje, med virkning fra 14. juli 1997.", "Hun ønsker å diskutere de medvirkende årsakene og nevner planer om å reise til England."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
       { id: "doc02", title: "Andre oppsigelsesbrev til The Southport School", date: "1997-06-16", dateLabel: "16. juni 1997", facsimile: "assets/facsimiles-v05/doc02-school-resignation-letter.png", alt: "Marions andre oppsigelsesbrev til The Southport School.", transcript: ["Datert 16. juni 1997 og adressert «Dear Sir / Madam».", "Marion skriver at hun vil reise utenlands på ubestemt tid og håper å undervise i England og Europa.", "Hun ber om fornyelse av lærerregistreringen for 1998 og bruker Lesley Lovedays adresse.", "Oppsigelsen skulle gjelde fra 20. juni 1997."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
       { id: "doc03", title: "Utreisekort og flyregistrering", date: "1997-06-22", dateLabel: "22. juni 1997", facsimile: "assets/facsimiles-v05/doc03-departure-card.png", alt: "Australsk utreisekort utfylt for Florabella Remakel.", transcript: ["Navn: Florabella Remakel.", "Avreise: Brisbane, 22. juni 1997 kl. 21.38.", "Flyselskap: Korean Airlines.", "Synlige felt: «Europe», «Luxembourg» og «S/Korea»."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"] },
       { id: "doc04", title: "Brevet til Sally", date: "1997-06-30", dateLabel: "mottatt 30. juni 1997", facsimile: "assets/facsimiles-v05/doc04-narita-stationery-letter.png", alt: "Marions brev til Sally på Hotel Nikko Narita-brevpapir.", transcript: ["Adressert til Sally og signert «Marion».", "Marion skriver at hun endelig har kommet til England etter et interessant besøk i øst, men at for mye bagasje gjorde reisen vanskeligere.", "Hun planlegger å bli i Tunbridge Wells noen dager før hun tar fatt på Europa.", "Konvolutten var poststemplet i Tunbridge Wells og brevet ble mottatt 30. juni 1997."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-parallel-compiled"] },
-      { id: "doc05", title: "Postkortene fra England", date: "1997-07", dateLabel: "sommeren 1997", facsimile: "assets/facsimiles-v05/doc05-sussex-postcards.png", alt: "Postkort fra Tunbridge Wells, Rye og Hastings.", transcript: ["Postkort sendt til familie og venner i Australia; de enkelte mottakerne er ikke fullt identifisert.", "Kortene er knyttet til Tunbridge Wells, Rye og Hastings.", "Alle er skrevet med samme hånd og signert «Marion»."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
+      { id: "doc05", title: "Postkortene fra England", date: "1997-07", dateLabel: "sommeren 1997", facsimile: "assets/facsimiles-v05/doc05-sussex-postcards.png", alt: "Postkort fra Tunbridge Wells, Rye og Hastings.", transcript: ["Postkort sendt til familie og venner i Australia; de enkelte mottakerne er ikke fullt identifisert.", "Kortene er knyttet til Tunbridge Wells, Rye og Hastings.", "Alle er skrevet med samme hånd og signert «Marion».", "Ett kort som senere ble funnet hadde britisk poststempel 7. august 1997 — fem dager etter den registrerte returen til Australia."], sourceIds: ["src-coroner-2024", "src-timeline-compiled", "src-witnesses-compiled"] },
       { id: "doc06", title: "Innreisekortet", date: "1997-08-02", dateLabel: "2. august 1997", facsimile: "assets/facsimiles-v05/doc06-arrival-card.png", alt: "Innreisekort utfylt for Florabella Remakel.", transcript: ["Navn: Florabella Remakel.", "Ankomst: Brisbane, 2. august 1997 kl. 10.11; Cathay Pacific.", "Oppgitt sivilstatus: gift; bostedsland: Luxembourg; yrke: home duties.", "Planlagt opphold: 8 dager; adresse i Australia: Novotel, Brisbane."], sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"] },
       { id: "doc08", title: "Notatbokinnførselen ved Byron Bay Police", date: "1997-10-22", dateLabel: "22. oktober 1997", facsimile: "assets/facsimiles-v05/doc08-police-notebook.png", alt: "Notatbokinnførsel fra Byron Bay Police.", transcript: ["Byron Bay, 22. oktober 1997.", "Sally og Chris møtte angående Marion Barter.", "Familien rapporterte retur til Australia 2. august og bankaktivitet i Byron Bay/Burleigh Heads.", "En større bevegelse omkring A$80 000 ble rapportert 15. oktober."], sourceIds: ["src-coroner-2024", "src-timeline-compiled"] },
       { id: "doc10", title: "Transaksjonsoversikten", date: "1997-08/10", dateLabel: "august–oktober 1997", facsimile: "assets/facsimiles-v05/doc10-bank-transaction-sheet.png", alt: "Oversikt over banktransaksjoner fra august til oktober 1997.", transcript: ["18. august: to uttak på A$500 i Byron Bay.", "21.–22. august: ett uttak på A$500 per dag i Burleigh Heads.", "23.–28. august: ett uttak på A$500 per dag i Byron Bay.", "15. oktober: omkring A$80 000, beskrevet som filialuttak eller mulig telegrafisk overføring.", "Destinasjonskontoen er ikke fastslått."], sourceIds: ["src-coroner-2024", "src-evidence-compiled"] },
       { id: "doc11", title: "Queensland-notatet", date: "1997-12-01", dateLabel: "1. desember 1997", facsimile: "assets/facsimiles-v05/doc11-queensland-safe-and-well-note.png", alt: "Queensland-notat om Marion Barter.", transcript: ["Queensland Missing Persons Bureau; filnotat datert 1. desember 1997; emne Marion Barter.", "Synlig konklusjon: «Missing person located safe and well, whereabouts not to be disclosed.»", "De foregående arbeidsnotatene er redigert og var ikke tilgjengelige i det senere offentlige materialet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
       { id: "doc12", title: "Salvation Army-brevet", date: "1998-03-18", dateLabel: "18. mars 1998 · senere materiale", facsimile: "assets/facsimiles-v05/doc12-salvation-army-letter.png", alt: "Brev fra The Salvation Army til familien.", transcript: ["The Salvation Army, Family Tracing correspondence; 18. mars 1998; adressert til Mr Wilson.", "Brevet sier at Marion hadde tatt ut de resterende pengene og ville begynne et nytt liv.", "En senere coroner-gjennomgang stilte spørsmål ved den rapporterte henvisningen til en bankansatt innen sikkerhet."], sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] },
       { id: "doc14", title: "Coronerens funn", date: "2024-02-29", dateLabel: "29. februar 2024 · senere materiale", facsimile: "assets/facsimiles-v05/doc14-coroner-findings-extract.png", alt: "Utdrag fra coronerens formelle funn.", transcript: ["State Coroner's Court, New South Wales; funn datert 29. februar 2024.", "Marion Barter er død og døde trolig en gang etter 15. oktober 1997.", "Levningene er ikke funnet.", "Sted, årsak og dødsmåte kunne ikke fastslås.", "Funnene fastslo ikke at en identifisert person forårsaket døden."], sourceIds: ["src-coroner-2024"] }
+      ,{ id: "doc16", title: "Kontaktannonsen", date: "1994-12-10", dateLabel: "10. desember 1994", facsimile: "assets/alias-v06/doc16-contact-ad.png", alt: "Kontaktannonse under navnet M.F. Remakel.", transcript: ["M.F. Remakel, 47 år og ugift, søker et varig forhold eller ekteskap.", "Kontakt: Box L51, Lennox Head og telefon (066) 864 788."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
+      { id: "doc17", title: "Selskapsutskrift – Ballina Coin Investments", date: "1994-09-02", dateLabel: "2. september 1994", facsimile: "assets/alias-v06/doc17-company-extract.png", alt: "Selskapsutskrift for Ballina Coin Investments.", transcript: ["Direktører: Frederick David De Hedervary og Diane De Hedervary.", "Adresse: Suite 9, 48 Tamar Street, Ballina.", "Telefon: (066) 864 788; postadresse PO Box 624, Ballina."], sourceIds: ["src-coroner-2024", "src-blum-finance-compiled"] },
+      { id: "doc18", title: "Internasjonalt reiseregister", date: "1997-06/07", dateLabel: "17. juni–31. juli 1997", facsimile: "assets/alias-v06/doc18-movement-record.png", alt: "Reiseregister for Richard Lloyd Westbury.", transcript: ["Richard Lloyd Westbury forlot Australia 17. juni 1997 med Japan som første destinasjon.", "Han returnerte til Australia 31. juli 1997.", "Reisedokumentet var utstedt i Westbury-navnet."], sourceIds: ["src-coroner-2024", "src-parallel-compiled"] },
+      { id: "doc19", title: "Immigrasjons- og statsborgerskapsfil", date: "1969/1976", dateLabel: "1969–1976", facsimile: "assets/alias-v06/doc19-migration-name-file.png", alt: "Immigrasjons- og statsborgerskapsfil med navnene Willy Wouters og Frederick De Hedervary.", transcript: ["Willy Wouters ankom Australia med Ilona Kinczel 24. mai 1969.", "Australsk statsborgerskap ble innvilget i 1976.", "Diane forklarte at mannen hun kjente som Willy Wouters senere brukte navnet Frederick De Hedervary."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
+      { id: "doc20", title: "Passkryssregister", date: "1997", dateLabel: "1997", facsimile: "assets/alias-v06/doc20-passport-cross-index.png", alt: "Passkryssregister som kobler De Hedervary- og Westbury-navnene.", transcript: ["Frederick David De Hedervary og Richard Lloyd Westbury er indeksert til samme reisendefil.", "Westbury-navnet ble brukt på passet under reisen 17. juni–31. juli 1997."], sourceIds: ["src-coroner-2024", "src-parallel-compiled"] },
+      { id: "doc21", title: "Intervju om fødsels- og familienavn", date: "2022", dateLabel: "forklaring under inquest", facsimile: "assets/alias-v06/doc21-birth-interview.png", alt: "Intervjuutdrag med navnene Willy Coppenolle og Willy Wouters.", transcript: ["Intervjupersonen sa at fødselsregisteret oppførte Willy Coppenolle.", "Han forklarte at moren senere giftet seg med Abel Florent Wouters, og at han brukte navnet Willy Wouters."], sourceIds: ["src-coroner-2024", "src-blum-alias-compiled"] },
+      { id: "doc22", title: "Luxembourg – vitnefil", date: "circa 1980", dateLabel: "omkring 1980", facsimile: "assets/alias-v06/doc22-luxembourg-witness-note.png", alt: "Vitnefil om Monique Cornelius, Fernand Remakel og Frederick De Hedervary.", transcript: ["Monique Cornelius var tidligere gift med Fernand Remakel.", "Hun korresponderte omkring 1980 med en mann som brukte navnet Frederick De Hedervary.", "Den virkelige Fernand Remakel er en separat person."], sourceIds: ["src-coroner-2024", "src-remakel-compiled"] }
     ],
 
     episode: {
       id: "ep1",
       title: "Mor tar ikke telefonen",
       period: "juni–desember 1997",
-      referenceLeadIds: ["sp03", "sp05", "sp07", "gc02", "gc03", "gc06", "ns01", "ns02", "ns08", "ns11", "ns13", "xr01", "xr02", "xr10", "xr11", "xr12"],
+      referenceLeadIds: ["sp05", "gc02", "gc03", "gc06", "gc08", "gc09", "ns01", "ns02", "ns04", "ns11", "ns13", "xr01", "xr07", "xr10", "xr11", "xr12"],
       brief: [
         "Det er oktober 1997. Marion dro fra Southport på en lang reise fire måneder tidligere. Familien har mottatt brev og postkort, men den siste telefonsamtalen ble brutt — og nå svarer hun ikke.",
         "Sally har oppdaget bankaktivitet hun ikke forstår. Du får et åpent register, et kart og de dokumentene familien allerede har. Det finnes ingen handlingsgrense; hvert oppslag registreres bare slik at du kan sammenligne etterforskningsstrategier.",
-        "Registeret er ikke kuratert for deg. De fleste oppslag gir lite eller ingenting, mens enkelte sidehistorier først får betydning i sluttoppgjøret. Referansestien bruker 16 oppslag; hvert ekstra oppslag trekker ett av ti effektivitetspoeng, men låser deg aldri ute. Avslutt når du mener du kan forklare hva som er dokumentert — og hva som fortsatt bare er en antakelse."
+        "Registeret er ikke kuratert for deg. De fleste oppslag gir lite eller ingenting, mens enkelte sidehistorier først får betydning i sluttoppgjøret. Referansestien bruker 16 oppslag; hvert ekstra oppslag trekker 5 poeng, men låser deg aldri ute. Avslutt når du mener du kan forklare hva som er dokumentert — og hva som fortsatt bare er en antakelse."
       ],
       initialDocumentIds: ["doc04", "doc05"],
       debriefDocumentIds: ["doc12", "doc14"],
       questions: [
         {
-          id: "main-1", group: "main",
-          prompt: "Rekonstruer den sikreste dokumenterte reiserammen fra avreisen 22. juni til den registrerte returen 2. august 1997. Hva vet vi — og hva beviser reisedokumentene ikke?",
+          id: "main-1", group: "main", points: 25,
+          prompt: "Hvilke navn i arkivene viser til samme mann? Nevn dokumentene som binder identitetene sammen.",
           modelAnswer: [
-            "En passasjer under navnet Florabella Remakel forlot Brisbane med Korean Airlines 22. juni og en passasjer under samme navn ble registrert inn i Brisbane med Cathay Pacific 2. august. Brev og postkort dokumenterer kontakt fra England i mellomperioden.",
-            "Kortene og registreringene støtter en reiseramme, men fastslår ikke alene hvem som fylte ut hvert felt, at alle oppgitte personopplysninger var sanne, hvem Marion eventuelt reiste med, eller hele ruten mellom Australia og England."
+            "M.F. Remakel, Frederick De Hedervary, Richard Lloyd Westbury, Willy Wouters og Willy Coppenolle peker mot samme person, senere offentlig kjent som Ric Blum.",
+            "Kjeden bygges av telefonnummeret i annonsen og selskapsregisteret, immigrasjonsfilen Wouters–De Hedervary, passkryssregisteret De Hedervary–Westbury og intervjuet Coppenolle–Wouters. Den virkelige Fernand Remakel er en separat person."
           ],
-          rubric: ["Begge nøkkeldatoene og aliaset.", "Skillet mellom registrert reise og sikker identifikasjon/livshistorie.", "Minst én tydelig begrensning i dokumentkjeden."],
-          sourceIds: ["src-coroner-2024", "src-timeline-compiled", "src-evidence-compiled"]
+          criteria: [
+            { points: 5, text: "Kobler M.F. Remakel til De Hedervary gjennom telefonnummeret og Ballina Coin Investments." },
+            { points: 5, text: "Kobler Willy Wouters til Frederick De Hedervary gjennom immigrasjons-/familiefilen." },
+            { points: 5, text: "Kobler De Hedervary til Richard Lloyd Westbury gjennom passkryssregisteret." },
+            { points: 5, text: "Kobler Willy Wouters og Willy Coppenolle, med forbehold om at fødselsnavnet bygger på personens egen forklaring." },
+            { points: 5, text: "Holder den virkelige Fernand Remakel utenfor identitetskjeden." }
+          ],
+          sourceIds: ["src-coroner-2024", "src-blum-alias-compiled", "src-blum-finance-compiled", "src-remakel-compiled"]
         },
         {
-          id: "main-2", group: "main",
-          prompt: "Hvordan bør Narita-brevpapiret, Sussex-postkortene og den siste telefonsamtalen settes sammen uten å overtolke dem?",
+          id: "main-2", group: "main", points: 15,
+          prompt: "Hvilke felt på passasjerkortene skiller seg fra resten av håndskriften?",
           modelAnswer: [
-            "Materialet viser at Sally mottok et brev på Hotel Nikko Narita-papir som ble postlagt fra England, samt postkort knyttet til steder i Kent og East Sussex. Den siste samtalen ble avbrutt og kan ikke plasseres sikkert geografisk.",
-            "Dette støtter kontakt og engelske poststeder, men brevpapiret beviser ikke at Marion bodde på hotellet eller var i Japan. Dokumentene gir heller ikke en komplett reiserute eller identifiserer eventuelt reisefølge."
+            "På utreisekortet skiller Europe, Luxembourg og S/Korea seg fra resten. På innreisekortet skiller passnummeret seg ut.",
+            "Forskjellen viser at minst to hender fylte ut kortene, men identifiserer ikke den andre skriveren."
           ],
-          rubric: ["Narita-papir og engelsk postgang holdes fra hverandre.", "Postkort/samtale brukes som kontaktspor, ikke full bevegelseslogg.", "Overtolkning av Japan, sted eller reisefølge avvises."],
-          sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-witnesses-compiled"]
+          criteria: [
+            { points: 5, text: "Finner Europe, Luxembourg og S/Korea på utreisekortet." },
+            { points: 5, text: "Finner passnummeret på innreisekortet." },
+            { points: 5, text: "Konkluderer med to hender uten å identifisere den andre skriveren." }
+          ],
+          sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-analysis-compiled"]
         },
         {
-          id: "main-3", group: "main",
-          prompt: "Hva viser banksporet fra august til oktober 1997, og hvilke avgjørende spørsmål lar transaksjonene stå åpne?",
+          id: "main-3", group: "main", points: 20,
+          prompt: "Hvordan kom Hotel Nikko Narita-brevpapiret til Marion i England, og hva viser forbindelsen?",
           modelAnswer: [
-            "Det offentlige materialet beskriver gjentatte uttak i Byron Bay og Burleigh Heads i august og en langt større transaksjon omkring 15. oktober. Mønsteret viser aktivitet på kontoen etter den registrerte returen.",
-            "Transaksjonene identifiserer ikke alene hvem som utførte dem, om Marion handlet frivillig, hvorfor pengene ble flyttet eller hvor den store summen til slutt endte."
+            "Richard Lloyd Westbury reiste via Japan 17. juni og oppga senere at transitthotellet sannsynligvis var Hotel Nikko Narita. Marion skrev fra England på papir fra samme hotell før brevet ble mottatt 30. juni.",
+            "Den mest sannsynlige forklaringen er at Westbury tok med papiret til England og ga det til Marion. Det knytter reisene sammen, men beviser ikke hva som senere skjedde med henne."
           ],
-          rubric: ["August-uttakene og den store oktobertransaksjonen.", "Koblingen til aktivitet etter retur.", "Bruker, motiv og endelig destinasjon behandles som åpne spørsmål."],
+          criteria: [
+            { points: 5, text: "Identifiserer Hotel Nikko Narita-papiret." },
+            { points: 5, text: "Plasserer Westbury i Japan 17. juni." },
+            { points: 5, text: "Plasserer Marions brev i England før 30. juni." },
+            { points: 5, text: "Forklarer papirforbindelsen uten å gjøre den til bevis for senere skyld." }
+          ],
           sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-parallel-compiled"]
         },
         {
-          id: "main-4", group: "main",
-          prompt: "Forklar hvordan politiets behandling i oktober–desember svekket etterforskningen. Hvilke to administrative spor er viktigst?",
+          id: "main-4", group: "main", points: 20,
+          prompt: "Hva skjedde med Marions penger fra 18. august til 15. oktober, og hva er det siste sikre livstegnet?",
           modelAnswer: [
-            "Henvendelsen ved Byron Bay 22. oktober ble registrert som en occurrence i stedet for en aktiv savnetsak. Senere sa et Queensland-notat at Marion var funnet trygg og at oppholdsstedet ikke skulle oppgis.",
-            "Arbeidsarkene som kunne vist grunnlaget for «safe and well», manglet ved senere kontroll. Kombinasjonen av feil klassifisering og en utilstrekkelig etterprøvbar avslutning bidro til at tid og mulig dokumentasjon gikk tapt."
+            "Kontoen ble belastet med gjentatte A$500-uttak i Byron Bay og Burleigh Heads i august. Omkring A$80 000 ble flyttet 15. oktober; destinasjonen er ukjent.",
+            "Joan Hazlett identifiserte Marion som kunden ved Colonial State Bank i Byron Bay 15. oktober. Coroneren aksepterte dette som den siste sikre observasjonen."
           ],
-          rubric: ["Occurrence i stedet for aktiv savnetsak.", "Queenslands safe-and-well-notat og manglende underlag.", "Konsekvensen for tid, arkiver eller etterprøvbarhet."],
+          criteria: [
+            { points: 5, text: "Finner de gjentatte uttakene i Byron Bay/Burleigh Heads." },
+            { points: 5, text: "Finner transaksjonen på omtrent A$80 000 den 15. oktober." },
+            { points: 5, text: "Identifiserer Joan Hazlett og Byron Bay-banken som siste sikre observasjon." },
+            { points: 5, text: "Fastslår at pengenes endelige destinasjon er ukjent." }
+          ],
+          sourceIds: ["src-coroner-2024", "src-evidence-compiled", "src-witnesses-compiled"]
+        },
+        {
+          id: "main-5", group: "main", points: 20,
+          prompt: "Hvilke to administrative avgjørelser førte til at etterforskningen stoppet opp?",
+          modelAnswer: [
+            "Byron Bay registrerte familiens henvendelse som en occurrence i stedet for en aktiv savnetsak. Deretter sa Queensland-notatet at Marion var funnet safe and well og at oppholdsstedet ikke skulle oppgis.",
+            "Arbeidsarkene som skulle forklare grunnlaget for safe-and-well-konklusjonen manglet senere."
+          ],
+          criteria: [
+            { points: 5, text: "Nevner familiens henvendelse 22. oktober." },
+            { points: 5, text: "Identifiserer occurrence-klassifiseringen." },
+            { points: 5, text: "Identifiserer Queensland-notatet safe and well." },
+            { points: 5, text: "Finner at underlaget/arbeidsarkene manglet." }
+          ],
           sourceIds: ["src-coroner-2024", "src-timeline-compiled", "src-witnesses-compiled", "src-case-hub"]
         },
         {
-          id: "main-5", group: "main",
-          prompt: "Hva er den mest forsvarlige samlede konklusjonen ved slutten av den historiske etterforskningen — og hvilke skyld- eller dødsårsaksutsagn kan bevisene ikke bære?",
+          id: "bonus-1", group: "bonus", points: 10,
+          prompt: "Hva endret Marion mellom de to oppsigelsesbrevene til The Southport School?",
           modelAnswer: [
-            "Ved utgangen av 1997 kunne familien dokumentere brutt kontakt, en registrert retur under Florabella Remakel, senere bankaktivitet og en politibehandling med alvorlige svakheter. Dette ga god grunn til fortsatt etterforskning.",
-            "Materialet fastslo ikke hvor Marion befant seg, om hun fortsatt levde, hvem som sto bak alle handlingene eller om en navngitt person hadde forårsaket skade. Ved dette historiske sluttpunktet er den forsvarlige konklusjonen at forsvinningen krevde videre etterforskning — ikke at dødsfall, dødsårsak eller skyld var bevist."
+            "Det første brevet 13. april satte fratreden til 14. juli. Det andre 16. juni flyttet den frem til 20. juni, samtidig som Marion ba om lærerregistrering for 1998 og oppga Lesley Lovedays adresse."
           ],
-          rubric: ["En nøktern syntese av kontakt, retur, bank og politisvikt.", "Ingen navngitt person gjøres skyldig uten bevis.", "Dødsfall, dødsårsak og gjerningsperson holdes åpne ved det historiske sluttpunktet."],
-          sourceIds: ["src-coroner-2024", "src-case-hub", "src-analysis-compiled"]
-        },
-        {
-          id: "bonus-1", group: "bonus",
-          prompt: "Hvem var Ilona Kinczel i Ric Blums livshistorie, og hvorfor må dødsfallet hennes omtales med særlig varsomhet?",
-          modelAnswer: [
-            "Ilona Kinczel var Blums tredje kone og mor til datteren Evelyn. Hun døde ung i Melbourne i 1977.",
-            "Arkivet fastslår ikke at dødsfallet skyldtes en forbrytelse eller at Blum medvirket."
+          criteria: [
+            { points: 5, text: "Finner endringen fra 14. juli til 20. juni." },
+            { points: 5, text: "Finner fornyelsen for 1998 eller Lesley Lovedays adresse." }
           ],
-          rubric: ["Tredje kone og dødsåret.", "Ingen foul play presenteres som fakta.", "Fravær av offentlig bevis brukes til å avgrense, ikke insinuere."],
-          sourceIds: ["src-ilona-compiled", "src-blum-alias-compiled"]
-        },
-        {
-          id: "bonus-2", group: "bonus",
-          prompt: "Hva forteller The Southport School-sporet om Marion rett før reisen, og hvilken motsigelse gjør sporet interessant?",
-          modelAnswer: [
-            "Marion var en anerkjent lærer ved The Southport School og hadde mottatt en Queensland Teaching Excellence Award i 1996. Det første oppsigelsesbrevet 13. april satte fratreden til 14. juli; det andre 16. juni flyttet den frem til 20. juni.",
-            "I det andre brevet ba hun samtidig om fornyelse av lærerregistreringen for 1998 og brukte Lesley Lovedays adresse. Det passer dårlig med en enkel fortelling om et fullstendig og permanent brudd med yrkeslivet, men forklarer ikke alene hensikten hennes."
-          ],
-          rubric: ["Begge oppsigelsesbrevene og endringen fra 14. juli til 20. juni.", "Fornyelsen for 1998 eller den profesjonelle anerkjennelsen.", "Motsigelsen beskrives uten å dikte motiv."],
           sourceIds: ["src-coroner-2024", "src-timeline-compiled", "src-marion-person-compiled"]
         },
         {
-          id: "bonus-3", group: "bonus",
-          prompt: "Hvem var den virkelige Fernand Remakel, hvordan kom navnet inn i nettverket, og hva må sies om hans rolle i Marion-saken?",
+          id: "bonus-2", group: "bonus", points: 10,
+          prompt: "Hvem var den virkelige Fernand Remakel, og hvorfor skal han holdes utenfor aliasgruppen?",
           modelAnswer: [
-            "Fernand Remakel var en virkelig mann fra Luxembourg og Monique Cornelius' tidligere ektefelle. Offentlige funn og senere undersøkelser knytter Ric Blums kjennskap til navnet til forholdet med Cornelius; Blum brukte senere Remakel-identiteten.",
-            "Den virkelige Remakel er en uskyldig tredjepart og er ikke knyttet til Marions forsvinning. Enkelte biografiske detaljer om ham er ikke like godt dokumentert som selve identitetsforbindelsen."
+            "Fernand Remakel var en virkelig person fra Luxembourg og Monique Cornelius' tidligere ektefelle. Han er personen navnet ble hentet fra, ikke mannen bak M.F. Remakel-annonsen og de andre identitetene."
           ],
-          rubric: ["Virkelig luxembourgsk person, ikke Blum.", "Monique Cornelius som identitetsbro.", "Uskyldig tredjepart og kildeforbehold."],
-          sourceIds: ["src-coroner-2024", "src-remakel-compiled", "src-blum-alias-compiled"]
+          criteria: [
+            { points: 5, text: "Identifiserer den virkelige Fernand og forbindelsen til Monique Cornelius." },
+            { points: 5, text: "Holder ham utenfor aliasgruppen og Marion-saken." }
+          ],
+          sourceIds: ["src-coroner-2024", "src-remakel-compiled"]
         },
         {
-          id: "bonus-4", group: "bonus",
-          prompt: "Hva var Ballina Coin Investments, og hvordan koblet selskapet kontaktannonsen til et større identitets- og pengespor?",
+          id: "bonus-3", group: "bonus", points: 10,
+          prompt: "Hvem var Ilona Kinczel, og hva fastslår arkivet om dødsfallet hennes?",
           modelAnswer: [
-            "Ballina Coin Investments ble registrert i 1994 med Frederick og Diane De Hedervary som direktører. Telefonen ble koblet til kort tid etter og frakoblet i februar 1995; coronerens materiale beskriver ingen inntekt og vurderte selskapet som et middel til å skjule kontaktannonsens forbindelse til familien.",
-            "Myntvirksomhet og senere auksjonsspor gir et dokumenterbart nettverk av navn og økonomiske kontaktpunkter. De viser ikke hvor Marions penger endte, og senere mynttransaksjoner beviser ikke hva som skjedde i 1997."
+            "Ilona Kinczel ankom Australia med Willy Wouters i 1969 og var hans tredje kone. Hun døde i Melbourne i 1977. Arkivet fastslår ikke at dødsfallet skyldtes en forbrytelse eller at en annen person medvirket."
           ],
-          rubric: ["1994-selskapet og De Hedervary-navnet.", "Kontaktannonse/telefonkoblingen.", "Myntsporet skilles fra bevis om Marions penger eller skjebne."],
+          criteria: [
+            { points: 5, text: "Kobler Ilona til Willy Wouters og 1969-ankomsten." },
+            { points: 5, text: "Oppgir 1977-dødsfallet uten å hevde forbrytelse eller medvirkning." }
+          ],
+          sourceIds: ["src-ilona-compiled", "src-blum-alias-compiled"]
+        },
+        {
+          id: "bonus-4", group: "bonus", points: 10,
+          prompt: "Hva var Ballina Coin Investments, og hvorfor var telefonnummeret viktig?",
+          modelAnswer: [
+            "Selskapet var registrert med Frederick og Diane De Hedervary som direktører og hadde ingen registrert driftsinntekt. Telefonnummeret (066) 864 788 ble også brukt i M.F. Remakel-annonsen og binder de to navnene sammen."
+          ],
+          criteria: [
+            { points: 5, text: "Identifiserer direktørene eller den manglende driftsinntekten." },
+            { points: 5, text: "Kobler telefonnummeret til M.F. Remakel-annonsen." }
+          ],
           sourceIds: ["src-coroner-2024", "src-blum-finance-compiled", "src-blum-alias-compiled"]
         },
         {
-          id: "bonus-5", group: "bonus",
-          prompt: "Hvilket gjentakende mønster viser arkivsporene rundt andre kvinner, aliaser og mynter — og hvorfor er et mønster fortsatt ikke en løsning på Marion-saken?",
+          id: "bonus-5", group: "bonus", points: 10,
+          prompt: "Hva er uvanlig med postkortet som ble poststemplet i Storbritannia 7. august 1997?",
           modelAnswer: [
-            "Kildene beskriver gjentatt bruk av aliaser og kontaktannonser, relasjoner bygget rundt en kultivert europeisk identitet, økonomiske løfter eller tap, og mynter eller samlerobjekter som kontakt- og pengespor.",
-            "Et slikt mønster kan prioritere dokumenter, vitner og økonomiske undersøkelser. Det kan ikke alene bevise at samme hendelsesforløp rammet Marion, at en bestemt person utførte en bestemt transaksjon, eller at noen forårsaket hennes død."
+            "Poststempelet er fem dager senere enn den registrerte returen til Australia 2. august. Det kan skyldes postforsinkelse eller at en annen postla kortet; det beviser ikke i seg selv at Marion fortsatt var i Storbritannia."
           ],
-          rubric: ["Minst tre dokumenterte mønsterelementer.", "Mønsteret brukes som etterforskningsverktøy.", "Mønster likestilles ikke med skyld eller årsak."],
-          sourceIds: ["src-coroner-2024", "src-blum-alias-compiled", "src-blum-finance-compiled"]
+          criteria: [
+            { points: 5, text: "Sammenholder 7. august med returen 2. august." },
+            { points: 5, text: "Gir en mulig forklaring uten å behandle poststempelet som sikkert oppholdssted." }
+          ],
+          sourceIds: ["src-witnesses-compiled", "src-timeline-compiled"]
         }
       ]
     },
@@ -249,8 +300,14 @@
         "De mer detaljerte arbeidsarkene som skulle vise grunnlaget for setningen, finnes ikke i den senere dokumentkjeden."
       ], ["doc11"], ["src-coroner-2024", "src-witnesses-compiled"]),
       quiet("gc07", "GC-07", "Queensland Police – samband", "Brisbane, Queensland", "loc-brisbane", { result: RECORDS_GONE }),
-      quiet("gc08", "GC-08", "Department of Immigration – Brisbane", "Brisbane, Queensland", "loc-brisbane", { result: "Et oppslag på det kjente navnet Marion Barter gir ingen enkel forklaring. Eventuelle treff under andre navn må finnes gjennom konkrete reisedokumenter, ikke antas." }),
-      quiet("gc09", "GC-09", "Department of Foreign Affairs and Trade", "Brisbane-kontoret", "loc-brisbane"),
+      entry("gc08", "GC-08", "Department of Immigration – historiske personfiler", "Brisbane, Queensland", "loc-brisbane", [
+        "En person ankom Australia som Willy Wouters i 1969. Etter statsborgerskap og ekteskap brukte den samme personen navnet Frederick De Hedervary.",
+        "Filen forklarer ikke andre navn som kan ha vært brukt senere."
+      ], ["doc19"], ["src-coroner-2024", "src-blum-alias-compiled"]),
+      entry("gc09", "GC-09", "Australian Passport Office – kryssregister", "Brisbane, Queensland", "loc-brisbane", [
+        "Et passkryssregister indekserer Frederick David De Hedervary og Richard Lloyd Westbury til samme reisendefil.",
+        "Westbury-navnet ble brukt under reisen 17. juni–31. juli 1997."
+      ], ["doc20"], ["src-coroner-2024", "src-parallel-compiled"]),
       quiet("gc10", "GC-10", "Australian Passport Office", "Brisbane, Queensland", "loc-brisbane", { result: "Det offentlige spillmaterialet gir ingen 1997-utskrift her. Et manglende treff på ett navn utelukker ikke bruk av et annet lovlig navn." }),
       quiet("gc11", "GC-11", "Republikken Koreas konsulat", "Brisbane, Queensland", "loc-brisbane"),
       quiet("gc12", "GC-12", "Japans konsulat", "Brisbane, Queensland", "loc-brisbane", { result: "Hotel Nikko Narita-brevpapiret er et dokumentert objekt, men denne henvendelsen gir ingen bevart hotell- eller innreiseregisterkobling." }),
@@ -269,7 +326,10 @@
         "Notatet gjengir familiens opplysninger om retur, bankaktivitet og omtrent A$80 000 den 15. oktober.",
         "Dokumentet er en samtidig nedtegnelse av hva politiet ble fortalt; det er ikke i seg selv verifikasjon av alle detaljene."
       ], ["doc08"], ["src-coroner-2024", "src-timeline-compiled"]),
-      quiet("ns04", "NS-04", "Butikkene i Byron Bay", "Byron Bay, New South Wales", "loc-byron", { result: "Familien undersøkte lokalt, men det offentlige materialet bevarer ingen sikker butikkobservasjon av Marion." }),
+      entry("ns04", "NS-04", "Colonial State Bank – avdelingsleder", "Byron Bay, New South Wales", "loc-byron", [
+        "Avdelingsleder Joan Hazlett identifiserte Marion som kunden hun betjente 15. oktober 1997.",
+        "Dette er den siste observasjonen coroneren aksepterte som sikker."
+      ], [], ["src-coroner-2024", "src-witnesses-compiled"]),
       quiet("ns05", "NS-05", "Overnattingssteder i Byron Bay", "Byron Bay, New South Wales", "loc-byron"),
       quiet("ns06", "NS-06", "Byron District Hospital", "Byron Bay, New South Wales", "loc-byron"),
       quiet("ns07", "NS-07", "Australia Post – Byron Bay", "Byron Bay, New South Wales", "loc-byron"),
@@ -280,14 +340,14 @@
       quiet("ns09", "NS-09", "Optikerregisteret – Grafton", "Grafton, New South Wales", "loc-grafton", { result: "Et senere registerspor peker mot bruk av et Medicare-kort i Grafton, men ingen bevart journal eller samtidig 1997-erindring kan identifisere pasienten sikkert. Oppslaget løser derfor ingenting i denne tidsrammen.", sourceIds: ["src-coroner-2024", "src-witnesses-compiled"] }),
       quiet("ns10", "NS-10", "Grafton Base Hospital", "Grafton, New South Wales", "loc-grafton"),
       entry("ns11", "NS-11", "Australian Securities & Investments Commission – Ballina", "Ballina, New South Wales", "loc-ballina", [
-        "Selskaps- og coroneropplysninger viser at Ballina Coin Investments ble registrert 2. september 1994 med Frederick og Diane De Hedervary som direktører.",
-        "Telefonen ble koblet til kort tid etter og frakoblet 14. februar 1995. Materialet beskriver ingen inntekt og knytter selskapet til skjermingen av en kontaktannonse. Det sier ikke hvor Marions penger endte."
-      ], [], ["src-coroner-2024", "src-blum-finance-compiled"], { era: "later" }),
+        "Ballina Coin Investments ble registrert 2. september 1994 med Frederick og Diane De Hedervary som direktører.",
+        "Selskapet brukte telefon (066) 864 788 og lokaler i Tamar Street, men har ingen registrert driftsinntekt."
+      ], ["doc17"], ["src-coroner-2024", "src-blum-finance-compiled"], { era: "later" }),
       quiet("ns12", "NS-12", "Bankfilialene i Ballina", "Ballina, New South Wales", "loc-ballina"),
       entry("ns13", "NS-13", "Telefon- og annonsearkivet – Northern Rivers", "Ballina / Wollongbar, New South Wales", "loc-lismore", [
-        "En kontaktannonse fra 1994 brukte Remakel-navnet og kunne spores via telefonopplysninger til Ballina Coin Investments-nettverket.",
-        "Sporet kobler et alias, en kontaktmåte og et selskapsnavn. Det beviser ikke i seg selv når eller hvordan Marion møtte noen."
-      ], [], ["src-coroner-2024", "src-blum-alias-compiled", "src-blum-finance-compiled"], { era: "later" }),
+        "En franskspråklig kontaktannonse fra 1994 sto under navnet M.F. Remakel.",
+        "Annonsen brukte telefon (066) 864 788 og Box L51 i Lennox Head."
+      ], ["doc16"], ["src-coroner-2024", "src-blum-alias-compiled", "src-blum-finance-compiled"], { era: "later" }),
       quiet("ns14", "NS-14", "Lismore Police Station", "Lismore, New South Wales", "loc-lismore"),
       quiet("ns15", "NS-15", "Tweed Heads Hospital", "Tweed Heads, New South Wales", "loc-tweed"),
       entry("ns16", "NS-16", "NSW Missing Persons Unit", "New South Wales", "loc-nsw", [
@@ -297,7 +357,7 @@
       quiet("ns17", "NS-17", "Bankenes sentrale arkivkontor", "New South Wales", "loc-nsw", { result: "Ingen komplett bankdokumentkjede blir sikret gjennom dette oppslaget. Senere tap av arkivmateriale gjør at flere spørsmål ikke kan kontrolleres fullt ut.", sourceIds: ["src-coroner-2024", "src-case-hub"] }),
       quiet("ns18", "NS-18", "Northern Star / lokale aviser", "Northern Rivers, New South Wales", "loc-nsw"),
 
-      quiet("xr01", "XR-01", "Hotel Nikko Narita", "Narita, Japan", "loc-narita", { result: "Brevpapiret samsvarer med Hotel Nikko Narita, men ingen bevart offentlig gjesteliste i denne henvendelsen viser hvem som tok papiret eller når.", sourceIds: ["src-coroner-2024", "src-parallel-compiled"] }),
+      quiet("xr01", "XR-01", "Hotel Nikko Narita", "Narita, Japan", "loc-narita", { result: "Richard Lloyd Westbury reiste via Japan 17. juni 1997 og forklarte senere at transitthotellet sannsynligvis var Hotel Nikko Narita. Ingen gjesteliste er bevart. Brevpapir fra samme hotell dukker opp i Marions brev fra England.", sourceIds: ["src-coroner-2024", "src-parallel-compiled"] }),
       entry("xr02", "XR-02", "Royal Tunbridge Wells Post Office", "Kent, England", "loc-tunbridge", [
         "Familien mottok et postkort fra Tunbridge Wells sommeren 1997.",
         "Kortet dokumenterer kontakt og et poststed, men sier ikke hvem Marion var sammen med eller hvor lenge hun oppholdt seg der."
@@ -312,21 +372,24 @@
       ], ["doc05"], ["src-coroner-2024", "src-timeline-compiled"]),
       quiet("xr05", "XR-05", "Sussex Police – internasjonalt samband", "Sussex, England", "loc-london"),
       quiet("xr06", "XR-06", "Australian High Commission", "London, England", "loc-london"),
-      quiet("xr07", "XR-07", "Flyplassarkivene i London", "London, England", "loc-london"),
+      entry("xr07", "XR-07", "Home Affairs – internasjonale bevegelser", "Australia / Europa", "loc-overseas", [
+        "Richard Lloyd Westbury forlot Australia 17. juni 1997 med Japan som første destinasjon og returnerte 31. juli.",
+        "Reisedatoene ligger fem dager før Marions avreise og to dager før hennes registrerte retur."
+      ], ["doc18"], ["src-coroner-2024", "src-parallel-compiled"]),
       quiet("xr08", "XR-08", "Korean Air – internasjonalt arkiv", "Seoul / London", "loc-overseas", { result: "Utover den registrerte utreisen fra Brisbane gir oppslaget ingen bevart offentlig reiserute som forklarer alle mellomliggende stopp." }),
       quiet("xr09", "XR-09", "Japanske innreiseregistre", "Japan", "loc-narita", { result: RECORDS_GONE }),
       entry("xr10", "XR-10", "Public Record Office Victoria – personregister", "Melbourne, Victoria", "loc-overseas", [
-        "Arkivoversikten identifiserer Ilona Kinczel som Ric Blums tredje kone. Hun døde ung i Melbourne i 1977.",
-        "Ingen offentlig kilde i materialet fastslår at dødsfallet skyldtes en forbrytelse eller at Blum medvirket. Arkivet fastslår ikke at dødsfallet skyldtes en forbrytelse eller at Blum medvirket."
+        "Ilona Kinczel ankom Australia i 1969 sammen med en mann registrert som Willy Wouters. Hun døde i Melbourne i 1977.",
+        "Arkivet fastslår ikke at dødsfallet skyldtes en forbrytelse eller at en annen person medvirket."
       ], [], ["src-ilona-compiled", "src-blum-alias-compiled"], { era: "later" }),
-      entry("xr11", "XR-11", "Luxembourg – folkeregister og lokalarkiv", "Luxembourg", "loc-overseas", [
-        "Fernand Remakel var en virkelig person fra Luxembourg og Monique Cornelius' tidligere ektefelle. Senere materiale beskriver Cornelius som forbindelsen som ga Blum kjennskap til navnet.",
-        "Den virkelige Remakel er en uskyldig tredjepart og er ikke knyttet til Marions forsvinning. Enkelte detaljer om hans biografi har begrenset åpen primærkildestøtte."
-      ], [], ["src-coroner-2024", "src-remakel-compiled", "src-blum-alias-compiled"], { era: "later" }),
-      entry("xr12", "XR-12", "Internasjonalt vitne- og selskapsarkiv", "Australia / Europa", "loc-overseas", [
-        "Senere vitne- og arkivmateriale beskriver gjentatt bruk av aliaser, kontaktannonser, økonomiske løfter og mynter eller samlerobjekter i flere relasjoner.",
-        "Mønsteret kan peke mot dokumenter og vitner som bør undersøkes. Det beviser ikke at samme hendelsesforløp rammet Marion eller at en navngitt person forårsaket hennes død."
-      ], [], ["src-coroner-2024", "src-blum-alias-compiled", "src-blum-finance-compiled"], { era: "later" })
+      entry("xr11", "XR-11", "Luxembourg – folkeregister og vitnearkiv", "Luxembourg", "loc-overseas", [
+        "Monique Cornelius var tidligere gift med den virkelige Fernand Remakel.",
+        "Omkring 1980 korresponderte hun med en annen mann som brukte navnet Frederick De Hedervary. Fernand Remakel er en separat person."
+      ], ["doc22"], ["src-coroner-2024", "src-remakel-compiled", "src-blum-alias-compiled"], { era: "later" }),
+      entry("xr12", "XR-12", "Europeisk identitetsarkiv", "Belgia / Luxembourg", "loc-overseas", [
+        "Et intervju knytter navnene Willy Coppenolle og Willy Wouters til samme livshistorie, men fødselsnavnet bygger på personens egen forklaring.",
+        "Arkivet skiller mellom dokumenterte navn og påstander om hvilket navn som var det opprinnelige."
+      ], ["doc21"], ["src-coroner-2024", "src-blum-alias-compiled"], { era: "later" })
     ]
   };
 })();
