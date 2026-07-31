@@ -6,6 +6,7 @@
     ["players", "Players"],
     ["squads", "Squads"],
     ["chips", "Chips"],
+    ["preseason", "Pre-season"],
     ["teams", "Clubs"],
     ["setpieces", "Set pieces"],
     ["news", "News"],
@@ -108,6 +109,7 @@
       if (key === "teams") count = d.teams?.length;
       if (key === "news") count = d.news?.length;
       if (key === "chips") count = d.chips?.suggestions?.length;
+      if (key === "preseason") count = d.preseason_view?.counts?.flagged;
       return `<button class="navtab" data-route="${key}" role="tab" aria-current="false">${h(title)}${count !== "" ? `<span class="count">${h(count)}</span>` : ""}</button>`;
     }).join("");
     $("#stale").innerHTML = `<span title="Generated ${h(dateText(d.generated_at))}">${h(ago(d.generated_at))}</span>`;
@@ -334,7 +336,67 @@
       ${groups}${noneRanked}`;
   }
 
-  const renderers = { overview: renderOverview, players: renderPlayers, squads: renderSquads, chips: renderChips, teams: renderTeams, setpieces: renderSetPieces, news: renderNews };
+  function renderPreseason() {
+    const p = state.data.preseason_view;
+    if (!p) {
+      $("#view-preseason").innerHTML = viewHeader("Pre-season", "No pre-season data in this export.");
+      return;
+    }
+    const c = p.counts || {};
+    const fixtureRow = (f) => {
+      const score = f.played
+        ? `<b class="${f.outcome === "W" ? "accent" : f.outcome === "L" ? "" : "dim"}">${h(f.scored)}–${h(f.conceded)}</b>`
+        : '<span class="dim">—</span>';
+      const link = f.link ? ` <a href="${safeUrl(f.link)}" target="_blank" rel="noopener noreferrer">${f.played ? "Report" : "Details"}</a>` : "";
+      return `<tr><td class="left dim">${h(f.date)}</td>
+        <td class="left"><b>${h(f.club)}</b></td>
+        <td>${f.played ? `<span class="sp ${f.outcome === "W" ? "sp-pen1" : f.outcome === "L" ? "sp-fk" : "sp-ck"}">${h(f.outcome)}</span>` : ""}</td>
+        <td>${score}</td>
+        <td class="left">${h(f.opponent)}${f.venue ? ` <span class="club">(${h(f.venue)})</span>` : ""}${f.competition ? ` <span class="newclub">${h(f.competition)}</span>` : ""}${link}</td></tr>`;
+    };
+    const table = (rows, empty) => `<div class="table-scroll"><table><thead><tr><th class="left">Date</th><th class="left">Club</th><th></th><th>Score</th><th class="left">Opponent</th></tr></thead><tbody>${rows.map(fixtureRow).join("") || `<tr><td colspan="5" class="left dim">${h(empty)}</td></tr>`}</tbody></table></div>`;
+
+    const availRows = (p.availability || []).map(r => `<tr ${playerAttrs(r.id)}>
+      <td class="left"><div class="who"><span class="name">${h(r.name)}</span><span class="club">${h(r.team)}</span></div></td>
+      <td>${posBadge(r.pos)}</td><td>£${num(r.cost)}</td>
+      <td><span class="sp ${r.status === "a" ? "sp-ck" : r.status === "d" ? "sp-fk" : "sp-pen1"}">${h(r.status_label)}</span></td>
+      <td>${r.chance === null || r.chance === undefined ? "—" : h(r.chance) + "%"}</td>
+      <td>${dash(r.selected_by, "%")}</td>
+      <td class="left dim">${h(r.news || "—")}</td></tr>`).join("");
+
+    const signingRows = (p.new_signings || []).map(r => `<tr ${playerAttrs(r.id)}>
+      <td class="left"><div class="who"><span class="name">${h(r.name)}</span><span class="club">${h(r.team)}</span><span class="newclub">NEW</span></div></td>
+      <td>${posBadge(r.pos)}</td><td>£${num(r.cost)}</td>
+      <td class="dim">${h(r.joined || "—")}</td>
+      <td>${dash(r.total_points)}</td><td>${dash(r.minutes)}</td><td>${dash(r.selected_by, "%")}</td></tr>`).join("");
+
+    const clubRows = (p.clubs || []).map(t => `<tr>
+      <td class="left"><b>${h(t.club)}</b></td>
+      <td>${h(t.played)}</td>
+      <td><span class="dim">${h(t.won)}–${h(t.drawn)}–${h(t.lost)}</span></td>
+      <td>${h(t.scored)}–${h(t.conceded)}</td>
+      <td>${h(t.upcoming)}</td></tr>`).join("");
+
+    $("#view-preseason").innerHTML = `${viewHeader("Pre-season", "Friendlies, fitness flags and summer moves — the only genuinely current signals before a ball is kicked.")}
+      ${p.fetched_ok ? "" : '<div class="warn"><h2>Friendly fixtures unavailable</h2><ul><li>The source page could not be loaded for this build. Availability and signings below are unaffected — they come straight from FPL.</li></ul></div>'}
+      <div class="ov-grid">
+        <div class="ov-card"><h3>Friendlies played</h3><div class="v">${dash(c.played)}</div><div class="s">${dash(c.upcoming)} still to come</div></div>
+        <div class="ov-card"><h3>Flagged players</h3><div class="v accent">${dash(c.flagged)}</div><div class="s">Injured, doubtful or unavailable</div></div>
+        <div class="ov-card"><h3>Summer signings</h3><div class="v accent-2">${dash(c.new_signings)}</div><div class="s">Stats earned at a previous club</div></div>
+        <div class="ov-card"><h3>Clubs covered</h3><div class="v">${dash(c.clubs)}</div><div class="s">of 20</div></div>
+      </div>
+      <div class="warn"><h2>Pre-season minutes are not available</h2><ul><li>${h(p.minutes_gap)}</li></ul></div>
+      ${panel("GW1 availability", "Straight from FPL, updated daily. Worst first — this is the sharpest pre-season signal there is.", `<div class="table-scroll"><table><thead><tr><th class="left">Player</th><th>Pos</th><th>Price</th><th>Status</th><th>Chance</th><th>Own</th><th class="left">FPL note</th></tr></thead><tbody>${availRows || '<tr><td colspan="7" class="left dim">No flagged players.</td></tr>'}</tbody></table></div>`)}
+      <div class="grid2">
+        ${panel("Recent results", "Context, not evidence — opposition quality varies wildly and managers rotate heavily", table(p.recent || [], "No results yet."))}
+        ${panel("Next up", "Upcoming friendlies", table(p.next_up || [], "No scheduled friendlies."))}
+      </div>
+      ${panel("Summer signings", "Bootstrap pairs last season's numbers with the player's CURRENT club — these earned them elsewhere", `<div class="table-scroll"><table><thead><tr><th class="left">Player</th><th>Pos</th><th>Price</th><th class="left">Joined</th><th>Last pts</th><th>Mins</th><th>Own</th></tr></thead><tbody>${signingRows || '<tr><td colspan="7" class="left dim">No summer signings detected.</td></tr>'}</tbody></table></div>`)}
+      ${panel("Pre-season form by club", "Played, W–D–L, goals for/against, and fixtures remaining", `<div class="table-scroll"><table><thead><tr><th class="left">Club</th><th>P</th><th>W–D–L</th><th>GF–GA</th><th>To come</th></tr></thead><tbody>${clubRows || '<tr><td colspan="5" class="left dim">No club data.</td></tr>'}</tbody></table></div>`)}
+      <div class="warn"><h2>Read this before trusting the table above</h2><ul>${(p.notes || []).map(x => `<li>${h(x)}</li>`).join("")}<li>Source: <a href="${safeUrl(p.source)}" target="_blank" rel="noopener noreferrer">premierleague.com club-by-club friendlies</a>. Fixture facts and a link only — no report text is copied.</li></ul></div>`;
+  }
+
+  const renderers = { overview: renderOverview, players: renderPlayers, squads: renderSquads, chips: renderChips, preseason: renderPreseason, teams: renderTeams, setpieces: renderSetPieces, news: renderNews };
 
   function route() {
     const requested = location.hash.replace(/^#\/?/, "").toLowerCase();
