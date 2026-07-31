@@ -219,6 +219,109 @@
       .pip.on { background: var(--green); }
       .cons-note { color: var(--muted); font-size: 0.75rem; }
 
+      /* ---- set pieces ---- */
+      .sp {
+        font-size: 0.62rem; font-weight: 800; letter-spacing: 0.02em;
+        padding: 0.05rem 0.25rem; border-radius: 0.25rem;
+        border: 1px solid transparent; white-space: nowrap;
+      }
+      .sp-pen1 { background: rgb(63 185 80 / 20%); color: #56d364; border-color: rgb(63 185 80 / 45%); }
+      .sp-pen2 { background: rgb(63 185 80 / 10%); color: #3fb950; opacity: 0.85; }
+      .sp-fk   { background: rgb(88 166 255 / 14%); color: var(--blue); }
+      .sp-ck   { background: rgb(255 255 255 / 7%); color: var(--muted); }
+
+      .sp-grid {
+        display: grid; gap: 0.5rem; padding: 1.15rem;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      }
+      .sp-card {
+        padding: 0.75rem 0.85rem; border: 1px solid var(--line);
+        border-radius: 0.5rem; background: rgb(255 255 255 / 2%);
+      }
+      .sp-team {
+        font-weight: 800; font-size: 0.82rem; letter-spacing: 0.04em;
+        margin-bottom: 0.5rem; color: var(--text);
+      }
+      .sp-line { display: flex; gap: 0.4rem; align-items: baseline; margin-bottom: 0.3rem; font-size: 0.75rem; }
+      .sp-kind {
+        width: 2.6rem; flex: none; color: var(--muted);
+        font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase;
+      }
+      .sp-takers { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+      .sp-taker { cursor: pointer; }
+      .sp-taker:hover .sp-nm { color: var(--blue); }
+      .sp-nm { font-weight: 600; }
+      .sp-rk { color: var(--muted); font-size: 0.66rem; }
+
+      /* ---- team profiles ---- */
+      .tm-grid {
+        display: grid; gap: 0.6rem; padding: 1.15rem;
+        grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+      }
+      .tm-card {
+        padding: 0.9rem 1rem; border: 1px solid var(--line);
+        border-radius: 0.55rem; background: rgb(255 255 255 / 2%);
+      }
+      .tm-card.thin { border-style: dashed; opacity: 0.85; }
+      .tm-top { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.15rem; }
+      .tm-abbr { font-weight: 800; font-size: 0.95rem; letter-spacing: 0.04em; }
+      .tm-full { color: var(--muted); font-size: 0.7rem; }
+      .tm-proj { margin-left: auto; font-weight: 700; font-size: 1rem; color: var(--blue); font-variant-numeric: tabular-nums; }
+      .tm-fx { display: flex; gap: 0.2rem; margin: 0.55rem 0 0.6rem; }
+      .tm-fdr {
+        flex: 1; height: 1.15rem; border-radius: 0.2rem;
+        display: grid; place-items: center; font-size: 0.58rem; font-weight: 800; color: #06090d;
+      }
+      .tm-rows { display: grid; gap: 0.22rem; }
+      .tm-row { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.72rem; }
+      .tm-row em { color: var(--muted); font-style: normal; }
+      .tm-row b { font-variant-numeric: tabular-nums; font-weight: 600; }
+      .tm-sp {
+        margin-top: 0.6rem; padding-top: 0.5rem; border-top: 1px solid var(--line);
+        display: flex; flex-wrap: wrap; gap: 0.3rem; font-size: 0.68rem;
+      }
+      .tm-note {
+        margin-top: 0.6rem; padding-top: 0.5rem; border-top: 1px dashed var(--line);
+        color: var(--amber); font-size: 0.68rem; line-height: 1.45;
+      }
+      .tm-cs {
+        display: inline-block; padding: 0.05rem 0.3rem; border-radius: 0.25rem;
+        background: rgb(63 185 80 / 16%); color: #56d364;
+        font-size: 0.6rem; font-weight: 800;
+      }
+
+      /* ---- news desk ---- */
+      .nw-list { display: grid; gap: 0.5rem; padding: 1.15rem; }
+      .nw-item {
+        display: grid; grid-template-columns: 2.2rem 1fr; gap: 0.75rem;
+        padding: 0.7rem 0.85rem; border: 1px solid var(--line);
+        border-radius: 0.5rem; background: rgb(255 255 255 / 2%);
+      }
+      .nw-score {
+        display: grid; place-items: center; align-self: start;
+        width: 2.2rem; height: 1.7rem; border-radius: 0.3rem;
+        font-size: 0.78rem; font-weight: 800; font-variant-numeric: tabular-nums;
+        background: rgb(88 166 255 / 14%); color: var(--blue);
+      }
+      .nw-score.hot { background: rgb(248 81 73 / 18%); color: #ff7b72; }
+      .nw-title { font-size: 0.86rem; font-weight: 600; line-height: 1.4; }
+      .nw-title a { color: var(--text); text-decoration: none; }
+      .nw-title a:hover { color: var(--blue); text-decoration: underline; }
+      .nw-meta { margin-top: 0.3rem; color: var(--muted); font-size: 0.68rem; }
+      .nw-tags { margin-top: 0.4rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+      .nw-player {
+        cursor: pointer; padding: 0.1rem 0.35rem; border-radius: 0.25rem;
+        background: rgb(88 166 255 / 12%); color: var(--blue);
+        font-size: 0.68rem; font-weight: 600;
+      }
+      .nw-player:hover { background: rgb(88 166 255 / 22%); }
+      .nw-club {
+        padding: 0.1rem 0.3rem; border-radius: 0.25rem;
+        background: rgb(255 255 255 / 6%); color: var(--muted);
+        font-size: 0.64rem; letter-spacing: 0.03em;
+      }
+      .nw-empty { padding: 1.15rem; color: var(--muted); font-size: 0.82rem; line-height: 1.6; }
+
       /* ---- hover tooltip + detail modal ---- */
       .hoverable { cursor: pointer; }
       .hoverable:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 0.3rem; }
@@ -411,6 +514,49 @@
         <div class="cons-grid" id="consensus"></div>
       </section>
 
+      <section class="panel" style="margin-top:1.5rem">
+        <div class="panel-head">
+          <h2>News desk</h2>
+          <p>
+            Scanned daily from Guardian, BBC Sport, Sky Sports and Fantasy Football Scout, then
+            matched to players and clubs. Headlines link to the publisher &mdash; we store the
+            headline, the link and our own one-line note, never the article text.
+            Ambiguous name matches are <strong>dropped rather than guessed</strong>: a
+            mis-linked injury story is worse than a missing one.
+          </p>
+        </div>
+        <div class="nw-list" id="news"></div>
+      </section>
+
+      <section class="panel" style="margin-top:1.5rem">
+        <div class="panel-head">
+          <h2>Club profiles &mdash; all 20</h2>
+          <p>
+            Aggregated from the squads, not from FPL&rsquo;s team object &mdash; which is nearly
+            empty in pre-season: <code>strength_attack</code> and <code>strength_defence</code>
+            are <strong>0 for all 20 clubs</strong>, and played/points/form are all zero because
+            no match has been played. Squad totals carry each player&rsquo;s <em>last</em> season,
+            at their <em>current</em> club.
+          </p>
+        </div>
+        <div class="tm-grid" id="teams"></div>
+      </section>
+
+      <section class="panel" style="margin-top:1.5rem">
+        <div class="panel-head">
+          <h2>Set-piece takers &mdash; all 20 clubs</h2>
+          <p>
+            One of the very few signals that does <em>not</em> depend on last season&rsquo;s form,
+            and it is complete already in pre-season. A first-choice penalty taker is close to
+            free expected points. Ranks are <strong>within the club</strong>: FPL&rsquo;s raw
+            corner and free-kick numbers share one internal scale, so the lowest corner order in
+            a squad is 4, 5 or 6 &mdash; never 1. Comparing the raw numbers across clubs would be
+            meaningless.
+          </p>
+        </div>
+        <div class="sp-grid" id="setpieces"></div>
+      </section>
+
       <section class="panel fx">
         <div class="panel-head">
           <h2>Fixture difficulty &mdash; next six gameweeks</h2>
@@ -451,6 +597,7 @@
         if (d.blank) flags.push('<span class="risk">BLANK</span>');
         if (d.new_club) flags.push(`<span class="newclub" title="Joined ${esc(d.joined || "?")} \u2014 stats earned at previous club">NEW</span>`);
         if (d.rotation_risk) flags.push('<span class="risk">ROT?</span>');
+        flags.push(...spBadges(d.set_pieces));
 
         const a = primary === "projected" ? d.projected : d.per_million;
         const b = primary === "projected" ? d.per_million : d.projected;
@@ -483,6 +630,7 @@
         const tags = [];
         if (p.new_club) tags.push('<span class="newclub">NEW</span>');
         if (p.rotation_risk) tags.push('<span class="risk">ROT?</span>');
+        tags.push(...spBadges(p.set_pieces));
         const badge = p.captain
           ? '<span class="badge" title="Captain">C</span>'
           : p.vice ? '<span class="badge v" title="Vice-captain">V</span>' : "";
@@ -492,7 +640,7 @@
           ${badge}
           <div class="card-name" title="${esc(p.name)}">${esc(p.name)}</div>
           <div class="card-meta">${esc(p.team)} &middot; &pound;${p.cost.toFixed(1)} &middot; ${p.start_share}%</div>
-          <div class="card-proj">${p.projected.toFixed(1)}</div>
+          <div class="card-proj">${p.projected === null || p.projected === undefined ? "\u2014" : p.projected.toFixed(1)}</div>
           <div class="card-tags">${tags.join(" ")}</div>
         </div>`;
       }
@@ -625,20 +773,31 @@
       function tipHTML(p) {
         const d = p.derived;
         const s = p.stats;
+        // Set-piece takers below the minutes floor have no projection. Show
+        // FPL's real numbers and say why ours are missing, rather than
+        // fabricating a zero.
+        const dec = (v, n) => (v === null || v === undefined ? "\u2014" : v.toFixed(n));
         const cells = [
-          ["Projected", d.projected.toFixed(1)],
-          ["Per \u00a3m", d.per_million.toFixed(2)],
-          ["Pts/90", d.rate_per_90.toFixed(2)],
-          ["Exp mins", d.exp_minutes],
-          ["Starts", d.start_share + "%"],
+          ["Projected", dec(d.projected, 1)],
+          ["Per \u00a3m", dec(d.per_million, 2)],
+          ["Pts/90", dec(d.rate_per_90, 2)],
+          ["Exp mins", d.exp_minutes ?? "\u2014"],
+          ["Starts", d.start_share === null ? "\u2014" : d.start_share + "%"],
           ["Owned", fmt("selected_by_percent", s.selected_by_percent)],
           ["Points", fmt("total_points", s.total_points)],
           ["xGI", fmt("expected_goal_involvements", s.expected_goal_involvements)],
-          ["Mean FDR", d.mean_fdr.toFixed(2)],
+          ["Mean FDR", dec(d.mean_fdr, 2)],
         ];
         const flags = [];
         if (d.new_club) flags.push('<span class="newclub">NEW</span>');
         if (d.rotation_risk) flags.push('<span class="risk">ROT?</span>');
+        flags.push(...spBadges(d.set_pieces));
+        const sp = d.set_pieces || {};
+        const duty = [
+          sp.penalties ? `penalties #${sp.penalties}` : "",
+          sp.direct_fk ? `free kicks #${sp.direct_fk}` : "",
+          sp.corners ? `corners #${sp.corners}` : "",
+        ].filter(Boolean).join(", ");
         const news = (s.news || "").trim();
         return `
           <div class="tip-head">
@@ -651,6 +810,8 @@
             ${cells.map(([k, v]) => `<div class="tip-cell"><span>${k}</span><b>${v}</b></div>`).join("")}
           </div>
           <div class="tip-fx">${esc(p.fixtures.join("   "))}</div>
+          ${duty ? `<div class="tip-fx">Set pieces: ${esc(duty)} <em>(rank in club)</em></div>` : ""}
+          ${d.no_projection ? `<div class="tip-news">No projection: ${esc(d.no_projection)}</div>` : ""}
           ${news ? `<div class="tip-news">${esc(news)}</div>` : ""}
           <div class="tip-hint">Click for all ${Object.keys(s).length} statistics</div>`;
       }
@@ -687,16 +848,20 @@
            ${esc(p.team)} &middot; \u00a3${p.cost.toFixed(1)}m
            &middot; ${esc(p.fixtures.join("  "))}`;
 
+        const dec2 = (v, n) => (v === null || v === undefined ? "\u2014" : v.toFixed(n));
         const derived = [
-          ["Projected (GW window)", d.projected.toFixed(1)],
-          ["Projected per \u00a3m", d.per_million.toFixed(2)],
-          ["Rate per 90", d.rate_per_90.toFixed(2)],
-          ["Expected minutes / fixture", d.exp_minutes],
-          ["Share of 38 games started", d.start_share + "%"],
-          ["Mean fixture difficulty", d.mean_fdr.toFixed(2)],
-          ["Fixtures in window", d.n_fixtures],
+          ["Projected (GW window)", dec2(d.projected, 1)],
+          ["Projected per \u00a3m", dec2(d.per_million, 2)],
+          ["Rate per 90", dec2(d.rate_per_90, 2)],
+          ["Expected minutes / fixture", d.exp_minutes ?? "\u2014"],
+          ["Share of 38 games started", d.start_share === null ? "\u2014" : d.start_share + "%"],
+          ["Mean fixture difficulty", dec2(d.mean_fdr, 2)],
+          ["Fixtures in window", d.n_fixtures ?? "\u2014"],
           ["Changed club this summer", d.new_club ? "yes" : "no"],
           ["Rotation risk flag", d.rotation_risk ? "yes" : "no"],
+          ["Penalties (rank in club)", (d.set_pieces || {}).penalties || "—"],
+          ["Direct free kicks (rank)", (d.set_pieces || {}).direct_fk || "—"],
+          ["Corners (rank)", (d.set_pieces || {}).corners || "—"],
         ];
 
         const used = new Set();
@@ -728,6 +893,8 @@
             <h4>Our numbers &mdash; derived, not from FPL</h4>
             <p>Projection = rate/90 &times; expected minutes &times; fixture multiplier.
                Kept separate from FPL&rsquo;s own statistics below so the two are never confused.</p>
+            ${d.no_projection ? `<p style="color:var(--amber)"><strong>No projection for this player:</strong>
+               ${esc(d.no_projection)}. FPL&rsquo;s own statistics below are still complete.</p>` : ""}
             <div class="stat-grid">
               ${derived.map(([k, v]) => `<div class="stat-item"><em>${esc(k)}</em><b>${esc(String(v))}</b></div>`).join("")}
             </div>
@@ -741,6 +908,128 @@
       function closeModal() {
         $("modal").setAttribute("data-open", "0");
         if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      // Set-piece badges. Rank is WITHIN the club: FPL's raw corner/free-kick
+      // numbers share one internal scale (lowest corner order in a squad is 4,
+      // 5 or 6 - never 1), so only rank-within-team is comparable.
+      function spBadges(sp) {
+        if (!sp) return [];
+        const out = [];
+        if (sp.penalties === 1) out.push('<span class="sp sp-pen1" title="First-choice penalty taker">PEN1</span>');
+        else if (sp.penalties === 2) out.push('<span class="sp sp-pen2" title="Second penalty taker">PEN2</span>');
+        if (sp.direct_fk === 1) out.push('<span class="sp sp-fk" title="First-choice direct free kicks">FK</span>');
+        if (sp.corners === 1) out.push('<span class="sp sp-ck" title="First-choice corners">CK</span>');
+        return out;
+      }
+
+      function renderNews(data) {
+        const items = data.news || [];
+        if (!items.length) {
+          $("news").innerHTML = `<div class="nw-empty">
+            No stories logged yet. The daily scan writes here once it has run.</div>`;
+          return;
+        }
+        $("news").innerHTML = items.map((n) => {
+          const when = (n.published || n.seen_at || "").slice(0, 22);
+          const players = (n.players || []).map((p) =>
+            `<span class="nw-player hoverable" data-pid="${p.id}" tabindex="0" role="button"
+                   aria-label="Show all statistics for ${esc(p.name)}"
+             >${esc(p.name)} <span class="dim">${esc(p.team)}</span></span>`).join("");
+          const clubs = (n.teams || []).map((c) => `<span class="nw-club">${esc(c)}</span>`).join("");
+          return `<div class="nw-item">
+            <div class="nw-score${n.score >= 6 ? " hot" : ""}">${n.score}</div>
+            <div>
+              <div class="nw-title">
+                <a href="${esc(n.link)}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>
+              </div>
+              <div class="nw-meta">${esc(n.source)}${when ? " &middot; " + esc(when) : ""}</div>
+              ${players || clubs ? `<div class="nw-tags">${players}${clubs}</div>` : ""}
+            </div>
+          </div>`;
+        }).join("");
+      }
+
+      function renderTeams(data) {
+        const teams = data.teams || [];
+        if (!teams.length) {
+          $("teams").innerHTML = '<p class="dim">No team data available.</p>';
+          return;
+        }
+        const maxProj = Math.max(...teams.map((t) => t.projected_total), 1);
+
+        $("teams").innerHTML = teams.map((t) => {
+          // Promoted clubs can have nobody clearing the minutes floor. Say so
+          // instead of rendering a row of confident zeros.
+          const thin = !t.projected_players;
+          const fdrBlocks = t.fixtures.map((label) => {
+            const fdr = Number((label.match(/\[(\d)\]/) || [])[1] || 3);
+            const opp = label.replace(/\[\d\]/, "").trim();
+            return `<div class="tm-fdr fdr-${fdr}" title="${esc(opp)}">${fdr}</div>`;
+          }).join("");
+
+          const sp = [
+            t.penalty_taker ? `<span class="sp sp-pen1">PEN ${esc(t.penalty_taker)}</span>` : "",
+            t.fk_taker ? `<span class="sp sp-fk">FK ${esc(t.fk_taker)}</span>` : "",
+            t.corner_taker ? `<span class="sp sp-ck">CK ${esc(t.corner_taker)}</span>` : "",
+          ].filter(Boolean).join("");
+
+          const rows = [
+            ["Squad / regulars", `${t.squad_size} / ${t.regulars}`],
+            ["Summer signings", t.new_signings],
+            ["Unavailable", t.unavailable],
+            ["Squad value", `\u00a3${t.total_cost.toFixed(1)}m`],
+            ["Priciest", `${esc(t.most_expensive)} \u00a3${t.priciest.toFixed(1)}`],
+            ["Goals + assists", `${t.goals} + ${t.assists}`],
+            ["xG / xA", `${t.xg.toFixed(1)} / ${t.xa.toFixed(1)}`],
+            ["G+A per \u00a3m", t.attack_per_cost.toFixed(2)],
+            ["Best projected", thin ? "\u2014" : `${esc(t.best)} ${t.best_projected.toFixed(1)}`],
+            ["Mean FDR", t.n_fixtures ? t.mean_fdr.toFixed(2) : "\u2014"],
+          ];
+
+          return `<div class="tm-card${thin ? " thin" : ""}">
+            <div class="tm-top">
+              <span class="tm-abbr">${esc(t.team)}</span>
+              <span class="tm-full">${esc(t.name)}</span>
+              <span class="tm-proj">${thin ? "\u2014" : t.projected_total.toFixed(1)}</span>
+            </div>
+            ${t.clean_sheet_rank && t.clean_sheet_rank <= 5
+              ? `<span class="tm-cs">CS rank #${t.clean_sheet_rank}</span>` : ""}
+            <div class="tm-fx">${fdrBlocks || '<span class="dim">no fixtures in window</span>'}</div>
+            <div class="tm-rows">
+              ${rows.map(([k, v]) => `<div class="tm-row"><em>${esc(k)}</em><b>${esc(String(v))}</b></div>`).join("")}
+            </div>
+            ${sp ? `<div class="tm-sp">${sp}</div>` : ""}
+            ${thin ? `<div class="tm-note">No player cleared the 900-minute floor, so this club
+                       has no projection. Newly promoted squads have no Premier League data.</div>` : ""}
+          </div>`;
+        }).join("");
+      }
+
+      function renderSetPieces(data) {
+        const teams = data.set_pieces || [];
+        if (!teams.length) {
+          $("setpieces").innerHTML = '<p class="dim">No set-piece data available.</p>';
+          return;
+        }
+        const kinds = [["penalties", "Pens"], ["direct_fk", "FK"], ["corners", "Corners"]];
+        $("setpieces").innerHTML = teams.map((t) => `
+          <div class="sp-card">
+            <div class="sp-team">${esc(t.team)}</div>
+            ${kinds.map(([key, label]) => {
+              const takers = t[key] || [];
+              if (!takers.length) return "";
+              return `<div class="sp-line">
+                <span class="sp-kind">${label}</span>
+                <span class="sp-takers">${takers.map((p) => `
+                  <span class="sp-taker hoverable" data-pid="${p.id}" tabindex="0" role="button"
+                        aria-label="Show all statistics for ${esc(p.name)}">
+                    <span class="sp-rk">${p.rank}.</span>
+                    <span class="sp-nm">${esc(p.name)}</span>
+                  </span>`).join("")}</span>
+              </div>`;
+            }).join("")}
+          </div>`).join("");
       }
 
       function wireDetail() {
@@ -811,6 +1100,9 @@
           GROUPS = data.stat_groups || [];
           renderSquads(data);
           renderConsensus(data);
+          renderNews(data);
+          renderTeams(data);
+          renderSetPieces(data);
           wireDetail();
 
           $("fixtures").innerHTML = data.fixtures.map((f) => `
