@@ -176,7 +176,8 @@
 
   const PLAYER_COLUMNS = [
     ["name", "Player", "left"], ["pos", "Pos", ""], ["cost", "Price", ""],
-    ["projected", "Proj", ""], ["per_million", "Pts/£m", ""], ["rate_per_90", "Pts/90", ""],
+    ["projected", "Proj 3GW", ""], ["per_gw", "Proj/GW", ""], ["ep", "FPL ep", ""],
+    ["per_million", "Pts/£m", ""], ["rate_per_90", "Pts/90", ""],
     ["exp_minutes", "Exp min", ""], ["start_share", "Start %", ""], ["pts", "Last pts", ""],
     ["xgi", "xGI", ""], ["own", "Own %", ""],
   ];
@@ -187,10 +188,11 @@
     $("#players-body").innerHTML = rows.map(p => `<tr ${playerAttrs(p.id)}>
       <td class="left"><div class="who"><span class="name">${h(p.name)}</span><span class="club">${h(p.team)}</span>${p.new_club ? '<span class="newclub">NEW</span>' : ""}</div></td>
       <td>${posBadge(p.pos)}</td><td>£${num(p.cost)}</td><td class="big accent">${num(p.projected)}</td>
+      <td>${num(p.per_gw)}</td><td class="accent-2">${num(p.ep)}</td>
       <td>${num(p.per_million, 2)}</td><td>${num(p.rate_per_90, 2)}</td><td>${dash(p.exp_minutes)}</td>
       <td>${dash(p.start_share, "%")}${p.rotation_risk ? ' <span class="risk">RISK</span>' : ""}</td>
       <td>${dash(p.pts)}</td><td>${num(p.xgi, 2)}</td><td>${dash(p.own, "%")}</td>
-    </tr>`).join("") || '<tr><td colspan="11" class="left dim">No players match these filters.</td></tr>';
+    </tr>`).join("") || '<tr><td colspan="13" class="left dim">No players match these filters.</td></tr>';
     $$("#players-table th[data-sort]").forEach(th => {
       const on = th.dataset.sort === state.playerSort.key;
       const base = th.dataset.title;
@@ -201,7 +203,7 @@
   function renderPlayers() {
     const teams = [...new Set((state.data.all_players || []).map(p => p.team))].sort();
     const headers = PLAYER_COLUMNS.map(([key, title, cls]) => `<th class="${cls}" data-sort="${key}" data-title="${h(title)}">${h(title)}</th>`).join("");
-    $("#view-players").innerHTML = `${viewHeader("Player explorer", "Search the full projected pool. Hover for a quick check; click for every exported FPL statistic.")}
+    $("#view-players").innerHTML = `${viewHeader("Player explorer", "Two independent numbers per player: our three-gameweek projection and FPL's own one-gameweek expected points. Where they disagree is where the thinking is.")}
       <section class="panel">
         <div class="filters">
           <input id="player-search" type="search" placeholder="Search player or club…" aria-label="Search players">
@@ -415,9 +417,9 @@
     const newsCount = (state.data.news || []).filter(n => (n.players || []).some(x => Number(x.id) === Number(p.id))).length;
     return `<div class="tip-head"><span class="tip-name">${h(p.name)}</span>${posBadge(p.pos)}<span class="club">${h(p.team)}</span></div>
       <div class="tip-grid">
-        <div class="tip-cell"><span>Projection</span><b>${num(p.projected)}</b></div><div class="tip-cell"><span>Price</span><b>£${num(p.cost)}</b></div><div class="tip-cell"><span>Value</span><b>${num(p.per_million, 2)}</b></div>
-        <div class="tip-cell"><span>Pts/90</span><b>${num(p.rate_per_90, 2)}</b></div><div class="tip-cell"><span>Exp min</span><b>${dash(p.exp_minutes)}</b></div><div class="tip-cell"><span>Start</span><b>${dash(p.start_share, "%")}</b></div>
-        <div class="tip-cell"><span>Last pts</span><b>${dash(p.pts)}</b></div><div class="tip-cell"><span>xGI</span><b>${num(p.xgi, 2)}</b></div><div class="tip-cell"><span>Owned</span><b>${dash(p.own, "%")}</b></div>
+        <div class="tip-cell"><span>Proj 3GW</span><b>${num(p.projected)}</b></div><div class="tip-cell"><span>Proj/GW</span><b>${num(p.per_gw)}</b></div><div class="tip-cell"><span>FPL ep</span><b>${num(p.ep)}</b></div>
+        <div class="tip-cell"><span>Price</span><b>£${num(p.cost)}</b></div><div class="tip-cell"><span>Value</span><b>${num(p.per_million, 2)}</b></div><div class="tip-cell"><span>Pts/90</span><b>${num(p.rate_per_90, 2)}</b></div>
+        <div class="tip-cell"><span>Exp min</span><b>${dash(p.exp_minutes)}</b></div><div class="tip-cell"><span>Start</span><b>${dash(p.start_share, "%")}</b></div><div class="tip-cell"><span>Owned</span><b>${dash(p.own, "%")}</b></div>
       </div><div class="tip-fx">${h((p.fixtures || []).join(" · ") || "No exported fixtures")}</div>${newsCount ? `<div class="tip-news">${newsCount} linked news item${newsCount === 1 ? "" : "s"}</div>` : ""}<div class="tip-hint">Click for all exported FPL statistics</div>`;
   }
 
