@@ -1,0 +1,2757 @@
+{
+ "generated_at": "2026-07-31T09:04:54+00:00",
+ "data_captured_at": "2026-07-31T07:12:02.976444+00:00",
+ "start_gw": 1,
+ "end_gw": 3,
+ "horizon": 3,
+ "deadline": "2026-08-21T17:30:00Z",
+ "gw_name": "Gameweek 1",
+ "preseason": true,
+ "counts": {
+  "players_total": 564,
+  "players_with_minutes": 400,
+  "players_projected": 237,
+  "changed_club": 60
+ },
+ "by_total": [
+  {
+   "name": "B.Fernandes",
+   "team": "MUN",
+   "pos": "MID",
+   "cost": 12.0,
+   "projected": 19.5,
+   "per_million": 1.63,
+   "rate_per_90": 6.9,
+   "exp_minutes": 81,
+   "start_share": 92,
+   "new_club": false,
+   "joined": "2020-01-30",
+   "fixtures": [
+    "HUL(A)[2]",
+    "IPS(H)[2]",
+    "EVE(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 48.8
+  },
+  {
+   "name": "Haaland",
+   "team": "MCI",
+   "pos": "FWD",
+   "cost": 15.5,
+   "projected": 19.3,
+   "per_million": 1.24,
+   "rate_per_90": 7.28,
+   "exp_minutes": 78,
+   "start_share": 89,
+   "new_club": false,
+   "joined": "2022-07-01",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 75.2
+  },
+  {
+   "name": "Semenyo",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 8.5,
+   "projected": 16.4,
+   "per_million": 1.93,
+   "rate_per_90": 5.68,
+   "exp_minutes": 84,
+   "start_share": 97,
+   "new_club": false,
+   "joined": "2026-01-09",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 20.8
+  },
+  {
+   "name": "Gabriel",
+   "team": "ARS",
+   "pos": "DEF",
+   "cost": 8.0,
+   "projected": 15.8,
+   "per_million": 1.98,
+   "rate_per_90": 6.84,
+   "exp_minutes": 72,
+   "start_share": 79,
+   "new_club": false,
+   "joined": "2020-09-01",
+   "fixtures": [
+    "COV(H)[2]",
+    "AVL(A)[4]",
+    "CHE(H)[4]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 25.5
+  },
+  {
+   "name": "Gibbs-White",
+   "team": "NFO",
+   "pos": "MID",
+   "cost": 8.0,
+   "projected": 14.8,
+   "per_million": 1.86,
+   "rate_per_90": 5.46,
+   "exp_minutes": 82,
+   "start_share": 92,
+   "new_club": false,
+   "joined": "2022-08-19",
+   "fixtures": [
+    "LEE(H)[2]",
+    "LIV(A)[4]",
+    "TOT(H)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 12.3
+  },
+  {
+   "name": "Guéhi",
+   "team": "MCI",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 14.7,
+   "per_million": 2.45,
+   "rate_per_90": 5.11,
+   "exp_minutes": 83,
+   "start_share": 92,
+   "new_club": false,
+   "joined": "2026-01-19",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 24.3
+  },
+  {
+   "name": "Thiago",
+   "team": "BRE",
+   "pos": "FWD",
+   "cost": 8.0,
+   "projected": 14.6,
+   "per_million": 1.82,
+   "rate_per_90": 4.96,
+   "exp_minutes": 86,
+   "start_share": 97,
+   "new_club": false,
+   "joined": "2024-07-01",
+   "fixtures": [
+    "TOT(H)[3]",
+    "LEE(A)[3]",
+    "SUN(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 15.9
+  },
+  {
+   "name": "Anderson",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 6.5,
+   "projected": 14.6,
+   "per_million": 2.24,
+   "rate_per_90": 4.86,
+   "exp_minutes": 88,
+   "start_share": 97,
+   "new_club": true,
+   "joined": "2026-07-02",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 12.1
+  },
+  {
+   "name": "Virgil",
+   "team": "LIV",
+   "pos": "DEF",
+   "cost": 6.5,
+   "projected": 14.4,
+   "per_million": 2.21,
+   "rate_per_90": 4.61,
+   "exp_minutes": 90,
+   "start_share": 100,
+   "new_club": false,
+   "joined": "2018-01-01",
+   "fixtures": [
+    "NEW(A)[3]",
+    "NFO(H)[3]",
+    "IPS(A)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 16.1
+  },
+  {
+   "name": "Senesi",
+   "team": "TOT",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 14.4,
+   "per_million": 2.39,
+   "rate_per_90": 4.79,
+   "exp_minutes": 87,
+   "start_share": 97,
+   "new_club": true,
+   "joined": "2026-07-01",
+   "fixtures": [
+    "BRE(A)[3]",
+    "NEW(H)[2]",
+    "NFO(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 11.1
+  },
+  {
+   "name": "Rice",
+   "team": "ARS",
+   "pos": "MID",
+   "cost": 7.5,
+   "projected": 14.1,
+   "per_million": 1.89,
+   "rate_per_90": 5.35,
+   "exp_minutes": 81,
+   "start_share": 92,
+   "new_club": false,
+   "joined": "2023-07-15",
+   "fixtures": [
+    "COV(H)[2]",
+    "AVL(A)[4]",
+    "CHE(H)[4]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 22.1
+  },
+  {
+   "name": "João Pedro",
+   "team": "CHE",
+   "pos": "FWD",
+   "cost": 7.5,
+   "projected": 13.7,
+   "per_million": 1.82,
+   "rate_per_90": 5.99,
+   "exp_minutes": 70,
+   "start_share": 82,
+   "new_club": false,
+   "joined": "2025-07-02",
+   "fixtures": [
+    "FUL(A)[3]",
+    "BHA(H)[2]",
+    "ARS(A)[5]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 54.0
+  },
+  {
+   "name": "Wilson",
+   "team": "LEE",
+   "pos": "MID",
+   "cost": 6.5,
+   "projected": 13.3,
+   "per_million": 2.04,
+   "rate_per_90": 5.65,
+   "exp_minutes": 70,
+   "start_share": 84,
+   "new_club": true,
+   "joined": "2026-07-08",
+   "fixtures": [
+    "NFO(A)[3]",
+    "BRE(H)[3]",
+    "BHA(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 8.9
+  },
+  {
+   "name": "Watkins",
+   "team": "AVL",
+   "pos": "FWD",
+   "cost": 8.0,
+   "projected": 13.2,
+   "per_million": 1.65,
+   "rate_per_90": 5.31,
+   "exp_minutes": 75,
+   "start_share": 87,
+   "new_club": false,
+   "joined": "2020-09-09",
+   "fixtures": [
+    "BHA(A)[3]",
+    "ARS(H)[4]",
+    "HUL(A)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 12.2
+  },
+  {
+   "name": "O'Reilly",
+   "team": "MCI",
+   "pos": "DEF",
+   "cost": 6.5,
+   "projected": 13.1,
+   "per_million": 2.02,
+   "rate_per_90": 5.45,
+   "exp_minutes": 70,
+   "start_share": 76,
+   "new_club": false,
+   "joined": "2022-12-16",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 23.4
+  },
+  {
+   "name": "Rogers",
+   "team": "CHE",
+   "pos": "MID",
+   "cost": 7.5,
+   "projected": 13.0,
+   "per_million": 1.73,
+   "rate_per_90": 4.64,
+   "exp_minutes": 86,
+   "start_share": 97,
+   "new_club": true,
+   "joined": "2026-07-21",
+   "fixtures": [
+    "FUL(A)[3]",
+    "BHA(H)[2]",
+    "ARS(A)[5]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 32.4
+  },
+  {
+   "name": "Szoboszlai",
+   "team": "LIV",
+   "pos": "MID",
+   "cost": 7.0,
+   "projected": 13.0,
+   "per_million": 1.85,
+   "rate_per_90": 4.46,
+   "exp_minutes": 85,
+   "start_share": 95,
+   "new_club": false,
+   "joined": "2023-07-02",
+   "fixtures": [
+    "NEW(A)[3]",
+    "NFO(H)[3]",
+    "IPS(A)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 48.2
+  },
+  {
+   "name": "Tarkowski",
+   "team": "EVE",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 12.9,
+   "per_million": 2.15,
+   "rate_per_90": 4.59,
+   "exp_minutes": 88,
+   "start_share": 97,
+   "new_club": false,
+   "joined": "2022-07-01",
+   "fixtures": [
+    "CRY(H)[3]",
+    "BOU(A)[3]",
+    "MUN(H)[4]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 9.8
+  },
+  {
+   "name": "Mukiele",
+   "team": "SUN",
+   "pos": "DEF",
+   "cost": 5.5,
+   "projected": 12.9,
+   "per_million": 2.34,
+   "rate_per_90": 4.88,
+   "exp_minutes": 73,
+   "start_share": 84,
+   "new_club": false,
+   "joined": "2025-08-17",
+   "fixtures": [
+    "IPS(A)[2]",
+    "FUL(H)[2]",
+    "BRE(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 7.7
+  },
+  {
+   "name": "Matheus N.",
+   "team": "MCI",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 12.6,
+   "per_million": 2.11,
+   "rate_per_90": 4.84,
+   "exp_minutes": 75,
+   "start_share": 84,
+   "new_club": false,
+   "joined": "2023-09-01",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 5.3
+  }
+ ],
+ "by_value": [
+  {
+   "name": "Guéhi",
+   "team": "MCI",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 14.7,
+   "per_million": 2.45,
+   "rate_per_90": 5.11,
+   "exp_minutes": 83,
+   "start_share": 92,
+   "new_club": false,
+   "joined": "2026-01-19",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 24.3
+  },
+  {
+   "name": "Van Hecke",
+   "team": "TOT",
+   "pos": "DEF",
+   "cost": 5.0,
+   "projected": 12.2,
+   "per_million": 2.43,
+   "rate_per_90": 4.15,
+   "exp_minutes": 84,
+   "start_share": 95,
+   "new_club": true,
+   "joined": "2026-06-18",
+   "fixtures": [
+    "BRE(A)[3]",
+    "NEW(H)[2]",
+    "NFO(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 8.1
+  },
+  {
+   "name": "Senesi",
+   "team": "TOT",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 14.4,
+   "per_million": 2.39,
+   "rate_per_90": 4.79,
+   "exp_minutes": 87,
+   "start_share": 97,
+   "new_club": true,
+   "joined": "2026-07-01",
+   "fixtures": [
+    "BRE(A)[3]",
+    "NEW(H)[2]",
+    "NFO(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 11.1
+  },
+  {
+   "name": "Kelleher",
+   "team": "BRE",
+   "pos": "GKP",
+   "cost": 5.0,
+   "projected": 11.7,
+   "per_million": 2.35,
+   "rate_per_90": 3.86,
+   "exp_minutes": 88,
+   "start_share": 97,
+   "new_club": false,
+   "joined": "2025-06-03",
+   "fixtures": [
+    "TOT(H)[3]",
+    "LEE(A)[3]",
+    "SUN(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 5.5
+  },
+  {
+   "name": "Mukiele",
+   "team": "SUN",
+   "pos": "DEF",
+   "cost": 5.5,
+   "projected": 12.9,
+   "per_million": 2.34,
+   "rate_per_90": 4.88,
+   "exp_minutes": 73,
+   "start_share": 84,
+   "new_club": false,
+   "joined": "2025-08-17",
+   "fixtures": [
+    "IPS(A)[2]",
+    "FUL(H)[2]",
+    "BRE(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 7.7
+  },
+  {
+   "name": "Roefs",
+   "team": "SUN",
+   "pos": "GKP",
+   "cost": 5.0,
+   "projected": 11.6,
+   "per_million": 2.32,
+   "rate_per_90": 3.89,
+   "exp_minutes": 83,
+   "start_share": 92,
+   "new_club": false,
+   "joined": "2025-08-01",
+   "fixtures": [
+    "IPS(A)[2]",
+    "FUL(H)[2]",
+    "BRE(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 5.5
+  },
+  {
+   "name": "Verbruggen",
+   "team": "BHA",
+   "pos": "GKP",
+   "cost": 4.5,
+   "projected": 10.3,
+   "per_million": 2.28,
+   "rate_per_90": 3.42,
+   "exp_minutes": 90,
+   "start_share": 100,
+   "new_club": false,
+   "joined": "2023-07-03",
+   "fixtures": [
+    "AVL(H)[3]",
+    "CHE(A)[4]",
+    "LEE(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 16.7
+  },
+  {
+   "name": "Mitchell",
+   "team": "CRY",
+   "pos": "DEF",
+   "cost": 4.5,
+   "projected": 10.2,
+   "per_million": 2.27,
+   "rate_per_90": 3.74,
+   "exp_minutes": 86,
+   "start_share": 95,
+   "new_club": false,
+   "joined": "2019-12-15",
+   "fixtures": [
+    "EVE(A)[3]",
+    "MCI(H)[4]",
+    "FUL(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 7.2
+  },
+  {
+   "name": "Anderson",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 6.5,
+   "projected": 14.6,
+   "per_million": 2.24,
+   "rate_per_90": 4.86,
+   "exp_minutes": 88,
+   "start_share": 97,
+   "new_club": true,
+   "joined": "2026-07-02",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 12.1
+  },
+  {
+   "name": "Virgil",
+   "team": "LIV",
+   "pos": "DEF",
+   "cost": 6.5,
+   "projected": 14.4,
+   "per_million": 2.21,
+   "rate_per_90": 4.61,
+   "exp_minutes": 90,
+   "start_share": 100,
+   "new_club": false,
+   "joined": "2018-01-01",
+   "fixtures": [
+    "NEW(A)[3]",
+    "NFO(H)[3]",
+    "IPS(A)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 16.1
+  },
+  {
+   "name": "Truffert",
+   "team": "BOU",
+   "pos": "DEF",
+   "cost": 5.5,
+   "projected": 12.0,
+   "per_million": 2.18,
+   "rate_per_90": 4.4,
+   "exp_minutes": 89,
+   "start_share": 100,
+   "new_club": false,
+   "joined": "2025-06-16",
+   "fixtures": [
+    "MCI(A)[5]",
+    "EVE(H)[3]",
+    "NEW(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 4.6
+  },
+  {
+   "name": "Tarkowski",
+   "team": "EVE",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 12.9,
+   "per_million": 2.15,
+   "rate_per_90": 4.59,
+   "exp_minutes": 88,
+   "start_share": 97,
+   "new_club": false,
+   "joined": "2022-07-01",
+   "fixtures": [
+    "CRY(H)[3]",
+    "BOU(A)[3]",
+    "MUN(H)[4]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 9.8
+  },
+  {
+   "name": "Shaw",
+   "team": "MUN",
+   "pos": "DEF",
+   "cost": 4.5,
+   "projected": 9.6,
+   "per_million": 2.14,
+   "rate_per_90": 3.16,
+   "exp_minutes": 85,
+   "start_share": 100,
+   "new_club": false,
+   "joined": "2014-07-01",
+   "fixtures": [
+    "HUL(A)[2]",
+    "IPS(H)[2]",
+    "EVE(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 24.0
+  },
+  {
+   "name": "Alderete",
+   "team": "SUN",
+   "pos": "DEF",
+   "cost": 5.0,
+   "projected": 10.7,
+   "per_million": 2.13,
+   "rate_per_90": 4.02,
+   "exp_minutes": 74,
+   "start_share": 84,
+   "new_club": false,
+   "joined": "2025-08-12",
+   "fixtures": [
+    "IPS(A)[2]",
+    "FUL(H)[2]",
+    "BRE(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 1.2
+  },
+  {
+   "name": "Matheus N.",
+   "team": "MCI",
+   "pos": "DEF",
+   "cost": 6.0,
+   "projected": 12.6,
+   "per_million": 2.11,
+   "rate_per_90": 4.84,
+   "exp_minutes": 75,
+   "start_share": 84,
+   "new_club": false,
+   "joined": "2023-09-01",
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 5.3
+  },
+  {
+   "name": "Hume",
+   "team": "SUN",
+   "pos": "DEF",
+   "cost": 4.5,
+   "projected": 9.4,
+   "per_million": 2.08,
+   "rate_per_90": 3.27,
+   "exp_minutes": 80,
+   "start_share": 89,
+   "new_club": false,
+   "joined": "2022-01-04",
+   "fixtures": [
+    "IPS(A)[2]",
+    "FUL(H)[2]",
+    "BRE(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 1.5
+  },
+  {
+   "name": "F.Kadıoğlu",
+   "team": "BHA",
+   "pos": "DEF",
+   "cost": 4.5,
+   "projected": 9.3,
+   "per_million": 2.07,
+   "rate_per_90": 3.39,
+   "exp_minutes": 82,
+   "start_share": 89,
+   "new_club": false,
+   "joined": "2024-08-27",
+   "fixtures": [
+    "AVL(H)[3]",
+    "CHE(A)[4]",
+    "LEE(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 3.1
+  },
+  {
+   "name": "Kayode",
+   "team": "BRE",
+   "pos": "DEF",
+   "cost": 4.5,
+   "projected": 9.3,
+   "per_million": 2.06,
+   "rate_per_90": 3.12,
+   "exp_minutes": 86,
+   "start_share": 97,
+   "new_club": false,
+   "joined": "2025-07-01",
+   "fixtures": [
+    "TOT(H)[3]",
+    "LEE(A)[3]",
+    "SUN(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 4.4
+  },
+  {
+   "name": "Leno",
+   "team": "FUL",
+   "pos": "GKP",
+   "cost": 4.5,
+   "projected": 9.2,
+   "per_million": 2.05,
+   "rate_per_90": 3.21,
+   "exp_minutes": 90,
+   "start_share": 100,
+   "new_club": false,
+   "joined": "2022-08-02",
+   "fixtures": [
+    "CHE(H)[4]",
+    "SUN(A)[3]",
+    "CRY(H)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 3.2
+  },
+  {
+   "name": "Cash",
+   "team": "AVL",
+   "pos": "DEF",
+   "cost": 4.5,
+   "projected": 9.2,
+   "per_million": 2.05,
+   "rate_per_90": 3.49,
+   "exp_minutes": 79,
+   "start_share": 89,
+   "new_club": false,
+   "joined": "2020-09-03",
+   "fixtures": [
+    "BHA(A)[3]",
+    "ARS(H)[4]",
+    "HUL(A)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 7.9
+  }
+ ],
+ "budget": 100.0,
+ "squads": [
+  {
+   "key": "balanced",
+   "label": "Balanced",
+   "rationale": "Straight projected points. No thumb on the scale.",
+   "cost": 100.0,
+   "bank": 0.0,
+   "projected_xi": 146.7,
+   "legal": true,
+   "violations": [],
+   "captain": "B.Fernandes",
+   "vice": "Haaland",
+   "formation": "5-4-1",
+   "xi": [
+    {
+     "name": "Verbruggen",
+     "team": "BHA",
+     "pos": "GKP",
+     "cost": 4.5,
+     "projected": 10.3,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Gabriel",
+     "team": "ARS",
+     "pos": "DEF",
+     "cost": 8.0,
+     "projected": 15.8,
+     "start_share": 79,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Mukiele",
+     "team": "SUN",
+     "pos": "DEF",
+     "cost": 5.5,
+     "projected": 12.9,
+     "start_share": 84,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Mitchell",
+     "team": "CRY",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 10.2,
+     "start_share": 95,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Shaw",
+     "team": "MUN",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 9.6,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Hume",
+     "team": "SUN",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 9.4,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "B.Fernandes",
+     "team": "MUN",
+     "pos": "MID",
+     "cost": 12.0,
+     "projected": 19.5,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": true,
+     "vice": false
+    },
+    {
+     "name": "Semenyo",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 8.5,
+     "projected": 16.4,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Gibbs-White",
+     "team": "NFO",
+     "pos": "MID",
+     "cost": 8.0,
+     "projected": 14.8,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Yarmoliuk",
+     "team": "BRE",
+     "pos": "MID",
+     "cost": 5.0,
+     "projected": 8.4,
+     "start_share": 79,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Haaland",
+     "team": "MCI",
+     "pos": "FWD",
+     "cost": 15.5,
+     "projected": 19.3,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": true
+    }
+   ],
+   "bench": [
+    {
+     "name": "Dubravka",
+     "team": "TOT",
+     "pos": "GKP",
+     "cost": 4.0,
+     "projected": 7.9,
+     "start_share": 92,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Hughes",
+     "team": "CRY",
+     "pos": "MID",
+     "cost": 4.5,
+     "projected": 3.5,
+     "start_share": 50,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Beto",
+     "team": "EVE",
+     "pos": "FWD",
+     "cost": 5.5,
+     "projected": 8.0,
+     "start_share": 45,
+     "new_club": false,
+     "rotation_risk": true,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Barry",
+     "team": "EVE",
+     "pos": "FWD",
+     "cost": 5.5,
+     "projected": 7.3,
+     "start_share": 55,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ]
+  },
+  {
+   "key": "value",
+   "label": "Value",
+   "rationale": "Projected points per million. Spreads budget, strong bench.",
+   "cost": 92.0,
+   "bank": 8.0,
+   "projected_xi": 150.6,
+   "legal": true,
+   "violations": [],
+   "captain": "Semenyo",
+   "vice": "Guéhi",
+   "formation": "4-4-2",
+   "xi": [
+    {
+     "name": "Kelleher",
+     "team": "BRE",
+     "pos": "GKP",
+     "cost": 5.0,
+     "projected": 11.7,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Guéhi",
+     "team": "MCI",
+     "pos": "DEF",
+     "cost": 6.0,
+     "projected": 14.7,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": true
+    },
+    {
+     "name": "Senesi",
+     "team": "TOT",
+     "pos": "DEF",
+     "cost": 6.0,
+     "projected": 14.4,
+     "start_share": 97,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Mukiele",
+     "team": "SUN",
+     "pos": "DEF",
+     "cost": 5.5,
+     "projected": 12.9,
+     "start_share": 84,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Van Hecke",
+     "team": "TOT",
+     "pos": "DEF",
+     "cost": 5.0,
+     "projected": 12.2,
+     "start_share": 95,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Semenyo",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 8.5,
+     "projected": 16.4,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": true,
+     "vice": false
+    },
+    {
+     "name": "Anderson",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 6.5,
+     "projected": 14.6,
+     "start_share": 97,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Wilson",
+     "team": "LEE",
+     "pos": "MID",
+     "cost": 6.5,
+     "projected": 13.3,
+     "start_share": 84,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "E.Le Fée",
+     "team": "SUN",
+     "pos": "MID",
+     "cost": 6.0,
+     "projected": 12.2,
+     "start_share": 87,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Thiago",
+     "team": "BRE",
+     "pos": "FWD",
+     "cost": 8.0,
+     "projected": 14.6,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "João Pedro",
+     "team": "CHE",
+     "pos": "FWD",
+     "cost": 7.5,
+     "projected": 13.7,
+     "start_share": 82,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ],
+   "bench": [
+    {
+     "name": "Roefs",
+     "team": "SUN",
+     "pos": "GKP",
+     "cost": 5.0,
+     "projected": 11.6,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Mitchell",
+     "team": "CRY",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 10.2,
+     "start_share": 95,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Gravenberch",
+     "team": "LIV",
+     "pos": "MID",
+     "cost": 6.0,
+     "projected": 11.7,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Calvert-Lewin",
+     "team": "LEE",
+     "pos": "FWD",
+     "cost": 6.0,
+     "projected": 11.2,
+     "start_share": 79,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ]
+  },
+  {
+   "key": "even",
+   "label": "Even spread",
+   "rationale": "Caps player price so no single slot eats the budget.",
+   "cost": 100.0,
+   "bank": 0.0,
+   "projected_xi": 157.7,
+   "legal": true,
+   "violations": [],
+   "captain": "Semenyo",
+   "vice": "Gabriel",
+   "formation": "4-4-2",
+   "xi": [
+    {
+     "name": "Verbruggen",
+     "team": "BHA",
+     "pos": "GKP",
+     "cost": 4.5,
+     "projected": 10.3,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Gabriel",
+     "team": "ARS",
+     "pos": "DEF",
+     "cost": 8.0,
+     "projected": 15.8,
+     "start_share": 79,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": true
+    },
+    {
+     "name": "Guéhi",
+     "team": "MCI",
+     "pos": "DEF",
+     "cost": 6.0,
+     "projected": 14.7,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Virgil",
+     "team": "LIV",
+     "pos": "DEF",
+     "cost": 6.5,
+     "projected": 14.4,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Senesi",
+     "team": "TOT",
+     "pos": "DEF",
+     "cost": 6.0,
+     "projected": 14.4,
+     "start_share": 97,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Semenyo",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 8.5,
+     "projected": 16.4,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": true,
+     "vice": false
+    },
+    {
+     "name": "Gibbs-White",
+     "team": "NFO",
+     "pos": "MID",
+     "cost": 8.0,
+     "projected": 14.8,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Anderson",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 6.5,
+     "projected": 14.6,
+     "start_share": 97,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Rice",
+     "team": "ARS",
+     "pos": "MID",
+     "cost": 7.5,
+     "projected": 14.1,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Thiago",
+     "team": "BRE",
+     "pos": "FWD",
+     "cost": 8.0,
+     "projected": 14.6,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "João Pedro",
+     "team": "CHE",
+     "pos": "FWD",
+     "cost": 7.5,
+     "projected": 13.7,
+     "start_share": 82,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ],
+   "bench": [
+    {
+     "name": "Dubravka",
+     "team": "TOT",
+     "pos": "GKP",
+     "cost": 4.0,
+     "projected": 7.9,
+     "start_share": 92,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Mitchell",
+     "team": "CRY",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 10.2,
+     "start_share": 95,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Wilson",
+     "team": "LEE",
+     "pos": "MID",
+     "cost": 6.5,
+     "projected": 13.3,
+     "start_share": 84,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Watkins",
+     "team": "AVL",
+     "pos": "FWD",
+     "cost": 8.0,
+     "projected": 13.2,
+     "start_share": 87,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ]
+  },
+  {
+   "key": "safe",
+   "label": "Low risk",
+   "rationale": "Punishes rotation risk and new-club uncertainty.",
+   "cost": 100.0,
+   "bank": 0.0,
+   "projected_xi": 147.8,
+   "legal": true,
+   "violations": [],
+   "captain": "B.Fernandes",
+   "vice": "Haaland",
+   "formation": "5-3-2",
+   "xi": [
+    {
+     "name": "Verbruggen",
+     "team": "BHA",
+     "pos": "GKP",
+     "cost": 4.5,
+     "projected": 10.3,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Virgil",
+     "team": "LIV",
+     "pos": "DEF",
+     "cost": 6.5,
+     "projected": 14.4,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Mitchell",
+     "team": "CRY",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 10.2,
+     "start_share": 95,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Shaw",
+     "team": "MUN",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 9.6,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Hume",
+     "team": "SUN",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 9.4,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Kayode",
+     "team": "BRE",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 9.3,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "B.Fernandes",
+     "team": "MUN",
+     "pos": "MID",
+     "cost": 12.0,
+     "projected": 19.5,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": true,
+     "vice": false
+    },
+    {
+     "name": "Semenyo",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 8.5,
+     "projected": 16.4,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Gibbs-White",
+     "team": "NFO",
+     "pos": "MID",
+     "cost": 8.0,
+     "projected": 14.8,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Haaland",
+     "team": "MCI",
+     "pos": "FWD",
+     "cost": 15.5,
+     "projected": 19.3,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": true
+    },
+    {
+     "name": "Thiago",
+     "team": "BRE",
+     "pos": "FWD",
+     "cost": 8.0,
+     "projected": 14.6,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ],
+   "bench": [
+    {
+     "name": "Dubravka",
+     "team": "TOT",
+     "pos": "GKP",
+     "cost": 4.0,
+     "projected": 7.9,
+     "start_share": 92,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Yarmoliuk",
+     "team": "BRE",
+     "pos": "MID",
+     "cost": 5.0,
+     "projected": 8.4,
+     "start_share": 79,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Hughes",
+     "team": "CRY",
+     "pos": "MID",
+     "cost": 4.5,
+     "projected": 3.5,
+     "start_share": 50,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Barry",
+     "team": "EVE",
+     "pos": "FWD",
+     "cost": 5.5,
+     "projected": 7.3,
+     "start_share": 55,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ]
+  },
+  {
+   "key": "differential",
+   "label": "Differential",
+   "rationale": "Rewards low ownership among players with real projections.",
+   "cost": 83.5,
+   "bank": 16.5,
+   "projected_xi": 117.2,
+   "legal": true,
+   "violations": [],
+   "captain": "Kelleher",
+   "vice": "Gravenberch",
+   "formation": "4-5-1",
+   "xi": [
+    {
+     "name": "Kelleher",
+     "team": "BRE",
+     "pos": "GKP",
+     "cost": 5.0,
+     "projected": 11.7,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": true,
+     "vice": false
+    },
+    {
+     "name": "Alderete",
+     "team": "SUN",
+     "pos": "DEF",
+     "cost": 5.0,
+     "projected": 10.7,
+     "start_share": 84,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Collins",
+     "team": "BRE",
+     "pos": "DEF",
+     "cost": 5.5,
+     "projected": 10.6,
+     "start_share": 84,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Chalobah",
+     "team": "CHE",
+     "pos": "DEF",
+     "cost": 5.5,
+     "projected": 10.3,
+     "start_share": 82,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Keane",
+     "team": "EVE",
+     "pos": "DEF",
+     "cost": 5.0,
+     "projected": 9.9,
+     "start_share": 76,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Gravenberch",
+     "team": "LIV",
+     "pos": "MID",
+     "cost": 6.0,
+     "projected": 11.7,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": true
+    },
+    {
+     "name": "O.Dango",
+     "team": "BRE",
+     "pos": "MID",
+     "cost": 6.5,
+     "projected": 11.0,
+     "start_share": 66,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Stach",
+     "team": "LEE",
+     "pos": "MID",
+     "cost": 6.0,
+     "projected": 10.8,
+     "start_share": 74,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Ampadu",
+     "team": "LEE",
+     "pos": "MID",
+     "cost": 5.5,
+     "projected": 10.6,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Aaronson",
+     "team": "LEE",
+     "pos": "MID",
+     "cost": 5.5,
+     "projected": 9.9,
+     "start_share": 79,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Welbeck",
+     "team": "BHA",
+     "pos": "FWD",
+     "cost": 6.0,
+     "projected": 9.9,
+     "start_share": 68,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ],
+   "bench": [
+    {
+     "name": "Roefs",
+     "team": "SUN",
+     "pos": "GKP",
+     "cost": 5.0,
+     "projected": 11.6,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Richards",
+     "team": "CRY",
+     "pos": "DEF",
+     "cost": 5.0,
+     "projected": 9.7,
+     "start_share": 82,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Richarlison",
+     "team": "TOT",
+     "pos": "FWD",
+     "cost": 6.0,
+     "projected": 9.6,
+     "start_share": 53,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Evanilson",
+     "team": "BOU",
+     "pos": "FWD",
+     "cost": 6.0,
+     "projected": 8.7,
+     "start_share": 84,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ]
+  },
+  {
+   "key": "fixtures",
+   "label": "Fixture-led",
+   "rationale": "Leans harder on the next few opponents.",
+   "cost": 100.0,
+   "bank": 0.0,
+   "projected_xi": 150.9,
+   "legal": true,
+   "violations": [],
+   "captain": "B.Fernandes",
+   "vice": "Haaland",
+   "formation": "5-3-2",
+   "xi": [
+    {
+     "name": "Verbruggen",
+     "team": "BHA",
+     "pos": "GKP",
+     "cost": 4.5,
+     "projected": 10.3,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Guéhi",
+     "team": "MCI",
+     "pos": "DEF",
+     "cost": 6.0,
+     "projected": 14.7,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Virgil",
+     "team": "LIV",
+     "pos": "DEF",
+     "cost": 6.5,
+     "projected": 14.4,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Senesi",
+     "team": "TOT",
+     "pos": "DEF",
+     "cost": 6.0,
+     "projected": 14.4,
+     "start_share": 97,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Shaw",
+     "team": "MUN",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 9.6,
+     "start_share": 100,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Hume",
+     "team": "SUN",
+     "pos": "DEF",
+     "cost": 4.5,
+     "projected": 9.4,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "B.Fernandes",
+     "team": "MUN",
+     "pos": "MID",
+     "cost": 12.0,
+     "projected": 19.5,
+     "start_share": 92,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": true,
+     "vice": false
+    },
+    {
+     "name": "Semenyo",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 8.5,
+     "projected": 16.4,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Yarmoliuk",
+     "team": "BRE",
+     "pos": "MID",
+     "cost": 5.0,
+     "projected": 8.4,
+     "start_share": 79,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Haaland",
+     "team": "MCI",
+     "pos": "FWD",
+     "cost": 15.5,
+     "projected": 19.3,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": true
+    },
+    {
+     "name": "Thiago",
+     "team": "BRE",
+     "pos": "FWD",
+     "cost": 8.0,
+     "projected": 14.6,
+     "start_share": 97,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    }
+   ],
+   "bench": [
+    {
+     "name": "Dubravka",
+     "team": "TOT",
+     "pos": "GKP",
+     "cost": 4.0,
+     "projected": 7.9,
+     "start_share": 92,
+     "new_club": true,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Sadiki",
+     "team": "SUN",
+     "pos": "MID",
+     "cost": 5.0,
+     "projected": 6.7,
+     "start_share": 87,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Hughes",
+     "team": "CRY",
+     "pos": "MID",
+     "cost": 4.5,
+     "projected": 3.5,
+     "start_share": 50,
+     "new_club": false,
+     "rotation_risk": false,
+     "captain": false,
+     "vice": false
+    },
+    {
+     "name": "Isidor",
+     "team": "SUN",
+     "pos": "FWD",
+     "cost": 5.5,
+     "projected": 6.1,
+     "start_share": 29,
+     "new_club": false,
+     "rotation_risk": true,
+     "captain": false,
+     "vice": false
+    }
+   ]
+  }
+ ],
+ "consensus": [
+  {
+   "name": "Semenyo",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 8.5,
+   "picked_by": 5,
+   "of": 6
+  },
+  {
+   "name": "Thiago",
+   "team": "BRE",
+   "pos": "FWD",
+   "cost": 8.0,
+   "picked_by": 4,
+   "of": 6
+  },
+  {
+   "name": "Mitchell",
+   "team": "CRY",
+   "pos": "DEF",
+   "cost": 4.5,
+   "picked_by": 4,
+   "of": 6
+  },
+  {
+   "name": "Verbruggen",
+   "team": "BHA",
+   "pos": "GKP",
+   "cost": 4.5,
+   "picked_by": 4,
+   "of": 6
+  },
+  {
+   "name": "Dubravka",
+   "team": "TOT",
+   "pos": "GKP",
+   "cost": 4.0,
+   "picked_by": 4,
+   "of": 6
+  },
+  {
+   "name": "Haaland",
+   "team": "MCI",
+   "pos": "FWD",
+   "cost": 15.5,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "B.Fernandes",
+   "team": "MUN",
+   "pos": "MID",
+   "cost": 12.0,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Gibbs-White",
+   "team": "NFO",
+   "pos": "MID",
+   "cost": 8.0,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Guéhi",
+   "team": "MCI",
+   "pos": "DEF",
+   "cost": 6.0,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Senesi",
+   "team": "TOT",
+   "pos": "DEF",
+   "cost": 6.0,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Virgil",
+   "team": "LIV",
+   "pos": "DEF",
+   "cost": 6.5,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Shaw",
+   "team": "MUN",
+   "pos": "DEF",
+   "cost": 4.5,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Hume",
+   "team": "SUN",
+   "pos": "DEF",
+   "cost": 4.5,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Yarmoliuk",
+   "team": "BRE",
+   "pos": "MID",
+   "cost": 5.0,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Hughes",
+   "team": "CRY",
+   "pos": "MID",
+   "cost": 4.5,
+   "picked_by": 3,
+   "of": 6
+  },
+  {
+   "name": "Gabriel",
+   "team": "ARS",
+   "pos": "DEF",
+   "cost": 8.0,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Anderson",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 6.5,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "João Pedro",
+   "team": "CHE",
+   "pos": "FWD",
+   "cost": 7.5,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Wilson",
+   "team": "LEE",
+   "pos": "MID",
+   "cost": 6.5,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Mukiele",
+   "team": "SUN",
+   "pos": "DEF",
+   "cost": 5.5,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Gravenberch",
+   "team": "LIV",
+   "pos": "MID",
+   "cost": 6.0,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Kelleher",
+   "team": "BRE",
+   "pos": "GKP",
+   "cost": 5.0,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Roefs",
+   "team": "SUN",
+   "pos": "GKP",
+   "cost": 5.0,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Barry",
+   "team": "EVE",
+   "pos": "FWD",
+   "cost": 5.5,
+   "picked_by": 2,
+   "of": 6
+  },
+  {
+   "name": "Rice",
+   "team": "ARS",
+   "pos": "MID",
+   "cost": 7.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Watkins",
+   "team": "AVL",
+   "pos": "FWD",
+   "cost": 8.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Van Hecke",
+   "team": "TOT",
+   "pos": "DEF",
+   "cost": 5.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "E.Le Fée",
+   "team": "SUN",
+   "pos": "MID",
+   "cost": 6.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Calvert-Lewin",
+   "team": "LEE",
+   "pos": "FWD",
+   "cost": 6.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Stach",
+   "team": "LEE",
+   "pos": "MID",
+   "cost": 6.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "O.Dango",
+   "team": "BRE",
+   "pos": "MID",
+   "cost": 6.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Chalobah",
+   "team": "CHE",
+   "pos": "DEF",
+   "cost": 5.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Ampadu",
+   "team": "LEE",
+   "pos": "MID",
+   "cost": 5.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Keane",
+   "team": "EVE",
+   "pos": "DEF",
+   "cost": 5.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Collins",
+   "team": "BRE",
+   "pos": "DEF",
+   "cost": 5.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Richards",
+   "team": "CRY",
+   "pos": "DEF",
+   "cost": 5.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Aaronson",
+   "team": "LEE",
+   "pos": "MID",
+   "cost": 5.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Welbeck",
+   "team": "BHA",
+   "pos": "FWD",
+   "cost": 6.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Alderete",
+   "team": "SUN",
+   "pos": "DEF",
+   "cost": 5.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Richarlison",
+   "team": "TOT",
+   "pos": "FWD",
+   "cost": 6.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Evanilson",
+   "team": "BOU",
+   "pos": "FWD",
+   "cost": 6.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Kayode",
+   "team": "BRE",
+   "pos": "DEF",
+   "cost": 4.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Beto",
+   "team": "EVE",
+   "pos": "FWD",
+   "cost": 5.5,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Sadiki",
+   "team": "SUN",
+   "pos": "MID",
+   "cost": 5.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "name": "Isidor",
+   "team": "SUN",
+   "pos": "FWD",
+   "cost": 5.5,
+   "picked_by": 1,
+   "of": 6
+  }
+ ],
+ "duplicate_squads": [],
+ "fixtures": [
+  {
+   "team": "EVE",
+   "mean": 2.83,
+   "sum": 17,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "CRY (H)",
+    "bou (A)",
+    "MUN (H)",
+    "tot (A)",
+    "IPS (H)",
+    "hul (A)"
+   ]
+  },
+  {
+   "team": "LIV",
+   "mean": 2.83,
+   "sum": 17,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "new (A)",
+    "NFO (H)",
+    "ips (A)",
+    "FUL (H)",
+    "bou (A)",
+    "MCI (H)"
+   ]
+  },
+  {
+   "team": "MUN",
+   "mean": 2.83,
+   "sum": 17,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "hul (A)",
+    "IPS (H)",
+    "eve (A)",
+    "MCI (H)",
+    "ful (A)",
+    "TOT (H)"
+   ]
+  },
+  {
+   "team": "NEW",
+   "mean": 2.83,
+   "sum": 17,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "LIV (H)",
+    "tot (A)",
+    "BOU (H)",
+    "lee (A)",
+    "HUL (H)",
+    "cov (A)"
+   ]
+  },
+  {
+   "team": "ARS",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "COV (H)",
+    "avl (A)",
+    "CHE (H)",
+    "sun (A)",
+    "bha (A)",
+    "LEE (H)"
+   ]
+  },
+  {
+   "team": "AVL",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "bha (A)",
+    "ARS (H)",
+    "hul (A)",
+    "NFO (H)",
+    "tot (A)",
+    "BRE (H)"
+   ]
+  },
+  {
+   "team": "BHA",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "AVL (H)",
+    "che (A)",
+    "LEE (H)",
+    "cov (A)",
+    "ARS (H)",
+    "sun (A)"
+   ]
+  },
+  {
+   "team": "CHE",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "ful (A)",
+    "BHA (H)",
+    "ars (A)",
+    "HUL (H)",
+    "bre (A)",
+    "BOU (H)"
+   ]
+  },
+  {
+   "team": "CRY",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "eve (A)",
+    "MCI (H)",
+    "ful (A)",
+    "IPS (H)",
+    "lee (A)",
+    "NFO (H)"
+   ]
+  },
+  {
+   "team": "IPS",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "SUN (H)",
+    "mun (A)",
+    "LIV (H)",
+    "cry (A)",
+    "eve (A)",
+    "FUL (H)"
+   ]
+  },
+  {
+   "team": "MCI",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "BOU (H)",
+    "cry (A)",
+    "COV (H)",
+    "mun (A)",
+    "SUN (H)",
+    "liv (A)"
+   ]
+  },
+  {
+   "team": "NFO",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "LEE (H)",
+    "liv (A)",
+    "TOT (H)",
+    "avl (A)",
+    "COV (H)",
+    "cry (A)"
+   ]
+  },
+  {
+   "team": "TOT",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "bre (A)",
+    "NEW (H)",
+    "nfo (A)",
+    "EVE (H)",
+    "AVL (H)",
+    "mun (A)"
+   ]
+  },
+  {
+   "team": "SUN",
+   "mean": 3.0,
+   "sum": 18,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "ips (A)",
+    "FUL (H)",
+    "bre (A)",
+    "ARS (H)",
+    "mci (A)",
+    "BHA (H)"
+   ]
+  },
+  {
+   "team": "BRE",
+   "mean": 3.17,
+   "sum": 19,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "TOT (H)",
+    "lee (A)",
+    "SUN (H)",
+    "bou (A)",
+    "CHE (H)",
+    "avl (A)"
+   ]
+  },
+  {
+   "team": "COV",
+   "mean": 3.17,
+   "sum": 19,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "ars (A)",
+    "HUL (H)",
+    "mci (A)",
+    "BHA (H)",
+    "nfo (A)",
+    "NEW (H)"
+   ]
+  },
+  {
+   "team": "HUL",
+   "mean": 3.17,
+   "sum": 19,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "MUN (H)",
+    "cov (A)",
+    "AVL (H)",
+    "che (A)",
+    "new (A)",
+    "EVE (H)"
+   ]
+  },
+  {
+   "team": "LEE",
+   "mean": 3.17,
+   "sum": 19,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "nfo (A)",
+    "BRE (H)",
+    "bha (A)",
+    "NEW (H)",
+    "CRY (H)",
+    "ars (A)"
+   ]
+  },
+  {
+   "team": "FUL",
+   "mean": 3.33,
+   "sum": 20,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "CHE (H)",
+    "sun (A)",
+    "CRY (H)",
+    "liv (A)",
+    "MUN (H)",
+    "ips (A)"
+   ]
+  },
+  {
+   "team": "BOU",
+   "mean": 3.67,
+   "sum": 22,
+   "n": 6,
+   "home": 3,
+   "list": [
+    "mci (A)",
+    "EVE (H)",
+    "new (A)",
+    "BRE (H)",
+    "LIV (H)",
+    "che (A)"
+   ]
+  }
+ ],
+ "caveats": [
+  "Pre-season: these are last season's rates against this season's fixtures.",
+  "Rows marked NEW changed club this summer. Their stats were earned at their OLD club but are shown against their NEW club's fixtures - new role, new system, unknown minutes.",
+  "Newly promoted players and summer signings from abroad have no data and are absent.",
+  "Backtest found ~+0.3 to +0.5 correlation for ANY predictor, and xGI did not reliably beat last season's points. This is a shortlist, not a forecast.",
+  "Mid-season signings are understated: minutes spread over 38 games they were not all available for. Check st% before trusting a low number."
+ ]
+}

@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FPL Analyzer Dashboard</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #090c10;
+        --panel: #10151c;
+        --line: #1e2731;
+        --text: #f0f6fc;
+        --muted: #8b98a5;
+        --blue: #58a6ff;
+        --purple: #a371f7;
+        --green: #3fb950;
+        --amber: #d29922;
+        --red: #f85149;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 12% -5%, rgb(47 129 247 / 18%), transparent 30rem),
+          radial-gradient(circle at 88% 5%, rgb(163 113 247 / 14%), transparent 26rem),
+          var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      .shell { width: min(78rem, calc(100% - 2.5rem)); margin-inline: auto; padding-bottom: 4rem; }
+
+      header { padding: 3.5rem 0 2rem; }
+
+      .eyebrow {
+        margin: 0 0 0.6rem;
+        color: var(--blue);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 { margin: 0 0 0.75rem; font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: -0.02em; }
+
+      .sub { margin: 0; color: var(--muted); font-size: 1rem; max-width: 46rem; line-height: 1.6; }
+
+      .meta {
+        display: flex; flex-wrap: wrap; gap: 0.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .chip {
+        padding: 0.35rem 0.7rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgb(255 255 255 / 3%);
+        font-size: 0.75rem;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .chip strong { color: var(--text); font-weight: 600; }
+
+      .warn {
+        margin: 2rem 0 0;
+        padding: 1.1rem 1.25rem;
+        border: 1px solid rgb(210 153 34 / 35%);
+        border-left: 3px solid var(--amber);
+        border-radius: 0.6rem;
+        background: rgb(210 153 34 / 8%);
+      }
+      .warn h2 { margin: 0 0 0.6rem; font-size: 0.85rem; color: var(--amber); letter-spacing: 0.04em; text-transform: uppercase; }
+      .warn ul { margin: 0; padding-left: 1.1rem; color: #d6c9a8; font-size: 0.86rem; line-height: 1.65; }
+      .warn li + li { margin-top: 0.35rem; }
+
+      .grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-top: 2rem; }
+      @media (min-width: 62rem) { .grid { grid-template-columns: 1fr 1fr; } }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 0.8rem;
+        background: var(--panel);
+        overflow: hidden;
+      }
+
+      .panel-head { padding: 1.15rem 1.25rem 0.9rem; border-bottom: 1px solid var(--line); }
+      .panel-head h2 { margin: 0 0 0.3rem; font-size: 1.05rem; }
+      .panel-head p { margin: 0; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+
+      table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+      th {
+        padding: 0.6rem 0.5rem;
+        color: var(--muted);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        text-align: right;
+        border-bottom: 1px solid var(--line);
+        white-space: nowrap;
+      }
+      th:nth-child(1), th:nth-child(2) { text-align: left; }
+      td {
+        padding: 0.5rem;
+        border-bottom: 1px solid rgb(30 39 49 / 55%);
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+      td:nth-child(1), td:nth-child(2) { text-align: left; }
+      tbody tr:hover { background: rgb(88 166 255 / 6%); }
+      tbody tr:last-child td { border-bottom: 0; }
+
+      .rank { color: var(--muted); width: 2rem; }
+      .who { display: flex; align-items: baseline; gap: 0.45rem; }
+      .name { font-weight: 600; }
+      .club { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.04em; }
+      .pos {
+        display: inline-block; min-width: 2.4rem;
+        padding: 0.1rem 0.35rem; border-radius: 0.25rem;
+        font-size: 0.65rem; font-weight: 700; text-align: center;
+      }
+      .pos.GKP { background: rgb(210 153 34 / 18%); color: #e3b341; }
+      .pos.DEF { background: rgb(63 185 80 / 16%); color: #56d364; }
+      .pos.MID { background: rgb(88 166 255 / 16%); color: var(--blue); }
+      .pos.FWD { background: rgb(248 81 73 / 16%); color: #ff7b72; }
+
+      .big { font-weight: 700; font-size: 0.92rem; }
+      .accent { color: var(--blue); }
+      .accent-2 { color: var(--purple); }
+      .dim { color: var(--muted); font-size: 0.75rem; }
+
+      .bar {
+        position: relative; display: block;
+        height: 0.3rem; width: 3.2rem; margin-left: auto;
+        border-radius: 999px; background: rgb(255 255 255 / 7%);
+        overflow: hidden;
+      }
+      .bar span { position: absolute; inset: 0 auto 0 0; border-radius: 999px; }
+
+      .risk { color: var(--amber); font-size: 0.68rem; font-weight: 700; }
+      .newclub {
+        color: var(--purple); font-size: 0.68rem; font-weight: 700;
+        border: 1px solid rgb(163 113 247 / 40%);
+        border-radius: 0.25rem; padding: 0 0.25rem;
+      }
+
+      /* ---- squad strategy toggle ---- */
+      .tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 1.15rem 1.25rem 0; }
+      .tab {
+        appearance: none; cursor: pointer; text-align: left;
+        padding: 0.5rem 0.85rem;
+        border: 1px solid var(--line); border-radius: 0.5rem;
+        background: rgb(255 255 255 / 3%); color: var(--muted);
+        font: inherit; font-size: 0.8rem; font-weight: 600;
+        transition: background 0.12s, border-color 0.12s, color 0.12s;
+      }
+      .tab:hover { background: rgb(88 166 255 / 10%); color: var(--text); }
+      .tab[aria-selected="true"] {
+        background: rgb(88 166 255 / 16%); border-color: var(--blue); color: var(--text);
+      }
+      .tab:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+      .tab-sub {
+        display: block; margin-top: 0.15rem;
+        font-size: 0.66rem; font-weight: 500; opacity: 0.72;
+        font-variant-numeric: tabular-nums;
+      }
+      .squad-head {
+        display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: baseline;
+        padding: 1.1rem 1.25rem; border-bottom: 1px solid var(--line);
+      }
+      .squad-why { color: var(--muted); font-size: 0.82rem; flex: 1 1 15rem; line-height: 1.55; }
+      .stat { text-align: right; }
+      .stat b { display: block; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+      .stat span {
+        color: var(--muted); font-size: 0.64rem;
+        letter-spacing: 0.08em; text-transform: uppercase;
+      }
+      .pitch {
+        padding: 1.5rem 1.25rem 1.25rem;
+        background:
+          linear-gradient(180deg, rgb(63 185 80 / 6%), transparent 65%),
+          repeating-linear-gradient(180deg, transparent 0 3.4rem, rgb(255 255 255 / 2%) 3.4rem 6.8rem);
+      }
+      .line { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+      .card {
+        position: relative; width: 7.6rem; padding: 0.5rem 0.4rem;
+        border: 1px solid var(--line); border-radius: 0.5rem;
+        background: var(--panel); text-align: center;
+      }
+      .card.cap { border-color: var(--blue); box-shadow: 0 0 0 1px rgb(88 166 255 / 30%); }
+      .card.vc { border-color: rgb(88 166 255 / 45%); }
+      .card-name { font-size: 0.78rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .card-meta { margin-top: 0.15rem; color: var(--muted); font-size: 0.65rem; font-variant-numeric: tabular-nums; }
+      .card-proj { margin-top: 0.25rem; font-size: 0.85rem; font-weight: 700; color: var(--blue); font-variant-numeric: tabular-nums; }
+      .badge {
+        position: absolute; top: -0.45rem; right: -0.35rem;
+        width: 1.3rem; height: 1.3rem; border-radius: 50%;
+        display: grid; place-items: center;
+        font-size: 0.6rem; font-weight: 800; background: var(--blue); color: #06090d;
+      }
+      .badge.v { background: #2c4257; color: var(--text); }
+      .card-tags { margin-top: 0.2rem; display: flex; gap: 0.2rem; justify-content: center; min-height: 0.9rem; }
+      .bench-strip { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px dashed var(--line); }
+      .bench-label {
+        text-align: center; color: var(--muted); font-size: 0.64rem;
+        letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.6rem;
+      }
+      .bench-strip .card { opacity: 0.6; }
+      .cons-grid { display: grid; gap: 0.45rem; padding: 1.15rem; }
+      .cons-row { display: grid; grid-template-columns: 6.5rem 1fr auto; gap: 0.8rem; align-items: center; font-size: 0.8rem; }
+      .pips { display: flex; gap: 0.15rem; }
+      .pip { width: 0.8rem; height: 0.8rem; border-radius: 0.15rem; background: rgb(255 255 255 / 8%); }
+      .pip.on { background: var(--green); }
+      .cons-note { color: var(--muted); font-size: 0.75rem; }
+
+      .fx { margin-top: 2rem; }
+      .fx-grid {
+        display: grid; gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+        padding: 1.15rem;
+      }
+      .fx-card {
+        padding: 0.7rem 0.8rem;
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        background: rgb(255 255 255 / 2%);
+      }
+      .fx-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.45rem; }
+      .fx-team { font-weight: 700; font-size: 0.85rem; letter-spacing: 0.03em; }
+      .fx-mean { font-size: 0.72rem; font-variant-numeric: tabular-nums; }
+      .fdrs { display: flex; gap: 0.2rem; }
+      .fdr {
+        flex: 1; height: 1.35rem; border-radius: 0.25rem;
+        display: grid; place-items: center;
+        font-size: 0.6rem; font-weight: 700; color: #06090d;
+      }
+      .fdr-2 { background: #3fb950; }
+      .fdr-3 { background: #7d8590; }
+      .fdr-4 { background: #d29922; }
+      .fdr-5 { background: #f85149; }
+      .fdr-1 { background: #56d364; }
+
+      footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.78rem; line-height: 1.7; }
+      code { background: rgb(255 255 255 / 6%); padding: 0.1rem 0.3rem; border-radius: 0.25rem; font-size: 0.9em; }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <p class="eyebrow">Concept Playground &middot; FPL Analyzer</p>
+        <h1>Projected points, next three gameweeks</h1>
+        <p class="sub">
+          <code>rate/90 &times; expected minutes &times; fixture multiplier</code> &mdash; three
+          inputs you can argue with separately, rather than one opaque score. The rate is last
+          season&rsquo;s points per 90, not xGI, because the backtest could not show xGI doing
+          better.
+        </p>
+        <div class="meta" id="meta"></div>
+      </header>
+
+      <section class="warn">
+        <h2>Read this before trusting a number</h2>
+        <ul id="caveats"></ul>
+      </section>
+
+      <div class="grid">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Highest projected return</h2>
+            <p>Raw ceiling. What you play if the budget is not the binding constraint.</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th></th><th>Player</th><th>Pos</th><th>&pound;</th>
+                <th>Proj</th><th>/&pound;m</th><th>Mins</th><th>Starts</th>
+              </tr>
+            </thead>
+            <tbody id="total"></tbody>
+          </table>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Best projected points per &pound;m</h2>
+            <p>Efficiency. Almost all defenders and keepers &mdash; clean sheets are cheap points.</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th></th><th>Player</th><th>Pos</th><th>&pound;</th>
+                <th>/&pound;m</th><th>Proj</th><th>Mins</th><th>Starts</th>
+              </tr>
+            </thead>
+            <tbody id="value"></tbody>
+          </table>
+        </section>
+      </div>
+
+      <section class="panel" style="margin-top:2rem">
+        <div class="panel-head">
+          <h2>GW1 squads &mdash; six strategies under &pound;100m</h2>
+          <p>
+            There is no optimal squad, only an optimal squad <em>given an objective</em>.
+            Toggle between them; the objective is a judgement call, not a calculation.
+          </p>
+        </div>
+        <div class="tabs" id="tabs" role="tablist" aria-label="Squad strategy"></div>
+        <div id="squad"></div>
+      </section>
+
+      <section class="panel" style="margin-top:1.5rem">
+        <div class="panel-head">
+          <h2>Consensus &mdash; who survives every objective</h2>
+          <p>
+            A player picked by every strategy is robust to the choice of objective.
+            A player picked by one is an artefact of that objective&rsquo;s assumptions.
+          </p>
+        </div>
+        <div class="cons-grid" id="consensus"></div>
+      </section>
+
+      <section class="panel fx">
+        <div class="panel-head">
+          <h2>Fixture difficulty &mdash; next six gameweeks</h2>
+          <p>FPL&rsquo;s own FDR, 1 easiest to 5 hardest. Set pre-season and never updated, so treat it as a tilt, not a verdict.</p>
+        </div>
+        <div class="fx-grid" id="fixtures"></div>
+      </section>
+
+      <footer id="footer"></footer>
+    </div>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+      const esc = (s) => String(s).replace(/[&<>"']/g, (c) =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+      function bar(value, max, colour) {
+        const pct = Math.max(2, Math.min(100, (value / max) * 100));
+        return `<span class="bar"><span style="width:${pct}%;background:${colour}"></span></span>`;
+      }
+
+      function row(d, i, primary, maxPrimary, maxSecondary, colour) {
+        const flags = [];
+        if (d.double) flags.push('<span class="risk">DGW</span>');
+        if (d.blank) flags.push('<span class="risk">BLANK</span>');
+        if (d.new_club) flags.push(`<span class="newclub" title="Joined ${esc(d.joined || "?")} \u2014 stats earned at previous club">NEW</span>`);
+        if (d.rotation_risk) flags.push('<span class="risk">ROT?</span>');
+
+        const a = primary === "projected" ? d.projected : d.per_million;
+        const b = primary === "projected" ? d.per_million : d.projected;
+        const fmtA = primary === "projected" ? a.toFixed(1) : a.toFixed(2);
+        const fmtB = primary === "projected" ? b.toFixed(2) : b.toFixed(1);
+
+        return `<tr>
+          <td class="rank">${i + 1}</td>
+          <td>
+            <div class="who">
+              <span class="name">${esc(d.name)}</span>
+              <span class="club">${esc(d.team)}</span>
+              ${flags.join(" ")}
+            </div>
+            <div class="dim">${esc(d.fixtures.join("  "))}</div>
+          </td>
+          <td><span class="pos ${esc(d.pos)}">${esc(d.pos)}</span></td>
+          <td>${d.cost.toFixed(1)}</td>
+          <td class="big ${primary === "projected" ? "accent" : "accent-2"}">${fmtA}</td>
+          <td>${fmtB}</td>
+          <td>${d.exp_minutes}${bar(d.exp_minutes, 90, "#3fb950")}</td>
+          <td>${d.start_share}%</td>
+        </tr>`;
+      }
+
+      const POS_LINES = ["GKP", "DEF", "MID", "FWD"];
+
+      function playerCard(p) {
+        const tags = [];
+        if (p.new_club) tags.push('<span class="newclub">NEW</span>');
+        if (p.rotation_risk) tags.push('<span class="risk">ROT?</span>');
+        const badge = p.captain
+          ? '<span class="badge" title="Captain">C</span>'
+          : p.vice ? '<span class="badge v" title="Vice-captain">V</span>' : "";
+        const cls = p.captain ? "card cap" : p.vice ? "card vc" : "card";
+        return `<div class="${cls}">
+          ${badge}
+          <div class="card-name" title="${esc(p.name)}">${esc(p.name)}</div>
+          <div class="card-meta">${esc(p.team)} &middot; &pound;${p.cost.toFixed(1)} &middot; ${p.start_share}%</div>
+          <div class="card-proj">${p.projected.toFixed(1)}</div>
+          <div class="card-tags">${tags.join(" ")}</div>
+        </div>`;
+      }
+
+      function renderSquad(squad, budget) {
+        const lines = POS_LINES.map((pos) => {
+          const men = squad.xi.filter((p) => p.pos === pos);
+          return men.length ? `<div class="line">${men.map(playerCard).join("")}</div>` : "";
+        }).join("");
+
+        const legal = squad.legal
+          ? '<b style="color:var(--green)">LEGAL</b><span>rules</span>'
+          : `<b style="color:var(--red)">ILLEGAL</b><span>${esc(squad.violations.join("; "))}</span>`;
+
+        $("squad").innerHTML = `
+          <div class="squad-head">
+            <div class="squad-why">${esc(squad.rationale)}</div>
+            <div class="stat"><b>&pound;${squad.cost.toFixed(1)}</b><span>spent of ${budget}</span></div>
+            <div class="stat"><b>&pound;${squad.bank.toFixed(1)}</b><span>in bank</span></div>
+            <div class="stat"><b>${squad.projected_xi.toFixed(1)}</b><span>XI projected</span></div>
+            <div class="stat"><b>${esc(squad.formation)}</b><span>formation</span></div>
+            <div class="stat"><b>${esc(squad.captain)}</b><span>captain</span></div>
+            <div class="stat">${legal}</div>
+          </div>
+          <div class="pitch">
+            ${lines}
+            <div class="bench-strip">
+              <div class="bench-label">Bench &mdash; in order</div>
+              <div class="line">${squad.bench.map(playerCard).join("")}</div>
+            </div>
+          </div>`;
+      }
+
+      function renderSquads(data) {
+        const squads = data.squads || [];
+        if (!squads.length) {
+          $("squad").innerHTML = '<p class="dim" style="padding:1.25rem">No legal squad could be built.</p>';
+          return;
+        }
+        const tabs = $("tabs");
+        tabs.innerHTML = squads.map((s, i) => `
+          <button class="tab" role="tab" id="tab-${esc(s.key)}"
+                  aria-selected="${i === 0}" aria-controls="squad" data-i="${i}">
+            ${esc(s.label)}
+            <span class="tab-sub">&pound;${s.cost.toFixed(1)} &middot; ${s.projected_xi.toFixed(1)} pts</span>
+          </button>`).join("");
+
+        const select = (i) => {
+          [...tabs.children].forEach((b, j) => b.setAttribute("aria-selected", String(i === j)));
+          renderSquad(squads[i], data.budget ?? 100);
+        };
+
+        tabs.addEventListener("click", (e) => {
+          const btn = e.target.closest(".tab");
+          if (btn) select(Number(btn.dataset.i));
+        });
+        // Keyboard support: a toggle you cannot tab through is not a control.
+        tabs.addEventListener("keydown", (e) => {
+          if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+          const cur = [...tabs.children].findIndex((b) => b.getAttribute("aria-selected") === "true");
+          const next = (cur + (e.key === "ArrowRight" ? 1 : squads.length - 1)) % squads.length;
+          select(next);
+          tabs.children[next].focus();
+          e.preventDefault();
+        });
+
+        select(0);
+
+        if ((data.duplicate_squads || []).length) {
+          const pairs = data.duplicate_squads.map((d) => d.join(" = ")).join(", ");
+          $("tabs").insertAdjacentHTML("afterend",
+            `<p class="warn" style="margin:1rem 1.25rem 0">Identical squads: ${esc(pairs)}.
+             A strategy that duplicates another is a label, not a strategy.</p>`);
+        }
+      }
+
+      function renderConsensus(data) {
+        const rows = (data.consensus || []).filter((c) => c.picked_by >= 2);
+        const solo = (data.consensus || []).filter((c) => c.picked_by === 1);
+        if (!rows.length) {
+          $("consensus").innerHTML = '<p class="dim">No player was picked by more than one strategy.</p>';
+          return;
+        }
+        $("consensus").innerHTML = rows.map((c) => {
+          const pips = Array.from({ length: c.of }, (_, i) =>
+            `<span class="pip${i < c.picked_by ? " on" : ""}"></span>`).join("");
+          return `<div class="cons-row">
+            <div class="pips" title="${c.picked_by} of ${c.of} strategies">${pips}</div>
+            <div><span class="pos ${esc(c.pos)}">${esc(c.pos)}</span>
+                 <span class="name">${esc(c.name)}</span>
+                 <span class="club">${esc(c.team)}</span></div>
+            <div class="dim">&pound;${c.cost.toFixed(1)}</div>
+          </div>`;
+        }).join("") + (solo.length
+          ? `<p class="cons-note" style="margin-top:0.9rem">
+               Picked by exactly one strategy (${solo.length}):
+               ${esc(solo.slice(0, 14).map((c) => c.name).join(", "))}${solo.length > 14 ? "\u2026" : ""}
+             </p>`
+          : "");
+      }
+
+      fetch("./data.json")
+        .then((r) => r.json())
+        .then((data) => {
+          const captured = new Date(data.data_captured_at);
+          const deadline = data.deadline ? new Date(data.deadline) : null;
+
+          $("meta").innerHTML = [
+            `<span class="chip">Window <strong>GW${data.start_gw}&ndash;${data.end_gw}</strong></span>`,
+            deadline ? `<span class="chip">${esc(data.gw_name)} deadline <strong>${deadline.toISOString().slice(0, 16).replace("T", " ")} UTC</strong></span>` : "",
+            `<span class="chip">Data captured <strong>${captured.toISOString().slice(0, 16).replace("T", " ")} UTC</strong></span>`,
+            `<span class="chip">Projected <strong>${data.counts.players_projected}</strong> of ${data.counts.players_total} players</span>`,
+            data.counts.changed_club ? `<span class="chip" style="border-color:rgb(163 113 247 / 45%);color:#c297ff"><strong>${data.counts.changed_club}</strong> changed club this summer</span>` : "",
+            data.preseason ? `<span class="chip" style="border-color:rgb(210 153 34 / 45%);color:#e3b341">Pre-season data</span>` : "",
+          ].join("");
+
+          $("caveats").innerHTML = data.caveats.map((c) => `<li>${esc(c)}</li>`).join("");
+
+          const maxT = Math.max(...data.by_total.map((d) => d.projected));
+          const maxV = Math.max(...data.by_value.map((d) => d.per_million));
+
+          $("total").innerHTML = data.by_total
+            .map((d, i) => row(d, i, "projected", maxT, maxV, "#58a6ff")).join("");
+          $("value").innerHTML = data.by_value
+            .map((d, i) => row(d, i, "per_million", maxV, maxT, "#a371f7")).join("");
+
+          renderSquads(data);
+          renderConsensus(data);
+
+          $("fixtures").innerHTML = data.fixtures.map((f) => `
+            <div class="fx-card">
+              <div class="fx-top">
+                <span class="fx-team">${esc(f.team)}</span>
+                <span class="fx-mean dim">FDR ${f.mean.toFixed(2)}</span>
+              </div>
+              <div class="fdrs">
+                ${f.list.map((label) => {
+                  const fdr = Number((label.match(/\[(\d)\]/) || [])[1] || 3);
+                  const opp = label.replace(/\[\d\]/, "").trim();
+                  return `<div class="fdr fdr-${fdr}" title="${esc(opp)}">${fdr}</div>`;
+                }).join("")}
+              </div>
+            </div>`).join("");
+
+          $("footer").innerHTML = `
+            Generated ${esc(data.generated_at)} from the public Fantasy Premier League API.
+            Read-only, no account data. <code>proj</code> is in arbitrary points-like units and is
+            <strong>not</strong> a forecast &mdash; the backtest found roughly +0.3 to +0.5 rank
+            correlation for every predictor tried, including simply using last season&rsquo;s
+            points. Use the ordering as a shortlist, not the magnitudes as predictions.
+            <code>Mins</code> is expected minutes per fixture; <code>Starts</code> is the share of
+            38 games started last season, the clearest rotation signal available.
+            <strong style="color:#c297ff">NEW</strong> marks a player who changed club this summer:
+            the stats were earned at their previous club, but are shown against their new
+            club&rsquo;s fixtures.`;
+        })
+        .catch((err) => {
+          $("meta").innerHTML = `<span class="chip" style="color:#f85149">Failed to load data.json: ${esc(err.message)}</span>`;
+        });
+    </script>
+  </body>
+</html>
