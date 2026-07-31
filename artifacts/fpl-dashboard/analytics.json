@@ -1,15 +1,16 @@
 {
- "generated_at": "2026-07-31T15:26:25+00:00",
+ "generated_at": "2026-07-31T15:48:09+00:00",
  "source": "https://github.com/vaastav/Fantasy-Premier-League",
  "source_licence": "MIT",
  "test_season": "2025-26",
  "counts": {
   "player_gameweeks": 113592,
   "rows_after_history_filter": 103757,
-  "features": 71,
+  "features": 72,
   "train": 76519,
   "test": 27238,
   "test_played": 10485,
+  "test_comparable": 2408,
   "zero_minute_share": 0.6151,
   "zero_point_share": 0.6319,
   "seasons": [
@@ -19,6 +20,24 @@
    "2025-26"
   ]
  },
+ "xp_coverage": [
+  {
+   "season": "2022-23",
+   "published": 35
+  },
+  {
+   "season": "2023-24",
+   "published": 37
+  },
+  {
+   "season": "2024-25",
+   "published": 35
+  },
+  {
+   "season": "2025-26",
+   "published": 11
+  }
+ ],
  "charts": [
   {
    "id": "zero_minutes_trap",
@@ -31,8 +50,13 @@
    "file": "./analytics/metric_disagreement.svg"
   },
   {
+   "id": "xp_coverage",
+   "caption": "FPL's xP is missing for most of the test season",
+   "file": "./analytics/xp_coverage.svg"
+  },
+  {
    "id": "ablation",
-   "caption": "Permutation importance said 63%. Removing it disagrees.",
+   "caption": "FPL's own xP is load-bearing, not noise",
    "file": "./analytics/ablation.svg"
   },
   {
@@ -58,6 +82,24 @@
  ],
  "scores_all_rows": [
   {
+   "model": "baseline: FPL xP",
+   "MAE": 0.81,
+   "RMSE": 1.568,
+   "spearman": 0.7871,
+   "top20_hit": 0.35,
+   "n": 6043,
+   "note": "FPL's own pre-match expected points (published for 6043 of 27238 rows)"
+  },
+  {
+   "model": "gradient boosting",
+   "MAE": 0.912,
+   "RMSE": 1.81,
+   "spearman": 0.7273,
+   "top20_hit": 0.276,
+   "n": 27238,
+   "note": "handles NaN natively"
+  },
+  {
    "model": "baseline: rolling mean 5",
    "MAE": 1.036,
    "RMSE": 2.085,
@@ -65,15 +107,6 @@
    "top20_hit": 0.121,
    "n": 27238,
    "note": "mean of the last five matches"
-  },
-  {
-   "model": "gradient boosting",
-   "MAE": 0.842,
-   "RMSE": 1.971,
-   "spearman": 0.7168,
-   "top20_hit": 0.254,
-   "n": 27238,
-   "note": "handles NaN natively"
   },
   {
    "model": "baseline: last match",
@@ -85,20 +118,11 @@
    "note": "predict the previous score"
   },
   {
-   "model": "baseline: FPL xP",
-   "MAE": 1.079,
-   "RMSE": 2.422,
-   "spearman": 0.2775,
-   "top20_hit": 0.117,
-   "n": 27238,
-   "note": "FPL's own pre-match expected points"
-  },
-  {
    "model": "ridge",
-   "MAE": 1.135,
-   "RMSE": 2.424,
-   "spearman": 0.2584,
-   "top20_hit": 0.184,
+   "MAE": 1.465,
+   "RMSE": 2.295,
+   "spearman": 0.2469,
+   "top20_hit": 0.186,
    "n": 27238,
    "note": "linear, median-imputed"
   },
@@ -114,11 +138,20 @@
  ],
  "scores_played": [
   {
+   "model": "baseline: FPL xP",
+   "MAE": 1.651,
+   "RMSE": 2.364,
+   "spearman": 0.6127,
+   "top20_hit": 0.363,
+   "n": 2408,
+   "note": "FPL's own pre-match expected points (published for 2408 of 10485 rows)"
+  },
+  {
    "model": "gbm",
-   "MAE": 1.963,
-   "RMSE": 3.142,
-   "spearman": 0.3367,
-   "top20_hit": 0.264,
+   "MAE": 1.857,
+   "RMSE": 2.777,
+   "spearman": 0.4091,
+   "top20_hit": 0.28,
    "n": 10485,
    "note": ""
   },
@@ -141,20 +174,11 @@
    "note": "predict the previous score"
   },
   {
-   "model": "baseline: FPL xP",
-   "MAE": 2.715,
-   "RMSE": 3.886,
-   "spearman": 0.0585,
-   "top20_hit": 0.154,
-   "n": 10485,
-   "note": "FPL's own pre-match expected points"
-  },
-  {
    "model": "ridge",
-   "MAE": 2.614,
-   "RMSE": 3.875,
-   "spearman": 0.0301,
-   "top20_hit": 0.189,
+   "MAE": 2.16,
+   "RMSE": 3.407,
+   "spearman": 0.0762,
+   "top20_hit": 0.193,
    "n": 10485,
    "note": ""
   },
@@ -168,178 +192,234 @@
    "note": "constant"
   }
  ],
+ "scores_comparable": [
+  {
+   "model": "gbm",
+   "MAE": 1.245,
+   "RMSE": 1.811,
+   "spearman": 0.701,
+   "top20_hit": 0.712,
+   "n": 2408,
+   "note": ""
+  },
+  {
+   "model": "ridge",
+   "MAE": 1.517,
+   "RMSE": 2.207,
+   "spearman": 0.6691,
+   "top20_hit": 0.606,
+   "n": 2408,
+   "note": ""
+  },
+  {
+   "model": "baseline: FPL xP",
+   "MAE": 1.651,
+   "RMSE": 2.364,
+   "spearman": 0.6127,
+   "top20_hit": 0.363,
+   "n": 2408,
+   "note": "FPL's own pre-match expected points"
+  },
+  {
+   "model": "baseline: rolling mean 5",
+   "MAE": 2.116,
+   "RMSE": 3.086,
+   "spearman": 0.3176,
+   "top20_hit": 0.131,
+   "n": 2408,
+   "note": "mean of the last five matches"
+  },
+  {
+   "model": "baseline: last match",
+   "MAE": 2.524,
+   "RMSE": 3.934,
+   "spearman": 0.2056,
+   "top20_hit": 0.15,
+   "n": 1928,
+   "note": "predict the previous score"
+  },
+  {
+   "model": "baseline: always 2.0",
+   "MAE": 1.892,
+   "RMSE": 3.096,
+   "spearman": null,
+   "top20_hit": 0.131,
+   "n": 2408,
+   "note": "constant"
+  }
+ ],
  "ablation": [
   {
    "model": "ridge",
-   "MAE": 1.985,
-   "RMSE": 2.935,
-   "spearman": 0.3367,
-   "top20_hit": 0.171,
-   "n": 10485,
+   "MAE": 1.939,
+   "RMSE": 2.887,
+   "spearman": 0.3611,
+   "top20_hit": 0.188,
+   "n": 2408,
    "note": ""
   },
   {
    "model": "gbm",
-   "MAE": 1.973,
-   "RMSE": 2.949,
-   "spearman": 0.3354,
-   "top20_hit": 0.179,
-   "n": 10485,
+   "MAE": 1.914,
+   "RMSE": 2.901,
+   "spearman": 0.3585,
+   "top20_hit": 0.194,
+   "n": 2408,
    "note": ""
   }
  ],
  "importance": [
   {
    "feature": "fpl_xp",
-   "importance": 0.50564,
-   "std": 0.01339
+   "importance": 2.28197,
+   "std": 0.02858
   },
   {
    "feature": "total_points_mean_3",
-   "importance": 0.06524,
-   "std": 0.00481
-  },
-  {
-   "feature": "match_index",
-   "importance": 0.03109,
-   "std": 0.00518
+   "importance": 0.34133,
+   "std": 0.01081
   },
   {
    "feature": "points_per_90_3",
-   "importance": 0.01995,
-   "std": 0.00241
-  },
-  {
-   "feature": "days_rest",
-   "importance": 0.01628,
-   "std": 0.00362
+   "importance": 0.07452,
+   "std": 0.00121
   },
   {
    "feature": "total_points_std_5",
-   "importance": 0.01368,
-   "std": 0.00076
+   "importance": 0.03162,
+   "std": 0.00261
   },
   {
    "feature": "opp_conceded_mean",
-   "importance": 0.00767,
-   "std": 0.00106
+   "importance": 0.0166,
+   "std": 0.00331
   },
   {
-   "feature": "transfers_balance_prev",
-   "importance": 0.00579,
-   "std": 0.00094
+   "feature": "bps_mean_3",
+   "importance": 0.01117,
+   "std": 0.00193
   },
   {
-   "feature": "is_home",
-   "importance": 0.00447,
-   "std": 0.00112
+   "feature": "bps_mean_5",
+   "importance": 0.00935,
+   "std": 0.00101
+  },
+  {
+   "feature": "total_points_mean_5",
+   "importance": 0.00935,
+   "std": 0.00431
+  },
+  {
+   "feature": "price",
+   "importance": 0.00622,
+   "std": 0.00172
+  },
+  {
+   "feature": "influence_mean_3",
+   "importance": 0.0056,
+   "std": 0.00089
   },
   {
    "feature": "bps_mean_10",
-   "importance": 0.00428,
-   "std": 0.001
+   "importance": 0.00466,
+   "std": 0.00159
   },
   {
-   "feature": "played_last",
-   "importance": 0.00319,
-   "std": 0.00128
+   "feature": "minutes_trend",
+   "importance": 0.0036,
+   "std": 0.00064
   },
   {
-   "feature": "influence_mean_5",
-   "importance": 0.00294,
-   "std": 0.00027
+   "feature": "transfers_balance_prev",
+   "importance": 0.0032,
+   "std": 0.00429
   },
   {
-   "feature": "bonus_mean_3",
-   "importance": 0.00133,
-   "std": 0.00012
-  },
-  {
-   "feature": "expected_assists_mean_3",
-   "importance": 0.00123,
-   "std": 0.00018
-  },
-  {
-   "feature": "assists_mean_3",
-   "importance": 0.00091,
-   "std": 4e-05
-  },
-  {
-   "feature": "expected_goal_involvements_mean_3",
-   "importance": 0.00078,
-   "std": 0.00029
-  },
-  {
-   "feature": "expected_goals_conceded_mean_10",
-   "importance": 0.00074,
-   "std": 0.00119
-  },
-  {
-   "feature": "started_last",
-   "importance": 0.00051,
-   "std": 0.00015
+   "feature": "minutes_std_5",
+   "importance": 0.00247,
+   "std": 0.00055
   },
   {
    "feature": "bonus_mean_5",
-   "importance": 0.00043,
-   "std": 0.00013
+   "importance": 0.00233,
+   "std": 0.0004
   },
   {
-   "feature": "bonus_mean_10",
-   "importance": 0.00027,
-   "std": 0.00024
+   "feature": "ict_index_mean_5",
+   "importance": 0.00213,
+   "std": 0.00054
+  },
+  {
+   "feature": "expected_goals_mean_5",
+   "importance": 0.00206,
+   "std": 0.00032
+  },
+  {
+   "feature": "minutes_mean_3",
+   "importance": 0.00201,
+   "std": 0.00056
+  },
+  {
+   "feature": "expected_goals_conceded_mean_10",
+   "importance": 0.00198,
+   "std": 0.00271
+  },
+  {
+   "feature": "ownership",
+   "importance": 0.00184,
+   "std": 0.00158
   }
  ],
  "negative_features": [
   {
-   "feature": "expected_goals_mean_10",
-   "importance": -0.00284,
-   "std": 0.00055
-  },
-  {
-   "feature": "total_points_mean_5",
-   "importance": -0.00426,
-   "std": 0.00104
-  },
-  {
-   "feature": "minutes_mean_10",
-   "importance": -0.00453,
-   "std": 0.00049
-  },
-  {
-   "feature": "expected_goals_conceded_mean_3",
-   "importance": -0.00472,
-   "std": 0.00107
-  },
-  {
-   "feature": "threat_mean_10",
-   "importance": -0.00532,
-   "std": 0.00053
-  },
-  {
-   "feature": "goals_conceded_mean_10",
-   "importance": -0.00574,
-   "std": 0.00095
+   "feature": "minutes_mean_5",
+   "importance": -0.0018,
+   "std": 0.00062
   },
   {
    "feature": "ict_index_mean_10",
-   "importance": -0.00644,
-   "std": 0.00028
+   "importance": -0.00204,
+   "std": 0.0003
   },
   {
-   "feature": "bps_mean_3",
-   "importance": -0.00953,
-   "std": 0.00167
+   "feature": "match_index",
+   "importance": -0.0022,
+   "std": 0.00433
+  },
+  {
+   "feature": "creativity_mean_3",
+   "importance": -0.00306,
+   "std": 0.00118
+  },
+  {
+   "feature": "minutes_mean_10",
+   "importance": -0.00384,
+   "std": 0.00081
+  },
+  {
+   "feature": "days_rest",
+   "importance": -0.00522,
+   "std": 0.00436
   },
   {
    "feature": "points_cum_mean",
-   "importance": -0.01458,
-   "std": 0.00119
+   "importance": -0.00607,
+   "std": 0.00409
   },
   {
-   "feature": "minutes_mean_3",
-   "importance": -0.0258,
-   "std": 0.00125
+   "feature": "goals_conceded_mean_10",
+   "importance": -0.00779,
+   "std": 0.00249
+  },
+  {
+   "feature": "played_last",
+   "importance": -0.00904,
+   "std": 0.00033
+  },
+  {
+   "feature": "total_points_mean_10",
+   "importance": -0.00953,
+   "std": 0.00187
   }
  ],
  "late_column_coverage": {
@@ -368,15 +448,21 @@
    "2025-26": 1.0
   }
  },
+ "corrections": [
+  "An earlier build of this page reported that FPL's own xP was nearly useless for ranking (spearman 0.059). That was wrong. The archive stores xP as 0.0 for entire gameweeks it never captured - 27 of 38 rounds in 2025-26 - and scoring those blanks as a predicted zero destroyed the baseline. On rounds where FPL actually published it, xP scores 0.613. It is a strong baseline.",
+  "The same error inverted the ablation. The earlier build concluded that removing xP barely mattered and that permutation importance had been misleading. With the blanks marked missing, removing xP costs the booster 0.34 spearman. Importance was right; the column was broken."
+ ],
  "findings": [
   "61.5% of test rows are players who did not play. Sorting those below everyone else is most of what a 0.72 rank correlation measures. Among players who actually played it drops to 0.34.",
   "A constant prediction of 2.0 has the best MAE in the table, and no ranking ability at all. MAE is the wrong metric for a selection problem; top-20 hit rate is the one that matches how this is used.",
-  "Permutation importance attributed 63% of the model to FPL's own xP. Retraining without it costs the booster 0.0013 spearman, and makes ridge eleven times better. Importance measures what a fitted model leaned on, not what information is necessary.",
+  "FPL's own xP is a strong baseline where it exists: spearman 0.613 and a top-20 hit rate of 0.363. The model beats it (0.701 and 0.712) but does not embarrass it.",
+  "Removing xP costs the gradient booster 0.34 spearman, so it is load-bearing rather than decorative. Permutation importance and the ablation agree once the column is read correctly.",
   "No expected-goals feature reaches the top ten. The fpl-analyzer backtest reached the same negative result independently.",
   "Defensive columns exist only in 2025-26, so they are excluded rather than zero-filled: zero is a real value for tackles."
  ],
  "limits": [
   "The archive records minutes after the fact and does not contain the injury flags FPL published before kickoff, so a model trained here cannot know a player was ruled out on the Friday. This is a real ceiling on accuracy, not a tuning problem.",
+  "FPL's xP exists for only 11 of 38 gameweeks in the test season, so the like-for-like comparison rests on 2,408 rows rather than 10,485. Both tables are published; neither is cherry-picked.",
   "One test season only. The fpl-analyzer backtest showed two season pairs disagreeing by more than the effect being measured.",
   "Charts and tables are aggregates. No per-player match rows from the archive are republished."
  ]
