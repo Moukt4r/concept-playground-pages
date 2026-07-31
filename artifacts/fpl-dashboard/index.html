@@ -219,6 +219,91 @@
       .pip.on { background: var(--green); }
       .cons-note { color: var(--muted); font-size: 0.75rem; }
 
+      /* ---- hover tooltip + detail modal ---- */
+      .hoverable { cursor: pointer; }
+      .hoverable:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 0.3rem; }
+      tbody tr.hoverable:hover { background: rgb(88 166 255 / 10%); }
+      .card.hoverable:hover { border-color: var(--blue); }
+
+      #tip {
+        position: fixed; z-index: 60; pointer-events: none;
+        max-width: 21rem; padding: 0.7rem 0.8rem;
+        border: 1px solid var(--line); border-radius: 0.55rem;
+        background: #0d1218; box-shadow: 0 10px 30px rgb(0 0 0 / 55%);
+        opacity: 0; transform: translateY(4px); transition: opacity 0.1s, transform 0.1s;
+      }
+      #tip[data-show="1"] { opacity: 1; transform: translateY(0); }
+      .tip-head { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.5rem; }
+      .tip-name { font-weight: 700; font-size: 0.88rem; }
+      .tip-grid {
+        display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.45rem 0.7rem;
+      }
+      .tip-cell span {
+        display: block; color: var(--muted); font-size: 0.6rem;
+        letter-spacing: 0.06em; text-transform: uppercase;
+      }
+      .tip-cell b { font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+      .tip-fx { margin-top: 0.55rem; color: var(--muted); font-size: 0.68rem; }
+      .tip-news {
+        margin-top: 0.5rem; padding-top: 0.45rem; border-top: 1px solid var(--line);
+        color: var(--amber); font-size: 0.7rem;
+      }
+      .tip-hint { margin-top: 0.5rem; color: var(--muted); font-size: 0.62rem; opacity: 0.8; }
+
+      #modal {
+        position: fixed; inset: 0; z-index: 80; display: none;
+        align-items: flex-start; justify-content: center;
+        padding: 3rem 1rem; overflow-y: auto;
+        background: rgb(2 4 8 / 78%);
+      }
+      #modal[data-open="1"] { display: flex; }
+      .modal-box {
+        width: min(60rem, 100%);
+        border: 1px solid var(--line); border-radius: 0.8rem;
+        background: var(--panel); box-shadow: 0 20px 60px rgb(0 0 0 / 60%);
+      }
+      .modal-head {
+        position: sticky; top: 0; z-index: 1;
+        display: flex; flex-wrap: wrap; gap: 1rem; align-items: baseline;
+        padding: 1.2rem 1.3rem; border-bottom: 1px solid var(--line);
+        background: var(--panel); border-radius: 0.8rem 0.8rem 0 0;
+      }
+      .modal-head h3 { margin: 0; font-size: 1.25rem; }
+      .modal-sub { color: var(--muted); font-size: 0.78rem; }
+      .modal-close {
+        margin-left: auto; appearance: none; cursor: pointer;
+        width: 2rem; height: 2rem; border-radius: 0.4rem;
+        border: 1px solid var(--line); background: rgb(255 255 255 / 4%);
+        color: var(--text); font: inherit; font-size: 1rem; line-height: 1;
+      }
+      .modal-close:hover { background: rgb(248 81 73 / 16%); border-color: var(--red); }
+      .modal-body { padding: 1.2rem 1.3rem 1.6rem; }
+      .derived-box {
+        margin-bottom: 1.3rem; padding: 0.9rem 1rem;
+        border: 1px solid rgb(88 166 255 / 30%); border-radius: 0.55rem;
+        background: rgb(88 166 255 / 7%);
+      }
+      .derived-box h4 { margin: 0 0 0.2rem; font-size: 0.8rem; color: var(--blue); }
+      .derived-box p { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.72rem; line-height: 1.5; }
+      .stat-group { margin-bottom: 1.4rem; }
+      .stat-group h4 {
+        margin: 0 0 0.55rem; font-size: 0.72rem; color: var(--muted);
+        letter-spacing: 0.1em; text-transform: uppercase;
+      }
+      .stat-grid {
+        display: grid; gap: 0.4rem 0.9rem;
+        grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+      }
+      .stat-item {
+        display: flex; justify-content: space-between; gap: 0.6rem;
+        padding: 0.32rem 0.5rem; border-radius: 0.3rem;
+        background: rgb(255 255 255 / 3%); font-size: 0.78rem;
+      }
+      .stat-item em { color: var(--muted); font-style: normal; font-size: 0.72rem; }
+      .stat-item b { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+      .stat-item.empty b { color: var(--muted); opacity: 0.5; font-weight: 400; }
+
       .fx { margin-top: 2rem; }
       .fx-grid {
         display: grid; gap: 0.5rem;
@@ -337,6 +422,19 @@
       <footer id="footer"></footer>
     </div>
 
+    <div id="tip" role="tooltip" aria-hidden="true"></div>
+
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-box">
+        <div class="modal-head">
+          <h3 id="modal-title"></h3>
+          <div class="modal-sub" id="modal-sub"></div>
+          <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
     <script>
       const $ = (id) => document.getElementById(id);
       const esc = (s) => String(s).replace(/[&<>"']/g, (c) =>
@@ -359,7 +457,8 @@
         const fmtA = primary === "projected" ? a.toFixed(1) : a.toFixed(2);
         const fmtB = primary === "projected" ? b.toFixed(2) : b.toFixed(1);
 
-        return `<tr>
+        return `<tr class="hoverable" data-pid="${d.id}" tabindex="0" role="button"
+                    aria-label="Show all statistics for ${esc(d.name)}">
           <td class="rank">${i + 1}</td>
           <td>
             <div class="who">
@@ -387,8 +486,9 @@
         const badge = p.captain
           ? '<span class="badge" title="Captain">C</span>'
           : p.vice ? '<span class="badge v" title="Vice-captain">V</span>' : "";
-        const cls = p.captain ? "card cap" : p.vice ? "card vc" : "card";
-        return `<div class="${cls}">
+        const cls = (p.captain ? "card cap" : p.vice ? "card vc" : "card") + " hoverable";
+        return `<div class="${cls}" data-pid="${p.id}" tabindex="0" role="button"
+                     aria-label="Show all statistics for ${esc(p.name)}">
           ${badge}
           <div class="card-name" title="${esc(p.name)}">${esc(p.name)}</div>
           <div class="card-meta">${esc(p.team)} &middot; &pound;${p.cost.toFixed(1)} &middot; ${p.start_share}%</div>
@@ -479,7 +579,8 @@
         $("consensus").innerHTML = rows.map((c) => {
           const pips = Array.from({ length: c.of }, (_, i) =>
             `<span class="pip${i < c.picked_by ? " on" : ""}"></span>`).join("");
-          return `<div class="cons-row">
+          return `<div class="cons-row hoverable" data-pid="${c.id}" tabindex="0" role="button"
+                       aria-label="Show all statistics for ${esc(c.name)}">
             <div class="pips" title="${c.picked_by} of ${c.of} strategies">${pips}</div>
             <div><span class="pos ${esc(c.pos)}">${esc(c.pos)}</span>
                  <span class="name">${esc(c.name)}</span>
@@ -492,6 +593,193 @@
                ${esc(solo.slice(0, 14).map((c) => c.name).join(", "))}${solo.length > 14 ? "\u2026" : ""}
              </p>`
           : "");
+      }
+
+      // ---------------------------------------------------------------- detail
+      // One lookup table for every rendered player, so the same person can be
+      // hovered from a table row, a pitch card or a consensus row and give the
+      // identical answer.
+      let PLAYERS = {};
+      let GROUPS = [];
+      let lastFocus = null;
+
+      const num = (v) => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : null;
+      };
+
+      function fmt(key, value) {
+        if (value === null || value === undefined || value === "") return "\u2014";
+        if (typeof value === "boolean") return value ? "yes" : "no";
+        const n = num(value);
+        if (n === null) return String(value);
+        if (key === "now_cost") return "\u00a3" + (n / 10).toFixed(1);
+        if (key.startsWith("cost_change")) return (n / 10).toFixed(1);
+        if (key === "selected_by_percent" || key === "price_change_percent") return n + "%";
+        return Number.isInteger(n) ? String(n) : n.toFixed(2);
+      }
+
+      const label = (k) => k.replace(/_/g, " ").replace(/\bper 90\b/, "/90");
+
+      // ---- hover tooltip: the few numbers that decide a pick ----
+      function tipHTML(p) {
+        const d = p.derived;
+        const s = p.stats;
+        const cells = [
+          ["Projected", d.projected.toFixed(1)],
+          ["Per \u00a3m", d.per_million.toFixed(2)],
+          ["Pts/90", d.rate_per_90.toFixed(2)],
+          ["Exp mins", d.exp_minutes],
+          ["Starts", d.start_share + "%"],
+          ["Owned", fmt("selected_by_percent", s.selected_by_percent)],
+          ["Points", fmt("total_points", s.total_points)],
+          ["xGI", fmt("expected_goal_involvements", s.expected_goal_involvements)],
+          ["Mean FDR", d.mean_fdr.toFixed(2)],
+        ];
+        const flags = [];
+        if (d.new_club) flags.push('<span class="newclub">NEW</span>');
+        if (d.rotation_risk) flags.push('<span class="risk">ROT?</span>');
+        const news = (s.news || "").trim();
+        return `
+          <div class="tip-head">
+            <span class="tip-name">${esc(p.name)}</span>
+            <span class="pos ${esc(p.pos)}">${esc(p.pos)}</span>
+            <span class="club">${esc(p.team)} &middot; \u00a3${p.cost.toFixed(1)}</span>
+            ${flags.join(" ")}
+          </div>
+          <div class="tip-grid">
+            ${cells.map(([k, v]) => `<div class="tip-cell"><span>${k}</span><b>${v}</b></div>`).join("")}
+          </div>
+          <div class="tip-fx">${esc(p.fixtures.join("   "))}</div>
+          ${news ? `<div class="tip-news">${esc(news)}</div>` : ""}
+          <div class="tip-hint">Click for all ${Object.keys(s).length} statistics</div>`;
+      }
+
+      function showTip(el, p) {
+        const tip = $("tip");
+        tip.innerHTML = tipHTML(p);
+        tip.setAttribute("data-show", "1");
+        tip.setAttribute("aria-hidden", "false");
+        const r = el.getBoundingClientRect();
+        const box = tip.getBoundingClientRect();
+        // Flip above / clamp horizontally so the tooltip never leaves the viewport.
+        let top = r.bottom + 8;
+        if (top + box.height > window.innerHeight - 8) top = Math.max(8, r.top - box.height - 8);
+        let left = r.left;
+        if (left + box.width > window.innerWidth - 8) left = window.innerWidth - box.width - 8;
+        tip.style.top = top + "px";
+        tip.style.left = Math.max(8, left) + "px";
+      }
+
+      function hideTip() {
+        const tip = $("tip");
+        tip.setAttribute("data-show", "0");
+        tip.setAttribute("aria-hidden", "true");
+      }
+
+      // ---- modal: everything FPL gives us ----
+      function openModal(p) {
+        lastFocus = document.activeElement;
+        const d = p.derived;
+        $("modal-title").textContent = p.name;
+        $("modal-sub").innerHTML =
+          `${esc(p.full_name || p.name)} &middot; <span class="pos ${esc(p.pos)}">${esc(p.pos)}</span>
+           ${esc(p.team)} &middot; \u00a3${p.cost.toFixed(1)}m
+           &middot; ${esc(p.fixtures.join("  "))}`;
+
+        const derived = [
+          ["Projected (GW window)", d.projected.toFixed(1)],
+          ["Projected per \u00a3m", d.per_million.toFixed(2)],
+          ["Rate per 90", d.rate_per_90.toFixed(2)],
+          ["Expected minutes / fixture", d.exp_minutes],
+          ["Share of 38 games started", d.start_share + "%"],
+          ["Mean fixture difficulty", d.mean_fdr.toFixed(2)],
+          ["Fixtures in window", d.n_fixtures],
+          ["Changed club this summer", d.new_club ? "yes" : "no"],
+          ["Rotation risk flag", d.rotation_risk ? "yes" : "no"],
+        ];
+
+        const used = new Set();
+        const groups = GROUPS.map(([name, fields]) => {
+          const items = fields.filter((f) => f in p.stats).map((f) => {
+            used.add(f);
+            const v = p.stats[f];
+            const empty = v === null || v === "" || v === undefined;
+            return `<div class="stat-item${empty ? " empty" : ""}">
+              <em>${esc(label(f))}</em><b>${esc(fmt(f, v))}</b></div>`;
+          });
+          return items.length
+            ? `<div class="stat-group"><h4>${esc(name)}</h4>
+                 <div class="stat-grid">${items.join("")}</div></div>`
+            : "";
+        }).join("");
+
+        // Anything FPL ships that we have not grouped still gets shown, so the
+        // modal cannot quietly become incomplete when the API adds fields.
+        const rest = Object.keys(p.stats).filter((k) => !used.has(k)).sort();
+        const restHTML = rest.length
+          ? `<div class="stat-group"><h4>Other (${rest.length})</h4>
+               <div class="stat-grid">${rest.map((f) => `<div class="stat-item">
+                 <em>${esc(label(f))}</em><b>${esc(fmt(f, p.stats[f]))}</b></div>`).join("")}</div></div>`
+          : "";
+
+        $("modal-body").innerHTML = `
+          <div class="derived-box">
+            <h4>Our numbers &mdash; derived, not from FPL</h4>
+            <p>Projection = rate/90 &times; expected minutes &times; fixture multiplier.
+               Kept separate from FPL&rsquo;s own statistics below so the two are never confused.</p>
+            <div class="stat-grid">
+              ${derived.map(([k, v]) => `<div class="stat-item"><em>${esc(k)}</em><b>${esc(String(v))}</b></div>`).join("")}
+            </div>
+          </div>
+          ${groups}${restHTML}`;
+
+        $("modal").setAttribute("data-open", "1");
+        $("modal-close").focus();
+      }
+
+      function closeModal() {
+        $("modal").setAttribute("data-open", "0");
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      function wireDetail() {
+        const hit = (e) => e.target.closest("[data-pid]");
+        document.addEventListener("mouseover", (e) => {
+          const el = hit(e);
+          if (!el) return;
+          const p = PLAYERS[el.dataset.pid];
+          if (p) showTip(el, p);
+        });
+        document.addEventListener("mouseout", (e) => {
+          if (hit(e)) hideTip();
+        });
+        document.addEventListener("focusin", (e) => {
+          const el = hit(e);
+          const p = el && PLAYERS[el.dataset.pid];
+          if (p) showTip(el, p); else hideTip();
+        });
+        document.addEventListener("scroll", hideTip, true);
+
+        document.addEventListener("click", (e) => {
+          const el = hit(e);
+          if (!el) return;
+          const p = PLAYERS[el.dataset.pid];
+          if (p) { hideTip(); openModal(p); }
+        });
+        // Keyboard parity: anything clickable must also be activatable.
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") { closeModal(); hideTip(); return; }
+          if (e.key !== "Enter" && e.key !== " ") return;
+          const el = document.activeElement && document.activeElement.closest("[data-pid]");
+          const p = el && PLAYERS[el.dataset.pid];
+          if (p) { e.preventDefault(); hideTip(); openModal(p); }
+        });
+
+        $("modal-close").addEventListener("click", closeModal);
+        $("modal").addEventListener("click", (e) => {
+          if (e.target.id === "modal") closeModal();
+        });
       }
 
       fetch("./data.json")
@@ -519,8 +807,11 @@
           $("value").innerHTML = data.by_value
             .map((d, i) => row(d, i, "per_million", maxV, maxT, "#a371f7")).join("");
 
+          PLAYERS = data.players || {};
+          GROUPS = data.stat_groups || [];
           renderSquads(data);
           renderConsensus(data);
+          wireDetail();
 
           $("fixtures").innerHTML = data.fixtures.map((f) => `
             <div class="fx-card">
