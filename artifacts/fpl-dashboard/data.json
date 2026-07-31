@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-31T11:26:10+00:00",
+ "generated_at": "2026-07-31T12:39:02+00:00",
  "data_captured_at": "2026-07-31T11:17:18.087079+00:00",
  "start_gw": 1,
  "end_gw": 3,
@@ -902,6 +902,380 @@
    ]
   }
  ],
+ "chips": {
+  "windows": [
+   {
+    "name": "3xc",
+    "label": "Triple Captain",
+    "start_gw": 1,
+    "stop_gw": 19,
+    "half": 1,
+    "type": "team"
+   },
+   {
+    "name": "bboost",
+    "label": "Bench Boost",
+    "start_gw": 1,
+    "stop_gw": 19,
+    "half": 1,
+    "type": "team"
+   },
+   {
+    "name": "freehit",
+    "label": "Free Hit",
+    "start_gw": 2,
+    "stop_gw": 19,
+    "half": 1,
+    "type": "transfer"
+   },
+   {
+    "name": "wildcard",
+    "label": "Wildcard",
+    "start_gw": 2,
+    "stop_gw": 19,
+    "half": 1,
+    "type": "transfer"
+   },
+   {
+    "name": "3xc",
+    "label": "Triple Captain",
+    "start_gw": 20,
+    "stop_gw": 38,
+    "half": 2,
+    "type": "team"
+   },
+   {
+    "name": "bboost",
+    "label": "Bench Boost",
+    "start_gw": 20,
+    "stop_gw": 38,
+    "half": 2,
+    "type": "team"
+   },
+   {
+    "name": "freehit",
+    "label": "Free Hit",
+    "start_gw": 20,
+    "stop_gw": 38,
+    "half": 2,
+    "type": "transfer"
+   },
+   {
+    "name": "wildcard",
+    "label": "Wildcard",
+    "start_gw": 20,
+    "stop_gw": 38,
+    "half": 2,
+    "type": "transfer"
+   }
+  ],
+  "doubles_scheduled": false,
+  "blanks_scheduled": false,
+  "squad": "Balanced",
+  "status": [
+   "No double gameweeks are scheduled: every club plays exactly once in all 38 gameweeks as published. Doubles appear later, when cup ties and TV picks force postponements.",
+   "No blank gameweeks are scheduled, so Free Hit has no target yet and is deliberately left unranked.",
+   "Chip windows are read from FPL, not assumed: two sets per season, and unused first-half chips expire after GW19.",
+   "Ranked against the Balanced squad. Measured 2026-07-31: league-wide ease varies by only 2 across the season while one squad varies by 13, so chip timing is only meaningful relative to the players you actually own."
+  ],
+  "suggestions": [
+   {
+    "chip": "wildcard",
+    "label": "Wildcard",
+    "gw": 17,
+    "score": 2.93,
+    "reason": "GW17: your next 5 GWs are +2.9 easier than the previous 5",
+    "confidence": "low",
+    "tied_with": [
+     17
+    ],
+    "caveats": [
+     "Fixture difficulty is set pre-season and never updates, so this is a planning hint, not a forecast.",
+     "Scored against today's squad. Change the squad and the answer changes."
+    ]
+   },
+   {
+    "chip": "wildcard",
+    "label": "Wildcard",
+    "gw": 18,
+    "score": 1.9,
+    "reason": "GW18: your next 5 GWs are +1.9 easier than the previous 5",
+    "confidence": "low",
+    "tied_with": [
+     18
+    ],
+    "caveats": [
+     "Fixture difficulty is set pre-season and never updates, so this is a planning hint, not a forecast.",
+     "Scored against today's squad. Change the squad and the answer changes."
+    ]
+   },
+   {
+    "chip": "wildcard",
+    "label": "Wildcard",
+    "gw": 19,
+    "score": 1.8,
+    "reason": "GW19: your next 5 GWs are +1.8 easier than the previous 5",
+    "confidence": "low",
+    "tied_with": [
+     19
+    ],
+    "caveats": [
+     "Fixture difficulty is set pre-season and never updates, so this is a planning hint, not a forecast.",
+     "Scored against today's squad. Change the squad and the answer changes."
+    ]
+   },
+   {
+    "chip": "wildcard",
+    "label": "Wildcard",
+    "gw": 22,
+    "score": 4.2,
+    "reason": "GW22: your next 5 GWs are +4.2 easier than the previous 5",
+    "confidence": "low",
+    "tied_with": [
+     22
+    ],
+    "caveats": [
+     "Fixture difficulty is set pre-season and never updates, so this is a planning hint, not a forecast.",
+     "Scored against today's squad. Change the squad and the answer changes."
+    ]
+   },
+   {
+    "chip": "wildcard",
+    "label": "Wildcard",
+    "gw": 24,
+    "score": 3.75,
+    "reason": "GW24: your next 5 GWs are +3.8 easier than the previous 5",
+    "confidence": "low",
+    "tied_with": [
+     24
+    ],
+    "caveats": [
+     "Fixture difficulty is set pre-season and never updates, so this is a planning hint, not a forecast.",
+     "Scored against today's squad. Change the squad and the answer changes."
+    ]
+   },
+   {
+    "chip": "wildcard",
+    "label": "Wildcard",
+    "gw": 23,
+    "score": 3.4,
+    "reason": "GW23: your next 5 GWs are +3.4 easier than the previous 5",
+    "confidence": "low",
+    "tied_with": [
+     23
+    ],
+    "caveats": [
+     "Fixture difficulty is set pre-season and never updates, so this is a planning hint, not a forecast.",
+     "Scored against today's squad. Change the squad and the answer changes."
+    ]
+   },
+   {
+    "chip": "bboost",
+    "label": "Bench Boost",
+    "gw": 1,
+    "score": 6.0,
+    "reason": "GW1: squad fixture ease +6 (0 of 15 doubling, 0 blanking)",
+    "confidence": "low",
+    "tied_with": [
+     1
+    ],
+    "caveats": [
+     "No double gameweeks are scheduled yet. Bench Boost is normally worth far more in a double - revisit once postponements create one."
+    ]
+   },
+   {
+    "chip": "bboost",
+    "label": "Bench Boost",
+    "gw": 11,
+    "score": 2.0,
+    "reason": "GW11: squad fixture ease +2 (0 of 15 doubling, 0 blanking)",
+    "confidence": "low",
+    "tied_with": [
+     11
+    ],
+    "caveats": [
+     "No double gameweeks are scheduled yet. Bench Boost is normally worth far more in a double - revisit once postponements create one."
+    ]
+   },
+   {
+    "chip": "bboost",
+    "label": "Bench Boost",
+    "gw": 3,
+    "score": 1.0,
+    "reason": "GW3: squad fixture ease +1 (0 of 15 doubling, 0 blanking)",
+    "confidence": "low",
+    "tied_with": [
+     3,
+     6,
+     14,
+     19
+    ],
+    "caveats": [
+     "No double gameweeks are scheduled yet. Bench Boost is normally worth far more in a double - revisit once postponements create one."
+    ]
+   },
+   {
+    "chip": "bboost",
+    "label": "Bench Boost",
+    "gw": 25,
+    "score": 5.0,
+    "reason": "GW25: squad fixture ease +5 (0 of 15 doubling, 0 blanking)",
+    "confidence": "low",
+    "tied_with": [
+     25
+    ],
+    "caveats": [
+     "No double gameweeks are scheduled yet. Bench Boost is normally worth far more in a double - revisit once postponements create one."
+    ]
+   },
+   {
+    "chip": "bboost",
+    "label": "Bench Boost",
+    "gw": 31,
+    "score": 4.0,
+    "reason": "GW31: squad fixture ease +4 (0 of 15 doubling, 0 blanking)",
+    "confidence": "low",
+    "tied_with": [
+     31
+    ],
+    "caveats": [
+     "No double gameweeks are scheduled yet. Bench Boost is normally worth far more in a double - revisit once postponements create one."
+    ]
+   },
+   {
+    "chip": "bboost",
+    "label": "Bench Boost",
+    "gw": 24,
+    "score": 3.0,
+    "reason": "GW24: squad fixture ease +3 (0 of 15 doubling, 0 blanking)",
+    "confidence": "low",
+    "tied_with": [
+     24,
+     26
+    ],
+    "caveats": [
+     "No double gameweeks are scheduled yet. Bench Boost is normally worth far more in a double - revisit once postponements create one."
+    ]
+   },
+   {
+    "chip": "3xc",
+    "label": "Triple Captain",
+    "gw": 1,
+    "score": 7.31,
+    "reason": "GW1: B.Fernandes (MUN) projects 7.3 from 1 fixture(s)",
+    "confidence": "low",
+    "tied_with": [
+     1,
+     2,
+     14,
+     18
+    ],
+    "caveats": [
+     "Single gameweek only - no doubles scheduled. Triple Captain typically returns most in a double.",
+     "FDR is a coarse integer, so 4 gameweeks score identically (GW1, GW2, GW14, GW18). Pick on form, not on this order."
+    ]
+   },
+   {
+    "chip": "3xc",
+    "label": "Triple Captain",
+    "gw": 2,
+    "score": 7.31,
+    "reason": "GW2: B.Fernandes (MUN) projects 7.3 from 1 fixture(s)",
+    "confidence": "low",
+    "tied_with": [
+     1,
+     2,
+     14,
+     18
+    ],
+    "caveats": [
+     "Single gameweek only - no doubles scheduled. Triple Captain typically returns most in a double.",
+     "FDR is a coarse integer, so 4 gameweeks score identically (GW1, GW2, GW14, GW18). Pick on form, not on this order."
+    ]
+   },
+   {
+    "chip": "3xc",
+    "label": "Triple Captain",
+    "gw": 14,
+    "score": 7.31,
+    "reason": "GW14: B.Fernandes (MUN) projects 7.3 from 1 fixture(s)",
+    "confidence": "low",
+    "tied_with": [
+     1,
+     2,
+     14,
+     18
+    ],
+    "caveats": [
+     "Single gameweek only - no doubles scheduled. Triple Captain typically returns most in a double.",
+     "FDR is a coarse integer, so 4 gameweeks score identically (GW1, GW2, GW14, GW18). Pick on form, not on this order."
+    ]
+   },
+   {
+    "chip": "3xc",
+    "label": "Triple Captain",
+    "gw": 20,
+    "score": 7.31,
+    "reason": "GW20: B.Fernandes (MUN) projects 7.3 from 1 fixture(s)",
+    "confidence": "low",
+    "tied_with": [
+     20,
+     25,
+     31,
+     32,
+     34,
+     36,
+     38
+    ],
+    "caveats": [
+     "Single gameweek only - no doubles scheduled. Triple Captain typically returns most in a double.",
+     "FDR is a coarse integer, so 7 gameweeks score identically (GW20, GW25, GW31, GW32, GW34, GW36…). Pick on form, not on this order."
+    ]
+   },
+   {
+    "chip": "3xc",
+    "label": "Triple Captain",
+    "gw": 25,
+    "score": 7.31,
+    "reason": "GW25: B.Fernandes (MUN) projects 7.3 from 1 fixture(s)",
+    "confidence": "low",
+    "tied_with": [
+     20,
+     25,
+     31,
+     32,
+     34,
+     36,
+     38
+    ],
+    "caveats": [
+     "Single gameweek only - no doubles scheduled. Triple Captain typically returns most in a double.",
+     "FDR is a coarse integer, so 7 gameweeks score identically (GW20, GW25, GW31, GW32, GW34, GW36…). Pick on form, not on this order."
+    ]
+   },
+   {
+    "chip": "3xc",
+    "label": "Triple Captain",
+    "gw": 31,
+    "score": 7.31,
+    "reason": "GW31: B.Fernandes (MUN) projects 7.3 from 1 fixture(s)",
+    "confidence": "low",
+    "tied_with": [
+     20,
+     25,
+     31,
+     32,
+     34,
+     36,
+     38
+    ],
+    "caveats": [
+     "Single gameweek only - no doubles scheduled. Triple Captain typically returns most in a double.",
+     "FDR is a coarse integer, so 7 gameweeks score identically (GW20, GW25, GW31, GW32, GW34, GW36…). Pick on form, not on this order."
+    ]
+   }
+  ]
+ },
  "movement": {
   "gameweeks_logged": 1,
   "risers": [],

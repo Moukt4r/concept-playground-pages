@@ -5,6 +5,7 @@
     ["overview", "Overview"],
     ["players", "Players"],
     ["squads", "Squads"],
+    ["chips", "Chips"],
     ["teams", "Clubs"],
     ["setpieces", "Set pieces"],
     ["news", "News"],
@@ -106,6 +107,7 @@
       if (key === "squads") count = d.squads?.length;
       if (key === "teams") count = d.teams?.length;
       if (key === "news") count = d.news?.length;
+      if (key === "chips") count = d.chips?.suggestions?.length;
       return `<button class="navtab" data-route="${key}" role="tab" aria-current="false">${h(title)}${count !== "" ? `<span class="count">${h(count)}</span>` : ""}</button>`;
     }).join("");
     $("#stale").innerHTML = `<span title="Generated ${h(dateText(d.generated_at))}">${h(ago(d.generated_at))}</span>`;
@@ -291,7 +293,48 @@
       ${panel("FPL-relevant headlines", `${news.length} items in the current export · headline, source link and our short relevance summary only`, rows ? `<div class="nw-list">${rows}</div>` : '<div class="nw-empty">No player-linked news in the current scan. That means “nothing matched safely”, not “nothing happened”.</div>')}`;
   }
 
-  const renderers = { overview: renderOverview, players: renderPlayers, squads: renderSquads, teams: renderTeams, setpieces: renderSetPieces, news: renderNews };
+  function renderChips() {
+    const c = state.data.chips;
+    if (!c) {
+      $("#view-chips").innerHTML = `${viewHeader("Chips", "No chip data in this export.")}`;
+      return;
+    }
+    const windowRows = (c.windows || []).map(w => `<tr>
+      <td class="left"><b>${h(w.label)}</b></td><td>GW${h(w.start_gw)}–${h(w.stop_gw)}</td>
+      <td>Half ${h(w.half)}</td><td class="left dim">${h(w.type)}</td></tr>`).join("");
+
+    const byChip = {};
+    for (const s of c.suggestions || []) (byChip[s.label] ??= []).push(s);
+
+    const groups = Object.entries(byChip).map(([label, items]) => {
+      const rows = items.map(s => {
+        const ties = (s.tied_with || []).length > 1
+          ? `<div class="nw-meta">Tied with ${s.tied_with.length} other gameweeks — pick on form, not on this order.</div>` : "";
+        const caveats = (s.caveats || []).map(x => `<div class="tm-note">${h(x)}</div>`).join("");
+        return `<article class="nw-item">
+          <div class="nw-score ${s.confidence === "medium" ? "" : "hot"}" title="Confidence: ${h(s.confidence)}">GW${h(s.gw)}</div>
+          <div><div class="nw-title">${h(s.reason)}</div>
+          <div class="nw-meta">Confidence: <b>${h(s.confidence)}</b> · score ${num(s.score, 2)}</div>
+          ${ties}${caveats}</div></article>`;
+      }).join("");
+      return panel(label, `${items.length} candidate gameweek(s)`, `<div class="nw-list">${rows}</div>`);
+    }).join("");
+
+    const noneRanked = !(c.suggestions || []).length
+      ? `<div class="nw-empty">No gameweek is ranked. That is the honest answer, not a missing feature — see the notes above.</div>` : "";
+
+    $("#view-chips").innerHTML = `${viewHeader("Chip timing", "Ranked against a squad, never against the league. Fixture difficulty is coarse, so equal weeks are shown as ties rather than a false order.")}
+      <div class="warn"><h2>What the fixture list actually says</h2><ul>${(c.status || []).map(x => `<li>${h(x)}</li>`).join("")}</ul></div>
+      <div class="ov-grid">
+        <div class="ov-card"><h3>Doubles scheduled</h3><div class="v">${c.doubles_scheduled ? "Yes" : "None"}</div><div class="s">Bench Boost / Triple Captain depend on these</div></div>
+        <div class="ov-card"><h3>Blanks scheduled</h3><div class="v">${c.blanks_scheduled ? "Yes" : "None"}</div><div class="s">Free Hit answers a blank gameweek</div></div>
+        <div class="ov-card"><h3>Reference squad</h3><div class="v" style="font-size:1.1rem">${h(c.squad || "—")}</div><div class="s">Change the squad and the answer changes</div></div>
+      </div>
+      ${panel("Chip windows", "Read from FPL, not assumed — unused first-half chips expire after GW19", `<div class="table-scroll"><table><thead><tr><th class="left">Chip</th><th>Window</th><th>Half</th><th class="left">Type</th></tr></thead><tbody>${windowRows}</tbody></table></div>`)}
+      ${groups}${noneRanked}`;
+  }
+
+  const renderers = { overview: renderOverview, players: renderPlayers, squads: renderSquads, chips: renderChips, teams: renderTeams, setpieces: renderSetPieces, news: renderNews };
 
   function route() {
     const requested = location.hash.replace(/^#\/?/, "").toLowerCase();
