@@ -1,5 +1,5 @@
 {
   "title": "FPL Analyzer Dashboard",
-  "description": "Projected Fantasy Premier League points over the next three gameweeks, ranked by total and by points per million.",
+  "description": "A navigable Fantasy Premier League analysis app with projections, player explorer, squad strategies, club profiles, fixtures, set pieces and a live news desk.",
   "language": "HTML, CSS and JavaScript"
 }
