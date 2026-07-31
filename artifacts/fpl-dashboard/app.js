@@ -7,6 +7,7 @@
     ["squads", "Squads"],
     ["chips", "Chips"],
     ["preseason", "Pre-season"],
+    ["analytics", "Analytics"],
     ["teams", "Clubs"],
     ["setpieces", "Set pieces"],
     ["news", "News"],
@@ -110,6 +111,7 @@
       if (key === "news") count = d.news?.length;
       if (key === "chips") count = d.chips?.suggestions?.length;
       if (key === "preseason") count = d.preseason_view?.counts?.flagged;
+      if (key === "analytics") count = state.analytics?.charts?.length;
       return `<button class="navtab" data-route="${key}" role="tab" aria-current="false">${h(title)}${count !== "" ? `<span class="count">${h(count)}</span>` : ""}</button>`;
     }).join("");
     $("#stale").innerHTML = `<span title="Generated ${h(dateText(d.generated_at))}">${h(ago(d.generated_at))}</span>`;
@@ -398,7 +400,70 @@
       <div class="warn"><h2>Read this before trusting the table above</h2><ul>${(p.notes || []).map(x => `<li>${h(x)}</li>`).join("")}<li>Source: <a href="${safeUrl(p.source)}" target="_blank" rel="noopener noreferrer">premierleague.com club-by-club friendlies</a>. Fixture facts and a link only — no report text is copied.</li></ul></div>`;
   }
 
-  const renderers = { overview: renderOverview, players: renderPlayers, squads: renderSquads, chips: renderChips, preseason: renderPreseason, teams: renderTeams, setpieces: renderSetPieces, news: renderNews };
+  async function renderAnalytics() {
+    const view = $("#view-analytics");
+    view.innerHTML = `${viewHeader("Analytics", "A data-science pass over 113,592 player-gameweeks. Several of these charts are deliberately unflattering to the model — a chart that only shows the number you like is marketing.")}<div class="loading">Loading analysis…</div>`;
+    let a = state.analytics;
+    if (!a) {
+      try {
+        const res = await fetch("./analytics.json", { cache: "no-cache" });
+        if (!res.ok) throw new Error(`analytics.json HTTP ${res.status}`);
+        a = state.analytics = await res.json();
+        renderNav();
+        $$(".navtab").forEach(el => el.setAttribute("aria-current", el.dataset.route === state.route ? "page" : "false"));
+      } catch (err) {
+        view.innerHTML = `${viewHeader("Analytics", "Model analysis over historical per-gameweek data.")}<div class="warn"><h2>Analysis unavailable</h2><ul><li>${h(err.message)}</li></ul></div>`;
+        return;
+      }
+    }
+
+    const c = a.counts || {};
+    const scoreTable = (rows, caption) => `<div class="table-scroll"><table><thead><tr><th class="left">Model</th><th>MAE</th><th>RMSE</th><th>Spearman</th><th>Top-20 hit</th><th>n</th><th class="left">Note</th></tr></thead><tbody>${(rows || []).map(r => {
+      const isModel = !/^baseline|always/.test(r.model);
+      return `<tr><td class="left"><b class="${isModel ? "accent" : ""}">${h(r.model)}</b></td>
+        <td>${num(r.MAE, 3)}</td><td>${num(r.RMSE, 3)}</td>
+        <td class="big ${isModel ? "accent" : ""}">${r.spearman === null ? "—" : num(r.spearman, 4)}</td>
+        <td>${num(r.top20_hit, 3)}</td><td class="dim">${dash(r.n)}</td>
+        <td class="left dim">${h(r.note || "")}</td></tr>`;
+    }).join("")}</tbody></table></div>${caption ? `<p class="dim" style="padding:0 1.2rem 1rem;font-size:.78rem;line-height:1.5">${h(caption)}</p>` : ""}`;
+
+    const impRows = (rows, negative) => `<div class="table-scroll"><table><thead><tr><th class="left">Feature</th><th>Importance</th><th>± std</th></tr></thead><tbody>${(rows || []).map(r => `<tr>
+      <td class="left"><code>${h(r.feature)}</code></td>
+      <td class="big ${negative ? "" : "accent"}" ${negative ? 'style="color:var(--red)"' : ""}>${num(r.importance, 4)}</td>
+      <td class="dim">${num(r.std, 4)}</td></tr>`).join("")}</tbody></table></div>`;
+
+    const charts = (a.charts || []).map(ch => `<figure style="margin:0 0 1.5rem">
+      <img src="${safeUrl(ch.file)}" alt="${h(ch.caption)}" loading="lazy" style="width:100%;height:auto;border:1px solid var(--line);border-radius:.7rem;background:var(--panel);display:block">
+      <figcaption class="dim" style="margin-top:.5rem;font-size:.78rem">${h(ch.caption)}</figcaption>
+    </figure>`).join("");
+
+    const late = a.late_column_coverage || {};
+    const lateRows = Object.entries(late).map(([col, seasons]) => `<tr>
+      <td class="left"><code>${h(col)}</code></td>
+      ${Object.values(seasons).map(v => `<td class="${v > 0 ? "accent" : "dim"}">${num(v * 100, 0)}%</td>`).join("")}</tr>`).join("");
+    const lateHead = Object.keys(Object.values(late)[0] || {}).map(s => `<th>${h(s)}</th>`).join("");
+
+    view.innerHTML = `${viewHeader("Analytics", "A data-science pass over 113,592 player-gameweeks. Several of these charts are deliberately unflattering to the model — a chart that only shows the number you like is marketing.")}
+      <div class="ov-grid">
+        <div class="ov-card"><h3>Player-gameweeks</h3><div class="v">${(c.player_gameweeks || 0).toLocaleString("en-GB")}</div><div class="s">${h((c.seasons || []).join(", "))}</div></div>
+        <div class="ov-card"><h3>Features</h3><div class="v accent">${dash(c.features)}</div><div class="s">after leakage exclusions</div></div>
+        <div class="ov-card"><h3>Did not play</h3><div class="v" style="color:var(--amber)">${num((c.zero_minute_share || 0) * 100, 1)}%</div><div class="s">of test rows — the trap below</div></div>
+        <div class="ov-card"><h3>Test season</h3><div class="v" style="font-size:1.3rem">${h(a.test_season)}</div><div class="s">split by season, never random</div></div>
+      </div>
+      <div class="warn"><h2>What the analysis found</h2><ul>${(a.findings || []).map(x => `<li>${h(x)}</li>`).join("")}</ul></div>
+      ${panel("Charts", "Rendered from the model run — aggregates only, no per-player rows from the source archive", `<div style="padding:1.2rem">${charts || '<div class="dim">No charts.</div>'}</div>`)}
+      ${panel("Scores: players who actually played", `${(c.test_played || 0).toLocaleString("en-GB")} rows. This is the honest table — the all-rows version is inflated by ${num((c.zero_minute_share || 0) * 100, 1)}% who did not play.`, scoreTable(a.scores_played, "Note that 'always 2.0' has the best MAE and no ranking ability. FPL is a selection problem, so top-20 hit rate is the metric that matches how this is used."))}
+      ${panel("Scores: all test rows", "Included for contrast, not as a result", scoreTable(a.scores_all_rows))}
+      ${panel("Ablation: removing FPL's xP", "Permutation importance attributed 63% of the model to this one column", scoreTable(a.ablation, "The booster loses 0.0013 spearman. Ridge gets eleven times better. Importance measures what a fitted model leaned on, not what information is necessary."))}
+      <div class="grid2">
+        ${panel("Top features", "Permutation importance on the test set", impRows(a.importance, false))}
+        ${panel("Features that did not earn their place", "Negative = shuffling the column improved the model", impRows(a.negative_features, true))}
+      </div>
+      ${lateRows ? panel("Schema drift", "Defensive columns exist in only one season, so they are excluded rather than zero-filled — zero is a real value for tackles", `<div class="table-scroll"><table><thead><tr><th class="left">Column</th>${lateHead}</tr></thead><tbody>${lateRows}</tbody></table></div>`) : ""}
+      <div class="warn"><h2>Limits</h2><ul>${(a.limits || []).map(x => `<li>${h(x)}</li>`).join("")}<li>Source: <a href="${safeUrl(a.source)}" target="_blank" rel="noopener noreferrer">vaastav/Fantasy-Premier-League</a> (${h(a.source_licence)}). FPL's own API cannot answer this: per-gameweek history is wiped at season rollover.</li></ul></div>`;
+  }
+
+  const renderers = { overview: renderOverview, players: renderPlayers, squads: renderSquads, chips: renderChips, preseason: renderPreseason, analytics: renderAnalytics, teams: renderTeams, setpieces: renderSetPieces, news: renderNews };
 
   function route() {
     const requested = location.hash.replace(/^#\/?/, "").toLowerCase();
