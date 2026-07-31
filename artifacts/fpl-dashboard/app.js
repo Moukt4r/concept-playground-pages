@@ -23,6 +23,7 @@
     squad: 0,
     playerFilters: { query: "", pos: "ALL", team: "ALL", maxCost: "ALL" },
     playerSort: { key: "projected", dir: -1 },
+    unratedQuery: "",
   };
 
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -202,6 +203,72 @@
     });
   }
 
+  function renderUnratedBody() {
+    const view = state.data.unrated_view;
+    if (!view) return;
+    const q = state.unratedQuery.trim().toLowerCase();
+    const rows = (view.players || []).filter(p =>
+      !q || `${p.name} ${p.team}`.toLowerCase().includes(q));
+    const el = $("#unrated-body");
+    if (!el) return;
+    $("#unrated-count").textContent = `${rows.length} of ${view.players.length}`;
+    el.innerHTML = rows.slice(0, 60).map(p => {
+      const sp = setPieceTags(p.set_pieces);
+      const tags = [
+        p.promoted ? '<span class="newclub">PROMOTED</span>' : "",
+        p.new_club && !p.promoted ? '<span class="newclub">NEW</span>' : "",
+        p.status !== "a" ? '<span class="risk">FLAGGED</span>' : "",
+      ].filter(Boolean).join(" ");
+      return `<tr ${playerAttrs(p.id)}>
+        <td class="left"><div class="who"><span class="name">${h(p.name)}</span><span class="club">${h(p.team)}</span>${tags}</div></td>
+        <td>${posBadge(p.pos)}</td><td>£${num(p.cost)}</td>
+        <td class="big accent-2">${h(p.signal)}</td>
+        <td>${sp || '<span class="dim">—</span>'}</td>
+        <td>${num(p.ep)}</td><td>${dash(p.own, "%")}</td>
+        <td>${dash(p.minutes)}</td>
+        <td class="left dim">${h(p.reason)}</td>
+      </tr>`;
+    }).join("") || '<tr><td colspan="9" class="left dim">No players match.</td></tr>';
+    if (rows.length > 60) {
+      el.innerHTML += `<tr><td colspan="9" class="left dim">Showing the 60 strongest signals of ${rows.length}. Search to narrow.</td></tr>`;
+    }
+  }
+
+  function unratedPanel() {
+    const view = state.data.unrated_view;
+    if (!view) return "";
+    const s = view.summary || {};
+    const reasons = Object.entries(s.by_reason || {})
+      .sort((a, b) => b[1] - a[1])
+      .map(([r, n]) => `<li><b>${h(n)}</b> — ${h(r)}</li>`).join("");
+    return `<section class="panel">
+      <div class="panel-head">
+        <h2>Not projected (${h(s.unrated ?? 0)})</h2>
+        <p>The table above covers ${h(s.projected ?? 0)} of ${h(s.total_players ?? 0)} players. These ${h(s.unrated ?? 0)} have too few Premier League minutes for a per-90 rate, so they get no projection — including every player at all three promoted clubs.</p>
+      </div>
+      <div class="warn" style="margin:1rem 1.2rem">
+        <h2>Signal is not points</h2>
+        <ul>
+          <li>${h(s.note || "")}</li>
+          <li>Weights are a stated prior, not a fitted model: there is no ground truth for players with no Premier League record. Set-piece duty leads because it is the only signal that does not depend on past output at all.</li>
+        </ul>
+      </div>
+      <div class="filters">
+        <input id="unrated-search" type="search" placeholder="Search unrated player or club…" aria-label="Search unrated players">
+        <span class="chip">${h(s.promoted_club_players ?? 0)} at promoted clubs</span>
+        <span class="chip">${h(s.with_set_piece_duty ?? 0)} with set-piece duty</span>
+        <span class="chip">${h(s.owned_over_1pct ?? 0)} owned &gt;1%</span>
+        <span class="rescount" id="unrated-count"></span>
+      </div>
+      <div class="table-scroll"><table><thead><tr>
+        <th class="left">Player</th><th>Pos</th><th>Price</th><th>Signal</th>
+        <th>Set pieces</th><th>FPL ep</th><th>Own %</th><th>Mins</th>
+        <th class="left">Why unrated</th>
+      </tr></thead><tbody id="unrated-body"></tbody></table></div>
+      <div style="padding:0 1.2rem 1.2rem"><ul class="dim" style="font-size:.78rem;line-height:1.6;margin:0;padding-left:1.1rem">${reasons}</ul></div>
+    </section>`;
+  }
+
   function renderPlayers() {
     const teams = [...new Set((state.data.all_players || []).map(p => p.team))].sort();
     const headers = PLAYER_COLUMNS.map(([key, title, cls]) => `<th class="${cls}" data-sort="${key}" data-title="${h(title)}">${h(title)}</th>`).join("");
@@ -215,8 +282,10 @@
           <span class="rescount" id="players-result-count"></span>
         </div>
         <div class="table-scroll"><table id="players-table"><thead><tr>${headers}</tr></thead><tbody id="players-body"></tbody></table></div>
-      </section>`;
+      </section>
+      ${unratedPanel()}`;
     renderPlayerBody();
+    renderUnratedBody();
   }
 
   function squadPlayerCard(p) {
@@ -593,6 +662,7 @@
     document.addEventListener("mouseout", event => { const p = event.target.closest("[data-pid]"); if (p && !p.contains(event.relatedTarget)) hideTip(); });
     document.addEventListener("input", event => {
       if (event.target.id === "player-search") { state.playerFilters.query = event.target.value; renderPlayerBody(); }
+      if (event.target.id === "unrated-search") { state.unratedQuery = event.target.value; renderUnratedBody(); }
     });
     document.addEventListener("change", event => {
       if (event.target.id === "team-filter") { state.playerFilters.team = event.target.value; renderPlayerBody(); }
