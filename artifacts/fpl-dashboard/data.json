@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-01T05:30:07+00:00",
- "data_captured_at": "2026-08-01T05:05:05.476982+00:00",
+ "generated_at": "2026-08-02T05:30:09+00:00",
+ "data_captured_at": "2026-08-02T05:05:05.442963+00:00",
  "start_gw": 1,
  "end_gw": 3,
  "horizon": 3,
@@ -187,7 +187,7 @@
    "name": "Arsenal",
    "squad_size": 28,
    "regulars": 16,
-   "unavailable": 3,
+   "unavailable": 2,
    "new_signings": 3,
    "total_cost": 173.0,
    "cheapest": 5.0,
@@ -667,6 +667,32 @@
   }
  ],
  "news": [
+  {
+   "title": "FPL pre-season: Four in four for Jesus + Sarr returns",
+   "link": "https://www.fantasyfootballscout.co.uk/2026/08/01/fpl-pre-season-four-in-four-for-jesus-sarr-returns",
+   "source": "Fantasy Football Scout",
+   "published": "Sat, 01 Aug 2026 12:30:00 +0000",
+   "seen_at": "2026-08-02T05:30:08+00:00",
+   "score": 4,
+   "summary": "Mentions G.Jesus, Sarr | clubs: CRY, IPS, NEW | relevance 4",
+   "teams": [
+    "CRY",
+    "IPS",
+    "NEW"
+   ],
+   "players": [
+    {
+     "id": 27,
+     "name": "G.Jesus",
+     "team": "ARS"
+    },
+    {
+     "id": 208,
+     "name": "Sarr",
+     "team": "CRY"
+    }
+   ]
+  },
   {
    "title": "Chelsea's Mudryk cleared to play after doping ban resolved",
    "link": "https://www.skysports.com/football/news/11661/13568818/mykhailo-mudryk-chelsea-winger-cleared-to-play-again-with-immediate-effect-after-doping-ban-resolved",
@@ -1292,192 +1318,204 @@
  "preseason_view": {
   "source": "https://www.premierleague.com/en/news/4606700/premier-league-clubs-summer-2026-friendlies-and-tours",
   "fetched_ok": true,
-  "today": "2026-08-01",
+  "today": "2026-08-02",
   "counts": {
-   "fixtures": 109,
-   "played": 40,
-   "upcoming": 69,
+   "fixtures": 111,
+   "played": 54,
+   "upcoming": 57,
    "clubs": 20,
-   "flagged": 55,
+   "flagged": 54,
    "new_signings": 61
   },
   "minutes_gap": "Minutes per player in pre-season friendlies are not published. Checked 2026-07-31: fbref (Cloudflare challenge), understat, sofascore, worldfootball, transfermarkt and 11v11 all block automated access - five of them name AI agents explicitly - and football-data.org puts Club Friendlies behind a paid tier. Spoofing a browser identity to get around that is not acceptable, so this column is absent rather than empty.",
   "recent": [
    {
-    "club": "Nott'm Forest",
-    "date": "2026-07-31",
-    "opponent": "Portimonese SAD",
-    "venue": "H",
-    "played": true,
-    "scored": 2,
-    "conceded": 1,
-    "outcome": "W",
-    "competition": "",
-    "link": "https://www.nottinghamforest.co.uk/news/2026/july/31/reds-continue-pre-season-with-win-over-portimonense/"
-   },
-   {
-    "club": "Bournemouth",
-    "date": "2026-07-30",
-    "opponent": "Augsburg",
-    "venue": "Saalfelden",
-    "played": true,
-    "scored": 5,
-    "conceded": 2,
-    "outcome": "W",
-    "competition": "",
-    "link": "https://www.afcb.co.uk/news/2026/july/30/cherries-finish-austria-camp-with-five-star-augsburg-win/"
-   },
-   {
-    "club": "Ipswich Town",
-    "date": "2026-07-29",
-    "opponent": "Osasuna",
-    "venue": "H",
-    "played": true,
-    "scored": 1,
-    "conceded": 2,
-    "outcome": "L",
-    "competition": "",
-    "link": "https://www.itfc.co.uk/news/2026/july/29/Ipswich-Town-Osasuna-pre-season-friendly-match-report/"
-   },
-   {
-    "club": "Liverpool",
-    "date": "2026-07-29",
-    "opponent": "Wrexham",
-    "venue": "H",
-    "played": true,
-    "scored": 1,
-    "conceded": 0,
-    "outcome": "W",
-    "competition": "",
-    "link": "https://www.liverpoolfc.com/news/rio-ngumoha-goal-settles-liverpool-v-wrexham-clash-new-york"
-   },
-   {
-    "club": "Newcastle",
-    "date": "2026-07-29",
-    "opponent": "Bristol City",
-    "venue": "H",
-    "played": true,
-    "scored": 1,
-    "conceded": 4,
-    "outcome": "L",
-    "competition": "",
-    "link": "https://www.newcastleunited.com/en/news/bristol-city-4-newcastle-united-1"
-   },
-   {
-    "club": "Spurs",
-    "date": "2026-07-29",
-    "opponent": "Sydney FC",
-    "venue": "Sydney",
-    "played": true,
-    "scored": 1,
-    "conceded": 1,
-    "outcome": "D",
-    "competition": "",
-    "link": "https://www.tottenhamhotspur.com/news/1080518/victory-on-penalties-after-tel-stunner-against-sydney"
-   },
-   {
-    "club": "Aston Villa",
-    "date": "2026-07-28",
-    "opponent": "Real Sociedad",
-    "venue": "H",
-    "played": true,
-    "scored": 2,
-    "conceded": 4,
-    "outcome": "L",
-    "competition": "",
-    "link": "https://www.avfc.co.uk/news/2026/july/28/report-aston-villa-2-4-real-sociedad/"
-   },
-   {
-    "club": "Chelsea",
-    "date": "2026-07-28",
-    "opponent": "Western Sydney Wanderers",
-    "venue": "A",
-    "played": true,
-    "scored": 6,
-    "conceded": 4,
-    "outcome": "W",
-    "competition": "",
-    "link": "https://www.chelseafc.com/en/news/article/match-report-chelsea-6-4-western-sydney-wanderers"
-   },
-   {
-    "club": "Crystal Palace",
-    "date": "2026-07-28",
-    "opponent": "Famalicao",
-    "venue": "A",
-    "played": true,
-    "scored": 0,
-    "conceded": 0,
-    "outcome": "D",
-    "competition": "",
-    "link": "https://www.cpfc.co.uk/news/match-reports/report-live-blog-highlights-palace-in-como-cup/"
-   },
-   {
-    "club": "Crystal Palace",
-    "date": "2026-07-28",
-    "opponent": "Lens",
-    "venue": "A",
-    "played": true,
-    "scored": 0,
-    "conceded": 3,
-    "outcome": "L",
-    "competition": "",
-    "link": "https://www.cpfc.co.uk/news/match-reports/report-palace-fall-to-defeat-in-como-cup-opener/"
-   },
-   {
-    "club": "Everton",
-    "date": "2026-07-28",
-    "opponent": "Stoke",
-    "venue": "A",
-    "played": true,
-    "scored": 0,
-    "conceded": 1,
-    "outcome": "L",
-    "competition": "",
-    "link": "https://www.evertonfc.com/news/2026/july/28/hackney-debuts-as-everton-narrowly-beaten-in-pre-season-test/"
-   },
-   {
-    "club": "Fulham",
-    "date": "2026-07-28",
-    "opponent": "Al-Ahli",
-    "venue": "A",
-    "played": true,
-    "scored": 1,
-    "conceded": 1,
-    "outcome": "D",
-    "competition": "",
-    "link": "https://www.fulhamfc.com/news/2026/july/28/al-ahli-fulham/"
-   }
-  ],
-  "next_up": [
-   {
-    "club": "Nott'm Forest",
-    "date": "2026-07-31",
-    "opponent": "Sporting",
-    "venue": "Faro",
-    "played": false,
-    "scored": null,
-    "conceded": null,
-    "outcome": "",
-    "competition": "",
-    "link": "https://www.nottinghamforest.co.uk/news/2026/june/22/forest-head-to-portugal-for-pre-season-camp/"
-   },
-   {
     "club": "Arsenal",
     "date": "2026-08-01",
     "opponent": "Girona",
-    "venue": "A",
-    "played": false,
-    "scored": null,
-    "conceded": null,
-    "outcome": "",
+    "venue": "H",
+    "played": true,
+    "scored": 4,
+    "conceded": 1,
+    "outcome": "W",
     "competition": "",
-    "link": "https://www.arsenal.com/news/mens-team-kick-pre-season-girona"
+    "link": "https://www.arsenal.com/news/report-girona-1-4-arsenal-aIyhn9r9XmW4"
    },
    {
     "club": "Aston Villa",
     "date": "2026-08-01",
     "opponent": "Indonesia All-Stars",
     "venue": "Jakarta",
+    "played": true,
+    "scored": 3,
+    "conceded": 1,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.avfc.co.uk/news/2026/august/01/report-indonesia-all-stars-1-3-aston-villa/"
+   },
+   {
+    "club": "Brighton",
+    "date": "2026-08-01",
+    "opponent": "Strasbourg",
+    "venue": "H",
+    "played": true,
+    "scored": 4,
+    "conceded": 3,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.brightonandhovealbion.com/media-article/mft-match-report-bha-albion-show-set-piece-threat-in-win-over-strasbourg"
+   },
+   {
+    "club": "Chelsea",
+    "date": "2026-08-01",
+    "opponent": "Spurs",
+    "venue": "Sydney",
+    "played": true,
+    "scored": 1,
+    "conceded": 2,
+    "outcome": "L",
+    "competition": "",
+    "link": "https://www.chelseafc.com/en/news/article/match-report-chelsea-tottenham-pre-season-2026"
+   },
+   {
+    "club": "Coventry City",
+    "date": "2026-08-01",
+    "opponent": "Leicester City",
+    "venue": "A",
+    "played": true,
+    "scored": 1,
+    "conceded": 0,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.ccfc.co.uk/news/2026/august/01/leicester-city-0-1-coventry-city-/"
+   },
+   {
+    "club": "Everton",
+    "date": "2026-08-01",
+    "opponent": "Hamburg",
+    "venue": "A",
+    "played": true,
+    "scored": 2,
+    "conceded": 1,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.evertonfc.com/news/2026/august/01/blog--hamburg-v-everton/"
+   },
+   {
+    "club": "Hull City",
+    "date": "2026-08-01",
+    "opponent": "Kasimpasa",
+    "venue": "Istanbul",
+    "played": true,
+    "scored": 1,
+    "conceded": 1,
+    "outcome": "D",
+    "competition": "",
+    "link": "https://www.wearehullcity.co.uk/news/2026/august/01/kasimpasa-1-1-hull-city/"
+   },
+   {
+    "club": "Ipswich Town",
+    "date": "2026-08-01",
+    "opponent": "Oxford Utd",
+    "venue": "A",
+    "played": true,
+    "scored": 2,
+    "conceded": 0,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.itfc.co.uk/news/2026/august/01/oxford-united-0-town-0/"
+   },
+   {
+    "club": "Ipswich Town",
+    "date": "2026-08-01",
+    "opponent": "Wycombe",
+    "venue": "A",
+    "played": true,
+    "scored": 2,
+    "conceded": 1,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.itfc.co.uk/news/2026/august/01/wycombe-wanderers-0-town-0/"
+   },
+   {
+    "club": "Man City",
+    "date": "2026-08-01",
+    "opponent": "Inter Milan",
+    "venue": "H",
+    "played": true,
+    "scored": 1,
+    "conceded": 1,
+    "outcome": "D",
+    "competition": "",
+    "link": "https://www.mancity.com/news/mens/inter-hong-kong-asia-tour-match-report-63921168"
+   },
+   {
+    "club": "Man Utd",
+    "date": "2026-08-01",
+    "opponent": "Atletico Madrid",
+    "venue": "Stockholm",
+    "played": true,
+    "scored": 2,
+    "conceded": 1,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.manutd.com/en/news/report-united-2-1-atleti"
+   },
+   {
+    "club": "Spurs",
+    "date": "2026-08-01",
+    "opponent": "Chelsea",
+    "venue": "Sydney",
+    "played": true,
+    "scored": 2,
+    "conceded": 1,
+    "outcome": "W",
+    "competition": "",
+    "link": "https://www.tottenhamhotspur.com/news/1081274/our-10-men-victorious-against-chelsea-in-sydney"
+   }
+  ],
+  "next_up": [
+   {
+    "club": "Leeds",
+    "date": "2026-08-02",
+    "opponent": "Liverpool",
+    "venue": "Chicago",
+    "played": false,
+    "scored": null,
+    "conceded": null,
+    "outcome": "",
+    "competition": "",
+    "link": "https://www.leedsunited.com/en/news/leeds-united-set-for-us-tour-this-summer"
+   },
+   {
+    "club": "Liverpool",
+    "date": "2026-08-02",
+    "opponent": "Leeds",
+    "venue": "Chicago",
+    "played": false,
+    "scored": null,
+    "conceded": null,
+    "outcome": "",
+    "competition": "",
+    "link": "https://www.liverpoolfc.com/news/liverpool-face-sunderland-wrexham-and-leeds-2026-pre-season-tour"
+   },
+   {
+    "club": "Sunderland",
+    "date": "2026-08-02",
+    "opponent": "Wrexham",
+    "venue": "Philadelphia",
+    "played": false,
+    "scored": null,
+    "conceded": null,
+    "outcome": "",
+    "competition": "",
+    "link": "https://www.safc.com/news/2026/june/08/----sunderland-afc-confirm-full-2026-27-pre-season-schedule/"
+   },
+   {
+    "club": "Aston Villa",
+    "date": "2026-08-04",
+    "opponent": "BG Pathum United",
+    "venue": "Pathum Thani",
     "played": false,
     "scored": null,
     "conceded": null,
@@ -1486,124 +1524,112 @@
     "link": "https://www.avfc.co.uk/news/2026/june/22/news-villa-announce-asia-pre-season-fixtures/"
    },
    {
-    "club": "Brighton",
-    "date": "2026-08-01",
-    "opponent": "Strasbourg",
+    "club": "Bournemouth",
+    "date": "2026-08-04",
+    "opponent": "Genoa",
     "venue": "behind closed doors",
     "played": false,
     "scored": null,
     "conceded": null,
     "outcome": "",
     "competition": "",
-    "link": "https://www.brightonandhovealbion.com/media-article/mft-news-pre-season-trip-details-confirmed-july-2026"
+    "link": "https://www.afcb.co.uk/news/2026/july/02/afc-bournemouth-confirm-genoa-and-real-betis-pre-season-friendlies/"
+   },
+   {
+    "club": "Ipswich Town",
+    "date": "2026-08-04",
+    "opponent": "Le Havre",
+    "venue": "H",
+    "played": false,
+    "scored": null,
+    "conceded": null,
+    "outcome": "",
+    "competition": "",
+    "link": "https://www.itfc.co.uk/news/2026/june/16/pre-season-schedule-confirmed/"
+   },
+   {
+    "club": "Arsenal",
+    "date": "2026-08-05",
+    "opponent": "Real Betis",
+    "venue": "Dublin",
+    "played": false,
+    "scored": null,
+    "conceded": null,
+    "outcome": "",
+    "competition": "",
+    "link": "https://www.arsenal.com/news/mens-first-team-play-real-betis-dublin"
    },
    {
     "club": "Chelsea",
-    "date": "2026-08-01",
-    "opponent": "Spurs",
-    "venue": "Sydney",
-    "played": false,
-    "scored": null,
-    "conceded": null,
-    "outcome": "",
-    "competition": "",
-    "link": "https://www.chelseafc.com/en/news/article/chelsea-fc-and-chelsea-fc-women-head-to-sydney-for-pre-season-tour-2026"
-   },
-   {
-    "club": "Everton",
-    "date": "2026-08-01",
-    "opponent": "Hamburg",
-    "venue": "A",
-    "played": false,
-    "scored": null,
-    "conceded": null,
-    "outcome": "",
-    "competition": "",
-    "link": "https://www.evertonfc.com/news/2026/june/24/everton-confirm-hamburg-double-header-for-pre-season/"
-   },
-   {
-    "club": "Hull City",
-    "date": "2026-08-01",
-    "opponent": "Kasimpasa",
-    "venue": "Istanbul",
-    "played": false,
-    "scored": null,
-    "conceded": null,
-    "outcome": "",
-    "competition": "",
-    "link": "https://www.wearehullcity.co.uk/news/2026/july/13/first-three-pre-season-friendlies-confirmed/"
-   },
-   {
-    "club": "Ipswich Town",
-    "date": "2026-08-01",
-    "opponent": "Oxford Utd",
-    "venue": "A",
-    "played": false,
-    "scored": null,
-    "conceded": null,
-    "outcome": "",
-    "competition": "",
-    "link": "https://www.itfc.co.uk/news/2026/june/16/pre-season-schedule-confirmed/"
-   },
-   {
-    "club": "Ipswich Town",
-    "date": "2026-08-01",
-    "opponent": "Wycombe",
-    "venue": "A",
-    "played": false,
-    "scored": null,
-    "conceded": null,
-    "outcome": "",
-    "competition": "",
-    "link": "https://www.itfc.co.uk/news/2026/june/16/pre-season-schedule-confirmed/"
-   },
-   {
-    "club": "Man City",
-    "date": "2026-08-01",
-    "opponent": "Inter Milan",
+    "date": "2026-08-05",
+    "opponent": "Juventus",
     "venue": "Hong Kong",
     "played": false,
     "scored": null,
     "conceded": null,
     "outcome": "",
     "competition": "",
-    "link": "https://www.mancity.com/news/mens/hong-kong-preseason-tour-2026-announcement-63912279"
+    "link": "https://www.chelseafc.com/en/news/article/chelsea-to-play-in-asia-in-august-against-serie-a-side"
    },
    {
-    "club": "Man Utd",
-    "date": "2026-08-01",
-    "opponent": "Atletico Madrid",
-    "venue": "Stockholm",
+    "club": "Man City",
+    "date": "2026-08-05",
+    "opponent": "K-League All-Stars",
+    "venue": "Seoul",
     "played": false,
     "scored": null,
     "conceded": null,
     "outcome": "",
     "competition": "",
-    "link": "https://www.manutd.com/en/news/detail/man-utd-announce-four-more-pre-season-2026-fixtures"
+    "link": "https://www.mancity.com/news/mens/man-city-k-league-all-stars-atletico-madrid-pre-season-asia-tour-fixture-announcement-63917707"
    },
    {
-    "club": "Spurs",
-    "date": "2026-08-01",
-    "opponent": "Chelsea",
-    "venue": "Sydney",
+    "club": "Aston Villa",
+    "date": "2026-08-07",
+    "opponent": "Bayern Munich",
+    "venue": "Hong Kong",
     "played": false,
     "scored": null,
     "conceded": null,
     "outcome": "",
     "competition": "",
-    "link": "https://www.tottenhamhotspur.com/news/2025/december/club-to-visit-sydney-on-2026-pre-season-tour/"
+    "link": "https://www.avfc.co.uk/news/2026/april/10/news-aston-villa-to-face-bayern-munich-in-hong-kong/"
+   },
+   {
+    "club": "Crystal Palace",
+    "date": "2026-08-07",
+    "opponent": "Fulham",
+    "venue": "behind closed doors",
+    "played": false,
+    "scored": null,
+    "conceded": null,
+    "outcome": "",
+    "competition": "",
+    "link": "https://www.cpfc.co.uk/news/announcement/pre-season-game-palace-fulham-annoucement/"
+   },
+   {
+    "club": "Fulham",
+    "date": "2026-08-07",
+    "opponent": "Crystal Palace",
+    "venue": "behind closed doors",
+    "played": false,
+    "scored": null,
+    "conceded": null,
+    "outcome": "",
+    "competition": "",
+    "link": "https://www.fulhamfc.com/news/2026/july/24/pre-season-update/"
    }
   ],
   "clubs": [
    {
     "club": "Arsenal",
-    "played": 1,
-    "won": 1,
+    "played": 2,
+    "won": 2,
     "drawn": 0,
     "lost": 0,
-    "scored": 3,
-    "conceded": 0,
-    "upcoming": 4,
+    "scored": 7,
+    "conceded": 1,
+    "upcoming": 3,
     "fixtures": [
      {
       "club": "Arsenal",
@@ -1621,13 +1647,13 @@
       "club": "Arsenal",
       "date": "2026-08-01",
       "opponent": "Girona",
-      "venue": "A",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "venue": "H",
+      "played": true,
+      "scored": 4,
+      "conceded": 1,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.arsenal.com/news/mens-team-kick-pre-season-girona"
+      "link": "https://www.arsenal.com/news/report-girona-1-4-arsenal-aIyhn9r9XmW4"
      },
      {
       "club": "Arsenal",
@@ -1669,13 +1695,13 @@
    },
    {
     "club": "Aston Villa",
-    "played": 3,
-    "won": 1,
+    "played": 4,
+    "won": 2,
     "drawn": 0,
     "lost": 2,
-    "scored": 8,
-    "conceded": 6,
-    "upcoming": 4,
+    "scored": 11,
+    "conceded": 7,
+    "upcoming": 3,
     "fixtures": [
      {
       "club": "Aston Villa",
@@ -1718,12 +1744,12 @@
       "date": "2026-08-01",
       "opponent": "Indonesia All-Stars",
       "venue": "Jakarta",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 3,
+      "conceded": 1,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.avfc.co.uk/news/2026/june/22/news-villa-announce-asia-pre-season-fixtures/"
+      "link": "https://www.avfc.co.uk/news/2026/august/01/report-indonesia-all-stars-1-3-aston-villa/"
      },
      {
       "club": "Aston Villa",
@@ -1873,13 +1899,13 @@
    },
    {
     "club": "Brighton",
-    "played": 1,
-    "won": 1,
+    "played": 2,
+    "won": 2,
     "drawn": 0,
     "lost": 0,
-    "scored": 4,
-    "conceded": 1,
-    "upcoming": 3,
+    "scored": 8,
+    "conceded": 4,
+    "upcoming": 2,
     "fixtures": [
      {
       "club": "Brighton",
@@ -1897,13 +1923,13 @@
       "club": "Brighton",
       "date": "2026-08-01",
       "opponent": "Strasbourg",
-      "venue": "behind closed doors",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "venue": "H",
+      "played": true,
+      "scored": 4,
+      "conceded": 3,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.brightonandhovealbion.com/media-article/mft-news-pre-season-trip-details-confirmed-july-2026"
+      "link": "https://www.brightonandhovealbion.com/media-article/mft-match-report-bha-albion-show-set-piece-threat-in-win-over-strasbourg"
      },
      {
       "club": "Brighton",
@@ -1933,13 +1959,13 @@
    },
    {
     "club": "Chelsea",
-    "played": 1,
+    "played": 2,
     "won": 1,
     "drawn": 0,
-    "lost": 0,
-    "scored": 6,
-    "conceded": 4,
-    "upcoming": 5,
+    "lost": 1,
+    "scored": 7,
+    "conceded": 6,
+    "upcoming": 4,
     "fixtures": [
      {
       "club": "Chelsea",
@@ -1958,12 +1984,12 @@
       "date": "2026-08-01",
       "opponent": "Spurs",
       "venue": "Sydney",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 1,
+      "conceded": 2,
+      "outcome": "L",
       "competition": "",
-      "link": "https://www.chelseafc.com/en/news/article/chelsea-fc-and-chelsea-fc-women-head-to-sydney-for-pre-season-tour-2026"
+      "link": "https://www.chelseafc.com/en/news/article/match-report-chelsea-tottenham-pre-season-2026"
      },
      {
       "club": "Chelsea",
@@ -2017,11 +2043,11 @@
    },
    {
     "club": "Coventry City",
-    "played": 2,
-    "won": 0,
+    "played": 3,
+    "won": 1,
     "drawn": 1,
     "lost": 1,
-    "scored": 2,
+    "scored": 3,
     "conceded": 3,
     "upcoming": 2,
     "fixtures": [
@@ -2048,6 +2074,18 @@
       "outcome": "D",
       "competition": "",
       "link": "https://www.ccfc.co.uk/news/2026/july/18/northampton-town-0-0-coventry-city-/"
+     },
+     {
+      "club": "Coventry City",
+      "date": "2026-08-01",
+      "opponent": "Leicester City",
+      "venue": "A",
+      "played": true,
+      "scored": 1,
+      "conceded": 0,
+      "outcome": "W",
+      "competition": "",
+      "link": "https://www.ccfc.co.uk/news/2026/august/01/leicester-city-0-1-coventry-city-/"
      },
      {
       "club": "Coventry City",
@@ -2149,13 +2187,13 @@
    },
    {
     "club": "Everton",
-    "played": 3,
-    "won": 1,
+    "played": 4,
+    "won": 2,
     "drawn": 1,
     "lost": 1,
-    "scored": 4,
-    "conceded": 1,
-    "upcoming": 3,
+    "scored": 6,
+    "conceded": 2,
+    "upcoming": 2,
     "fixtures": [
      {
       "club": "Everton",
@@ -2198,12 +2236,12 @@
       "date": "2026-08-01",
       "opponent": "Hamburg",
       "venue": "A",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 2,
+      "conceded": 1,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.evertonfc.com/news/2026/june/24/everton-confirm-hamburg-double-header-for-pre-season/"
+      "link": "https://www.evertonfc.com/news/2026/august/01/blog--hamburg-v-everton/"
      },
      {
       "club": "Everton",
@@ -2233,12 +2271,12 @@
    },
    {
     "club": "Fulham",
-    "played": 2,
-    "won": 0,
+    "played": 3,
+    "won": 1,
     "drawn": 1,
     "lost": 1,
-    "scored": 1,
-    "conceded": 3,
+    "scored": 3,
+    "conceded": 4,
     "upcoming": 3,
     "fixtures": [
      {
@@ -2264,6 +2302,18 @@
       "outcome": "D",
       "competition": "",
       "link": "https://www.fulhamfc.com/news/2026/july/28/al-ahli-fulham/"
+     },
+     {
+      "club": "Fulham",
+      "date": "2026-07-31",
+      "opponent": "SC Farense",
+      "venue": "A",
+      "played": true,
+      "scored": 2,
+      "conceded": 1,
+      "outcome": "W",
+      "competition": "",
+      "link": "https://www.fulhamfc.com/news/2026/august/01/farense-1-2-fulham/"
      },
      {
       "club": "Fulham",
@@ -2305,13 +2355,13 @@
    },
    {
     "club": "Hull City",
-    "played": 2,
+    "played": 3,
     "won": 2,
-    "drawn": 0,
+    "drawn": 1,
     "lost": 0,
-    "scored": 5,
-    "conceded": 1,
-    "upcoming": 3,
+    "scored": 6,
+    "conceded": 2,
+    "upcoming": 2,
     "fixtures": [
      {
       "club": "Hull City",
@@ -2342,12 +2392,12 @@
       "date": "2026-08-01",
       "opponent": "Kasimpasa",
       "venue": "Istanbul",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 1,
+      "conceded": 1,
+      "outcome": "D",
       "competition": "",
-      "link": "https://www.wearehullcity.co.uk/news/2026/july/13/first-three-pre-season-friendlies-confirmed/"
+      "link": "https://www.wearehullcity.co.uk/news/2026/august/01/kasimpasa-1-1-hull-city/"
      },
      {
       "club": "Hull City",
@@ -2377,13 +2427,13 @@
    },
    {
     "club": "Ipswich Town",
-    "played": 1,
-    "won": 0,
+    "played": 3,
+    "won": 2,
     "drawn": 0,
     "lost": 1,
-    "scored": 1,
-    "conceded": 2,
-    "upcoming": 5,
+    "scored": 5,
+    "conceded": 3,
+    "upcoming": 3,
     "fixtures": [
      {
       "club": "Ipswich Town",
@@ -2402,24 +2452,24 @@
       "date": "2026-08-01",
       "opponent": "Oxford Utd",
       "venue": "A",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 2,
+      "conceded": 0,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.itfc.co.uk/news/2026/june/16/pre-season-schedule-confirmed/"
+      "link": "https://www.itfc.co.uk/news/2026/august/01/oxford-united-0-town-0/"
      },
      {
       "club": "Ipswich Town",
       "date": "2026-08-01",
       "opponent": "Wycombe",
       "venue": "A",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 2,
+      "conceded": 1,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.itfc.co.uk/news/2026/june/16/pre-season-schedule-confirmed/"
+      "link": "https://www.itfc.co.uk/news/2026/august/01/wycombe-wanderers-0-town-0/"
      },
      {
       "club": "Ipswich Town",
@@ -2605,25 +2655,25 @@
    },
    {
     "club": "Man City",
-    "played": 0,
+    "played": 1,
     "won": 0,
-    "drawn": 0,
+    "drawn": 1,
     "lost": 0,
-    "scored": 0,
-    "conceded": 0,
-    "upcoming": 4,
+    "scored": 1,
+    "conceded": 1,
+    "upcoming": 3,
     "fixtures": [
      {
       "club": "Man City",
       "date": "2026-08-01",
       "opponent": "Inter Milan",
-      "venue": "Hong Kong",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "venue": "H",
+      "played": true,
+      "scored": 1,
+      "conceded": 1,
+      "outcome": "D",
       "competition": "",
-      "link": "https://www.mancity.com/news/mens/hong-kong-preseason-tour-2026-announcement-63912279"
+      "link": "https://www.mancity.com/news/mens/inter-hong-kong-asia-tour-match-report-63921168"
      },
      {
       "club": "Man City",
@@ -2665,13 +2715,13 @@
    },
    {
     "club": "Man Utd",
-    "played": 2,
-    "won": 1,
+    "played": 3,
+    "won": 2,
     "drawn": 0,
     "lost": 1,
-    "scored": 5,
-    "conceded": 1,
-    "upcoming": 4,
+    "scored": 7,
+    "conceded": 2,
+    "upcoming": 3,
     "fixtures": [
      {
       "club": "Man Utd",
@@ -2702,12 +2752,12 @@
       "date": "2026-08-01",
       "opponent": "Atletico Madrid",
       "venue": "Stockholm",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 2,
+      "conceded": 1,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.manutd.com/en/news/detail/man-utd-announce-four-more-pre-season-2026-fixtures"
+      "link": "https://www.manutd.com/en/news/report-united-2-1-atleti"
      },
      {
       "club": "Man Utd",
@@ -2845,13 +2895,13 @@
    },
    {
     "club": "Nott'm Forest",
-    "played": 4,
+    "played": 5,
     "won": 3,
     "drawn": 1,
-    "lost": 0,
-    "scored": 8,
-    "conceded": 2,
-    "upcoming": 5,
+    "lost": 1,
+    "scored": 9,
+    "conceded": 6,
+    "upcoming": 4,
     "fixtures": [
      {
       "club": "Nott'm Forest",
@@ -2892,26 +2942,26 @@
      {
       "club": "Nott'm Forest",
       "date": "2026-07-31",
+      "opponent": "Sporting",
+      "venue": "A",
+      "played": true,
+      "scored": 1,
+      "conceded": 4,
+      "outcome": "L",
+      "competition": "",
+      "link": "https://www.nottinghamforest.co.uk/news/2026/july/31/sporting-cp-report/"
+     },
+     {
+      "club": "Nott'm Forest",
+      "date": "2026-07-31",
       "opponent": "Portimonese SAD",
-      "venue": "H",
+      "venue": "A",
       "played": true,
       "scored": 2,
       "conceded": 1,
       "outcome": "W",
       "competition": "",
       "link": "https://www.nottinghamforest.co.uk/news/2026/july/31/reds-continue-pre-season-with-win-over-portimonense/"
-     },
-     {
-      "club": "Nott'm Forest",
-      "date": "2026-07-31",
-      "opponent": "Sporting",
-      "venue": "Faro",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
-      "competition": "",
-      "link": "https://www.nottinghamforest.co.uk/news/2026/june/22/forest-head-to-portugal-for-pre-season-camp/"
      },
      {
       "club": "Nott'm Forest",
@@ -2965,13 +3015,13 @@
    },
    {
     "club": "Spurs",
-    "played": 3,
-    "won": 2,
+    "played": 4,
+    "won": 3,
     "drawn": 1,
     "lost": 0,
-    "scored": 4,
-    "conceded": 1,
-    "upcoming": 4,
+    "scored": 6,
+    "conceded": 2,
+    "upcoming": 3,
     "fixtures": [
      {
       "club": "Spurs",
@@ -3014,12 +3064,12 @@
       "date": "2026-08-01",
       "opponent": "Chelsea",
       "venue": "Sydney",
-      "played": false,
-      "scored": null,
-      "conceded": null,
-      "outcome": "",
+      "played": true,
+      "scored": 2,
+      "conceded": 1,
+      "outcome": "W",
       "competition": "",
-      "link": "https://www.tottenhamhotspur.com/news/2025/december/club-to-visit-sydney-on-2026-pre-season-tour/"
+      "link": "https://www.tottenhamhotspur.com/news/1081274/our-10-men-victorious-against-chelsea-in-sydney"
      },
      {
       "club": "Spurs",
@@ -3155,7 +3205,7 @@
     "status_label": "Unavailable",
     "chance": 0,
     "news": "Has joined KVC Westerlo on loan for the rest of the season",
-    "selected_by": 0.8,
+    "selected_by": 0.7,
     "total_points": 0
    },
    {
@@ -3220,7 +3270,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Foot injury - Unknown return date",
-    "selected_by": 8.3,
+    "selected_by": 7.5,
     "total_points": 113
    },
    {
@@ -3246,7 +3296,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Groin injury - Expected back 21 Aug",
-    "selected_by": 0.6,
+    "selected_by": 0.5,
     "total_points": 149
    },
    {
@@ -3391,19 +3441,6 @@
     "news": "Back injury - Unknown return date",
     "selected_by": 0.1,
     "total_points": 69
-   },
-   {
-    "id": 10,
-    "name": "White",
-    "team": "ARS",
-    "pos": "DEF",
-    "cost": 5.5,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Knee injury - Expected back 21 Aug",
-    "selected_by": 0.0,
-    "total_points": 45
    },
    {
     "id": 48,
@@ -3757,19 +3794,6 @@
     "total_points": 61
    },
    {
-    "id": 164,
-    "name": "Quenda",
-    "team": "CHE",
-    "pos": "MID",
-    "cost": 5.5,
-    "status": "d",
-    "status_label": "Doubtful",
-    "chance": 75,
-    "news": "Unspecified injury - 75% chance of playing",
-    "selected_by": 0.1,
-    "total_points": 0
-   },
-   {
     "id": 325,
     "name": "Darlow",
     "team": "MUN",
@@ -3822,6 +3846,19 @@
     "total_points": 16
    },
    {
+    "id": 164,
+    "name": "Quenda",
+    "team": "CHE",
+    "pos": "MID",
+    "cost": 5.5,
+    "status": "d",
+    "status_label": "Doubtful",
+    "chance": 75,
+    "news": "Unspecified injury - 75% chance of playing",
+    "selected_by": 0.0,
+    "total_points": 0
+   },
+   {
     "id": 374,
     "name": "Endo",
     "team": "LIV",
@@ -3871,7 +3908,7 @@
     "joined": "2026-07-02",
     "total_points": 180,
     "minutes": 3332,
-    "selected_by": 12.2,
+    "selected_by": 12.1,
     "status": "a"
    },
    {
@@ -3895,7 +3932,7 @@
     "joined": "2026-07-21",
     "total_points": 169,
     "minutes": 3280,
-    "selected_by": 32.1,
+    "selected_by": 31.6,
     "status": "a"
    },
    {
@@ -3907,7 +3944,7 @@
     "joined": "2026-07-08",
     "total_points": 168,
     "minutes": 2674,
-    "selected_by": 8.8,
+    "selected_by": 8.7,
     "status": "a"
    },
    {
@@ -3943,7 +3980,7 @@
     "joined": "2026-07-02",
     "total_points": 135,
     "minutes": 3017,
-    "selected_by": 4.1,
+    "selected_by": 4.0,
     "status": "a"
    },
    {
@@ -3967,7 +4004,7 @@
     "joined": "2026-07-01",
     "total_points": 96,
     "minutes": 3150,
-    "selected_by": 24.9,
+    "selected_by": 24.8,
     "status": "a"
    },
    {
@@ -3979,7 +4016,7 @@
     "joined": "2026-07-01",
     "total_points": 87,
     "minutes": 1787,
-    "selected_by": 4.7,
+    "selected_by": 4.6,
     "status": "a"
    },
    {
@@ -4003,7 +4040,7 @@
     "joined": "2026-07-06",
     "total_points": 81,
     "minutes": 2534,
-    "selected_by": 3.0,
+    "selected_by": 3.5,
     "status": "a"
    },
    {
@@ -4051,7 +4088,7 @@
     "joined": "2026-07-01",
     "total_points": 55,
     "minutes": 1165,
-    "selected_by": 1.7,
+    "selected_by": 1.8,
     "status": "a"
    },
    {
@@ -4087,7 +4124,7 @@
     "joined": "2026-07-22",
     "total_points": 31,
     "minutes": 812,
-    "selected_by": 20.2,
+    "selected_by": 20.1,
     "status": "a"
    },
    {
@@ -4303,7 +4340,7 @@
     "joined": "2026-07-17",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 2.7,
+    "selected_by": 2.6,
     "status": "a"
    },
    {
@@ -4363,7 +4400,7 @@
     "joined": "2026-07-24",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.0,
+    "selected_by": 0.1,
     "status": "a"
    },
    {
@@ -4375,7 +4412,7 @@
     "joined": "2026-07-17",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 1.0,
+    "selected_by": 1.1,
     "status": "a"
    },
    {
@@ -4411,7 +4448,7 @@
     "joined": "2026-06-15",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.1,
+    "selected_by": 0.0,
     "status": "d"
    },
    {
@@ -4423,7 +4460,7 @@
     "joined": "2026-07-14",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.2,
+    "selected_by": 0.3,
     "status": "a"
    },
    {
@@ -4435,7 +4472,7 @@
     "joined": "2026-07-28",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.1,
+    "selected_by": 0.2,
     "status": "a"
    },
    {
@@ -4495,7 +4532,7 @@
     "joined": "2026-07-23",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 2.2,
+    "selected_by": 2.3,
     "status": "a"
    },
    {
@@ -4531,7 +4568,7 @@
     "joined": "2026-07-23",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 1.3,
+    "selected_by": 1.4,
     "status": "a"
    },
    {
@@ -4555,7 +4592,7 @@
     "joined": "2026-07-14",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 2.7,
+    "selected_by": 2.8,
     "status": "a"
    },
    {
@@ -4608,13 +4645,13 @@
    "unrated": 327,
    "promoted_club_players": 86,
    "with_set_piece_duty": 37,
-   "owned_over_1pct": 51,
+   "owned_over_1pct": 52,
    "by_reason": {
-    "under 900 Premier League minutes last season": 121,
+    "under 900 Premier League minutes last season": 122,
     "promoted club - played outside the Premier League last season": 86,
     "no Premier League minutes last season": 47,
     "summer signing - last season's football was elsewhere": 24,
-    "flagged unavailable, so excluded from projections": 49
+    "flagged unavailable, so excluded from projections": 48
    },
    "note": "These players have no projection because a per-90 rate needs minutes, and they have too few. `signal` is a 0-100 role indicator built only from price, FPL's own expected points, set-piece duty and ownership - it is not points and must never be compared with the projected column."
   },
@@ -4631,7 +4668,7 @@
      "penalties": 1
     },
     "ep": 2.7,
-    "own": 11.5,
+    "own": 11.6,
     "minutes": 694,
     "status": "a",
     "news": "",
@@ -4744,31 +4781,6 @@
     }
    },
    {
-    "id": 465,
-    "name": "Osula",
-    "team": "NEW",
-    "pos": "FWD",
-    "cost": 6.0,
-    "signal": 47,
-    "reason": "under 900 Premier League minutes last season",
-    "set_pieces": {
-     "penalties": 2
-    },
-    "ep": 2.0,
-    "own": 2.0,
-    "minutes": 805,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 10.1,
-     "price": 22.5,
-     "ep": 10.0,
-     "ownership": 4.0
-    }
-   },
-   {
     "id": 515,
     "name": "Maddison",
     "team": "TOT",
@@ -4778,7 +4790,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 2.3,
+    "own": 2.2,
     "minutes": 34,
     "status": "a",
     "news": "",
@@ -4788,7 +4800,32 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 11.5,
-     "ownership": 4.6
+     "ownership": 4.4
+    }
+   },
+   {
+    "id": 465,
+    "name": "Osula",
+    "team": "NEW",
+    "pos": "FWD",
+    "cost": 6.0,
+    "signal": 46,
+    "reason": "under 900 Premier League minutes last season",
+    "set_pieces": {
+     "penalties": 2
+    },
+    "ep": 2.0,
+    "own": 1.9,
+    "minutes": 805,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": false,
+    "components": {
+     "set_pieces": 10.1,
+     "price": 22.5,
+     "ep": 10.0,
+     "ownership": 3.8
     }
    },
    {
@@ -4820,14 +4857,14 @@
     "team": "CHE",
     "pos": "MID",
     "cost": 6.5,
-    "signal": 44,
+    "signal": 45,
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {
      "penalties": 3,
      "corners": 4
     },
     "ep": 2.3,
-    "own": 1.5,
+    "own": 1.6,
     "minutes": 839,
     "status": "a",
     "news": "",
@@ -4837,7 +4874,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 11.5,
-     "ownership": 3.0
+     "ownership": 3.2
     }
    },
    {
@@ -4850,7 +4887,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 1.3,
+    "own": 1.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -4860,7 +4897,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 11.5,
-     "ownership": 2.6
+     "ownership": 2.8
     }
    },
    {
@@ -5017,7 +5054,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.1,
-    "own": 2.7,
+    "own": 2.6,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -5027,7 +5064,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 10.5,
-     "ownership": 5.4
+     "ownership": 5.2
     }
    },
    {
@@ -5154,6 +5191,29 @@
     }
    },
    {
+    "id": 10,
+    "name": "White",
+    "team": "ARS",
+    "pos": "DEF",
+    "cost": 5.5,
+    "signal": 35,
+    "reason": "under 900 Premier League minutes last season",
+    "set_pieces": {},
+    "ep": 2.5,
+    "own": 0.1,
+    "minutes": 699,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 22.5,
+     "ep": 12.5,
+     "ownership": 0.2
+    }
+   },
+   {
     "id": 464,
     "name": "Wissa",
     "team": "NEW",
@@ -5257,7 +5317,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 0.2,
+    "own": 0.3,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -5267,7 +5327,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 10.0,
-     "ownership": 0.4
+     "ownership": 0.6
     }
    },
    {
@@ -5317,6 +5377,29 @@
      "price": 15.0,
      "ep": 10.0,
      "ownership": 0.4
+    }
+   },
+   {
+    "id": 504,
+    "name": "Vuskovic",
+    "team": "BHA",
+    "pos": "DEF",
+    "cost": 5.0,
+    "signal": 32,
+    "reason": "summer signing - last season's football was elsewhere",
+    "set_pieces": {},
+    "ep": 2.2,
+    "own": 2.8,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 15.0,
+     "ep": 11.0,
+     "ownership": 5.6
     }
    },
    {
@@ -5391,29 +5474,6 @@
     }
    },
    {
-    "id": 504,
-    "name": "Vuskovic",
-    "team": "BHA",
-    "pos": "DEF",
-    "cost": 5.0,
-    "signal": 31,
-    "reason": "summer signing - last season's football was elsewhere",
-    "set_pieces": {},
-    "ep": 2.2,
-    "own": 2.7,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 15.0,
-     "ep": 11.0,
-     "ownership": 5.4
-    }
-   },
-   {
     "id": 149,
     "name": "Colwill",
     "team": "CHE",
@@ -5423,7 +5483,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.2,
-    "own": 2.0,
+    "own": 1.9,
     "minutes": 225,
     "status": "a",
     "news": "",
@@ -5433,7 +5493,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 11.0,
-     "ownership": 4.0
+     "ownership": 3.8
     }
    },
    {
@@ -5492,7 +5552,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 17.4,
+    "own": 17.9,
     "minutes": 630,
     "status": "a",
     "news": "",
@@ -5561,7 +5621,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.2,
-    "own": 1.0,
+    "own": 1.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -5571,7 +5631,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 11.0,
-     "ownership": 2.0
+     "ownership": 2.2
     }
    },
    {
@@ -5931,7 +5991,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 0.1,
+    "own": 0.2,
     "minutes": 152,
     "status": "a",
     "news": "",
@@ -5941,7 +6001,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 10.0,
-     "ownership": 0.2
+     "ownership": 0.4
     }
    },
    {
@@ -6329,7 +6389,7 @@
      "penalties": 1
     },
     "ep": 0.0,
-    "own": 8.3,
+    "own": 7.5,
     "minutes": 1663,
     "status": "i",
     "news": "Foot injury - Unknown return date",
@@ -6594,7 +6654,7 @@
      "corners": 2
     },
     "ep": 1.0,
-    "own": 3.8,
+    "own": 3.7,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6604,7 +6664,7 @@
      "set_pieces": 5.9,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 7.6
+     "ownership": 7.4
     }
    },
    {
@@ -6805,7 +6865,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 0.1,
+    "own": 0.2,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6815,7 +6875,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 10.0,
-     "ownership": 0.2
+     "ownership": 0.4
     }
    },
    {
@@ -8033,7 +8093,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 20.2,
+    "own": 20.1,
     "minutes": 812,
     "status": "a",
     "news": "",
@@ -8171,7 +8231,7 @@
     "reason": "no Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.1,
+    "own": 0.0,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8181,7 +8241,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.2
+     "ownership": 0.0
     }
    },
    {
@@ -8447,7 +8507,7 @@
     "reason": "no Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.1,
+    "own": 0.0,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8457,7 +8517,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.2
+     "ownership": 0.0
     }
    },
    {
@@ -8585,7 +8645,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.0,
+    "own": 0.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8595,7 +8655,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.0
+     "ownership": 0.2
     }
    },
    {
@@ -8654,7 +8714,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.1,
+    "own": 0.2,
     "minutes": 101,
     "status": "a",
     "news": "",
@@ -8664,7 +8724,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.2
+     "ownership": 0.4
     }
    },
    {
@@ -8723,7 +8783,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 6.1,
+    "own": 6.0,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8861,7 +8921,7 @@
     "reason": "no Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 4.9,
+    "own": 4.8,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8871,7 +8931,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 9.8
+     "ownership": 9.6
     }
    },
    {
@@ -8930,7 +8990,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 8.2,
+    "own": 8.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8999,7 +9059,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 7.6,
+    "own": 7.5,
     "minutes": 602,
     "status": "a",
     "news": "",
@@ -9045,7 +9105,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 16.9,
+    "own": 16.8,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -9166,7 +9226,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 3.2,
+    "own": 3.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -9176,7 +9236,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 6.4
+     "ownership": 6.2
     }
    },
    {
@@ -9260,7 +9320,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.6,
+    "own": 0.5,
     "minutes": 2452,
     "status": "i",
     "news": "Groin injury - Expected back 21 Aug",
@@ -9270,7 +9330,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 0.0,
-     "ownership": 1.2
+     "ownership": 1.0
     }
    },
    {
@@ -9354,7 +9414,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 2.7,
+    "own": 2.6,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -9364,7 +9424,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 5.4
+     "ownership": 5.2
     }
    },
    {
@@ -9406,6 +9466,29 @@
     "news": "",
     "new_club": false,
     "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 4.6
+    }
+   },
+   {
+    "id": 556,
+    "name": "Targett",
+    "team": "HUL",
+    "pos": "DEF",
+    "cost": 4.0,
+    "signal": 10,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 2.3,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
     "components": {
      "set_pieces": 0.0,
      "price": 0.0,
@@ -9517,7 +9600,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 1.9,
+    "own": 1.8,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -9527,7 +9610,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 3.8
+     "ownership": 3.6
     }
    },
    {
@@ -9625,29 +9708,6 @@
      "price": 0.0,
      "ep": 5.0,
      "ownership": 3.6
-    }
-   },
-   {
-    "id": 556,
-    "name": "Targett",
-    "team": "HUL",
-    "pos": "DEF",
-    "cost": 4.0,
-    "signal": 9,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 2.2,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 4.4
     }
    },
    {
@@ -9848,7 +9908,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.1,
+    "own": 0.0,
     "minutes": 0,
     "status": "d",
     "news": "Unspecified injury - 75% chance of playing",
@@ -9858,7 +9918,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 7.5,
-     "ownership": 0.2
+     "ownership": 0.0
     }
    },
    {
@@ -9881,29 +9941,6 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 6.5,
-     "ownership": 0.0
-    }
-   },
-   {
-    "id": 10,
-    "name": "White",
-    "team": "ARS",
-    "pos": "DEF",
-    "cost": 5.5,
-    "signal": 8,
-    "reason": "flagged unavailable, so excluded from projections",
-    "set_pieces": {},
-    "ep": 0.0,
-    "own": 0.0,
-    "minutes": 699,
-    "status": "i",
-    "news": "Knee injury - Expected back 21 Aug",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 22.5,
-     "ep": 0.0,
      "ownership": 0.0
     }
    },
@@ -9997,6 +10034,29 @@
      "price": 0.0,
      "ep": 5.0,
      "ownership": 2.2
+    }
+   },
+   {
+    "id": 508,
+    "name": "Davies",
+    "team": "TOT",
+    "pos": "DEF",
+    "cost": 4.0,
+    "signal": 7,
+    "reason": "under 900 Premier League minutes last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 0.8,
+    "minutes": 136,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 1.6
     }
    },
    {
@@ -10322,29 +10382,6 @@
     }
    },
    {
-    "id": 508,
-    "name": "Davies",
-    "team": "TOT",
-    "pos": "DEF",
-    "cost": 4.0,
-    "signal": 6,
-    "reason": "under 900 Premier League minutes last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 0.7,
-    "minutes": 136,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 1.4
-    }
-   },
-   {
     "id": 288,
     "name": "Dowell",
     "team": "HUL",
@@ -10354,7 +10391,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 0.6,
+    "own": 0.5,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10364,7 +10401,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 1.2
+     "ownership": 1.0
     }
    },
    {
@@ -10406,6 +10443,29 @@
     "news": "",
     "new_club": false,
     "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 0.6
+    }
+   },
+   {
+    "id": 51,
+    "name": "George Hemmings",
+    "team": "AVL",
+    "pos": "MID",
+    "cost": 4.5,
+    "signal": 6,
+    "reason": "under 900 Premier League minutes last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 0.3,
+    "minutes": 25,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": false,
     "components": {
      "set_pieces": 0.0,
      "price": 0.0,
@@ -10549,6 +10609,29 @@
      "price": 0.0,
      "ep": 5.0,
      "ownership": 0.8
+    }
+   },
+   {
+    "id": 252,
+    "name": "McNally",
+    "team": "FUL",
+    "pos": "GKP",
+    "cost": 4.0,
+    "signal": 6,
+    "reason": "no Premier League minutes last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 0.3,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 0.6
     }
    },
    {
@@ -11265,29 +11348,6 @@
     }
    },
    {
-    "id": 51,
-    "name": "George Hemmings",
-    "team": "AVL",
-    "pos": "MID",
-    "cost": 4.5,
-    "signal": 5,
-    "reason": "under 900 Premier League minutes last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 0.2,
-    "minutes": 25,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 0.4
-    }
-   },
-   {
     "id": 359,
     "name": "Gomez",
     "team": "LIV",
@@ -11586,29 +11646,6 @@
      "price": 0.0,
      "ep": 5.0,
      "ownership": 0.2
-    }
-   },
-   {
-    "id": 252,
-    "name": "McNally",
-    "team": "FUL",
-    "pos": "GKP",
-    "cost": 4.0,
-    "signal": 5,
-    "reason": "no Premier League minutes last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 0.2,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 0.4
     }
    },
    {
@@ -12056,11 +12093,11 @@
     "team": "COV",
     "pos": "FWD",
     "cost": 4.5,
-    "signal": 1,
+    "signal": 0,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.8,
+    "own": 0.7,
     "minutes": 0,
     "status": "u",
     "news": "Has joined KVC Westerlo on loan for the rest of the season",
@@ -12070,7 +12107,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 0.0,
-     "ownership": 1.6
+     "ownership": 1.4
     }
    },
    {
@@ -13743,7 +13780,7 @@
    },
    "pts": 235,
    "xgi": 23.1,
-   "own": 48.9,
+   "own": 48.7,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -13752,7 +13789,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 48.9
+   "selected_by": 48.7
   },
   {
    "id": 411,
@@ -13774,7 +13811,7 @@
    },
    "pts": 239,
    "xgi": 28.2,
-   "own": 75.2,
+   "own": 75.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -13783,7 +13820,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 75.2
+   "selected_by": 75.1
   },
   {
    "id": 397,
@@ -13805,7 +13842,7 @@
    },
    "pts": 202,
    "xgi": 14.2,
-   "own": 20.9,
+   "own": 21.4,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -13814,7 +13851,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 20.9
+   "selected_by": 21.4
   },
   {
    "id": 4,
@@ -13834,7 +13871,7 @@
    "set_pieces": {},
    "pts": 209,
    "xgi": 4.7,
-   "own": 25.5,
+   "own": 25.7,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -13843,7 +13880,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 25.5
+   "selected_by": 25.7
   },
   {
    "id": 480,
@@ -13866,7 +13903,7 @@
    },
    "pts": 188,
    "xgi": 13.7,
-   "own": 12.2,
+   "own": 12.0,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -13875,7 +13912,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.2
+   "selected_by": 12.0
   },
   {
    "id": 106,
@@ -13958,7 +13995,7 @@
    },
    "pts": 184,
    "xgi": 10.5,
-   "own": 22.2,
+   "own": 22.3,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -13967,7 +14004,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.2
+   "selected_by": 22.3
   },
   {
    "id": 481,
@@ -13987,7 +14024,7 @@
    "set_pieces": {},
    "pts": 180,
    "xgi": 7.7,
-   "own": 12.2,
+   "own": 12.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -13996,7 +14033,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.2
+   "selected_by": 12.1
   },
   {
    "id": 356,
@@ -14016,7 +14053,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 5.2,
-   "own": 16.2,
+   "own": 16.3,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -14025,7 +14062,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 16.2
+   "selected_by": 16.3
   },
   {
    "id": 498,
@@ -14107,7 +14144,7 @@
    "set_pieces": {},
    "pts": 177,
    "xgi": 16.9,
-   "own": 54.4,
+   "own": 54.5,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -14116,7 +14153,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 54.4
+   "selected_by": 54.5
   },
   {
    "id": 55,
@@ -14167,7 +14204,7 @@
    "set_pieces": {},
    "pts": 168,
    "xgi": 10.7,
-   "own": 8.8,
+   "own": 8.7,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -14176,7 +14213,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 8.8
+   "selected_by": 8.7
   },
   {
    "id": 387,
@@ -14196,7 +14233,7 @@
    "set_pieces": {},
    "pts": 160,
    "xgi": 8.8,
-   "own": 23.3,
+   "own": 23.2,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -14205,7 +14242,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 23.3
+   "selected_by": 23.2
   },
   {
    "id": 40,
@@ -14225,7 +14262,7 @@
    "set_pieces": {},
    "pts": 169,
    "xgi": 11.2,
-   "own": 32.1,
+   "own": 31.6,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -14234,7 +14271,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 32.1
+   "selected_by": 31.6
   },
   {
    "id": 12,
@@ -14434,7 +14471,7 @@
    "set_pieces": {},
    "pts": 143,
    "xgi": 0.2,
-   "own": 5.5,
+   "own": 5.6,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -14443,7 +14480,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.5
+   "selected_by": 5.6
   },
   {
    "id": 533,
@@ -14492,7 +14529,7 @@
    "set_pieces": {},
    "pts": 136,
    "xgi": 0.1,
-   "own": 5.5,
+   "own": 5.4,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -14501,7 +14538,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.5
+   "selected_by": 5.4
   },
   {
    "id": 109,
@@ -14521,7 +14558,7 @@
    "set_pieces": {},
    "pts": 130,
    "xgi": 0.1,
-   "own": 16.8,
+   "own": 16.7,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -14530,7 +14567,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 16.8
+   "selected_by": 16.7
   },
   {
    "id": 204,
@@ -14579,7 +14616,7 @@
    "set_pieces": {},
    "pts": 180,
    "xgi": 7.7,
-   "own": 12.2,
+   "own": 12.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -14588,7 +14625,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.2
+   "selected_by": 12.1
   },
   {
    "id": 356,
@@ -14608,7 +14645,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 5.2,
-   "own": 16.2,
+   "own": 16.3,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -14617,7 +14654,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 16.2
+   "selected_by": 16.3
   },
   {
    "id": 61,
@@ -14695,7 +14732,7 @@
    "set_pieces": {},
    "pts": 113,
    "xgi": 2.7,
-   "own": 24.1,
+   "own": 24.2,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -14704,7 +14741,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 24.1
+   "selected_by": 24.2
   },
   {
    "id": 535,
@@ -14755,7 +14792,7 @@
    },
    "pts": 154,
    "xgi": 2.6,
-   "own": 5.2,
+   "own": 5.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -14764,7 +14801,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.2
+   "selected_by": 5.1
   },
   {
    "id": 542,
@@ -14788,7 +14825,7 @@
    },
    "pts": 147,
    "xgi": 11.2,
-   "own": 11.4,
+   "own": 11.7,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -14797,7 +14834,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.4
+   "selected_by": 11.7
   },
   {
    "id": 534,
@@ -14850,7 +14887,7 @@
    },
    "pts": 118,
    "xgi": 5.4,
-   "own": 3.1,
+   "own": 3.0,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -14859,7 +14896,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.1
+   "selected_by": 3.0
   },
   {
    "id": 32,
@@ -14910,7 +14947,7 @@
    "set_pieces": {},
    "pts": 113,
    "xgi": 4.2,
-   "own": 4.4,
+   "own": 4.3,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -14919,7 +14956,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.4
+   "selected_by": 4.3
   }
  ],
  "all_players": [
@@ -14945,7 +14982,7 @@
    },
    "pts": 235,
    "xgi": 23.1,
-   "own": 48.9,
+   "own": 48.7,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -14954,7 +14991,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 48.9
+   "selected_by": 48.7
   },
   {
    "id": 411,
@@ -14976,7 +15013,7 @@
    },
    "pts": 239,
    "xgi": 28.2,
-   "own": 75.2,
+   "own": 75.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -14985,7 +15022,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 75.2
+   "selected_by": 75.1
   },
   {
    "id": 397,
@@ -15007,7 +15044,7 @@
    },
    "pts": 202,
    "xgi": 14.2,
-   "own": 20.9,
+   "own": 21.4,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -15016,7 +15053,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 20.9
+   "selected_by": 21.4
   },
   {
    "id": 4,
@@ -15036,7 +15073,7 @@
    "set_pieces": {},
    "pts": 209,
    "xgi": 4.7,
-   "own": 25.5,
+   "own": 25.7,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -15045,7 +15082,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 25.5
+   "selected_by": 25.7
   },
   {
    "id": 480,
@@ -15068,7 +15105,7 @@
    },
    "pts": 188,
    "xgi": 13.7,
-   "own": 12.2,
+   "own": 12.0,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -15077,7 +15114,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.2
+   "selected_by": 12.0
   },
   {
    "id": 106,
@@ -15160,7 +15197,7 @@
    },
    "pts": 184,
    "xgi": 10.5,
-   "own": 22.2,
+   "own": 22.3,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -15169,7 +15206,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.2
+   "selected_by": 22.3
   },
   {
    "id": 481,
@@ -15189,7 +15226,7 @@
    "set_pieces": {},
    "pts": 180,
    "xgi": 7.7,
-   "own": 12.2,
+   "own": 12.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -15198,7 +15235,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.2
+   "selected_by": 12.1
   },
   {
    "id": 356,
@@ -15218,7 +15255,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 5.2,
-   "own": 16.2,
+   "own": 16.3,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -15227,7 +15264,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 16.2
+   "selected_by": 16.3
   },
   {
    "id": 498,
@@ -15309,7 +15346,7 @@
    "set_pieces": {},
    "pts": 177,
    "xgi": 16.9,
-   "own": 54.4,
+   "own": 54.5,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -15318,7 +15355,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 54.4
+   "selected_by": 54.5
   },
   {
    "id": 55,
@@ -15369,7 +15406,7 @@
    "set_pieces": {},
    "pts": 168,
    "xgi": 10.7,
-   "own": 8.8,
+   "own": 8.7,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -15378,7 +15415,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 8.8
+   "selected_by": 8.7
   },
   {
    "id": 387,
@@ -15398,7 +15435,7 @@
    "set_pieces": {},
    "pts": 160,
    "xgi": 8.8,
-   "own": 23.3,
+   "own": 23.2,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -15407,7 +15444,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 23.3
+   "selected_by": 23.2
   },
   {
    "id": 40,
@@ -15427,7 +15464,7 @@
    "set_pieces": {},
    "pts": 169,
    "xgi": 11.2,
-   "own": 32.1,
+   "own": 31.6,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -15436,7 +15473,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 32.1
+   "selected_by": 31.6
   },
   {
    "id": 12,
@@ -15551,7 +15588,7 @@
    },
    "pts": 148,
    "xgi": 17.0,
-   "own": 13.6,
+   "own": 14.8,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -15560,7 +15597,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 13.6
+   "selected_by": 14.8
   },
   {
    "id": 389,
@@ -15582,7 +15619,7 @@
    },
    "pts": 154,
    "xgi": 2.6,
-   "own": 5.2,
+   "own": 5.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -15591,7 +15628,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.2
+   "selected_by": 5.1
   },
   {
    "id": 542,
@@ -15615,7 +15652,7 @@
    },
    "pts": 147,
    "xgi": 11.2,
-   "own": 11.4,
+   "own": 11.7,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -15624,7 +15661,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.4
+   "selected_by": 11.7
   },
   {
    "id": 155,
@@ -15739,7 +15776,7 @@
    },
    "pts": 154,
    "xgi": 10.6,
-   "own": 8.1,
+   "own": 8.2,
    "fixtures": [
     "LIV(H)[4]",
     "TOT(A)[3]",
@@ -15748,7 +15785,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 8.1
+   "selected_by": 8.2
   },
   {
    "id": 61,
@@ -15797,7 +15834,7 @@
    "set_pieces": {},
    "pts": 143,
    "xgi": 10.3,
-   "own": 15.2,
+   "own": 15.0,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -15806,7 +15843,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 15.2
+   "selected_by": 15.0
   },
   {
    "id": 346,
@@ -15828,7 +15865,7 @@
    },
    "pts": 142,
    "xgi": 16.6,
-   "own": 17.9,
+   "own": 18.0,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -15837,7 +15874,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 17.9
+   "selected_by": 18.0
   },
   {
    "id": 82,
@@ -15857,7 +15894,7 @@
    "set_pieces": {},
    "pts": 143,
    "xgi": 0.2,
-   "own": 5.5,
+   "own": 5.6,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -15866,7 +15903,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.5
+   "selected_by": 5.6
   },
   {
    "id": 236,
@@ -15975,7 +16012,7 @@
    "set_pieces": {},
    "pts": 136,
    "xgi": 0.1,
-   "own": 5.5,
+   "own": 5.4,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -15984,7 +16021,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.5
+   "selected_by": 5.4
   },
   {
    "id": 399,
@@ -16007,7 +16044,7 @@
    },
    "pts": 135,
    "xgi": 13.1,
-   "own": 9.6,
+   "own": 9.5,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -16016,7 +16053,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 9.6
+   "selected_by": 9.5
   },
   {
    "id": 335,
@@ -16128,7 +16165,7 @@
    "set_pieces": {},
    "pts": 135,
    "xgi": 5.0,
-   "own": 4.1,
+   "own": 4.0,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -16137,7 +16174,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.1
+   "selected_by": 4.0
   },
   {
    "id": 398,
@@ -16224,7 +16261,7 @@
    },
    "pts": 131,
    "xgi": 13.0,
-   "own": 3.4,
+   "own": 3.5,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -16233,7 +16270,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.4
+   "selected_by": 3.5
   },
   {
    "id": 544,
@@ -16318,7 +16355,7 @@
    },
    "pts": 137,
    "xgi": 13.7,
-   "own": 1.7,
+   "own": 1.8,
    "fixtures": [
     "MCI(A)[5]",
     "EVE(H)[3]",
@@ -16327,7 +16364,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 1.7
+   "selected_by": 1.8
   },
   {
    "id": 84,
@@ -16407,7 +16444,7 @@
    },
    "pts": 128,
    "xgi": 11.1,
-   "own": 18.3,
+   "own": 17.8,
    "fixtures": [
     "CRY(H)[3]",
     "BOU(A)[3]",
@@ -16416,7 +16453,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 18.3
+   "selected_by": 17.8
   },
   {
    "id": 94,
@@ -16438,7 +16475,7 @@
    },
    "pts": 125,
    "xgi": 14.1,
-   "own": 2.4,
+   "own": 2.3,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -16447,7 +16484,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.4
+   "selected_by": 2.3
   },
   {
    "id": 143,
@@ -16525,7 +16562,7 @@
    "set_pieces": {},
    "pts": 130,
    "xgi": 0.1,
-   "own": 16.8,
+   "own": 16.7,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -16534,7 +16571,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 16.8
+   "selected_by": 16.7
   },
   {
    "id": 204,
@@ -16677,7 +16714,7 @@
    },
    "pts": 125,
    "xgi": 12.0,
-   "own": 10.9,
+   "own": 11.1,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -16686,7 +16723,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.9
+   "selected_by": 11.1
   },
   {
    "id": 469,
@@ -16709,7 +16746,7 @@
    },
    "pts": 128,
    "xgi": 6.0,
-   "own": 13.4,
+   "own": 13.3,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -16718,7 +16755,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 13.4
+   "selected_by": 13.3
   },
   {
    "id": 25,
@@ -16832,7 +16869,7 @@
    "set_pieces": {},
    "pts": 131,
    "xgi": 0.1,
-   "own": 3.0,
+   "own": 3.1,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -16841,7 +16878,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.0
+   "selected_by": 3.1
   },
   {
    "id": 231,
@@ -16890,7 +16927,7 @@
    "set_pieces": {},
    "pts": 116,
    "xgi": 3.1,
-   "own": 3.1,
+   "own": 3.2,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -16899,7 +16936,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.1
+   "selected_by": 3.2
   },
   {
    "id": 400,
@@ -17011,7 +17048,7 @@
    "set_pieces": {},
    "pts": 113,
    "xgi": 2.7,
-   "own": 24.1,
+   "own": 24.2,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -17020,7 +17057,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 24.1
+   "selected_by": 24.2
   },
   {
    "id": 527,
@@ -17042,7 +17079,7 @@
    },
    "pts": 119,
    "xgi": 10.1,
-   "own": 1.6,
+   "own": 1.7,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -17051,7 +17088,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 1.6
+   "selected_by": 1.7
   },
   {
    "id": 445,
@@ -17071,7 +17108,7 @@
    "set_pieces": {},
    "pts": 126,
    "xgi": 5.8,
-   "own": 2.3,
+   "own": 2.2,
    "fixtures": [
     "LIV(H)[4]",
     "TOT(A)[3]",
@@ -17080,7 +17117,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.3
+   "selected_by": 2.2
   },
   {
    "id": 503,
@@ -17311,7 +17348,7 @@
    },
    "pts": 118,
    "xgi": 5.4,
-   "own": 3.1,
+   "own": 3.0,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -17320,7 +17357,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.1
+   "selected_by": 3.0
   },
   {
    "id": 412,
@@ -17340,7 +17377,7 @@
    "set_pieces": {},
    "pts": 109,
    "xgi": 0.0,
-   "own": 20.3,
+   "own": 20.2,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -17349,7 +17386,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 20.3
+   "selected_by": 20.2
   },
   {
    "id": 122,
@@ -17434,7 +17471,7 @@
    },
    "pts": 114,
    "xgi": 13.0,
-   "own": 13.2,
+   "own": 13.0,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -17443,7 +17480,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 13.2
+   "selected_by": 13.0
   },
   {
    "id": 390,
@@ -17521,7 +17558,7 @@
    "set_pieces": {},
    "pts": 113,
    "xgi": 4.2,
-   "own": 4.4,
+   "own": 4.3,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -17530,7 +17567,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.4
+   "selected_by": 4.3
   },
   {
    "id": 250,
@@ -17613,7 +17650,7 @@
    },
    "pts": 117,
    "xgi": 12.1,
-   "own": 10.7,
+   "own": 10.5,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -17622,7 +17659,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.7
+   "selected_by": 10.5
   },
   {
    "id": 142,
@@ -17674,7 +17711,7 @@
    "set_pieces": {},
    "pts": 124,
    "xgi": 0.0,
-   "own": 3.5,
+   "own": 3.6,
    "fixtures": [
     "MCI(A)[5]",
     "EVE(H)[3]",
@@ -17683,7 +17720,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.5
+   "selected_by": 3.6
   },
   {
    "id": 491,
@@ -17705,7 +17742,7 @@
    },
    "pts": 114,
    "xgi": 7.7,
-   "own": 4.7,
+   "own": 4.9,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -17714,7 +17751,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.7
+   "selected_by": 4.9
   },
   {
    "id": 463,
@@ -18033,7 +18070,7 @@
    "set_pieces": {},
    "pts": 110,
    "xgi": 3.8,
-   "own": 3.9,
+   "own": 3.8,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -18042,7 +18079,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.9
+   "selected_by": 3.8
   },
   {
    "id": 102,
@@ -18062,7 +18099,7 @@
    "set_pieces": {},
    "pts": 104,
    "xgi": 2.6,
-   "own": 1.6,
+   "own": 1.5,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -18071,7 +18108,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 1.6
+   "selected_by": 1.5
   },
   {
    "id": 261,
@@ -18153,7 +18190,7 @@
    "set_pieces": {},
    "pts": 109,
    "xgi": 4.1,
-   "own": 14.2,
+   "own": 14.5,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -18162,7 +18199,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 14.2
+   "selected_by": 14.5
   },
   {
    "id": 453,
@@ -18213,7 +18250,7 @@
    },
    "pts": 103,
    "xgi": 7.1,
-   "own": 2.8,
+   "own": 2.7,
    "fixtures": [
     "BHA(A)[3]",
     "ARS(H)[4]",
@@ -18222,7 +18259,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.8
+   "selected_by": 2.7
   },
   {
    "id": 97,
@@ -18335,7 +18372,7 @@
    "set_pieces": {},
    "pts": 95,
    "xgi": 4.2,
-   "own": 2.0,
+   "own": 1.9,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -18344,7 +18381,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 2.0
+   "selected_by": 1.9
   },
   {
    "id": 116,
@@ -18395,7 +18432,7 @@
    "set_pieces": {},
    "pts": 100,
    "xgi": 1.9,
-   "own": 17.9,
+   "own": 17.7,
    "fixtures": [
     "BHA(A)[3]",
     "ARS(H)[4]",
@@ -18404,7 +18441,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 17.9
+   "selected_by": 17.7
   },
   {
    "id": 497,
@@ -18424,7 +18461,7 @@
    "set_pieces": {},
    "pts": 96,
    "xgi": 0.0,
-   "own": 24.9,
+   "own": 24.8,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -18433,7 +18470,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 24.9
+   "selected_by": 24.8
   },
   {
    "id": 327,
@@ -18514,7 +18551,7 @@
    },
    "pts": 98,
    "xgi": 3.9,
-   "own": 0.6,
+   "own": 0.5,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -18523,7 +18560,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 0.6
+   "selected_by": 0.5
   },
   {
    "id": 30,
@@ -18574,7 +18611,7 @@
    "set_pieces": {},
    "pts": 90,
    "xgi": 1.6,
-   "own": 7.3,
+   "own": 7.5,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -18583,7 +18620,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 7.3
+   "selected_by": 7.5
   },
   {
    "id": 127,
@@ -18663,7 +18700,7 @@
    "set_pieces": {},
    "pts": 92,
    "xgi": 6.7,
-   "own": 22.0,
+   "own": 21.8,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -18672,7 +18709,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.0
+   "selected_by": 21.8
   },
   {
    "id": 431,
@@ -18783,7 +18820,7 @@
    "set_pieces": {},
    "pts": 91,
    "xgi": 0.0,
-   "own": 4.1,
+   "own": 4.2,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -18792,7 +18829,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.1
+   "selected_by": 4.2
   },
   {
    "id": 404,
@@ -19163,7 +19200,7 @@
    "set_pieces": {},
    "pts": 85,
    "xgi": 2.2,
-   "own": 6.1,
+   "own": 6.0,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -19172,7 +19209,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 6.1
+   "selected_by": 6.0
   },
   {
    "id": 516,
@@ -19250,7 +19287,7 @@
    "set_pieces": {},
    "pts": 87,
    "xgi": 5.8,
-   "own": 0.8,
+   "own": 0.7,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -19259,7 +19296,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 0.8
+   "selected_by": 0.7
   },
   {
    "id": 447,
@@ -19368,7 +19405,7 @@
    },
    "pts": 84,
    "xgi": 5.7,
-   "own": 1.6,
+   "own": 1.5,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -19377,7 +19414,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 1.6
+   "selected_by": 1.5
   },
   {
    "id": 9,
@@ -19397,7 +19434,7 @@
    "set_pieces": {},
    "pts": 87,
    "xgi": 2.0,
-   "own": 4.7,
+   "own": 4.6,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -19406,7 +19443,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.7
+   "selected_by": 4.6
   },
   {
    "id": 484,
@@ -19489,7 +19526,7 @@
    },
    "pts": 81,
    "xgi": 4.6,
-   "own": 3.0,
+   "own": 3.5,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -19498,7 +19535,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.0
+   "selected_by": 3.5
   },
   {
    "id": 391,
@@ -19518,7 +19555,7 @@
    "set_pieces": {},
    "pts": 79,
    "xgi": 3.0,
-   "own": 9.2,
+   "own": 9.7,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -19527,7 +19564,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 9.2
+   "selected_by": 9.7
   },
   {
    "id": 505,
@@ -19547,7 +19584,7 @@
    "set_pieces": {},
    "pts": 78,
    "xgi": 2.7,
-   "own": 10.0,
+   "own": 9.9,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -19556,7 +19593,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.0
+   "selected_by": 9.9
   },
   {
    "id": 514,
@@ -19578,7 +19615,7 @@
    },
    "pts": 78,
    "xgi": 4.9,
-   "own": 0.3,
+   "own": 0.4,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -19587,7 +19624,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.3
+   "selected_by": 0.4
   },
   {
    "id": 536,
@@ -19667,7 +19704,7 @@
    },
    "pts": 78,
    "xgi": 5.3,
-   "own": 4.6,
+   "own": 5.4,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -19676,7 +19713,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 4.6
+   "selected_by": 5.4
   },
   {
    "id": 87,
@@ -19696,7 +19733,7 @@
    "set_pieces": {},
    "pts": 76,
    "xgi": 1.4,
-   "own": 0.8,
+   "own": 0.9,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -19705,7 +19742,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 0.8
+   "selected_by": 0.9
   },
   {
    "id": 449,
@@ -19728,7 +19765,7 @@
    },
    "pts": 79,
    "xgi": 3.8,
-   "own": 4.3,
+   "own": 4.2,
    "fixtures": [
     "LIV(H)[4]",
     "TOT(A)[3]",
@@ -19737,7 +19774,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.3
+   "selected_by": 4.2
   },
   {
    "id": 262,
@@ -20915,7 +20952,7 @@
    "set_pieces": {},
    "pts": 55,
    "xgi": 2.5,
-   "own": 1.7,
+   "own": 1.8,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -20924,7 +20961,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 1.7
+   "selected_by": 1.8
   },
   {
    "id": 339,
@@ -21390,7 +21427,7 @@
    },
    "pts": 51,
    "xgi": 1.6,
-   "own": 0.1,
+   "own": 0.2,
    "fixtures": [
     "LIV(H)[4]",
     "TOT(A)[3]",
@@ -21399,7 +21436,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.1
+   "selected_by": 0.2
   },
   {
    "id": 487,
@@ -21510,7 +21547,7 @@
    "set_pieces": {},
    "pts": 42,
    "xgi": 0.5,
-   "own": 0.3,
+   "own": 0.4,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -21519,7 +21556,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.3
+   "selected_by": 0.4
   },
   {
    "id": 519,
@@ -21630,7 +21667,7 @@
    },
    "pts": 45,
    "xgi": 3.0,
-   "own": 10.7,
+   "own": 10.9,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -21639,7 +21676,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.7
+   "selected_by": 10.9
   },
   {
    "id": 526,
@@ -21661,7 +21698,7 @@
    },
    "pts": 40,
    "xgi": 3.3,
-   "own": 2.9,
+   "own": 2.8,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -21670,7 +21707,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 2.9
+   "selected_by": 2.8
   },
   {
    "id": 326,
@@ -21838,7 +21875,7 @@
    "set_pieces": {},
    "pts": 40,
    "xgi": 0.7,
-   "own": 17.2,
+   "own": 17.1,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -21847,7 +21884,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 17.2
+   "selected_by": 17.1
   },
   {
    "id": 255,
@@ -24215,5 +24252,5 @@
   "Mid-season signings are understated: minutes spread over 38 games they were not all available for. Check st% before trusting a low number."
  ],
  "players_url": "./players.json",
- "players_count": 277
+ "players_count": 278
 }
