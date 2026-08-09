@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FPL Expected XI — all 20 clubs</title>
+    <meta
+      name="description"
+      content="Predicted GW1 line-ups for every Premier League club, with each player's measured 2025/26 record decomposed into blocks that sum to his published points per game."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="shell">
+        <p class="eyebrow">Concept exploration</p>
+        <h1>Expected XI</h1>
+        <p class="intro">
+          A predicted line-up is somebody else's forecast. Everything else on this page
+          is measured. Pick a club, then pick a player to see the blocks that sum to his
+          published points per game.
+        </p>
+        <p class="provenance" id="provenance"></p>
+      </div>
+    </header>
+
+    <main class="shell">
+      <nav class="clubs" id="clubs" aria-label="Club"></nav>
+
+      <section class="board">
+        <div class="pitch-wrap">
+          <div class="pitch-head">
+            <div>
+              <h2 id="club-name">—</h2>
+              <p class="sub" id="club-sub"></p>
+            </div>
+            <span class="formation" id="formation"></span>
+          </div>
+          <div class="pitch" id="pitch"></div>
+          <p class="legend">
+            <span class="chip fdr-2">FDR</span> fixture difficulty ·
+            current price and ownership · tap a player for the breakdown
+          </p>
+        </div>
+
+        <aside class="panel" id="panel">
+          <p class="empty-state">Select a player.</p>
+        </aside>
+      </section>
+
+      <section class="omissions" id="omissions"></section>
+
+      <section class="method">
+        <h2>What is measured and what is not</h2>
+        <dl>
+          <dt>Prior — not measured</dt>
+          <dd>
+            Who starts. This is a current external projection, not a fact. It can be
+            wrong, and on several clubs the measured record shows why it deserves doubt.
+          </dd>
+          <dt>Measured — 2025/26 record</dt>
+          <dd>
+            Price, ownership, minutes, starts, total points and points per game are
+            measured fields from the completed 2025/26 season.
+          </dd>
+          <dt>Derived — auditable</dt>
+          <dd>
+            Each block is that player's season total for one scoring category, scaled by
+            points&nbsp;per&nbsp;game ÷ total&nbsp;points. Both factors are measured
+            fields, so no appearance count is inferred, and the blocks sum to the
+            measured points-per-game figure. Rounding to two decimals can leave the sum
+            a hundredth short.
+          </dd>
+          <dt>Why points per game</dt>
+          <dd>
+            Per-90 divides by minutes played, which quietly deletes the games a manager
+            got nothing from: a substitute who plays twenty minutes a week can outrank a
+            regular starter. Points per game played keeps those games in. Appearance
+            points cannot exceed 2 per match, because a match pays at most 2 for turning
+            up &mdash; a handful of players show 2.01&ndash;2.06 here, which is FPL
+            rounding its published points-per-game to one decimal, not a player beating
+            the ceiling.
+          </dd>
+          <dt>No composite score</dt>
+          <dd>
+            There is no 0–100 rating anywhere on this page. A hand-weighted index is an
+            editorial opinion wearing a number's clothes, and it fails without saying so.
+            The breakdown is published instead so a reader can disagree with the
+            conclusion without doubting the data.
+          </dd>
+          <dt>No player photographs</dt>
+          <dd>
+            Player cutouts are licensed press images. This page is public, so it uses
+            initials rather than borrowing them.
+          </dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="shell">
+      <p>
+        Static output from a private concept playground. Fantasy Premier League data
+        © the Premier League; this page is not affiliated with or endorsed by them.
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
