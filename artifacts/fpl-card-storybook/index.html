@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FPL Card Storybook — every card style</title>
+    <meta
+      name="description"
+      content="One rendered example of all fifteen card styles used in the FPL video pipeline, with what each style is for and which gate constrains it."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="shell">
+        <a class="back" href="../../">← Concept Playground</a>
+        <p class="eyebrow">Concept exploration</p>
+        <h1>Card Storybook</h1>
+        <p class="intro">
+          Fifteen card styles, rendered by six different scripts, in a pipeline where
+          the only way to see one used to be building a video that used it. This page
+          renders one example of each from the same code the videos use.
+        </p>
+        <p class="provenance">
+          <strong>Why this exists.</strong> Two styles had never been exercised on a
+          real card and failed the first time they were. Nine of eleven chart kinds
+          had never rendered at all. An unused style is not a neutral fact — it is a
+          defect waiting for the video that finally needs it.
+        </p>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section aria-labelledby="styles-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Rendered from the pipeline</p>
+            <h2 id="styles-heading">Every style</h2>
+          </div>
+          <span class="count" id="count"></span>
+        </div>
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <section aria-labelledby="rules-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">What constrains a card</p>
+            <h2 id="rules-heading">Rules these cards obey</h2>
+          </div>
+        </div>
+        <div class="notes">
+          <article class="note">
+            <h3>Size encodes magnitude — never font size</h3>
+            <p>
+              Bar length or colour carries the quantity. A card once shipped with
+              mathematically correct bar <em>ratios</em> where the longest bar was
+              65px, because wide labels stole the width: proportionally right,
+              visually dead.
+            </p>
+            <p>
+              <code>layout_gate</code> L12 now enforces absolute floors — top bar
+              ≥200px, spread ≥40px — on top of the ratio check.
+            </p>
+          </article>
+          <article class="note">
+            <h3>Parts must sum to the total</h3>
+            <p>
+              The ledger styles refuse to render when the blocks do not add up to the
+              printed total. A breakdown whose parts disagree with its own headline is
+              a false claim, not a styling defect — and the viewer can only catch it
+              with a calculator.
+            </p>
+          </article>
+          <article class="note">
+            <h3>Minutes are the sample, not a metric</h3>
+            <p>
+              Comparison cards print minutes and starts under each name.
+              <code>points_per_game</code> divides by <em>appearances</em>, so twenty
+              minutes off the bench costs a whole game of denominator — two players can
+              share a rate on completely different exposure.
+            </p>
+            <p>
+              It is a caption rather than a compared row on purpose: a bar for
+              “2721 vs 1920” would invite reading more minutes as better.
+            </p>
+          </article>
+          <article class="note">
+            <h3>The badge is the current club</h3>
+            <p>
+              A player who moved in the summer flies his new badge, and the move is
+              stated on the card. Numbers earned elsewhere are labelled
+              “another club” — a caveated figure is honest, an uncaveated one is a
+              claim about a shirt he never played in.
+            </p>
+          </article>
+          <article class="note">
+            <h3>Text stays inside the safe area</h3>
+            <p>
+              The Shorts button rail owns everything past x=950, so the safe area is
+              asymmetric. Columns centred on raw frame width drift outward on the right
+              — a defect that hid until a value happened to be wide enough to cross the
+              line.
+            </p>
+          </article>
+          <article class="note">
+            <h3>Photos are free-licence only, here</h3>
+            <p>
+              The pipeline can use official Premier League cutouts inside a video under
+              a credit stamp. This page is public, so it uses only CC or public-domain
+              portraits, each with its photographer named. Nine restricted images in the
+              same cache are excluded by licence, not by name.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <p class="footer">
+        Rendered by <code>video/_build/storybook_cards.py</code> from the same card
+        scripts the videos use. The style list is read from the build’s own
+        <code>CARD_FIELDS</code> at run time — a style that exists in the build but
+        not here is reported as a failure rather than quietly omitted.
+        Club badges identify the subject of the commentary. Player photos are CC or
+        public domain, credited in the card description.
+      </p>
+    </main>
+
+    <script>
+      const grid = document.getElementById("grid");
+      const count = document.getElementById("count");
+
+      // Which script draws which style. Kept beside the gallery because "where do
+      // I go to change this" is the second question after "which card do I want".
+      const renderers = {
+        stat: "fpl_cards.py",
+        pitch: "fpl_cards.py",
+        leaderboard: "fpl_rank_card.py",
+        fixtures: "fpl_rank_card.py",
+        runs: "fpl_rank_card.py",
+        grid: "fpl_rank_card.py",
+        composition: "fpl_compare_card.py",
+        tug: "fpl_compare_card.py",
+        split: "fpl_compare_card.py",
+        portrait: "fpl_player_card.py",
+        h2h: "fpl_h2h_card.py",
+        "ledger-stack": "fpl_ledger_card.py",
+        "ledger-waffle": "fpl_ledger_card.py",
+        "ledger-threshold": "fpl_ledger_card.py",
+        chart: "fpl_viz_lab.py",
+      };
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      fetch("./cards.json")
+        .then((response) => {
+          if (!response.ok) throw new Error(`cards.json: HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((manifest) => {
+          const cards = manifest.cards ?? [];
+          count.textContent =
+            `${manifest.styles_rendered} of ${manifest.styles_in_build} styles`;
+
+          grid.innerHTML = cards
+            .map((card) => {
+              const renderer = renderers[card.style] ?? "";
+              return `
+                <article class="card">
+                  <figure>
+                    <img src="./cards/${escapeHtml(card.file)}"
+                         alt="Example of the ${escapeHtml(card.style)} card style"
+                         loading="lazy" width="540" height="960">
+                  </figure>
+                  <div class="card-body">
+                    <h3>${escapeHtml(card.style)}</h3>
+                    <p>${escapeHtml(card.description)}</p>
+                    ${renderer ? `<p class="renderer">${escapeHtml(renderer)}</p>` : ""}
+                  </div>
+                </article>`;
+            })
+            .join("");
+        })
+        .catch((error) => {
+          // An error page is not a data answer: say what failed, do not render
+          // an empty grid that reads as "no styles exist".
+          count.textContent = "failed to load";
+          grid.innerHTML =
+            `<p class="renderer">Could not load cards.json — ${escapeHtml(error.message)}</p>`;
+        });
+    </script>
+  </body>
+</html>

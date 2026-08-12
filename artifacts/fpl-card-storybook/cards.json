@@ -1,0 +1,82 @@
+{
+ "generated_from": "video/_build/storybook_cards.py",
+ "styles_in_build": 15,
+ "styles_rendered": 15,
+ "cards": [
+  {
+   "style": "stat",
+   "file": "stat.jpg",
+   "description": "One number, one verdict. The payoff card almost every video ends on."
+  },
+  {
+   "style": "pitch",
+   "file": "pitch.jpg",
+   "description": "A short list laid out as a team sheet, ranked by one metric."
+  },
+  {
+   "style": "leaderboard",
+   "file": "leaderboard.jpg",
+   "description": "Ranked bars where length encodes magnitude. L12 enforces a visible spread so long names cannot collapse the bars into stubs."
+  },
+  {
+   "style": "ledger-stack",
+   "file": "ledger-stack.jpg",
+   "description": "One total taken apart. Parts must sum to the printed total - the renderer refuses to draw otherwise."
+  },
+  {
+   "style": "ledger-waffle",
+   "file": "ledger-waffle.jpg",
+   "description": "Same decomposition as a unit chart. Better when the parts are close in size."
+  },
+  {
+   "style": "ledger-threshold",
+   "file": "ledger-threshold.jpg",
+   "description": "A measured rate against the bar it has to clear. No solver, no residual - the API supplies both numbers."
+  },
+  {
+   "style": "fixtures",
+   "file": "fixtures.jpg",
+   "description": "One row per gameweek, coloured by FDR. Argue from fixtures and you must show the run."
+  },
+  {
+   "style": "grid",
+   "file": "grid.jpg",
+   "description": "Many entries, little text. Inventory rather than argument."
+  },
+  {
+   "style": "runs",
+   "file": "runs.jpg",
+   "description": "Whole runs side by side. Comparing clubs' schedules, not one club's week-by-week."
+  },
+  {
+   "style": "portrait",
+   "file": "portrait.jpg",
+   "description": "A licensed photo plus the numbers that justify naming him. Photo is CC/PD only on this page — Photo: Bryan Berlin / CC BY-SA 4.0."
+  },
+  {
+   "style": "composition",
+   "file": "composition.jpg",
+   "description": "How two totals are built, not just which is bigger."
+  },
+  {
+   "style": "tug",
+   "file": "tug.jpg",
+   "description": "Two players pulling against each other on shared metrics. Minutes sit under the names as the sample the rates were measured over."
+  },
+  {
+   "style": "split",
+   "file": "split.jpg",
+   "description": "Same comparison, columns instead of bars. Reads better when the values are mixed units."
+  },
+  {
+   "style": "h2h",
+   "file": "h2h.jpg",
+   "description": "Two faces, no reading required. A scroll-stopper. Photos: Photo: Bryan Berlin / CC BY-SA 4.0; Photo: Bryan Berlin / CC BY-SA 4.0."
+  },
+  {
+   "style": "chart",
+   "file": "chart.jpg",
+   "description": "Analytical charts from bootstrap-static. Eleven kinds; the generator owns the numbers so a chart cannot contradict the API."
+  }
+ ]
+}
