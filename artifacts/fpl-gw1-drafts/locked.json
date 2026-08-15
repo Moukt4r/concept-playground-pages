@@ -1,0 +1,635 @@
+{
+ "generated_at": "2026-08-15T21:28:22+00:00",
+ "deadline": "2026-08-21T17:30:00Z",
+ "entry_id": 2262945,
+ "entry_name": "Bang Bang Ro",
+ "locked_in": true,
+ "cost": 100.0,
+ "bank": 0.0,
+ "formation": "3-4-3",
+ "captain": "B.Fernandes",
+ "vice": "Haaland",
+ "chip_plan": "early Bench Boost",
+ "players": [
+  {
+   "name": "Verbruggen",
+   "pos": "GKP",
+   "team": "BHA",
+   "cost": 4.5,
+   "owned": 18.4,
+   "points": 130,
+   "starts": 38,
+   "minutes": 3420,
+   "dc90": 0.0,
+   "clears_defcon": false,
+   "fdr3": 9,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Mosquera",
+   "pos": "DEF",
+   "team": "ARS",
+   "cost": 5.5,
+   "owned": 13.2,
+   "points": 40,
+   "starts": 9,
+   "minutes": 986,
+   "dc90": 8.67,
+   "clears_defcon": false,
+   "fdr3": 10,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Shaw",
+   "pos": "DEF",
+   "team": "MUN",
+   "cost": 4.5,
+   "owned": 24.0,
+   "points": 113,
+   "starts": 38,
+   "minutes": 3220,
+   "dc90": 6.26,
+   "clears_defcon": false,
+   "fdr3": 7,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Guéhi",
+   "pos": "DEF",
+   "team": "MCI",
+   "cost": 6.0,
+   "owned": 22.4,
+   "points": 179,
+   "starts": 35,
+   "minutes": 3150,
+   "dc90": 7.94,
+   "clears_defcon": false,
+   "fdr3": 8,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Ampadu",
+   "pos": "MID",
+   "team": "LEE",
+   "cost": 5.5,
+   "owned": 1.6,
+   "points": 134,
+   "starts": 35,
+   "minutes": 3119,
+   "dc90": 12.0,
+   "clears_defcon": true,
+   "fdr3": 9,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Szoboszlai",
+   "pos": "MID",
+   "team": "LIV",
+   "cost": 7.0,
+   "owned": 42.1,
+   "points": 160,
+   "starts": 36,
+   "minutes": 3232,
+   "dc90": 9.41,
+   "clears_defcon": false,
+   "fdr3": 8,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "B.Fernandes",
+   "pos": "MID",
+   "team": "MUN",
+   "cost": 12.0,
+   "owned": 48.0,
+   "points": 235,
+   "starts": 35,
+   "minutes": 3065,
+   "dc90": 8.43,
+   "clears_defcon": false,
+   "fdr3": 7,
+   "xi": true,
+   "bench_order": null,
+   "captain": true,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Mbeumo",
+   "pos": "MID",
+   "team": "MUN",
+   "cost": 8.0,
+   "owned": 27.5,
+   "points": 148,
+   "starts": 31,
+   "minutes": 2611,
+   "dc90": 4.79,
+   "clears_defcon": false,
+   "fdr3": 7,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Calvert-Lewin",
+   "pos": "FWD",
+   "team": "LEE",
+   "cost": 6.0,
+   "owned": 25.6,
+   "points": 142,
+   "starts": 30,
+   "minutes": 2721,
+   "dc90": 3.47,
+   "clears_defcon": false,
+   "fdr3": 9,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "João Pedro",
+   "pos": "FWD",
+   "team": "CHE",
+   "cost": 7.5,
+   "owned": 56.7,
+   "points": 177,
+   "starts": 31,
+   "minutes": 2658,
+   "dc90": 4.67,
+   "clears_defcon": false,
+   "fdr3": 10,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Haaland",
+   "pos": "FWD",
+   "team": "MCI",
+   "cost": 15.5,
+   "owned": 73.3,
+   "points": 239,
+   "starts": 34,
+   "minutes": 2953,
+   "dc90": 3.17,
+   "clears_defcon": false,
+   "fdr3": 8,
+   "xi": true,
+   "bench_order": null,
+   "captain": false,
+   "vice": true,
+   "promoted": false
+  },
+  {
+   "name": "Kinsky",
+   "pos": "GKP",
+   "team": "TOT",
+   "cost": 4.5,
+   "owned": 19.7,
+   "points": 20,
+   "starts": 7,
+   "minutes": 630,
+   "dc90": 0.0,
+   "clears_defcon": false,
+   "fdr3": 8,
+   "xi": false,
+   "bench_order": 1,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Davis",
+   "pos": "DEF",
+   "team": "IPS",
+   "cost": 4.0,
+   "owned": 5.0,
+   "points": 0,
+   "starts": 0,
+   "minutes": 0,
+   "dc90": 0,
+   "clears_defcon": false,
+   "fdr3": 10,
+   "xi": false,
+   "bench_order": 2,
+   "captain": false,
+   "vice": false,
+   "promoted": true
+  },
+  {
+   "name": "Xhaka",
+   "pos": "MID",
+   "team": "SUN",
+   "cost": 5.5,
+   "owned": 5.0,
+   "points": 124,
+   "starts": 32,
+   "minutes": 2901,
+   "dc90": 11.23,
+   "clears_defcon": false,
+   "fdr3": 7,
+   "xi": false,
+   "bench_order": 3,
+   "captain": false,
+   "vice": false,
+   "promoted": false
+  },
+  {
+   "name": "Thomas",
+   "pos": "DEF",
+   "team": "COV",
+   "cost": 4.0,
+   "owned": 8.2,
+   "points": 0,
+   "starts": 0,
+   "minutes": 0,
+   "dc90": 0,
+   "clears_defcon": false,
+   "fdr3": 12,
+   "xi": false,
+   "bench_order": 4,
+   "captain": false,
+   "vice": false,
+   "promoted": true
+  }
+ ],
+ "fdr": {
+  "ARS": [
+   {
+    "where": "H",
+    "opp": "COV",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "AVL",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "CHE",
+    "d": 4
+   }
+  ],
+  "COV": [
+   {
+    "where": "A",
+    "opp": "ARS",
+    "d": 5
+   },
+   {
+    "where": "H",
+    "opp": "HUL",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "MCI",
+    "d": 5
+   }
+  ],
+  "HUL": [
+   {
+    "where": "H",
+    "opp": "MUN",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "COV",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "AVL",
+    "d": 3
+   }
+  ],
+  "MUN": [
+   {
+    "where": "A",
+    "opp": "HUL",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "IPS",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "EVE",
+    "d": 3
+   }
+  ],
+  "EVE": [
+   {
+    "where": "H",
+    "opp": "CRY",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "BOU",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "MUN",
+    "d": 4
+   }
+  ],
+  "CRY": [
+   {
+    "where": "A",
+    "opp": "EVE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "MCI",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "FUL",
+    "d": 3
+   }
+  ],
+  "IPS": [
+   {
+    "where": "H",
+    "opp": "SUN",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "MUN",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "LIV",
+    "d": 4
+   }
+  ],
+  "SUN": [
+   {
+    "where": "A",
+    "opp": "IPS",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "FUL",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "BRE",
+    "d": 3
+   }
+  ],
+  "NFO": [
+   {
+    "where": "H",
+    "opp": "LEE",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "LIV",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "TOT",
+    "d": 3
+   }
+  ],
+  "LEE": [
+   {
+    "where": "A",
+    "opp": "NFO",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BRE",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "BHA",
+    "d": 3
+   }
+  ],
+  "BRE": [
+   {
+    "where": "H",
+    "opp": "TOT",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "LEE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "SUN",
+    "d": 2
+   }
+  ],
+  "TOT": [
+   {
+    "where": "A",
+    "opp": "BRE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "NEW",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "NFO",
+    "d": 3
+   }
+  ],
+  "BHA": [
+   {
+    "where": "H",
+    "opp": "AVL",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "CHE",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "LEE",
+    "d": 2
+   }
+  ],
+  "AVL": [
+   {
+    "where": "A",
+    "opp": "BHA",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "ARS",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "HUL",
+    "d": 2
+   }
+  ],
+  "MCI": [
+   {
+    "where": "H",
+    "opp": "BOU",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "CRY",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "COV",
+    "d": 2
+   }
+  ],
+  "BOU": [
+   {
+    "where": "A",
+    "opp": "MCI",
+    "d": 5
+   },
+   {
+    "where": "H",
+    "opp": "EVE",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "NEW",
+    "d": 3
+   }
+  ],
+  "NEW": [
+   {
+    "where": "H",
+    "opp": "LIV",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "TOT",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BOU",
+    "d": 3
+   }
+  ],
+  "LIV": [
+   {
+    "where": "A",
+    "opp": "NEW",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "NFO",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "IPS",
+    "d": 2
+   }
+  ],
+  "FUL": [
+   {
+    "where": "H",
+    "opp": "CHE",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "SUN",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "CRY",
+    "d": 3
+   }
+  ],
+  "CHE": [
+   {
+    "where": "A",
+    "opp": "FUL",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BHA",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "ARS",
+    "d": 5
+   }
+  ]
+ },
+ "rules": {
+  "budget": 100.0,
+  "squad": "2 GKP, 5 DEF, 5 MID, 3 FWD",
+  "max_per_club": 3,
+  "defcon_def": 10,
+  "defcon_mid": 12,
+  "defcon_cap": 2
+ }
+}
