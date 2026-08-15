@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FPL GW1 — three squad drafts</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="top">
+  <p class="eyebrow">Fantasy Premier League · 2026/27</p>
+  <h1>Three squads, three different questions</h1>
+  <p class="lede">
+    There is no optimal squad, only an optimal squad <em>given an objective</em>.
+    Each draft below answers one question honestly and accepts what that costs
+    it elsewhere. Every pick is re-derived from the live FPL API: availability,
+    budget, club limits and the position-dependent defensive-contribution
+    threshold.
+  </p>
+  <p class="meta" id="meta"></p>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Squad drafts"></nav>
+
+<main id="main"></main>
+
+<section class="panel notes">
+  <h2>What is checked, and what is not</h2>
+  <div class="cols">
+    <div>
+      <h3>Verified against the API</h3>
+      <ul>
+        <li>15 players: 2 GKP, 5 DEF, 5 MID, 3 FWD</li>
+        <li>Maximum 3 players per club</li>
+        <li>Total cost within £100.0m</li>
+        <li>Every player <code>status = a</code> and no reduced chance of playing</li>
+        <li>Legal XI: exactly 1 GKP, at least 3 DEF, at least 1 FWD</li>
+        <li>Defensive contribution per 90 against the real threshold</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Deliberately not claimed</h3>
+      <ul>
+        <li>No projected point totals. Zero of 38 gameweeks have been played,
+            so last season's rates are a <em>prior</em>, not a forecast.</li>
+        <li>No probability of returns. FPL's per-match history resets at the
+            season boundary and the endpoint is not available to us.</li>
+        <li>A summer signing's record was earned at his previous club. Those
+            players are marked, not silently re-attributed.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="panel notes">
+  <h2>The DefCon rule these drafts are built on</h2>
+  <p>
+    Defensive contribution pays <strong>+2 points</strong> when a player passes
+    a threshold in a single match. The threshold, and the actions that count,
+    depend on position:
+  </p>
+  <table class="rules">
+    <thead><tr><th>Position</th><th>Counting actions</th><th>Bar per match</th></tr></thead>
+    <tbody>
+      <tr><td>DEF</td><td>clearances + blocks + interceptions + tackles</td><td>10</td></tr>
+      <tr><td>MID / FWD</td><td>the same, <strong>plus ball recoveries</strong></td><td>12</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Recoveries pay a midfielder and pay a defender nothing. Verified against
+    the API: Senesi 357 + 62 = <strong>419</strong>, matching his recorded
+    total exactly, while Anderson needs his 306 recoveries to reach
+    <strong>515</strong> — without them he sits at 209. Six of every ten
+    actions Anderson makes are in a category a defender is not paid for. That
+    is why the bar is lower at the back.
+  </p>
+  <p class="warn">
+    The bonus is <strong>capped at +2 per match</strong>. Twenty actions pays
+    exactly what twelve pays, so volume above the bar is wasted. It is a
+    threshold, never a tally.
+  </p>
+</section>
+
+<footer class="foot">
+  <p id="foot-meta"></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

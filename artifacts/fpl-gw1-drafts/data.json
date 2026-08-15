@@ -1,0 +1,1170 @@
+{
+ "generated_at": "2026-08-15T18:46:09+00:00",
+ "api_snapshot": "2026-08-21T17:30:00Z",
+ "deadline": "2026-08-21T17:30:00Z",
+ "squads": [
+  {
+   "key": "defcon",
+   "label": "DefCon-motoren",
+   "thesis": "Recoveries teller for midtbane, ikke forsvar - og baren nullstilles hver kamp.",
+   "why": "Fire midtbanespillere over 12-baren og tre forsvarere over 10. Scott og Ampadu eies av 1,6 % hver. Vi kjoper volumet markedet ikke priser, fordi det ikke star i noen standard-tabell.",
+   "cost": 98.0,
+   "bank": 2.0,
+   "formation": "4-4-2",
+   "captain": "Haaland",
+   "vice": "B.Fernandes",
+   "legal": true,
+   "violations": [],
+   "defcon_count": 6,
+   "players": [
+    {
+     "name": "Verbruggen",
+     "pos": "GKP",
+     "team": "BHA",
+     "cost": 4.5,
+     "owned": 18.4,
+     "points": 130,
+     "minutes": 3420,
+     "dc90": 0.0,
+     "clears_defcon": false,
+     "fdr3": 9,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 0.0,
+     "xa": 0.06
+    },
+    {
+     "name": "Dubravka",
+     "pos": "GKP",
+     "team": "TOT",
+     "cost": 4.0,
+     "owned": 22.3,
+     "points": 96,
+     "minutes": 3150,
+     "dc90": 0.0,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 0.0,
+     "xa": 0.04
+    },
+    {
+     "name": "Senesi",
+     "pos": "DEF",
+     "team": "TOT",
+     "cost": 6.0,
+     "owned": 10.0,
+     "points": 175,
+     "minutes": 3288,
+     "dc90": 11.47,
+     "clears_defcon": true,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 1.53,
+     "xa": 4.72
+    },
+    {
+     "name": "Ballard",
+     "pos": "DEF",
+     "team": "SUN",
+     "cost": 5.0,
+     "owned": 4.6,
+     "points": 116,
+     "minutes": 2144,
+     "dc90": 11.08,
+     "clears_defcon": true,
+     "fdr3": 7,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.46,
+     "xa": 0.63
+    },
+    {
+     "name": "Keane",
+     "pos": "DEF",
+     "team": "EVE",
+     "cost": 5.0,
+     "owned": 1.7,
+     "points": 131,
+     "minutes": 2588,
+     "dc90": 10.5,
+     "clears_defcon": true,
+     "fdr3": 10,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.3,
+     "xa": 0.49
+    },
+    {
+     "name": "Mitchell",
+     "pos": "DEF",
+     "team": "CRY",
+     "cost": 4.5,
+     "owned": 6.9,
+     "points": 135,
+     "minutes": 3253,
+     "dc90": 6.78,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 1.59,
+     "xa": 2.53
+    },
+    {
+     "name": "Hume",
+     "pos": "DEF",
+     "team": "SUN",
+     "cost": 4.5,
+     "owned": 5.3,
+     "points": 110,
+     "minutes": 3032,
+     "dc90": 6.03,
+     "clears_defcon": false,
+     "fdr3": 7,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 2.27,
+     "xa": 2.05
+    },
+    {
+     "name": "B.Fernandes",
+     "pos": "MID",
+     "team": "MUN",
+     "cost": 12.0,
+     "owned": 48.0,
+     "points": 235,
+     "minutes": 3065,
+     "dc90": 8.43,
+     "clears_defcon": false,
+     "fdr3": 7,
+     "xi": true,
+     "captain": false,
+     "vice": true,
+     "xg": 10.79,
+     "xa": 12.28
+    },
+    {
+     "name": "Anderson",
+     "pos": "MID",
+     "team": "MCI",
+     "cost": 6.5,
+     "owned": 10.9,
+     "points": 180,
+     "minutes": 3332,
+     "dc90": 13.91,
+     "clears_defcon": true,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.94,
+     "xa": 4.79
+    },
+    {
+     "name": "Ampadu",
+     "pos": "MID",
+     "team": "LEE",
+     "cost": 5.5,
+     "owned": 1.6,
+     "points": 134,
+     "minutes": 3119,
+     "dc90": 12.0,
+     "clears_defcon": true,
+     "fdr3": 9,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.47,
+     "xa": 2.2
+    },
+    {
+     "name": "Scott",
+     "pos": "MID",
+     "team": "BOU",
+     "cost": 6.0,
+     "owned": 1.6,
+     "points": 136,
+     "minutes": 2848,
+     "dc90": 12.2,
+     "clears_defcon": true,
+     "fdr3": 11,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 3.8,
+     "xa": 2.94
+    },
+    {
+     "name": "Hughes",
+     "pos": "MID",
+     "team": "CRY",
+     "cost": 4.5,
+     "owned": 11.2,
+     "points": 45,
+     "minutes": 1560,
+     "dc90": 8.54,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 1.11,
+     "xa": 1.94
+    },
+    {
+     "name": "Haaland",
+     "pos": "FWD",
+     "team": "MCI",
+     "cost": 15.5,
+     "owned": 73.3,
+     "points": 239,
+     "minutes": 2953,
+     "dc90": 3.17,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": true,
+     "vice": false,
+     "xg": 25.5,
+     "xa": 2.67
+    },
+    {
+     "name": "Thiago",
+     "pos": "FWD",
+     "team": "BRE",
+     "cost": 8.0,
+     "owned": 16.2,
+     "points": 181,
+     "minutes": 3282,
+     "dc90": 5.87,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 20.6,
+     "xa": 1.83
+    },
+    {
+     "name": "Mateta",
+     "pos": "FWD",
+     "team": "CRY",
+     "cost": 6.5,
+     "owned": 6.4,
+     "points": 114,
+     "minutes": 2210,
+     "dc90": 5.09,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 14.42,
+     "xa": 1.32
+    }
+   ]
+  },
+  {
+   "key": "fixtures",
+   "label": "Fixture-starteren",
+   "thesis": "United og Sunderland har ligaens letteste apning: FDR-sum 7 over GW1-3.",
+   "why": "Last opp der poengene er lettest tilgjengelig de forste tre rundene, og vurder salg etter GW3. Shaw, Hume og Bruno henter fra de to letteste programmene i ligaen.",
+   "cost": 100.0,
+   "bank": 0.0,
+   "formation": "4-4-2",
+   "captain": "B.Fernandes",
+   "vice": "Haaland",
+   "legal": true,
+   "violations": [],
+   "defcon_count": 2,
+   "players": [
+    {
+     "name": "Verbruggen",
+     "pos": "GKP",
+     "team": "BHA",
+     "cost": 4.5,
+     "owned": 18.4,
+     "points": 130,
+     "minutes": 3420,
+     "dc90": 0.0,
+     "clears_defcon": false,
+     "fdr3": 9,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 0.0,
+     "xa": 0.06
+    },
+    {
+     "name": "Dubravka",
+     "pos": "GKP",
+     "team": "TOT",
+     "cost": 4.0,
+     "owned": 22.3,
+     "points": 96,
+     "minutes": 3150,
+     "dc90": 0.0,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 0.0,
+     "xa": 0.04
+    },
+    {
+     "name": "Shaw",
+     "pos": "DEF",
+     "team": "MUN",
+     "cost": 4.5,
+     "owned": 24.1,
+     "points": 113,
+     "minutes": 3220,
+     "dc90": 6.26,
+     "clears_defcon": false,
+     "fdr3": 7,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 0.72,
+     "xa": 1.98
+    },
+    {
+     "name": "Hume",
+     "pos": "DEF",
+     "team": "SUN",
+     "cost": 4.5,
+     "owned": 5.3,
+     "points": 110,
+     "minutes": 3032,
+     "dc90": 6.03,
+     "clears_defcon": false,
+     "fdr3": 7,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.27,
+     "xa": 2.05
+    },
+    {
+     "name": "Senesi",
+     "pos": "DEF",
+     "team": "TOT",
+     "cost": 6.0,
+     "owned": 10.0,
+     "points": 175,
+     "minutes": 3288,
+     "dc90": 11.47,
+     "clears_defcon": true,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 1.53,
+     "xa": 4.72
+    },
+    {
+     "name": "Mitchell",
+     "pos": "DEF",
+     "team": "CRY",
+     "cost": 4.5,
+     "owned": 6.9,
+     "points": 135,
+     "minutes": 3253,
+     "dc90": 6.78,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 1.59,
+     "xa": 2.53
+    },
+    {
+     "name": "Kayode",
+     "pos": "DEF",
+     "team": "BRE",
+     "cost": 4.5,
+     "owned": 3.7,
+     "points": 113,
+     "minutes": 3258,
+     "dc90": 6.05,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 1.28,
+     "xa": 2.89
+    },
+    {
+     "name": "B.Fernandes",
+     "pos": "MID",
+     "team": "MUN",
+     "cost": 12.0,
+     "owned": 48.0,
+     "points": 235,
+     "minutes": 3065,
+     "dc90": 8.43,
+     "clears_defcon": false,
+     "fdr3": 7,
+     "xi": true,
+     "captain": true,
+     "vice": false,
+     "xg": 10.79,
+     "xa": 12.28
+    },
+    {
+     "name": "Cherki",
+     "pos": "MID",
+     "team": "MCI",
+     "cost": 7.5,
+     "owned": 8.7,
+     "points": 135,
+     "minutes": 1772,
+     "dc90": 6.86,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 4.28,
+     "xa": 8.87
+    },
+    {
+     "name": "Gibbs-White",
+     "pos": "MID",
+     "team": "NFO",
+     "cost": 8.0,
+     "owned": 11.6,
+     "points": 188,
+     "minutes": 3101,
+     "dc90": 5.17,
+     "clears_defcon": false,
+     "fdr3": 9,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 10.81,
+     "xa": 2.91
+    },
+    {
+     "name": "Anderson",
+     "pos": "MID",
+     "team": "MCI",
+     "cost": 6.5,
+     "owned": 10.9,
+     "points": 180,
+     "minutes": 3332,
+     "dc90": 13.91,
+     "clears_defcon": true,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.94,
+     "xa": 4.79
+    },
+    {
+     "name": "Hughes",
+     "pos": "MID",
+     "team": "CRY",
+     "cost": 4.5,
+     "owned": 11.2,
+     "points": 45,
+     "minutes": 1560,
+     "dc90": 8.54,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 1.11,
+     "xa": 1.94
+    },
+    {
+     "name": "Haaland",
+     "pos": "FWD",
+     "team": "MCI",
+     "cost": 15.5,
+     "owned": 73.3,
+     "points": 239,
+     "minutes": 2953,
+     "dc90": 3.17,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": true,
+     "xg": 25.5,
+     "xa": 2.67
+    },
+    {
+     "name": "Thiago",
+     "pos": "FWD",
+     "team": "BRE",
+     "cost": 8.0,
+     "owned": 16.2,
+     "points": 181,
+     "minutes": 3282,
+     "dc90": 5.87,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 20.6,
+     "xa": 1.83
+    },
+    {
+     "name": "Beto",
+     "pos": "FWD",
+     "team": "EVE",
+     "cost": 5.5,
+     "owned": 3.0,
+     "points": 104,
+     "minutes": 1551,
+     "dc90": 5.16,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 8.9,
+     "xa": 0.23
+    }
+   ]
+  },
+  {
+   "key": "no-haaland",
+   "label": "Uten Haaland",
+   "thesis": "73 % eier Haaland. A sta uten ham er i seg selv en differensial.",
+   "why": "15,5 % av budsjettet i en spiller. Frigjor vi det, far vi rad til Gabriel, Virgil og Semenyo samtidig. Risikoen er apenbar og bevisst: gar Haaland av med hat trick i GW1, taper vi terreng mot tre av fire managere.",
+   "cost": 100.0,
+   "bank": 0.0,
+   "formation": "4-4-2",
+   "captain": "B.Fernandes",
+   "vice": "Semenyo",
+   "legal": true,
+   "violations": [],
+   "defcon_count": 2,
+   "players": [
+    {
+     "name": "Kelleher",
+     "pos": "GKP",
+     "team": "BRE",
+     "cost": 5.0,
+     "owned": 5.7,
+     "points": 143,
+     "minutes": 3330,
+     "dc90": 0.0,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 0.0,
+     "xa": 0.22
+    },
+    {
+     "name": "Dubravka",
+     "pos": "GKP",
+     "team": "TOT",
+     "cost": 4.0,
+     "owned": 22.3,
+     "points": 96,
+     "minutes": 3150,
+     "dc90": 0.0,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 0.0,
+     "xa": 0.04
+    },
+    {
+     "name": "Gabriel",
+     "pos": "DEF",
+     "team": "ARS",
+     "cost": 8.0,
+     "owned": 27.4,
+     "points": 209,
+     "minutes": 2750,
+     "dc90": 9.07,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.94,
+     "xa": 1.75
+    },
+    {
+     "name": "Senesi",
+     "pos": "DEF",
+     "team": "TOT",
+     "cost": 6.0,
+     "owned": 10.0,
+     "points": 175,
+     "minutes": 3288,
+     "dc90": 11.47,
+     "clears_defcon": true,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 1.53,
+     "xa": 4.72
+    },
+    {
+     "name": "Virgil",
+     "pos": "DEF",
+     "team": "LIV",
+     "cost": 6.5,
+     "owned": 17.0,
+     "points": 175,
+     "minutes": 3420,
+     "dc90": 9.26,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 3.77,
+     "xa": 1.44
+    },
+    {
+     "name": "Mitchell",
+     "pos": "DEF",
+     "team": "CRY",
+     "cost": 4.5,
+     "owned": 6.9,
+     "points": 135,
+     "minutes": 3253,
+     "dc90": 6.78,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 1.59,
+     "xa": 2.53
+    },
+    {
+     "name": "Hume",
+     "pos": "DEF",
+     "team": "SUN",
+     "cost": 4.5,
+     "owned": 5.3,
+     "points": 110,
+     "minutes": 3032,
+     "dc90": 6.03,
+     "clears_defcon": false,
+     "fdr3": 7,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 2.27,
+     "xa": 2.05
+    },
+    {
+     "name": "B.Fernandes",
+     "pos": "MID",
+     "team": "MUN",
+     "cost": 12.0,
+     "owned": 48.0,
+     "points": 235,
+     "minutes": 3065,
+     "dc90": 8.43,
+     "clears_defcon": false,
+     "fdr3": 7,
+     "xi": true,
+     "captain": true,
+     "vice": false,
+     "xg": 10.79,
+     "xa": 12.28
+    },
+    {
+     "name": "Semenyo",
+     "pos": "MID",
+     "team": "MCI",
+     "cost": 8.5,
+     "owned": 28.0,
+     "points": 202,
+     "minutes": 3200,
+     "dc90": 6.64,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": true,
+     "xg": 11.1,
+     "xa": 3.12
+    },
+    {
+     "name": "Gibbs-White",
+     "pos": "MID",
+     "team": "NFO",
+     "cost": 8.0,
+     "owned": 11.6,
+     "points": 188,
+     "minutes": 3101,
+     "dc90": 5.17,
+     "clears_defcon": false,
+     "fdr3": 9,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 10.81,
+     "xa": 2.91
+    },
+    {
+     "name": "Anderson",
+     "pos": "MID",
+     "team": "MCI",
+     "cost": 6.5,
+     "owned": 10.9,
+     "points": 180,
+     "minutes": 3332,
+     "dc90": 13.91,
+     "clears_defcon": true,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 2.94,
+     "xa": 4.79
+    },
+    {
+     "name": "Hughes",
+     "pos": "MID",
+     "team": "CRY",
+     "cost": 4.5,
+     "owned": 11.2,
+     "points": 45,
+     "minutes": 1560,
+     "dc90": 8.54,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 1.11,
+     "xa": 1.94
+    },
+    {
+     "name": "Thiago",
+     "pos": "FWD",
+     "team": "BRE",
+     "cost": 8.0,
+     "owned": 16.2,
+     "points": 181,
+     "minutes": 3282,
+     "dc90": 5.87,
+     "clears_defcon": false,
+     "fdr3": 8,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 20.6,
+     "xa": 1.83
+    },
+    {
+     "name": "João Pedro",
+     "pos": "FWD",
+     "team": "CHE",
+     "cost": 7.5,
+     "owned": 56.5,
+     "points": 177,
+     "minutes": 2658,
+     "dc90": 4.67,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": true,
+     "captain": false,
+     "vice": false,
+     "xg": 14.91,
+     "xa": 1.96
+    },
+    {
+     "name": "Mateta",
+     "pos": "FWD",
+     "team": "CRY",
+     "cost": 6.5,
+     "owned": 6.4,
+     "points": 114,
+     "minutes": 2210,
+     "dc90": 5.09,
+     "clears_defcon": false,
+     "fdr3": 10,
+     "xi": false,
+     "captain": false,
+     "vice": false,
+     "xg": 14.42,
+     "xa": 1.32
+    }
+   ]
+  }
+ ],
+ "fdr": {
+  "ARS": [
+   {
+    "where": "H",
+    "opp": "COV",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "AVL",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "CHE",
+    "d": 4
+   }
+  ],
+  "COV": [
+   {
+    "where": "A",
+    "opp": "ARS",
+    "d": 5
+   },
+   {
+    "where": "H",
+    "opp": "HUL",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "MCI",
+    "d": 5
+   }
+  ],
+  "HUL": [
+   {
+    "where": "H",
+    "opp": "MUN",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "COV",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "AVL",
+    "d": 3
+   }
+  ],
+  "MUN": [
+   {
+    "where": "A",
+    "opp": "HUL",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "IPS",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "EVE",
+    "d": 3
+   }
+  ],
+  "EVE": [
+   {
+    "where": "H",
+    "opp": "CRY",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "BOU",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "MUN",
+    "d": 4
+   }
+  ],
+  "CRY": [
+   {
+    "where": "A",
+    "opp": "EVE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "MCI",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "FUL",
+    "d": 3
+   }
+  ],
+  "IPS": [
+   {
+    "where": "H",
+    "opp": "SUN",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "MUN",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "LIV",
+    "d": 4
+   }
+  ],
+  "SUN": [
+   {
+    "where": "A",
+    "opp": "IPS",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "FUL",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "BRE",
+    "d": 3
+   }
+  ],
+  "NFO": [
+   {
+    "where": "H",
+    "opp": "LEE",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "LIV",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "TOT",
+    "d": 3
+   }
+  ],
+  "LEE": [
+   {
+    "where": "A",
+    "opp": "NFO",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BRE",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "BHA",
+    "d": 3
+   }
+  ],
+  "BRE": [
+   {
+    "where": "H",
+    "opp": "TOT",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "LEE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "SUN",
+    "d": 2
+   }
+  ],
+  "TOT": [
+   {
+    "where": "A",
+    "opp": "BRE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "NEW",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "NFO",
+    "d": 3
+   }
+  ],
+  "BHA": [
+   {
+    "where": "H",
+    "opp": "AVL",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "CHE",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "LEE",
+    "d": 2
+   }
+  ],
+  "AVL": [
+   {
+    "where": "A",
+    "opp": "BHA",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "ARS",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "HUL",
+    "d": 2
+   }
+  ],
+  "MCI": [
+   {
+    "where": "H",
+    "opp": "BOU",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "CRY",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "COV",
+    "d": 2
+   }
+  ],
+  "BOU": [
+   {
+    "where": "A",
+    "opp": "MCI",
+    "d": 5
+   },
+   {
+    "where": "H",
+    "opp": "EVE",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "NEW",
+    "d": 3
+   }
+  ],
+  "NEW": [
+   {
+    "where": "H",
+    "opp": "LIV",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "TOT",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BOU",
+    "d": 3
+   }
+  ],
+  "LIV": [
+   {
+    "where": "A",
+    "opp": "NEW",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "NFO",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "IPS",
+    "d": 2
+   }
+  ],
+  "FUL": [
+   {
+    "where": "H",
+    "opp": "CHE",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "SUN",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "CRY",
+    "d": 3
+   }
+  ],
+  "CHE": [
+   {
+    "where": "A",
+    "opp": "FUL",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BHA",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "ARS",
+    "d": 5
+   }
+  ]
+ },
+ "rules": {
+  "budget": 100.0,
+  "squad": "2 GKP, 5 DEF, 5 MID, 3 FWD",
+  "max_per_club": 3,
+  "defcon_def": 10,
+  "defcon_mid": 12,
+  "defcon_cap": 2
+ }
+}
