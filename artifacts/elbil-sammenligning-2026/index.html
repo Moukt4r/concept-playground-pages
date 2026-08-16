@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kildebelagt sammenligning av fem kompakte elbiler for norsk vinter, plass og totalverdi.">
+  <title>Elbilduellen 2026</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="hero">
+    <nav class="nav shell" aria-label="Hovedmeny">
+      <a class="brand" href="../../"><span class="brand-mark">CP</span><span>Concept Playground</span></a>
+      <a class="nav-link" href="#kilder">Kilder og forbehold</a>
+    </nav>
+    <div class="hero-grid shell">
+      <div class="hero-copy">
+        <p class="eyebrow">KOMPAKT ELBIL · NORGE · 16.08.2026</p>
+        <h1>Fem biler.<br><span>Én ærlig duell.</span></h1>
+        <p class="lede">ID. Polo møter sine nærmeste utfordrere på pris, rekkevidde, plass og vinteregnethet. Bekreftede fakta er skilt fra foreløpige tall og åpne spørsmål.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#sammenligning">Se sammenligningen</a>
+          <a class="button button-ghost" href="#konklusjon">Hopp til konklusjonen</a>
+        </div>
+      </div>
+      <aside class="hero-verdict" aria-label="Kort konklusjon">
+        <div class="verdict-label">Kortversjonen</div>
+        <div class="verdict-car">ID. Polo Life 52</div>
+        <p>Det tryggeste helhetsvalget akkurat nå — men ikke det billigste.</p>
+        <div class="verdict-stats">
+          <div><strong>451</strong><span>km WLTP</span></div>
+          <div><strong>441</strong><span>liter</span></div>
+          <div><strong>1 200</strong><span>kg henger</span></div>
+        </div>
+        <div class="verdict-note"><span class="dot dot-green"></span> Varmepumpe bekreftet standard</div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="snapshot shell" aria-labelledby="snapshot-title">
+      <div class="section-heading">
+        <p class="eyebrow">FELTET</p>
+        <h2 id="snapshot-title">Samme klasse. Ulike kompromisser.</h2>
+        <p>Prisene er observerte norske priser. Velg hva du vil sortere bilene etter.</p>
+      </div>
+      <div class="controls" role="group" aria-label="Sorter biler">
+        <button class="control active" type="button" data-sort="editorial">Vår rekkefølge</button>
+        <button class="control" type="button" data-sort="price">Lavest pris</button>
+        <button class="control" type="button" data-sort="range">Lengst rekkevidde</button>
+        <button class="control" type="button" data-sort="cargo">Mest plass</button>
+      </div>
+      <div class="car-grid" id="car-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="comparison" id="sammenligning" aria-labelledby="comparison-title">
+      <div class="shell">
+        <div class="section-heading section-heading-light">
+          <p class="eyebrow">TALL MOT TALL</p>
+          <h2 id="comparison-title">Det du faktisk sammenligner</h2>
+          <p>«Ubekreftet» er med vilje synlig. Et tomt datapunkt er bedre enn falsk presisjon.</p>
+        </div>
+        <div class="table-wrap" tabindex="0">
+          <table>
+            <thead><tr><th>Modell</th><th>Pris</th><th>WLTP</th><th>Bagasje</th><th>DC / 10–80 %</th><th>Henger</th><th>Varmepumpe</th></tr></thead>
+            <tbody id="comparison-body"></tbody>
+          </table>
+        </div>
+        <div class="legend">
+          <span><i class="dot dot-green"></i> Bekreftet</span>
+          <span><i class="dot dot-amber"></i> Foreløpig eller uavklart</span>
+          <span><i class="dot dot-red"></i> Utløpt kampanje / levering senere</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="scenarios shell" aria-labelledby="scenario-title">
+      <div class="section-heading">
+        <p class="eyebrow">TRE MÅTER Å VELGE PÅ</p>
+        <h2 id="scenario-title">Vinneren avhenger av jobben</h2>
+      </div>
+      <div class="scenario-grid">
+        <article class="scenario scenario-winter">
+          <div class="scenario-number">01</div>
+          <p class="scenario-kicker">Minst usikkerhet</p>
+          <h3>ID. Polo Life 52</h3>
+          <p>Varmepumpe, 1 200 kg hengervekt og fem seter er dokumentert. Den koster mer enn Raval og Epiq, men har færre kritiske spørsmål igjen.</p>
+          <ul><li>Best helhetsbilde i dag</li><li>451 km foreløpig WLTP</li><li>Levering må inn i skriftlig tilbud</li></ul>
+        </article>
+        <article class="scenario scenario-value">
+          <div class="scenario-number">02</div>
+          <p class="scenario-kicker">Mest bil per krone — kanskje</p>
+          <h3>Cupra Raval Range</h3>
+          <p>Teknisk svært nær Polo og opptil 43 600 kroner billigere i den annonserte kampanjen. Problemet: fristen gikk ut 15. august.</p>
+          <ul><li>Samme 441 liter bagasje</li><li>Vinterhjul og frakt var inkludert</li><li>Pris og varmepumpe må bekreftes</li></ul>
+        </article>
+        <article class="scenario scenario-space">
+          <div class="scenario-number">03</div>
+          <p class="scenario-kicker">Mest lasteplass</p>
+          <h3>Škoda Epiq 52</h3>
+          <p>475 liter bagasje og 1 200 kg hengervekt til omtrent Polo-pris. Det mest interessante alternativet hvis plassen avgjør.</p>
+          <ul><li>34 liter mer enn Polo/Raval</li><li>Planlagt tidlig Q4-levering</li><li>Norsk varmepumpestatus er uavklart</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="winter-section" aria-labelledby="winter-title">
+      <div class="shell winter-grid">
+        <div><p class="eyebrow">VINTER ER IKKE EN FOTNOTE</p><h2 id="winter-title">Planlegg med margin,<br>ikke med WLTP.</h2></div>
+        <div class="winter-copy">
+          <p>WLTP er et sammenligningstall, ikke et løfte for norsk vinter. Ingen produksjonsbil i dette feltet var uavhengig vintertestet i Norge da oversikten ble laget.</p>
+          <div class="winter-rule"><span>Praktisk regel</span><strong>Bekreft varmepumpe, batteriforvarming og faktisk hurtiglading før bestilling.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="deep-dive shell" aria-labelledby="details-title">
+      <div class="section-heading"><p class="eyebrow">DETALJENE</p><h2 id="details-title">Styrker, svakheter og spørsmål</h2></div>
+      <div class="accordion" id="accordion"></div>
+    </section>
+
+    <section class="verdict-section" id="konklusjon" aria-labelledby="verdict-title">
+      <div class="shell verdict-grid">
+        <div class="verdict-index">05→01</div>
+        <div>
+          <p class="eyebrow">KONKLUSJON 16.08.2026</p>
+          <h2 id="verdict-title">Ikke signer før tre ting er på plass.</h2>
+          <ol class="action-list">
+            <li><span>01</span><div><strong>Sammenlign totalpris</strong><p>Ta med lokal frakt, vinterhjul, metallic, hengerfeste og relevant vinterutstyr.</p></div></li>
+            <li><span>02</span><div><strong>Test faktisk plass</strong><p>Liter forteller ikke om barnevogn, barneseter og forseteposisjon fungerer samtidig.</p></div></li>
+            <li><span>03</span><div><strong>Få levering og utstyr skriftlig</strong><p>Særlig varmepumpe, batteriforvarming og leveringsmåned.</p></div></li>
+          </ol>
+          <p class="final-call"><strong>Valget nå:</strong> Polo er det tryggeste helhetsvalget. Raval kan være kuppet dersom kampanjen forlenges og varmepumpe kan bestilles rimelig. Epiq er den klare plassutfordreren.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources shell" id="kilder" aria-labelledby="sources-title">
+      <div class="section-heading">
+        <p class="eyebrow">PROVENIENS</p><h2 id="sources-title">Kilder og forbehold</h2>
+        <p>Dataene er kontrollert mot norske produsent- og importørkilder 16. august 2026. Trykk for å åpne originalkilden.</p>
+      </div>
+      <div class="source-list">
+        <a href="https://www.volkswagen.no/no/alle-bilmodeller/id-polo.html" target="_blank" rel="noreferrer"><span>01</span><div><strong>Volkswagen Norge</strong><small>ID. Polo modellside</small></div><b>↗</b></a>
+        <a href="https://www.volkswagen.no/idhub/content/dam/onehub_pkw/importers/no/priser-og-brosjyrer/id-polo/prisliste-id-polo.pdf" target="_blank" rel="noreferrer"><span>02</span><div><strong>Volkswagen Norge</strong><small>Prisliste datert 04.08.2026</small></div><b>↗</b></a>
+        <a href="https://www.cupraofficial.no/elbilkampanjer/kjope-raval-range" target="_blank" rel="noreferrer"><span>03</span><div><strong>Cupra Norge</strong><small>Raval Range-kampanje</small></div><b>↗</b></a>
+        <a href="https://kommunikasjon.ntb.no/pressemelding/18971144/kia-ev2-na-starter-salget?publisherId=17847239&amp;lang=no" target="_blank" rel="noreferrer"><span>04</span><div><strong>Kia Norge</strong><small>EV2 salgsstart og spesifikasjoner</small></div><b>↗</b></a>
+        <a href="https://kommunikasjon.ntb.no/pressemelding/18909160/verdenspremiere-for-skoda-epiq-liten-pa-utsiden-stor-og-smart-pa-innsiden?publisherId=16054733&amp;lang=no" target="_blank" rel="noreferrer"><span>05</span><div><strong>Škoda Norge</strong><small>Epiq premiere og norske priser</small></div><b>↗</b></a>
+        <a href="https://kommunikasjon.ntb.no/pressemelding/18993395/verdenspremiere-na-kan-du-bestille-volkswagen-id-cross?publisherId=16054789&amp;lang=no" target="_blank" rel="noreferrer"><span>06</span><div><strong>Volkswagen Norge</strong><small>ID. Cross premiere og bestilling</small></div><b>↗</b></a>
+      </div>
+      <div class="method-note"><strong>Metode:</strong> Nyere norsk teknisk dokumentasjon vinner over eldre internasjonale opplysninger. Foreløpig WLTP er merket. Motstridende eller utilgjengelige opplysninger er ikke fylt inn med antakelser. Prisene kan endres og er ikke tilbud.</div>
+    </section>
+  </main>
+
+  <footer><div class="shell footer-inner"><span>Concept Playground · Elbilduellen 2026</span><span>Research, ikke kjøpsrådgivning</span></div></footer>
+  <script src="./app.js"></script>
+</body>
+</html>
