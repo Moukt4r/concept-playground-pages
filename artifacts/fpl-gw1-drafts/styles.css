@@ -126,6 +126,8 @@ main { max-width: 940px; margin: 0 auto; }
 .chip b { color: var(--ink); }
 .chip.ok { border-color: var(--mint); color: var(--mint); }
 .chip.bad { border-color: var(--rose); color: var(--rose); }
+.chip.current { border-color: var(--cyan); color: var(--cyan); }
+.chip.snapshot { border-color: var(--purple); color: var(--purple); }
 
 h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -0.01em; }
 h3 { font-size: 14px; margin: 0 0 8px; color: var(--mint); text-transform: uppercase; letter-spacing: .08em; }
@@ -144,17 +146,30 @@ h3 { font-size: 14px; margin: 0 0 8px; color: var(--mint); text-transform: upper
 
 .row {
   display: grid;
+  width: 100%;
   grid-template-columns: 26px 44px 1fr 62px 62px 56px 1fr;
   gap: 10px;
   align-items: center;
   padding: 8px 10px;
+  border: 0;
   border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
   font-variant-numeric: tabular-nums;
   font-size: 14px;
 }
 
 .row.bench { opacity: .55; }
 .row:nth-child(odd) { background: rgba(255,255,255,.02); }
+.player-row { cursor: pointer; transition: background .15s, box-shadow .15s; }
+.player-row:hover, .player-row:focus-visible {
+  background: rgba(61,220,151,.08);
+  box-shadow: inset 3px 0 0 var(--mint);
+  outline: none;
+}
+.player-row.bench:hover, .player-row.bench:focus-visible { opacity: .9; }
 
 .pos {
   font-size: 11px;
@@ -201,6 +216,9 @@ h3 { font-size: 14px; margin: 0 0 8px; color: var(--mint); text-transform: upper
 .tag.defcon { border-color: var(--mint); color: var(--mint); }
 .tag.diff { border-color: var(--purple); color: var(--purple); }
 .tag.fix { border-color: var(--cyan); color: var(--cyan); }
+.tag.risk { border-color: var(--rose); color: var(--rose); }
+/* "Unknown" must not look like a verdict: no colour, just grey. */
+.tag.unknown { border-color: var(--line); color: var(--dim); }
 
 .notes .cols {
   display: grid;
@@ -270,6 +288,114 @@ code {
   border-top: 1px solid var(--line);
   padding-top: 16px;
 }
+.downloads { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.downloads a { color: var(--cyan); text-decoration: none; }
+.downloads a:hover { text-decoration: underline; }
+
+#modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
+  overflow-y: auto;
+  background: rgb(2 4 8 / 82%);
+}
+#modal[data-open="1"] { display: flex; }
+.modal-box {
+  width: min(920px, 100%);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 65%);
+}
+.modal-head {
+  position: sticky;
+  top: -1px;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+  border-radius: 14px 14px 0 0;
+  background: var(--panel);
+}
+.modal-head h3 { margin: 0; color: var(--ink); font-size: 22px; text-transform: none; letter-spacing: normal; }
+.modal-sub { color: var(--dim); font-size: 13px; margin-top: 2px; }
+.modal-close {
+  margin-left: auto;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--ink);
+  font: inherit;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover { border-color: var(--rose); color: var(--rose); }
+.modal-body { padding: 20px; }
+.loading, .dim { color: var(--dim); }
+.derived-box, .provenance, .coverage-missing {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel-2);
+}
+.derived-box { border-color: color-mix(in srgb, var(--cyan) 55%, var(--line)); }
+.derived-box h4, .provenance h4, .stat-group h4 {
+  margin: 0 0 10px;
+  color: var(--mint);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.stat-group { margin: 0 0 22px; }
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+}
+.stat-item {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.025);
+}
+.stat-item.empty { opacity: .5; }
+.stat-item em { display: block; color: var(--dim); font-size: 11px; font-style: normal; }
+.stat-item b { display: block; overflow-wrap: anywhere; color: var(--ink); font-size: 14px; font-variant-numeric: tabular-nums; }
+.coverage-missing { border-color: var(--amber); color: var(--dim); }
+.provenance ul { margin: 8px 0 0; padding-left: 18px; color: var(--dim); }
+.news-list { display: grid; gap: 8px; }
+.news-link {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--ink);
+  text-decoration: none;
+  background: rgba(255,255,255,.025);
+}
+.news-link:hover, .news-link:focus-visible { border-color: var(--cyan); outline: none; }
+.news-link span { min-width: 0; }
+.news-link b { display: block; line-height: 1.35; }
+.news-link small { display: block; margin-top: 3px; color: var(--dim); line-height: 1.35; }
+.news-link time { margin-left: auto; color: var(--dim); font-size: 11px; white-space: nowrap; }
+.table-scroll { overflow-x: auto; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 1.7; word-break: break-word; }
+.detail-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.detail-table th, .detail-table td { padding: 8px 9px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+.detail-table .left, .detail-table th.left { text-align: left; }
 
 @media (max-width: 760px) {
   .row {
@@ -278,4 +404,14 @@ code {
   }
   .own, .pts { display: none; }
   .tags { grid-column: 1 / -1; }
+  #modal { padding: 0; }
+  .modal-box { min-height: 100%; border-radius: 0; border-block: 0; }
+  .modal-head { border-radius: 0; }
+  .modal-body { padding: 14px; }
+  /* The head is sticky, so an anchored heading would otherwise scroll in
+     underneath it and read as a cut-off title. */
+  .modal-body h4 { scroll-margin-top: 90px; }
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .news-link { display: block; }
+  .news-link time { display: block; margin: 6px 0 0; }
 }

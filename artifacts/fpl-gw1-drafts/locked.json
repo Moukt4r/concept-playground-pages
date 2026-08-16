@@ -1,285 +1,395 @@
 {
- "generated_at": "2026-08-15T21:28:22+00:00",
+ "generated_at": "2026-08-16T15:39:10+00:00",
  "deadline": "2026-08-21T17:30:00Z",
- "entry_id": 2262945,
- "entry_name": "Bang Bang Ro",
+ "gw": 1,
  "locked_in": true,
  "cost": 100.0,
  "bank": 0.0,
+ "bank_note": null,
  "formation": "3-4-3",
- "captain": "B.Fernandes",
- "vice": "Haaland",
- "chip_plan": "early Bench Boost",
+ "captain": "Haaland",
+ "vice": "B.Fernandes",
+ "legal": true,
+ "violations": [],
+ "defcon_count": 0,
+ "defcon_unknown": 4,
+ "squad_captured_at": "2026-08-16T14:26:11.395292+00:00",
+ "squad_source": "mirrored by hand from the authenticated team page; this project stores no credentials and cannot fetch it",
  "players": [
   {
+   "id": 109,
    "name": "Verbruggen",
    "pos": "GKP",
    "team": "BHA",
    "cost": 4.5,
-   "owned": 18.4,
+   "owned": 18.5,
    "points": 130,
    "starts": 38,
    "minutes": 3420,
-   "dc90": 0.0,
-   "clears_defcon": false,
+   "dc90": null,
+   "defcon_bar": null,
+   "clears_defcon": null,
+   "defcon_note": "Defensive contribution has no threshold for goalkeepers.",
    "fdr3": 9,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 11,
    "name": "Mosquera",
    "pos": "DEF",
    "team": "ARS",
    "cost": 5.5,
-   "owned": 13.2,
+   "owned": 12.7,
    "points": 40,
    "starts": 9,
    "minutes": 986,
    "dc90": 8.67,
+   "defcon_bar": 10,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 10,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 423,
    "name": "Shaw",
    "pos": "DEF",
    "team": "MUN",
    "cost": 4.5,
-   "owned": 24.0,
+   "owned": 23.7,
    "points": 113,
    "starts": 38,
    "minutes": 3220,
    "dc90": 6.26,
+   "defcon_bar": 10,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 7,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
-   "name": "Guéhi",
+   "id": 391,
+   "name": "Gvardiol",
    "pos": "DEF",
    "team": "MCI",
-   "cost": 6.0,
-   "owned": 22.4,
-   "points": 179,
-   "starts": 35,
-   "minutes": 3150,
-   "dc90": 7.94,
+   "cost": 5.5,
+   "owned": 13.7,
+   "points": 79,
+   "starts": 16,
+   "minutes": 1370,
+   "dc90": 6.77,
+   "defcon_bar": 10,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 8,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
-   "name": "Ampadu",
+   "id": 124,
+   "name": "Groß",
    "pos": "MID",
-   "team": "LEE",
+   "team": "BHA",
    "cost": 5.5,
-   "owned": 1.6,
-   "points": 134,
-   "starts": 35,
-   "minutes": 3119,
-   "dc90": 12.0,
-   "clears_defcon": true,
+   "owned": 11.5,
+   "points": 78,
+   "starts": 18,
+   "minutes": 1636,
+   "dc90": 7.98,
+   "defcon_bar": 12,
+   "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 9,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 368,
    "name": "Szoboszlai",
    "pos": "MID",
    "team": "LIV",
    "cost": 7.0,
-   "owned": 42.1,
+   "owned": 41.8,
    "points": 160,
    "starts": 36,
    "minutes": 3232,
    "dc90": 9.41,
+   "defcon_bar": 12,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 8,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 426,
    "name": "B.Fernandes",
    "pos": "MID",
    "team": "MUN",
    "cost": 12.0,
-   "owned": 48.0,
+   "owned": 47.8,
    "points": 235,
    "starts": 35,
    "minutes": 3065,
    "dc90": 8.43,
+   "defcon_bar": 12,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 7,
    "xi": true,
    "bench_order": null,
-   "captain": true,
-   "vice": false,
-   "promoted": false
+   "captain": false,
+   "vice": true,
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 427,
    "name": "Mbeumo",
    "pos": "MID",
    "team": "MUN",
    "cost": 8.0,
-   "owned": 27.5,
+   "owned": 28.1,
    "points": 148,
    "starts": 31,
    "minutes": 2611,
    "dc90": 4.79,
+   "defcon_bar": 12,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 7,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 346,
    "name": "Calvert-Lewin",
    "pos": "FWD",
    "team": "LEE",
    "cost": 6.0,
-   "owned": 25.6,
+   "owned": 25.8,
    "points": 142,
    "starts": 30,
    "minutes": 2721,
    "dc90": 3.47,
+   "defcon_bar": 12,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 9,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 165,
    "name": "João Pedro",
    "pos": "FWD",
    "team": "CHE",
    "cost": 7.5,
-   "owned": 56.7,
+   "owned": 57.5,
    "points": 177,
    "starts": 31,
    "minutes": 2658,
    "dc90": 4.67,
+   "defcon_bar": 12,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 10,
    "xi": true,
    "bench_order": null,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 411,
    "name": "Haaland",
    "pos": "FWD",
    "team": "MCI",
    "cost": 15.5,
-   "owned": 73.3,
+   "owned": 73.2,
    "points": 239,
    "starts": 34,
    "minutes": 2953,
    "dc90": 3.17,
+   "defcon_bar": 12,
    "clears_defcon": false,
+   "defcon_note": null,
    "fdr3": 8,
    "xi": true,
    "bench_order": null,
-   "captain": false,
-   "vice": true,
-   "promoted": false
+   "captain": true,
+   "vice": false,
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 496,
    "name": "Kinsky",
    "pos": "GKP",
    "team": "TOT",
    "cost": 4.5,
-   "owned": 19.7,
+   "owned": 19.9,
    "points": 20,
    "starts": 7,
    "minutes": 630,
-   "dc90": 0.0,
-   "clears_defcon": false,
+   "dc90": null,
+   "defcon_bar": null,
+   "clears_defcon": null,
+   "defcon_note": "Defensive contribution has no threshold for goalkeepers.",
    "fdr3": 8,
    "xi": false,
    "bench_order": 1,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 305,
    "name": "Davis",
    "pos": "DEF",
    "team": "IPS",
    "cost": 4.0,
-   "owned": 5.0,
-   "points": 0,
-   "starts": 0,
-   "minutes": 0,
-   "dc90": 0,
-   "clears_defcon": false,
+   "owned": 5.1,
+   "points": null,
+   "starts": null,
+   "minutes": null,
+   "dc90": null,
+   "defcon_bar": 10,
+   "clears_defcon": null,
+   "defcon_note": "No Premier League 2025/26 minutes, so there is no rate to compare against the bar.",
    "fdr3": 10,
    "xi": false,
    "bench_order": 2,
    "captain": false,
    "vice": false,
-   "promoted": true
+   "measured": false,
+   "no_data_reason": "No Premier League 2025/26 record. This player was not registered in the competition that season, so FPL's totals are zero by construction rather than by performance.",
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
-   "name": "Xhaka",
+   "id": 335,
+   "name": "Stach",
    "pos": "MID",
-   "team": "SUN",
-   "cost": 5.5,
-   "owned": 5.0,
-   "points": 124,
-   "starts": 32,
-   "minutes": 2901,
-   "dc90": 11.23,
+   "team": "LEE",
+   "cost": 6.0,
+   "owned": 1.1,
+   "points": 137,
+   "starts": 28,
+   "minutes": 2369,
+   "dc90": 10.11,
+   "defcon_bar": 12,
    "clears_defcon": false,
-   "fdr3": 7,
+   "defcon_note": null,
+   "fdr3": 9,
    "xi": false,
    "bench_order": 3,
    "captain": false,
    "vice": false,
-   "promoted": false
+   "measured": true,
+   "no_data_reason": null,
+   "status": "a",
+   "available": true,
+   "news": null
   },
   {
+   "id": 173,
    "name": "Thomas",
    "pos": "DEF",
    "team": "COV",
    "cost": 4.0,
    "owned": 8.2,
-   "points": 0,
-   "starts": 0,
-   "minutes": 0,
-   "dc90": 0,
-   "clears_defcon": false,
+   "points": null,
+   "starts": null,
+   "minutes": null,
+   "dc90": null,
+   "defcon_bar": 10,
+   "clears_defcon": null,
+   "defcon_note": "No Premier League 2025/26 minutes, so there is no rate to compare against the bar.",
    "fdr3": 12,
    "xi": false,
    "bench_order": 4,
    "captain": false,
    "vice": false,
-   "promoted": true
+   "measured": false,
+   "no_data_reason": "No Premier League 2025/26 record. This player was not registered in the competition that season, so FPL's totals are zero by construction rather than by performance.",
+   "status": "a",
+   "available": true,
+   "news": null
   }
  ],
  "fdr": {
@@ -300,210 +410,6 @@
     "d": 4
    }
   ],
-  "COV": [
-   {
-    "where": "A",
-    "opp": "ARS",
-    "d": 5
-   },
-   {
-    "where": "H",
-    "opp": "HUL",
-    "d": 2
-   },
-   {
-    "where": "A",
-    "opp": "MCI",
-    "d": 5
-   }
-  ],
-  "HUL": [
-   {
-    "where": "H",
-    "opp": "MUN",
-    "d": 4
-   },
-   {
-    "where": "A",
-    "opp": "COV",
-    "d": 2
-   },
-   {
-    "where": "H",
-    "opp": "AVL",
-    "d": 3
-   }
-  ],
-  "MUN": [
-   {
-    "where": "A",
-    "opp": "HUL",
-    "d": 2
-   },
-   {
-    "where": "H",
-    "opp": "IPS",
-    "d": 2
-   },
-   {
-    "where": "A",
-    "opp": "EVE",
-    "d": 3
-   }
-  ],
-  "EVE": [
-   {
-    "where": "H",
-    "opp": "CRY",
-    "d": 3
-   },
-   {
-    "where": "A",
-    "opp": "BOU",
-    "d": 3
-   },
-   {
-    "where": "H",
-    "opp": "MUN",
-    "d": 4
-   }
-  ],
-  "CRY": [
-   {
-    "where": "A",
-    "opp": "EVE",
-    "d": 3
-   },
-   {
-    "where": "H",
-    "opp": "MCI",
-    "d": 4
-   },
-   {
-    "where": "A",
-    "opp": "FUL",
-    "d": 3
-   }
-  ],
-  "IPS": [
-   {
-    "where": "H",
-    "opp": "SUN",
-    "d": 2
-   },
-   {
-    "where": "A",
-    "opp": "MUN",
-    "d": 4
-   },
-   {
-    "where": "H",
-    "opp": "LIV",
-    "d": 4
-   }
-  ],
-  "SUN": [
-   {
-    "where": "A",
-    "opp": "IPS",
-    "d": 2
-   },
-   {
-    "where": "H",
-    "opp": "FUL",
-    "d": 2
-   },
-   {
-    "where": "A",
-    "opp": "BRE",
-    "d": 3
-   }
-  ],
-  "NFO": [
-   {
-    "where": "H",
-    "opp": "LEE",
-    "d": 2
-   },
-   {
-    "where": "A",
-    "opp": "LIV",
-    "d": 4
-   },
-   {
-    "where": "H",
-    "opp": "TOT",
-    "d": 3
-   }
-  ],
-  "LEE": [
-   {
-    "where": "A",
-    "opp": "NFO",
-    "d": 3
-   },
-   {
-    "where": "H",
-    "opp": "BRE",
-    "d": 3
-   },
-   {
-    "where": "A",
-    "opp": "BHA",
-    "d": 3
-   }
-  ],
-  "BRE": [
-   {
-    "where": "H",
-    "opp": "TOT",
-    "d": 3
-   },
-   {
-    "where": "A",
-    "opp": "LEE",
-    "d": 3
-   },
-   {
-    "where": "H",
-    "opp": "SUN",
-    "d": 2
-   }
-  ],
-  "TOT": [
-   {
-    "where": "A",
-    "opp": "BRE",
-    "d": 3
-   },
-   {
-    "where": "H",
-    "opp": "NEW",
-    "d": 2
-   },
-   {
-    "where": "A",
-    "opp": "NFO",
-    "d": 3
-   }
-  ],
-  "BHA": [
-   {
-    "where": "H",
-    "opp": "AVL",
-    "d": 3
-   },
-   {
-    "where": "A",
-    "opp": "CHE",
-    "d": 4
-   },
-   {
-    "where": "H",
-    "opp": "LEE",
-    "d": 2
-   }
-  ],
   "AVL": [
    {
     "where": "A",
@@ -518,23 +424,6 @@
    {
     "where": "A",
     "opp": "HUL",
-    "d": 2
-   }
-  ],
-  "MCI": [
-   {
-    "where": "H",
-    "opp": "BOU",
-    "d": 3
-   },
-   {
-    "where": "A",
-    "opp": "CRY",
-    "d": 3
-   },
-   {
-    "where": "H",
-    "opp": "COV",
     "d": 2
    }
   ],
@@ -555,20 +444,173 @@
     "d": 3
    }
   ],
-  "NEW": [
+  "BRE": [
    {
     "where": "H",
-    "opp": "LIV",
-    "d": 4
-   },
-   {
-    "where": "A",
     "opp": "TOT",
     "d": 3
    },
    {
+    "where": "A",
+    "opp": "LEE",
+    "d": 3
+   },
+   {
     "where": "H",
+    "opp": "SUN",
+    "d": 2
+   }
+  ],
+  "BHA": [
+   {
+    "where": "H",
+    "opp": "AVL",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "CHE",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "LEE",
+    "d": 2
+   }
+  ],
+  "CHE": [
+   {
+    "where": "A",
+    "opp": "FUL",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BHA",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "ARS",
+    "d": 5
+   }
+  ],
+  "COV": [
+   {
+    "where": "A",
+    "opp": "ARS",
+    "d": 5
+   },
+   {
+    "where": "H",
+    "opp": "HUL",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "MCI",
+    "d": 5
+   }
+  ],
+  "CRY": [
+   {
+    "where": "A",
+    "opp": "EVE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "MCI",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "FUL",
+    "d": 3
+   }
+  ],
+  "EVE": [
+   {
+    "where": "H",
+    "opp": "CRY",
+    "d": 3
+   },
+   {
+    "where": "A",
     "opp": "BOU",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "MUN",
+    "d": 4
+   }
+  ],
+  "FUL": [
+   {
+    "where": "H",
+    "opp": "CHE",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "SUN",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "CRY",
+    "d": 3
+   }
+  ],
+  "HUL": [
+   {
+    "where": "H",
+    "opp": "MUN",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "COV",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "AVL",
+    "d": 3
+   }
+  ],
+  "IPS": [
+   {
+    "where": "H",
+    "opp": "SUN",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "MUN",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "LIV",
+    "d": 4
+   }
+  ],
+  "LEE": [
+   {
+    "where": "A",
+    "opp": "NFO",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BRE",
+    "d": 3
+   },
+   {
+    "where": "A",
+    "opp": "BHA",
     "d": 3
    }
   ],
@@ -589,38 +631,106 @@
     "d": 2
    }
   ],
-  "FUL": [
+  "MCI": [
    {
     "where": "H",
-    "opp": "CHE",
-    "d": 4
-   },
-   {
-    "where": "A",
-    "opp": "SUN",
+    "opp": "BOU",
     "d": 3
    },
    {
-    "where": "H",
+    "where": "A",
     "opp": "CRY",
     "d": 3
-   }
-  ],
-  "CHE": [
-   {
-    "where": "A",
-    "opp": "FUL",
-    "d": 3
    },
    {
     "where": "H",
-    "opp": "BHA",
+    "opp": "COV",
+    "d": 2
+   }
+  ],
+  "MUN": [
+   {
+    "where": "A",
+    "opp": "HUL",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "IPS",
     "d": 2
    },
    {
     "where": "A",
-    "opp": "ARS",
-    "d": 5
+    "opp": "EVE",
+    "d": 3
+   }
+  ],
+  "NEW": [
+   {
+    "where": "H",
+    "opp": "LIV",
+    "d": 4
+   },
+   {
+    "where": "A",
+    "opp": "TOT",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "BOU",
+    "d": 3
+   }
+  ],
+  "NFO": [
+   {
+    "where": "H",
+    "opp": "LEE",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "LIV",
+    "d": 4
+   },
+   {
+    "where": "H",
+    "opp": "TOT",
+    "d": 3
+   }
+  ],
+  "TOT": [
+   {
+    "where": "A",
+    "opp": "BRE",
+    "d": 3
+   },
+   {
+    "where": "H",
+    "opp": "NEW",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "NFO",
+    "d": 3
+   }
+  ],
+  "SUN": [
+   {
+    "where": "A",
+    "opp": "IPS",
+    "d": 2
+   },
+   {
+    "where": "H",
+    "opp": "FUL",
+    "d": 2
+   },
+   {
+    "where": "A",
+    "opp": "BRE",
+    "d": 3
    }
   ]
  },
@@ -631,5 +741,114 @@
   "defcon_def": 10,
   "defcon_mid": 12,
   "defcon_cap": 2
+ },
+ "sources": {
+  "fpl_bootstrap": {
+   "endpoint": "https://fantasy.premierleague.com/api/bootstrap-static/",
+   "captured_at": "2026-08-16T15:35:21.594470+00:00",
+   "describes": "2025/26 cumulative totals, 2026/27 prices and availability"
+  },
+  "fpl_fixtures": {
+   "endpoint": "https://fantasy.premierleague.com/api/fixtures/",
+   "captured_at": "2026-08-16T15:35:21.870158+00:00",
+   "describes": "2026/27 fixtures and FPL's own difficulty ratings"
+  },
+  "fpl_element_summary": {
+   "endpoint": "https://fantasy.premierleague.com/api/element-summary/{id}/",
+   "players": 15,
+   "describes": "per-player upcoming fixtures, gameweek history and past seasons"
+  },
+  "premier_league_pulselive": {
+   "endpoint": "https://footballapi.pulselive.com/football/stats/player/{id}",
+   "competition_id": 1,
+   "season_id": 777,
+   "season": "2025/26",
+   "captured_at": "2026-08-16T15:35:47.320764+00:00",
+   "error": null,
+   "stats_requested": [
+    "appearances",
+    "mins_played",
+    "goals",
+    "goal_assist",
+    "total_scoring_att",
+    "ontarget_scoring_att",
+    "shot_off_target",
+    "blocked_scoring_att",
+    "big_chance_created",
+    "big_chance_missed",
+    "att_pen_goal",
+    "att_pen_miss",
+    "total_pass",
+    "accurate_pass",
+    "total_cross",
+    "accurate_cross",
+    "touches",
+    "clean_sheet",
+    "goals_conceded",
+    "total_tackle",
+    "won_tackle",
+    "interception",
+    "effective_clearance",
+    "outfielder_block",
+    "ball_recovery",
+    "aerial_won",
+    "aerial_lost",
+    "duel_won",
+    "duel_lost",
+    "fouls",
+    "was_fouled",
+    "yellow_card",
+    "red_card",
+    "own_goals",
+    "error_lead_to_goal",
+    "saves",
+    "penalty_save",
+    "total_high_claim",
+    "punches",
+    "total_keeper_sweeper"
+   ],
+   "stats_unsupported": {
+    "starts": "no rows returned for any audited player; Pulselive calls this `game_started`, and FPL's own `starts` already covers it",
+    "key_passes": "no rows returned for any audited player in comp 1 season 777"
+   },
+   "divergent_from_fpl": {
+    "goal_assist": "Premier League assists are counted under Opta's rules and disagree with FPL's own `assists` for 5 of 13 measured players. The two are different definitions, not a discrepancy to resolve - compare them, never blend them."
+   },
+   "resolved_via": "club squad lists, /teams/{pulse_id}/compseasons/841/staff, joined on opta_code",
+   "resolved": 15,
+   "unresolved": [],
+   "resolver_error": null,
+   "describes": "Premier League 2025/26 Opta counts, joined on opta_code"
+  },
+  "premier_league_news": {
+   "endpoint": "https://api.premierleague.com/content/premierleague/en",
+   "captured_at": "2026-08-16T15:36:09.162684+00:00",
+   "error": null,
+   "articles_indexed": 1193,
+   "window_days": 120,
+   "max_per_player": 5,
+   "describes": "official Premier League editorial, linked by headline only - no article text is stored or republished"
+  },
+  "squad_mirror": {
+   "captured_at": "2026-08-16T14:26:11.395292+00:00",
+   "how": "mirrored by hand from the authenticated team page; this project stores no credentials and cannot fetch it",
+   "describes": "the 15 picks, XI/bench split, captain and vice"
+  }
+ },
+ "coverage": {
+  "pulselive": {
+   "covered": 13,
+   "not_in_premier_league_2025_26": 2,
+   "fetch_failed": 0
+  },
+  "labels": {
+   "covered": "Premier League 2025/26 statistics returned by the official Premier League API.",
+   "not_in_premier_league_2025_26": "No Premier League 2025/26 record. The player did not appear in the competition that season, so there is nothing to report - this is absence of measurement, not zero output.",
+   "fetch_failed": "The player is listed for Premier League 2025/26 but the statistics request did not return a usable body."
+  },
+  "unmeasured_players": [
+   "Davis",
+   "Thomas"
+  ]
  }
 }

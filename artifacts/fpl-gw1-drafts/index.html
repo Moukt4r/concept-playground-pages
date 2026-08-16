@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FPL GW1 — the locked squad, and four drafts</title>
+<link rel="icon" href="data:," />
+<title>FPL GW1 — current squad and four drafts</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="top">
   <p class="eyebrow">Fantasy Premier League · 2026/27</p>
-  <h1>One locked squad, four drafts</h1>
+  <h1>Current squad, four drafts</h1>
   <p class="lede">
-    The first tab is the squad actually entered for Gameweek 1. The rest are the drafts it was chosen from - there is no optimal squad, only an optimal squad <em>given an objective</em>.
-    Each draft below answers one question honestly and accepts what that costs
-    it elsewhere. Every pick is re-derived from the live FPL API: availability,
-    budget, club limits and the position-dependent defensive-contribution
-    threshold.
+    The first tab is the current Gameweek 1 squad, refreshed from the server-verified
+    team mirror and official APIs. The other four are the snapshots it was chosen from —
+    there is no optimal squad, only an optimal squad <em>given an objective</em>.
+    Click any current-squad player to open every available FPL field, season history,
+    upcoming fixture, prior-season Premier League event statistic and relevant official
+    Premier League news links.
   </p>
   <p class="meta" id="meta"></p>
 </header>
@@ -36,6 +38,8 @@
         <li>Every player <code>status = a</code> and no reduced chance of playing</li>
         <li>Legal XI: exactly 1 GKP, at least 3 DEF, at least 1 FWD</li>
         <li>Defensive contribution per 90 against the real threshold</li>
+        <li>Every current-squad row resolves to an on-demand player-stat record</li>
+        <li>Official FPL history and upcoming fixtures for all 15 players</li>
       </ul>
     </div>
     <div>
@@ -47,6 +51,7 @@
             season boundary and the endpoint is not available to us.</li>
         <li>A summer signing's record was earned at his previous club. Those
             players are marked, not silently re-attributed.</li>
+        <li>Missing prior-season API coverage is never converted to a measured zero.</li>
       </ul>
     </div>
   </div>
@@ -83,7 +88,26 @@
 
 <footer class="foot">
   <p id="foot-meta"></p>
+  <p class="downloads">
+    Raw downloads:
+    <a href="locked.json">current squad</a>
+    <a href="players.json">all 15 player records</a>
+    <a href="data.json">page data</a>
+  </p>
 </footer>
+
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-open="0">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <h3 id="modal-title">Player statistics</h3>
+        <div class="modal-sub" id="modal-sub"></div>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="Close player statistics">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>
