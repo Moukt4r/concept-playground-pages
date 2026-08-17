@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-16T05:30:16+00:00",
- "data_captured_at": "2026-08-16T05:05:17.551507+00:00",
+ "generated_at": "2026-08-17T05:30:09+00:00",
+ "data_captured_at": "2026-08-17T05:05:03.843359+00:00",
  "start_gw": 1,
  "end_gw": 3,
  "horizon": 3,
@@ -10,7 +10,7 @@
  "counts": {
   "players_total": 587,
   "players_with_minutes": 400,
-  "players_projected": 228,
+  "players_projected": 227,
   "changed_club": {
    "fallers": [],
    "risers": []
@@ -34,7 +34,7 @@
    "xa": 55.8,
    "xgc": 53.6,
    "attack_per_cost": 0.94,
-   "projected_total": 173.4,
+   "projected_total": 167.2,
    "projected_players": 16,
    "best": "Haaland",
    "best_projected": 20.4,
@@ -315,44 +315,11 @@
    "corner_taker": "N.Williams"
   },
   {
-   "team": "LIV",
-   "name": "Liverpool",
-   "squad_size": 35,
-   "regulars": 12,
-   "unavailable": 7,
-   "new_signings": 3,
-   "total_cost": 189.0,
-   "cheapest": 4.0,
-   "priciest": 9.0,
-   "most_expensive": "Isak",
-   "goals": 52,
-   "assists": 48,
-   "xg": 50.3,
-   "xa": 33.9,
-   "xgc": 47.6,
-   "attack_per_cost": 0.53,
-   "projected_total": 95.6,
-   "projected_players": 10,
-   "best": "Virgil",
-   "best_projected": 14.4,
-   "mean_fdr": 2.67,
-   "n_fixtures": 3,
-   "fixtures": [
-    "NEW(A)[3]",
-    "NFO(H)[3]",
-    "IPS(A)[2]"
-   ],
-   "clean_sheet_rank": 3,
-   "penalty_taker": "Isak",
-   "fk_taker": "Szoboszlai",
-   "corner_taker": "Szoboszlai"
-  },
-  {
    "team": "SUN",
    "name": "Sunderland",
    "squad_size": 25,
    "regulars": 13,
-   "unavailable": 5,
+   "unavailable": 6,
    "new_signings": 1,
    "total_cost": 123.0,
    "cheapest": 4.0,
@@ -414,6 +381,39 @@
    "corner_taker": "Garner"
   },
   {
+   "team": "LIV",
+   "name": "Liverpool",
+   "squad_size": 35,
+   "regulars": 12,
+   "unavailable": 8,
+   "new_signings": 3,
+   "total_cost": 189.0,
+   "cheapest": 4.0,
+   "priciest": 9.0,
+   "most_expensive": "Isak",
+   "goals": 52,
+   "assists": 48,
+   "xg": 50.3,
+   "xa": 33.9,
+   "xgc": 47.6,
+   "attack_per_cost": 0.53,
+   "projected_total": 89.0,
+   "projected_players": 9,
+   "best": "Virgil",
+   "best_projected": 14.4,
+   "mean_fdr": 2.67,
+   "n_fixtures": 3,
+   "fixtures": [
+    "NEW(A)[3]",
+    "NFO(H)[3]",
+    "IPS(A)[2]"
+   ],
+   "clean_sheet_rank": 3,
+   "penalty_taker": "Isak",
+   "fk_taker": "Szoboszlai",
+   "corner_taker": "Szoboszlai"
+  },
+  {
    "team": "AVL",
    "name": "Aston Villa",
    "squad_size": 28,
@@ -463,7 +463,7 @@
    "xa": 22.2,
    "xgc": 49.2,
    "attack_per_cost": 0.51,
-   "projected_total": 82.7,
+   "projected_total": 80.9,
    "projected_players": 13,
    "best": "Thiaw",
    "best_projected": 9.5,
@@ -671,6 +671,145 @@
   }
  ],
  "news": [
+  {
+   "title": "Villa close in on Suzuki with Martinez future in doubt",
+   "link": "https://www.bbc.co.uk/sport/football/articles/ckg44n858qvo?at_medium=RSS&at_campaign=rss",
+   "source": "BBC Sport",
+   "published": "Sun, 16 Aug 2026 13:38:08 GMT",
+   "seen_at": "2026-08-17T05:30:08+00:00",
+   "score": 5,
+   "summary": "Mentions Martinez | clubs: AVL | relevance 5",
+   "teams": [
+    "AVL"
+   ],
+   "players": [
+    {
+     "id": 28,
+     "name": "Martinez",
+     "team": "AVL"
+    }
+   ]
+  },
+  {
+   "title": "FPL pre-season: Thiago + Schade braces, Sangare impact + Bournemouth injuries",
+   "link": "https://www.fantasyfootballscout.co.uk/2026/08/16/fpl-pre-season-thiago-schade-braces-sangare-impact-bournemouth-injuries",
+   "source": "Fantasy Football Scout",
+   "published": "Sun, 16 Aug 2026 21:25:00 +0000",
+   "seen_at": "2026-08-17T05:30:08+00:00",
+   "score": 5,
+   "summary": "Mentions Kluivert, Schade, Thiago | clubs: BOU, IPS, NEW | relevance 5",
+   "teams": [
+    "BOU",
+    "IPS",
+    "NEW"
+   ],
+   "players": [
+    {
+     "id": 70,
+     "name": "Kluivert",
+     "team": "BOU"
+    },
+    {
+     "id": 94,
+     "name": "Schade",
+     "team": "BRE"
+    },
+    {
+     "id": 106,
+     "name": "Thiago",
+     "team": "BRE"
+    }
+   ]
+  },
+  {
+   "title": "FPL pre-season: Villa injuries, another Ndiaye pen + no Norgaard",
+   "link": "https://www.fantasyfootballscout.co.uk/2026/08/16/fpl-pre-season-villa-injuries-another-ndiaye-pen-no-norgaard",
+   "source": "Fantasy Football Scout",
+   "published": "Sun, 16 Aug 2026 11:00:00 +0000",
+   "seen_at": "2026-08-17T05:30:08+00:00",
+   "score": 5,
+   "summary": "Mentions Ndiaye | clubs: EVE, IPS, NEW | relevance 5",
+   "teams": [
+    "EVE",
+    "IPS",
+    "NEW"
+   ],
+   "players": [
+    {
+     "id": 237,
+     "name": "Ndiaye",
+     "team": "EVE"
+    }
+   ]
+  },
+  {
+   "title": "Shop window or new chance - what next for Grealish?",
+   "link": "https://www.bbc.co.uk/sport/football/articles/c07rr20g732o?at_medium=RSS&at_campaign=rss",
+   "source": "BBC Sport",
+   "published": "Sun, 16 Aug 2026 18:30:55 GMT",
+   "seen_at": "2026-08-17T05:30:08+00:00",
+   "score": 4,
+   "summary": "Mentions Grealish | clubs: CHE, NEW, SUN | relevance 4",
+   "teams": [
+    "CHE",
+    "NEW",
+    "SUN"
+   ],
+   "players": [
+    {
+     "id": 238,
+     "name": "Grealish",
+     "team": "MCI"
+    }
+   ]
+  },
+  {
+   "title": "FPL pre-season: Pedro again, Rogers debut, Munoz returns",
+   "link": "https://www.fantasyfootballscout.co.uk/2026/08/16/fpl-pre-season-pedro-again-rogers-debut-munoz-returns",
+   "source": "Fantasy Football Scout",
+   "published": "Sun, 16 Aug 2026 07:25:00 +0000",
+   "seen_at": "2026-08-17T05:30:08+00:00",
+   "score": 4,
+   "summary": "Mentions Rogers, Munoz | clubs: CHE, CRY, IPS, MUN, NEW | relevance 4",
+   "teams": [
+    "CHE",
+    "CRY",
+    "IPS",
+    "MUN",
+    "NEW"
+   ],
+   "players": [
+    {
+     "id": 40,
+     "name": "Rogers",
+     "team": "CHE"
+    },
+    {
+     "id": 377,
+     "name": "Munoz",
+     "team": "LIV"
+    }
+   ]
+  },
+  {
+   "title": "Tottenham latest: Maddison returns as Spurs end pre-season unbeaten",
+   "link": "https://www.skysports.com/football/live-blog/11661/13025489/tottenham-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+   "source": "Sky Sports",
+   "published": "Sun, 16 Aug 2026 16:00:00 BST",
+   "seen_at": "2026-08-17T05:30:08+00:00",
+   "score": 4,
+   "summary": "Mentions Maddison | clubs: TOT | relevance 4",
+   "teams": [
+    "TOT"
+   ],
+   "players": [
+    {
+     "id": 515,
+     "name": "Maddison",
+     "team": "TOT"
+    }
+   ]
+  },
   {
    "title": "Rashford returns as AC Milan highlight issues facing Carrick",
    "link": "https://www.bbc.co.uk/sport/football/articles/cg5ll71pqv1o?at_medium=RSS&at_campaign=rss",
@@ -1509,152 +1648,6 @@
      "team": "LIV"
     }
    ]
-  },
-  {
-   "title": "Chelsea interested in Henderson after holding positive talks with Welbeck",
-   "link": "https://www.skysports.com/football/news/11661/13567555/chelsea-transfer-news-blues-interested-in-signing-jordan-henderson-36-after-holding-positive-talks-with-35-year-old-danny-welbeck",
-   "source": "Sky Sports",
-   "published": "Mon, 27 Jul 2026 14:34:00 BST",
-   "seen_at": "2026-07-31T11:02:42+00:00",
-   "score": 5,
-   "summary": "Mentions Henderson, Welbeck | clubs: BRE, CHE | relevance 5",
-   "teams": [
-    "BRE",
-    "CHE"
-   ],
-   "players": [
-    {
-     "id": 101,
-     "name": "Henderson",
-     "team": "CHE"
-    },
-    {
-     "id": 136,
-     "name": "Welbeck",
-     "team": "CHE"
-    }
-   ]
-  },
-  {
-   "title": "Four pointers to most open Premier League title race in years",
-   "link": "https://www.bbc.co.uk/sport/football/articles/c1e163xpzz2o?at_medium=RSS&at_campaign=rss",
-   "source": "BBC Sport",
-   "published": "Thu, 30 Jul 2026 07:01:01 GMT",
-   "seen_at": "2026-07-31T11:02:42+00:00",
-   "score": 4,
-   "summary": "clubs: ARS, BRE, CHE, NEW, TOT | relevance 4",
-   "teams": [
-    "ARS",
-    "BRE",
-    "CHE",
-    "NEW",
-    "TOT"
-   ],
-   "players": []
-  },
-  {
-   "title": "Phillips' struggles are a cautionary tale for Anderson",
-   "link": "https://www.bbc.co.uk/sport/football/articles/clyl1354z3yo?at_medium=RSS&at_campaign=rss",
-   "source": "BBC Sport",
-   "published": "Thu, 30 Jul 2026 06:36:56 GMT",
-   "seen_at": "2026-07-31T11:02:42+00:00",
-   "score": 4,
-   "summary": "Mentions Anderson | clubs: ARS, CHE, IPS | relevance 4",
-   "teams": [
-    "ARS",
-    "CHE",
-    "IPS"
-   ],
-   "players": [
-    {
-     "id": 481,
-     "name": "Anderson",
-     "team": "MCI"
-    }
-   ]
-  },
-  {
-   "title": "The Guardian view on a gripping season of British football: the best may be yet to come | Editorial",
-   "link": "https://www.theguardian.com/commentisfree/2026/jun/01/the-guardian-view-on-a-gripping-season-of-british-football-the-best-may-be-yet-to-come",
-   "source": "Guardian",
-   "published": "Mon, 01 Jun 2026 18:05:59 GMT",
-   "seen_at": "2026-07-31T11:02:42+00:00",
-   "score": 4,
-   "summary": "clubs: ARS, EVE, SUN | relevance 4",
-   "teams": [
-    "ARS",
-    "EVE",
-    "SUN"
-   ],
-   "players": []
-  },
-  {
-   "title": "Premier League 2025-26 season review: our predictions v reality",
-   "link": "https://www.theguardian.com/football/2026/may/26/premier-league-2025-26-season-review-predictions-reality-liverpool-chelsea-brentford-sunderland",
-   "source": "Guardian",
-   "published": "Tue, 26 May 2026 15:56:24 GMT",
-   "seen_at": "2026-07-31T11:02:42+00:00",
-   "score": 4,
-   "summary": "Mentions Arrizabalaga, Mosquera, Madueke, Zubimendi, Nørgaard, Gyökeres | clubs: ARS, BRE, CHE, LIV, NEW, SUN | relevance 4",
-   "teams": [
-    "ARS",
-    "BRE",
-    "CHE",
-    "LIV",
-    "NEW",
-    "SUN"
-   ],
-   "players": [
-    {
-     "id": 2,
-     "name": "Arrizabalaga",
-     "team": "ARS"
-    },
-    {
-     "id": 11,
-     "name": "Mosquera",
-     "team": "ARS"
-    },
-    {
-     "id": 16,
-     "name": "Madueke",
-     "team": "ARS"
-    },
-    {
-     "id": 19,
-     "name": "Zubimendi",
-     "team": "ARS"
-    },
-    {
-     "id": 21,
-     "name": "Nørgaard",
-     "team": "EVE"
-    },
-    {
-     "id": 25,
-     "name": "Gyökeres",
-     "team": "ARS"
-    }
-   ]
-  },
-  {
-   "title": "Brighton latest: Leicester on verge of Watson loan signing",
-   "link": "https://www.skysports.com/football/live-blog/11661/13279295/brighton-transfers-latest-news-rumours-and-gossip-live-updates-goals-and-highlights",
-   "source": "Sky Sports",
-   "published": "Fri, 31 Jul 2026 11:00:00 BST",
-   "seen_at": "2026-07-31T11:02:42+00:00",
-   "score": 4,
-   "summary": "Mentions Watson | clubs: BHA | relevance 4",
-   "teams": [
-    "BHA"
-   ],
-   "players": [
-    {
-     "id": 133,
-     "name": "Watson",
-     "team": "BHA"
-    }
-   ]
   }
  ],
  "chips": {
@@ -2033,13 +2026,13 @@
  "preseason_view": {
   "source": "https://www.premierleague.com/en/news/4606700/premier-league-clubs-summer-2026-friendlies-and-tours",
   "fetched_ok": true,
-  "today": "2026-08-16",
+  "today": "2026-08-17",
   "counts": {
    "fixtures": 110,
    "played": 85,
    "upcoming": 25,
    "clubs": 19,
-   "flagged": 91,
+   "flagged": 93,
    "new_signings": 92
   },
   "minutes_gap": "Minutes per player in pre-season friendlies are not published. Checked 2026-07-31: fbref (Cloudflare challenge), understat, sofascore, worldfootball, transfermarkt and 11v11 all block automated access - five of them name AI agents explicitly - and football-data.org puts Club Friendlies behind a paid tier. Spoofing a browser identity to get around that is not acceptable, so this column is absent rather than empty.",
@@ -3896,7 +3889,7 @@
     "status_label": "Unavailable",
     "chance": 0,
     "news": "Has joined Como permanently",
-    "selected_by": 1.0,
+    "selected_by": 0.9,
     "total_points": 136
    },
    {
@@ -3909,7 +3902,7 @@
     "status_label": "Unavailable",
     "chance": 0,
     "news": "Has joined Konyaspor permanently",
-    "selected_by": 1.0,
+    "selected_by": 0.9,
     "total_points": 1
    },
    {
@@ -3922,7 +3915,7 @@
     "status_label": "Unavailable",
     "chance": 0,
     "news": "Has joined Paris Saint-Germain permanently",
-    "selected_by": 0.7,
+    "selected_by": 0.6,
     "total_points": 97
    },
    {
@@ -3935,7 +3928,7 @@
     "status_label": "Unavailable",
     "chance": 0,
     "news": "Has joined Wrexham permanently",
-    "selected_by": 0.7,
+    "selected_by": 0.6,
     "total_points": 0
    },
    {
@@ -3965,19 +3958,6 @@
     "total_points": 0
    },
    {
-    "id": 80,
-    "name": "Enes Ünal",
-    "team": "BOU",
-    "pos": "FWD",
-    "cost": 5.5,
-    "status": "u",
-    "status_label": "Unavailable",
-    "chance": 0,
-    "news": "Has joined Getafe permanently",
-    "selected_by": 0.2,
-    "total_points": 27
-   },
-   {
     "id": 197,
     "name": "Bassette",
     "team": "COV",
@@ -4002,6 +3982,19 @@
     "news": "Has joined KV Mechelen on loan for the rest of the season",
     "selected_by": 0.2,
     "total_points": 0
+   },
+   {
+    "id": 80,
+    "name": "Enes Ünal",
+    "team": "BOU",
+    "pos": "FWD",
+    "cost": 5.5,
+    "status": "u",
+    "status_label": "Unavailable",
+    "chance": 0,
+    "news": "Has joined Getafe permanently",
+    "selected_by": 0.1,
+    "total_points": 27
    },
    {
     "id": 141,
@@ -4143,7 +4136,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Foot injury - Unknown return date",
-    "selected_by": 2.3,
+    "selected_by": 2.0,
     "total_points": 113
    },
    {
@@ -4156,7 +4149,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Knee injury - Unknown return date",
-    "selected_by": 1.6,
+    "selected_by": 1.2,
     "total_points": 0
    },
    {
@@ -4169,7 +4162,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Unspecified injury - Unknown return date",
-    "selected_by": 1.5,
+    "selected_by": 1.2,
     "total_points": 0
    },
    {
@@ -4182,7 +4175,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Thigh injury - Unknown return date",
-    "selected_by": 1.3,
+    "selected_by": 1.0,
     "total_points": 0
    },
    {
@@ -4195,47 +4188,8 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Unspecified injury - Unknown return date",
-    "selected_by": 0.7,
+    "selected_by": 0.5,
     "total_points": 113
-   },
-   {
-    "id": 122,
-    "name": "Minteh",
-    "team": "BHA",
-    "pos": "MID",
-    "cost": 6.0,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Leg injury - Expected back 28 Nov",
-    "selected_by": 0.6,
-    "total_points": 117
-   },
-   {
-    "id": 274,
-    "name": "Butland",
-    "team": "HUL",
-    "pos": "GKP",
-    "cost": 4.5,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Arm injury - Unknown return date",
-    "selected_by": 0.5,
-    "total_points": 0
-   },
-   {
-    "id": 278,
-    "name": "Hughes",
-    "team": "HUL",
-    "pos": "DEF",
-    "cost": 4.0,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Groin injury - Unknown return date",
-    "selected_by": 0.5,
-    "total_points": 0
    },
    {
     "id": 6,
@@ -4251,6 +4205,19 @@
     "total_points": 137
    },
    {
+    "id": 122,
+    "name": "Minteh",
+    "team": "BHA",
+    "pos": "MID",
+    "cost": 6.0,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Leg injury - Expected back 28 Nov",
+    "selected_by": 0.4,
+    "total_points": 117
+   },
+   {
     "id": 239,
     "name": "Garner",
     "team": "EVE",
@@ -4262,6 +4229,32 @@
     "news": "Groin injury - Expected back 22 Aug",
     "selected_by": 0.4,
     "total_points": 159
+   },
+   {
+    "id": 274,
+    "name": "Butland",
+    "team": "HUL",
+    "pos": "GKP",
+    "cost": 4.5,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Arm injury - Unknown return date",
+    "selected_by": 0.4,
+    "total_points": 0
+   },
+   {
+    "id": 278,
+    "name": "Hughes",
+    "team": "HUL",
+    "pos": "DEF",
+    "cost": 4.0,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Groin injury - Unknown return date",
+    "selected_by": 0.4,
+    "total_points": 0
    },
    {
     "id": 5,
@@ -4277,32 +4270,6 @@
     "total_points": 149
    },
    {
-    "id": 54,
-    "name": "Gomes",
-    "team": "AVL",
-    "pos": "MID",
-    "cost": 5.5,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Calf injury - Unknown return date",
-    "selected_by": 0.3,
-    "total_points": 85
-   },
-   {
-    "id": 131,
-    "name": "Baleba",
-    "team": "BHA",
-    "pos": "MID",
-    "cost": 5.0,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Ankle injury - Expected back 23 Aug",
-    "selected_by": 0.3,
-    "total_points": 56
-   },
-   {
     "id": 294,
     "name": "Zambrano",
     "team": "HUL",
@@ -4316,30 +4283,30 @@
     "total_points": 0
    },
    {
-    "id": 414,
-    "name": "Heaton",
-    "team": "MUN",
-    "pos": "GKP",
-    "cost": 4.0,
+    "id": 54,
+    "name": "Gomes",
+    "team": "AVL",
+    "pos": "MID",
+    "cost": 5.5,
     "status": "i",
     "status_label": "Injured",
     "chance": 0,
-    "news": "Hamstring injury - Unknown return date",
-    "selected_by": 0.3,
-    "total_points": 0
+    "news": "Calf injury - Unknown return date",
+    "selected_by": 0.2,
+    "total_points": 85
    },
    {
-    "id": 77,
-    "name": "Adli",
-    "team": "BOU",
+    "id": 131,
+    "name": "Baleba",
+    "team": "BHA",
     "pos": "MID",
     "cost": 5.0,
     "status": "i",
     "status_label": "Injured",
     "chance": 0,
-    "news": "Unspecified injury - Unknown return date",
+    "news": "Ankle injury - Expected back 23 Aug",
     "selected_by": 0.2,
-    "total_points": 67
+    "total_points": 56
    },
    {
     "id": 331,
@@ -4355,19 +4322,6 @@
     "total_points": 68
    },
    {
-    "id": 349,
-    "name": "Mateo Joseph",
-    "team": "LEE",
-    "pos": "FWD",
-    "cost": 4.5,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Knee injury - Unknown return date",
-    "selected_by": 0.2,
-    "total_points": 0
-   },
-   {
     "id": 380,
     "name": "Ekitiké",
     "team": "LIV",
@@ -4381,6 +4335,19 @@
     "total_points": 125
    },
    {
+    "id": 414,
+    "name": "Heaton",
+    "team": "MUN",
+    "pos": "GKP",
+    "cost": 4.0,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Hamstring injury - Unknown return date",
+    "selected_by": 0.2,
+    "total_points": 0
+   },
+   {
     "id": 65,
     "name": "J.Araujo",
     "team": "BOU",
@@ -4392,6 +4359,19 @@
     "news": "Thigh injury - Unknown return date",
     "selected_by": 0.1,
     "total_points": 0
+   },
+   {
+    "id": 77,
+    "name": "Adli",
+    "team": "BOU",
+    "pos": "MID",
+    "cost": 5.0,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Unspecified injury - Unknown return date",
+    "selected_by": 0.1,
+    "total_points": 67
    },
    {
     "id": 121,
@@ -4446,6 +4426,19 @@
     "total_points": 0
    },
    {
+    "id": 349,
+    "name": "Mateo Joseph",
+    "team": "LEE",
+    "pos": "FWD",
+    "cost": 4.5,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Knee injury - Unknown return date",
+    "selected_by": 0.1,
+    "total_points": 0
+   },
+   {
     "id": 363,
     "name": "Leoni",
     "team": "LIV",
@@ -4470,6 +4463,19 @@
     "news": "Back injury - Unknown return date",
     "selected_by": 0.1,
     "total_points": 69
+   },
+   {
+    "id": 458,
+    "name": "Joelinton",
+    "team": "NEW",
+    "pos": "MID",
+    "cost": 5.5,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Unspecified injury - Unknown return date",
+    "selected_by": 0.1,
+    "total_points": 73
    },
    {
     "id": 48,
@@ -4758,6 +4764,19 @@
     "total_points": 123
    },
    {
+    "id": 389,
+    "name": "Matheus N.",
+    "team": "MCI",
+    "pos": "DEF",
+    "cost": 6.0,
+    "status": "d",
+    "status_label": "Doubtful",
+    "chance": 75,
+    "news": "Knock - 75% chance of playing",
+    "selected_by": 4.0,
+    "total_points": 154
+   },
+   {
     "id": 533,
     "name": "Mukiele",
     "team": "SUN",
@@ -4767,7 +4786,7 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Knock - 75% chance of playing",
-    "selected_by": 3.9,
+    "selected_by": 3.4,
     "total_points": 151
    },
    {
@@ -4780,7 +4799,7 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Shin injury - 75% chance of playing",
-    "selected_by": 2.0,
+    "selected_by": 1.8,
     "total_points": 111
    },
    {
@@ -4793,21 +4812,8 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Unspecified injury - 75% chance of playing",
-    "selected_by": 0.7,
+    "selected_by": 0.6,
     "total_points": 77
-   },
-   {
-    "id": 21,
-    "name": "Nørgaard",
-    "team": "EVE",
-    "pos": "MID",
-    "cost": 5.0,
-    "status": "d",
-    "status_label": "Doubtful",
-    "chance": 75,
-    "news": "Lack of match fitness - 75% chance of playing",
-    "selected_by": 0.7,
-    "total_points": 7
    },
    {
     "id": 66,
@@ -4819,8 +4825,21 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Hamstring injury - 75% chance of playing",
-    "selected_by": 0.6,
+    "selected_by": 0.5,
     "total_points": 3
+   },
+   {
+    "id": 21,
+    "name": "Nørgaard",
+    "team": "EVE",
+    "pos": "MID",
+    "cost": 5.0,
+    "status": "d",
+    "status_label": "Doubtful",
+    "chance": 75,
+    "news": "Lack of match fitness - 75% chance of playing",
+    "selected_by": 0.5,
+    "total_points": 7
    },
    {
     "id": 535,
@@ -4832,7 +4851,7 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Knock - 75% chance of playing",
-    "selected_by": 0.6,
+    "selected_by": 0.5,
     "total_points": 125
    },
    {
@@ -4849,17 +4868,17 @@
     "total_points": 108
    },
    {
-    "id": 56,
-    "name": "Abraham",
-    "team": "AVL",
-    "pos": "FWD",
-    "cost": 5.5,
+    "id": 541,
+    "name": "Meunier",
+    "team": "SUN",
+    "pos": "DEF",
+    "cost": 4.5,
     "status": "d",
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Knock - 75% chance of playing",
-    "selected_by": 0.3,
-    "total_points": 23
+    "selected_by": 0.4,
+    "total_points": 0
    },
    {
     "id": 81,
@@ -4875,17 +4894,17 @@
     "total_points": 0
    },
    {
-    "id": 74,
-    "name": "Brooks",
-    "team": "BOU",
-    "pos": "MID",
-    "cost": 5.0,
+    "id": 56,
+    "name": "Abraham",
+    "team": "AVL",
+    "pos": "FWD",
+    "cost": 5.5,
     "status": "d",
     "status_label": "Doubtful",
     "chance": 75,
-    "news": "Unspecified injury - 75% chance of playing",
+    "news": "Knock - 75% chance of playing",
     "selected_by": 0.2,
-    "total_points": 59
+    "total_points": 23
    },
    {
     "id": 183,
@@ -4914,17 +4933,17 @@
     "total_points": 0
    },
    {
-    "id": 446,
-    "name": "Schär",
-    "team": "NEW",
-    "pos": "DEF",
-    "cost": 5.0,
+    "id": 373,
+    "name": "C.Jones",
+    "team": "LIV",
+    "pos": "MID",
+    "cost": 5.5,
     "status": "d",
     "status_label": "Doubtful",
     "chance": 75,
-    "news": "Knock - 75% chance of playing",
+    "news": "Hip injury - 75% chance of playing",
     "selected_by": 0.2,
-    "total_points": 51
+    "total_points": 81
    },
    {
     "id": 512,
@@ -4938,6 +4957,19 @@
     "news": "Thigh injury - 75% chance of playing",
     "selected_by": 0.2,
     "total_points": 75
+   },
+   {
+    "id": 74,
+    "name": "Brooks",
+    "team": "BOU",
+    "pos": "MID",
+    "cost": 5.0,
+    "status": "d",
+    "status_label": "Doubtful",
+    "chance": 75,
+    "news": "Unspecified injury - 75% chance of playing",
+    "selected_by": 0.1,
+    "total_points": 59
    },
    {
     "id": 170,
@@ -4964,19 +4996,6 @@
     "news": "Calf injury - 50% chance of playing",
     "selected_by": 0.1,
     "total_points": 0
-   },
-   {
-    "id": 238,
-    "name": "Grealish",
-    "team": "MCI",
-    "pos": "MID",
-    "cost": 6.5,
-    "status": "d",
-    "status_label": "Doubtful",
-    "chance": 75,
-    "news": "Foot injury - 75% chance of playing",
-    "selected_by": 0.1,
-    "total_points": 79
    },
    {
     "id": 430,
@@ -5080,7 +5099,7 @@
     "joined": "2026-07-02",
     "total_points": 180,
     "minutes": 3332,
-    "selected_by": 10.8,
+    "selected_by": 10.2,
     "status": "a"
    },
    {
@@ -5092,7 +5111,7 @@
     "joined": "2026-07-01",
     "total_points": 175,
     "minutes": 3288,
-    "selected_by": 10.0,
+    "selected_by": 9.8,
     "status": "a"
    },
    {
@@ -5104,7 +5123,7 @@
     "joined": "2026-07-21",
     "total_points": 169,
     "minutes": 3280,
-    "selected_by": 26.3,
+    "selected_by": 26.8,
     "status": "a"
    },
    {
@@ -5116,7 +5135,7 @@
     "joined": "2026-07-08",
     "total_points": 168,
     "minutes": 2674,
-    "selected_by": 7.7,
+    "selected_by": 7.5,
     "status": "a"
    },
    {
@@ -5128,7 +5147,7 @@
     "joined": "2026-08-08",
     "total_points": 154,
     "minutes": 2456,
-    "selected_by": 10.2,
+    "selected_by": 9.6,
     "status": "a"
    },
    {
@@ -5140,7 +5159,7 @@
     "joined": "2026-07-30",
     "total_points": 154,
     "minutes": 3085,
-    "selected_by": 11.0,
+    "selected_by": 10.8,
     "status": "a"
    },
    {
@@ -5152,7 +5171,7 @@
     "joined": "2026-06-18",
     "total_points": 148,
     "minutes": 3210,
-    "selected_by": 8.8,
+    "selected_by": 8.9,
     "status": "a"
    },
    {
@@ -5164,7 +5183,7 @@
     "joined": "2026-07-02",
     "total_points": 135,
     "minutes": 3017,
-    "selected_by": 2.7,
+    "selected_by": 2.5,
     "status": "a"
    },
    {
@@ -5176,7 +5195,7 @@
     "joined": "2026-08-01",
     "total_points": 126,
     "minutes": 2249,
-    "selected_by": 2.4,
+    "selected_by": 2.3,
     "status": "a"
    },
    {
@@ -5200,7 +5219,7 @@
     "joined": "2026-07-01",
     "total_points": 96,
     "minutes": 3150,
-    "selected_by": 22.3,
+    "selected_by": 22.1,
     "status": "a"
    },
    {
@@ -5212,7 +5231,7 @@
     "joined": "2026-07-01",
     "total_points": 87,
     "minutes": 1787,
-    "selected_by": 3.7,
+    "selected_by": 3.2,
     "status": "a"
    },
    {
@@ -5224,7 +5243,7 @@
     "joined": "2026-07-20",
     "total_points": 85,
     "minutes": 2207,
-    "selected_by": 0.3,
+    "selected_by": 0.2,
     "status": "i"
    },
    {
@@ -5236,7 +5255,7 @@
     "joined": "2026-07-06",
     "total_points": 81,
     "minutes": 2534,
-    "selected_by": 4.2,
+    "selected_by": 4.1,
     "status": "a"
    },
    {
@@ -5272,7 +5291,7 @@
     "joined": "2026-07-14",
     "total_points": 68,
     "minutes": 1857,
-    "selected_by": 1.9,
+    "selected_by": 2.0,
     "status": "a"
    },
    {
@@ -5320,7 +5339,7 @@
     "joined": "2026-07-01",
     "total_points": 55,
     "minutes": 1165,
-    "selected_by": 2.5,
+    "selected_by": 2.7,
     "status": "a"
    },
    {
@@ -5344,7 +5363,7 @@
     "joined": "2026-07-13",
     "total_points": 47,
     "minutes": 1247,
-    "selected_by": 1.3,
+    "selected_by": 1.2,
     "status": "a"
    },
    {
@@ -5380,7 +5399,7 @@
     "joined": "2026-07-22",
     "total_points": 31,
     "minutes": 812,
-    "selected_by": 18.4,
+    "selected_by": 18.2,
     "status": "a"
    },
    {
@@ -5404,7 +5423,7 @@
     "joined": "2026-08-06",
     "total_points": 13,
     "minutes": 360,
-    "selected_by": 2.6,
+    "selected_by": 2.7,
     "status": "a"
    },
    {
@@ -5428,7 +5447,7 @@
     "joined": "2026-08-05",
     "total_points": 7,
     "minutes": 101,
-    "selected_by": 0.7,
+    "selected_by": 0.5,
     "status": "d"
    },
    {
@@ -5440,7 +5459,7 @@
     "joined": "2026-06-27",
     "total_points": 6,
     "minutes": 49,
-    "selected_by": 7.3,
+    "selected_by": 7.2,
     "status": "a"
    },
    {
@@ -5464,7 +5483,7 @@
     "joined": "2026-07-16",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.7,
+    "selected_by": 0.8,
     "status": "a"
    },
    {
@@ -5488,7 +5507,7 @@
     "joined": "2026-08-10",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.9,
+    "selected_by": 1.1,
     "status": "a"
    },
    {
@@ -5524,7 +5543,7 @@
     "joined": "2026-07-02",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.5,
+    "selected_by": 0.4,
     "status": "i"
    },
    {
@@ -5572,7 +5591,7 @@
     "joined": "2026-08-11",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.3,
+    "selected_by": 0.4,
     "status": "a"
    },
    {
@@ -5596,7 +5615,7 @@
     "joined": "2026-07-08",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.3,
+    "selected_by": 0.4,
     "status": "a"
    },
    {
@@ -5704,7 +5723,7 @@
     "joined": "2026-07-01",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 1.1,
+    "selected_by": 1.5,
     "status": "a"
    },
    {
@@ -5716,7 +5735,7 @@
     "joined": "2026-06-15",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.1,
+    "selected_by": 0.0,
     "status": "a"
    },
    {
@@ -5740,7 +5759,7 @@
     "joined": "2026-07-25",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.5,
+    "selected_by": 0.4,
     "status": "a"
    },
    {
@@ -5752,7 +5771,7 @@
     "joined": "2026-07-17",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 1.6,
+    "selected_by": 1.2,
     "status": "i"
    },
    {
@@ -5764,7 +5783,7 @@
     "joined": "2026-08-12",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.2,
+    "selected_by": 0.4,
     "status": "a"
    },
    {
@@ -5788,8 +5807,8 @@
     "joined": "2026-07-15",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.5,
-    "status": "a"
+    "selected_by": 0.4,
+    "status": "d"
    },
    {
     "id": 207,
@@ -5836,7 +5855,7 @@
     "joined": "2026-07-17",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 2.0,
+    "selected_by": 2.2,
     "status": "a"
    },
    {
@@ -5872,7 +5891,7 @@
     "joined": "2026-07-01",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 2.4,
+    "selected_by": 2.5,
     "status": "a"
    },
    {
@@ -6016,7 +6035,7 @@
     "joined": "2026-08-09",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.0,
+    "selected_by": 0.1,
     "status": "a"
    },
    {
@@ -6040,7 +6059,7 @@
     "joined": "2026-07-23",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 3.0,
+    "selected_by": 2.9,
     "status": "a"
    },
    {
@@ -6100,7 +6119,7 @@
     "joined": "2026-07-23",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 4.2,
+    "selected_by": 10.0,
     "status": "a"
    },
    {
@@ -6148,7 +6167,7 @@
     "joined": "2026-08-07",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 0.1,
+    "selected_by": 0.2,
     "status": "a"
    },
    {
@@ -6185,17 +6204,17 @@
  "unrated_view": {
   "summary": {
    "total_players": 587,
-   "projected": 228,
-   "unrated": 359,
+   "projected": 227,
+   "unrated": 360,
    "promoted_club_players": 65,
    "with_set_piece_duty": 38,
-   "owned_over_1pct": 54,
+   "owned_over_1pct": 55,
    "by_reason": {
     "under 900 Premier League minutes last season": 113,
-    "summer signing - last season's football was elsewhere": 44,
+    "summer signing - last season's football was elsewhere": 43,
     "promoted club - played outside the Premier League last season": 65,
     "no Premier League minutes last season": 61,
-    "flagged unavailable, so excluded from projections": 76
+    "flagged unavailable, so excluded from projections": 78
    },
    "note": "These players have no projection because a per-90 rate needs minutes, and they have too few. `signal` is a 0-100 role indicator built only from price, FPL's own expected points, set-piece duty and ownership - it is not points and must never be compared with the projected column."
   },
@@ -6212,7 +6231,7 @@
      "penalties": 1
     },
     "ep": 2.7,
-    "own": 14.0,
+    "own": 14.6,
     "minutes": 694,
     "status": "a",
     "news": "",
@@ -6313,7 +6332,7 @@
      "penalties": 1
     },
     "ep": 1.8,
-    "own": 1.5,
+    "own": 1.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6323,7 +6342,32 @@
      "set_pieces": 25.3,
      "price": 15.0,
      "ep": 9.0,
-     "ownership": 3.0
+     "ownership": 2.8
+    }
+   },
+   {
+    "id": 557,
+    "name": "Tzolis",
+    "team": "ARS",
+    "pos": "MID",
+    "cost": 6.5,
+    "signal": 52,
+    "reason": "summer signing - last season's football was elsewhere",
+    "set_pieces": {
+     "corners": 3
+    },
+    "ep": 2.3,
+    "own": 10.0,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 30.0,
+     "ep": 11.5,
+     "ownership": 10.0
     }
    },
    {
@@ -6354,41 +6398,16 @@
     }
    },
    {
-    "id": 557,
-    "name": "Tzolis",
-    "team": "ARS",
-    "pos": "MID",
-    "cost": 6.5,
-    "signal": 50,
-    "reason": "summer signing - last season's football was elsewhere",
-    "set_pieces": {
-     "corners": 3
-    },
-    "ep": 2.3,
-    "own": 4.2,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 30.0,
-     "ep": 11.5,
-     "ownership": 8.4
-    }
-   },
-   {
     "id": 26,
     "name": "Havertz",
     "team": "ARS",
     "pos": "FWD",
     "cost": 7.5,
-    "signal": 48,
+    "signal": 49,
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 3.2,
+    "own": 3.9,
     "minutes": 577,
     "status": "a",
     "news": "",
@@ -6398,7 +6417,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 11.5,
-     "ownership": 6.4
+     "ownership": 7.8
     }
    },
    {
@@ -6425,32 +6444,6 @@
     }
    },
    {
-    "id": 157,
-    "name": "Estêvão",
-    "team": "CHE",
-    "pos": "MID",
-    "cost": 6.5,
-    "signal": 45,
-    "reason": "under 900 Premier League minutes last season",
-    "set_pieces": {
-     "penalties": 3,
-     "corners": 5
-    },
-    "ep": 2.3,
-    "own": 1.6,
-    "minutes": 839,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 30.0,
-     "ep": 11.5,
-     "ownership": 3.2
-    }
-   },
-   {
     "id": 515,
     "name": "Maddison",
     "team": "TOT",
@@ -6460,7 +6453,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 1.8,
+    "own": 1.7,
     "minutes": 34,
     "status": "a",
     "news": "",
@@ -6470,7 +6463,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 11.5,
-     "ownership": 3.6
+     "ownership": 3.4
     }
    },
    {
@@ -6485,7 +6478,7 @@
      "penalties": 2
     },
     "ep": 2.0,
-    "own": 1.2,
+    "own": 1.1,
     "minutes": 805,
     "status": "a",
     "news": "",
@@ -6495,7 +6488,33 @@
      "set_pieces": 10.1,
      "price": 22.5,
      "ep": 10.0,
-     "ownership": 2.4
+     "ownership": 2.2
+    }
+   },
+   {
+    "id": 157,
+    "name": "Estêvão",
+    "team": "CHE",
+    "pos": "MID",
+    "cost": 6.5,
+    "signal": 44,
+    "reason": "under 900 Premier League minutes last season",
+    "set_pieces": {
+     "penalties": 3,
+     "corners": 5
+    },
+    "ep": 2.3,
+    "own": 1.5,
+    "minutes": 839,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 30.0,
+     "ep": 11.5,
+     "ownership": 3.0
     }
    },
    {
@@ -6604,7 +6623,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.5,
-    "own": 2.4,
+    "own": 2.5,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6614,7 +6633,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 12.5,
-     "ownership": 4.8
+     "ownership": 5.0
     }
    },
    {
@@ -6646,11 +6665,11 @@
     "team": "ARS",
     "pos": "DEF",
     "cost": 5.5,
-    "signal": 38,
+    "signal": 39,
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.5,
-    "own": 1.4,
+    "own": 2.0,
     "minutes": 699,
     "status": "a",
     "news": "",
@@ -6660,7 +6679,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 12.5,
-     "ownership": 2.8
+     "ownership": 4.0
     }
    },
    {
@@ -6673,7 +6692,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.5,
-    "own": 0.9,
+    "own": 1.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6683,7 +6702,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 12.5,
-     "ownership": 1.8
+     "ownership": 2.2
     }
    },
    {
@@ -6696,7 +6715,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.5,
-    "own": 0.3,
+    "own": 0.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6706,7 +6725,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 12.5,
-     "ownership": 0.6
+     "ownership": 0.8
     }
    },
    {
@@ -6719,7 +6738,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.1,
-    "own": 1.4,
+    "own": 1.3,
     "minutes": 547,
     "status": "a",
     "news": "",
@@ -6729,7 +6748,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 10.5,
-     "ownership": 2.8
+     "ownership": 2.6
     }
    },
    {
@@ -6769,7 +6788,7 @@
      "penalties": 2
     },
     "ep": 1.8,
-    "own": 0.3,
+    "own": 0.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6779,7 +6798,7 @@
      "set_pieces": 10.1,
      "price": 15.0,
      "ep": 9.0,
-     "ownership": 0.6
+     "ownership": 0.8
     }
    },
    {
@@ -6909,7 +6928,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.6,
-    "own": 2.6,
+    "own": 2.7,
     "minutes": 360,
     "status": "a",
     "news": "",
@@ -6919,7 +6938,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 13.0,
-     "ownership": 5.2
+     "ownership": 5.4
     }
    },
    {
@@ -6978,7 +6997,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.2,
-    "own": 2.0,
+    "own": 2.2,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -6988,7 +7007,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 11.0,
-     "ownership": 4.0
+     "ownership": 4.4
     }
    },
    {
@@ -7004,7 +7023,7 @@
      "corners": 1
     },
     "ep": 1.5,
-    "own": 0.2,
+    "own": 0.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -7014,7 +7033,7 @@
      "set_pieces": 14.7,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.4
+     "ownership": 0.2
     }
    },
    {
@@ -7041,6 +7060,29 @@
     }
    },
    {
+    "id": 362,
+    "name": "Jacquet",
+    "team": "LIV",
+    "pos": "DEF",
+    "cost": 5.0,
+    "signal": 29,
+    "reason": "summer signing - last season's football was elsewhere",
+    "set_pieces": {},
+    "ep": 2.2,
+    "own": 1.5,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 15.0,
+     "ep": 11.0,
+     "ownership": 3.0
+    }
+   },
+   {
     "id": 2,
     "name": "Arrizabalaga",
     "team": "ARS",
@@ -7061,29 +7103,6 @@
      "price": 15.0,
      "ep": 13.0,
      "ownership": 0.2
-    }
-   },
-   {
-    "id": 362,
-    "name": "Jacquet",
-    "team": "LIV",
-    "pos": "DEF",
-    "cost": 5.0,
-    "signal": 28,
-    "reason": "summer signing - last season's football was elsewhere",
-    "set_pieces": {},
-    "ep": 2.2,
-    "own": 1.1,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 15.0,
-     "ep": 11.0,
-     "ownership": 2.2
     }
    },
    {
@@ -7211,7 +7230,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.9,
-    "own": 19.8,
+    "own": 19.9,
     "minutes": 630,
     "status": "a",
     "news": "",
@@ -7372,7 +7391,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 0.5,
+    "own": 0.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -7382,7 +7401,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 10.0,
-     "ownership": 1.0
+     "ownership": 0.8
     }
    },
    {
@@ -7464,7 +7483,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.8,
-    "own": 0.4,
+    "own": 0.5,
     "minutes": 480,
     "status": "a",
     "news": "",
@@ -7474,7 +7493,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 9.0,
-     "ownership": 0.8
+     "ownership": 1.0
     }
    },
    {
@@ -7694,7 +7713,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 0.0,
+    "own": 0.1,
     "minutes": 125,
     "status": "a",
     "news": "",
@@ -7704,7 +7723,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 10.0,
-     "ownership": 0.0
+     "ownership": 0.2
     }
    },
    {
@@ -8050,7 +8069,7 @@
      "corners": 2
     },
     "ep": 1.0,
-    "own": 5.0,
+    "own": 5.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8101,7 +8120,7 @@
      "penalties": 1
     },
     "ep": 0.0,
-    "own": 2.3,
+    "own": 2.0,
     "minutes": 1663,
     "status": "i",
     "news": "Foot injury - Unknown return date",
@@ -8111,7 +8130,7 @@
      "set_pieces": 25.3,
      "price": 30.0,
      "ep": 0.0,
-     "ownership": 4.6
+     "ownership": 4.0
     }
    },
    {
@@ -8454,7 +8473,7 @@
     "reason": "summer signing - last season's football was elsewhere",
     "set_pieces": {},
     "ep": 1.9,
-    "own": 0.1,
+    "own": 0.0,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -8464,7 +8483,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 9.5,
-     "ownership": 0.2
+     "ownership": 0.0
     }
    },
    {
@@ -8564,26 +8583,28 @@
     }
    },
    {
-    "id": 541,
-    "name": "Meunier",
-    "team": "SUN",
+    "id": 389,
+    "name": "Matheus N.",
+    "team": "MCI",
     "pos": "DEF",
-    "cost": 4.5,
+    "cost": 6.0,
     "signal": 17,
-    "reason": "summer signing - last season's football was elsewhere",
-    "set_pieces": {},
-    "ep": 1.7,
-    "own": 0.5,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": true,
+    "reason": "flagged unavailable, so excluded from projections",
+    "set_pieces": {
+     "penalties": 5
+    },
+    "ep": 2.1,
+    "own": 4.0,
+    "minutes": 2861,
+    "status": "d",
+    "news": "Knock - 75% chance of playing",
+    "new_club": false,
     "promoted": false,
     "components": {
      "set_pieces": 0.0,
-     "price": 7.5,
-     "ep": 8.5,
-     "ownership": 1.0
+     "price": 30.0,
+     "ep": 10.5,
+     "ownership": 8.0
     }
    },
    {
@@ -9660,7 +9681,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 18.4,
+    "own": 18.2,
     "minutes": 812,
     "status": "a",
     "news": "",
@@ -9775,7 +9796,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.1,
+    "own": 0.0,
     "minutes": 40,
     "status": "a",
     "news": "",
@@ -9785,7 +9806,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.2
+     "ownership": 0.0
     }
    },
    {
@@ -10076,7 +10097,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 7.3,
+    "own": 7.2,
     "minutes": 49,
     "status": "a",
     "news": "",
@@ -10283,7 +10304,7 @@
     "reason": "no Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.1,
+    "own": 0.2,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10293,7 +10314,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.2
+     "ownership": 0.4
     }
    },
    {
@@ -10398,7 +10419,7 @@
     "reason": "no Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 5.6,
+    "own": 5.5,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10490,7 +10511,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.2,
+    "own": 0.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10500,7 +10521,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.4
+     "ownership": 0.2
     }
    },
    {
@@ -10536,7 +10557,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.0,
+    "own": 0.1,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10546,7 +10567,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.0
+     "ownership": 0.2
     }
    },
    {
@@ -10582,7 +10603,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 8.2,
+    "own": 8.0,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10630,7 +10651,7 @@
      "penalties": 1
     },
     "ep": 0.0,
-    "own": 1.3,
+    "own": 1.0,
     "minutes": 0,
     "status": "i",
     "news": "Thigh injury - Unknown return date",
@@ -10640,7 +10661,7 @@
      "set_pieces": 25.3,
      "price": 15.0,
      "ep": 0.0,
-     "ownership": 2.6
+     "ownership": 2.0
     }
    },
    {
@@ -10653,7 +10674,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 6.7,
+    "own": 6.5,
     "minutes": 602,
     "status": "a",
     "news": "",
@@ -10676,7 +10697,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.5,
-    "own": 0.1,
+    "own": 0.2,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10686,7 +10707,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 7.5,
-     "ownership": 0.2
+     "ownership": 0.4
     }
    },
    {
@@ -10722,7 +10743,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 15.3,
+    "own": 15.0,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10768,7 +10789,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 1.7,
-    "own": 2.0,
+    "own": 1.8,
     "minutes": 1630,
     "status": "d",
     "news": "Shin injury - 75% chance of playing",
@@ -10778,30 +10799,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 8.5,
-     "ownership": 4.0
-    }
-   },
-   {
-    "id": 238,
-    "name": "Grealish",
-    "team": "MCI",
-    "pos": "MID",
-    "cost": 6.5,
-    "signal": 14,
-    "reason": "flagged unavailable, so excluded from projections",
-    "set_pieces": {},
-    "ep": 1.7,
-    "own": 0.1,
-    "minutes": 1627,
-    "status": "d",
-    "news": "Foot injury - 75% chance of playing",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 30.0,
-     "ep": 8.5,
-     "ownership": 0.2
+     "ownership": 3.6
     }
    },
    {
@@ -10814,7 +10812,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 1.9,
-    "own": 3.9,
+    "own": 3.4,
     "minutes": 2784,
     "status": "d",
     "news": "Knock - 75% chance of playing",
@@ -10824,7 +10822,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 9.5,
-     "ownership": 7.8
+     "ownership": 6.8
     }
    },
    {
@@ -10889,7 +10887,7 @@
      "corners": 2
     },
     "ep": 1.0,
-    "own": 2.3,
+    "own": 2.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -10899,7 +10897,7 @@
      "set_pieces": 2.5,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 4.6
+     "ownership": 4.8
     }
    },
    {
@@ -10981,7 +10979,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 2.8,
+    "own": 2.9,
     "minutes": 565,
     "status": "a",
     "news": "",
@@ -10991,7 +10989,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 5.6
+     "ownership": 5.8
     }
    },
    {
@@ -11004,7 +11002,7 @@
     "reason": "no Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 2.8,
+    "own": 2.9,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -11014,7 +11012,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 5.6
+     "ownership": 5.8
     }
    },
    {
@@ -11096,7 +11094,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 3.0,
+    "own": 2.9,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -11106,53 +11104,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 6.0
-    }
-   },
-   {
-    "id": 298,
-    "name": "Destan",
-    "team": "HUL",
-    "pos": "FWD",
-    "cost": 4.5,
-    "signal": 10,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 2.3,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 4.6
-    }
-   },
-   {
-    "id": 171,
-    "name": "Dovin",
-    "team": "COV",
-    "pos": "GKP",
-    "cost": 4.0,
-    "signal": 10,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 2.3,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 4.6
+     "ownership": 5.8
     }
    },
    {
@@ -11188,7 +11140,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 1.0,
+    "own": 0.9,
     "minutes": 2780,
     "status": "u",
     "news": "Has joined Como permanently",
@@ -11198,7 +11150,53 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 0.0,
-     "ownership": 2.0
+     "ownership": 1.8
+    }
+   },
+   {
+    "id": 298,
+    "name": "Destan",
+    "team": "HUL",
+    "pos": "FWD",
+    "cost": 4.5,
+    "signal": 9,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 2.2,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 4.4
+    }
+   },
+   {
+    "id": 171,
+    "name": "Dovin",
+    "team": "COV",
+    "pos": "GKP",
+    "cost": 4.0,
+    "signal": 9,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 2.2,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 4.4
     }
    },
    {
@@ -11211,7 +11209,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 1.8,
+    "own": 1.9,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -11221,7 +11219,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 3.6
+     "ownership": 3.8
     }
    },
    {
@@ -11234,7 +11232,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 1.6,
+    "own": 1.2,
     "minutes": 0,
     "status": "i",
     "news": "Knee injury - Unknown return date",
@@ -11244,7 +11242,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 0.0,
-     "ownership": 3.2
+     "ownership": 2.4
     }
    },
    {
@@ -11268,31 +11266,6 @@
      "price": 0.0,
      "ep": 5.0,
      "ownership": 3.8
-    }
-   },
-   {
-    "id": 446,
-    "name": "Schär",
-    "team": "NEW",
-    "pos": "DEF",
-    "cost": 5.0,
-    "signal": 9,
-    "reason": "flagged unavailable, so excluded from projections",
-    "set_pieces": {
-     "direct_fk": 2
-    },
-    "ep": 1.6,
-    "own": 0.2,
-    "minutes": 1089,
-    "status": "d",
-    "news": "Knock - 75% chance of playing",
-    "new_club": false,
-    "promoted": false,
-    "components": {
-     "set_pieces": 3.4,
-     "price": 15.0,
-     "ep": 8.0,
-     "ownership": 0.4
     }
    },
    {
@@ -11378,7 +11351,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 1.3,
-    "own": 0.3,
+    "own": 0.2,
     "minutes": 278,
     "status": "d",
     "news": "Knock - 75% chance of playing",
@@ -11388,7 +11361,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 6.5,
-     "ownership": 0.6
+     "ownership": 0.4
     }
    },
    {
@@ -11401,7 +11374,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 1.6,
-    "own": 0.6,
+    "own": 0.5,
     "minutes": 2797,
     "status": "d",
     "news": "Knock - 75% chance of playing",
@@ -11411,7 +11384,30 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 8.0,
-     "ownership": 1.2
+     "ownership": 1.0
+    }
+   },
+   {
+    "id": 373,
+    "name": "C.Jones",
+    "team": "LIV",
+    "pos": "MID",
+    "cost": 5.5,
+    "signal": 8,
+    "reason": "flagged unavailable, so excluded from projections",
+    "set_pieces": {},
+    "ep": 1.5,
+    "own": 0.2,
+    "minutes": 1923,
+    "status": "d",
+    "news": "Hip injury - 75% chance of playing",
+    "new_club": false,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 15.0,
+     "ep": 7.5,
+     "ownership": 0.4
     }
    },
    {
@@ -11541,7 +11537,7 @@
      "corners": 5
     },
     "ep": 0.0,
-    "own": 0.6,
+    "own": 0.4,
     "minutes": 2389,
     "status": "i",
     "news": "Leg injury - Expected back 28 Nov",
@@ -11551,7 +11547,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 0.0,
-     "ownership": 1.2
+     "ownership": 0.8
     }
    },
    {
@@ -11613,7 +11609,7 @@
     "reason": "under 900 Premier League minutes last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 1.7,
+    "own": 1.6,
     "minutes": 7,
     "status": "a",
     "news": "",
@@ -11623,7 +11619,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 3.4
+     "ownership": 3.2
     }
    },
    {
@@ -11693,6 +11689,29 @@
      "price": 0.0,
      "ep": 5.0,
      "ownership": 1.8
+    }
+   },
+   {
+    "id": 182,
+    "name": "Amenda",
+    "team": "COV",
+    "pos": "DEF",
+    "cost": 4.0,
+    "signal": 7,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 0.8,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 1.6
     }
    },
    {
@@ -11928,29 +11947,6 @@
     }
    },
    {
-    "id": 182,
-    "name": "Amenda",
-    "team": "COV",
-    "pos": "DEF",
-    "cost": 4.0,
-    "signal": 6,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 0.7,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 1.4
-    }
-   },
-   {
     "id": 192,
     "name": "Andrews",
     "team": "COV",
@@ -12052,7 +12048,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 0.7,
+    "own": 0.6,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -12062,7 +12058,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 1.4
+     "ownership": 1.2
     }
    },
    {
@@ -12075,7 +12071,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 0.5,
+    "own": 0.4,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -12085,7 +12081,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 1.0
+     "ownership": 0.8
     }
    },
    {
@@ -12236,7 +12232,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 0.6,
+    "own": 0.7,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -12246,7 +12242,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 1.2
+     "ownership": 1.4
     }
    },
    {
@@ -12259,7 +12255,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 1.5,
+    "own": 1.2,
     "minutes": 0,
     "status": "i",
     "news": "Unspecified injury - Unknown return date",
@@ -12269,7 +12265,30 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 0.0,
-     "ownership": 3.0
+     "ownership": 2.4
+    }
+   },
+   {
+    "id": 586,
+    "name": "Mendy",
+    "team": "HUL",
+    "pos": "DEF",
+    "cost": 4.0,
+    "signal": 6,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 0.4,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 5.0,
+     "ownership": 0.8
     }
    },
    {
@@ -12374,7 +12393,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.7,
+    "own": 0.5,
     "minutes": 2761,
     "status": "i",
     "news": "Unspecified injury - Unknown return date",
@@ -12384,7 +12403,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 0.0,
-     "ownership": 1.4
+     "ownership": 1.0
     }
    },
    {
@@ -12420,7 +12439,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 1.1,
-    "own": 0.7,
+    "own": 0.6,
     "minutes": 1769,
     "status": "d",
     "news": "Unspecified injury - 75% chance of playing",
@@ -12430,7 +12449,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 5.5,
-     "ownership": 1.4
+     "ownership": 1.2
     }
    },
    {
@@ -12627,7 +12646,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 0.1,
+    "own": 0.0,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -12637,7 +12656,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 5.0,
-     "ownership": 0.2
+     "ownership": 0.0
     }
    },
    {
@@ -12653,7 +12672,7 @@
      "corners": 4
     },
     "ep": 1.1,
-    "own": 0.2,
+    "own": 0.1,
     "minutes": 1188,
     "status": "d",
     "news": "Unspecified injury - 75% chance of playing",
@@ -12663,7 +12682,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 5.5,
-     "ownership": 0.4
+     "ownership": 0.2
     }
    },
    {
@@ -12837,7 +12856,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.2,
+    "own": 0.1,
     "minutes": 214,
     "status": "u",
     "news": "Has joined Getafe permanently",
@@ -12847,7 +12866,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 0.0,
-     "ownership": 0.4
+     "ownership": 0.2
     }
    },
    {
@@ -12906,7 +12925,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.3,
+    "own": 0.2,
     "minutes": 2207,
     "status": "i",
     "news": "Calf injury - Unknown return date",
@@ -12916,7 +12935,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 0.0,
-     "ownership": 0.6
+     "ownership": 0.4
     }
    },
    {
@@ -12986,6 +13005,29 @@
      "price": 0.0,
      "ep": 5.0,
      "ownership": 0.4
+    }
+   },
+   {
+    "id": 458,
+    "name": "Joelinton",
+    "team": "NEW",
+    "pos": "MID",
+    "cost": 5.5,
+    "signal": 5,
+    "reason": "flagged unavailable, so excluded from projections",
+    "set_pieces": {},
+    "ep": 0.0,
+    "own": 0.1,
+    "minutes": 1950,
+    "status": "i",
+    "news": "Unspecified injury - Unknown return date",
+    "new_club": false,
+    "promoted": false,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 15.0,
+     "ep": 0.0,
+     "ownership": 0.2
     }
    },
    {
@@ -13219,26 +13261,26 @@
     }
    },
    {
-    "id": 586,
-    "name": "Mendy",
-    "team": "HUL",
+    "id": 541,
+    "name": "Meunier",
+    "team": "SUN",
     "pos": "DEF",
-    "cost": 4.0,
+    "cost": 4.5,
     "signal": 5,
-    "reason": "promoted club - played outside the Premier League last season",
+    "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
-    "ep": 1.0,
-    "own": 0.2,
+    "ep": 1.3,
+    "own": 0.4,
     "minutes": 0,
-    "status": "a",
-    "news": "",
+    "status": "d",
+    "news": "Knock - 75% chance of playing",
     "new_club": true,
-    "promoted": true,
+    "promoted": false,
     "components": {
      "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 0.4
+     "price": 7.5,
+     "ep": 6.5,
+     "ownership": 0.8
     }
    },
    {
@@ -13320,7 +13362,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 1.1,
-    "own": 0.7,
+    "own": 0.5,
     "minutes": 101,
     "status": "d",
     "news": "Lack of match fitness - 75% chance of playing",
@@ -13330,7 +13372,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 5.5,
-     "ownership": 1.4
+     "ownership": 1.0
     }
    },
    {
@@ -13550,7 +13592,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.2,
+    "own": 0.1,
     "minutes": 1074,
     "status": "i",
     "news": "Unspecified injury - Unknown return date",
@@ -13560,7 +13602,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 0.0,
-     "ownership": 0.4
+     "ownership": 0.2
     }
    },
    {
@@ -13596,7 +13638,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.3,
+    "own": 0.2,
     "minutes": 1646,
     "status": "i",
     "news": "Ankle injury - Expected back 23 Aug",
@@ -13606,7 +13648,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 0.0,
-     "ownership": 0.6
+     "ownership": 0.4
     }
    },
    {
@@ -13688,7 +13730,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.5,
+    "own": 0.4,
     "minutes": 0,
     "status": "i",
     "news": "Arm injury - Unknown return date",
@@ -13698,7 +13740,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 0.0,
-     "ownership": 1.0
+     "ownership": 0.8
     }
    },
    {
@@ -13782,7 +13824,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.7,
+    "own": 0.6,
     "minutes": 1842,
     "status": "u",
     "news": "Has joined Paris Saint-Germain permanently",
@@ -13792,7 +13834,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 0.0,
-     "ownership": 1.4
+     "ownership": 1.2
     }
    },
    {
@@ -14104,7 +14146,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.8,
-    "own": 0.6,
+    "own": 0.5,
     "minutes": 34,
     "status": "d",
     "news": "Hamstring injury - 75% chance of playing",
@@ -14114,7 +14156,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 4.0,
-     "ownership": 1.2
+     "ownership": 1.0
     }
    },
    {
@@ -14150,7 +14192,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 1.0,
+    "own": 0.9,
     "minutes": 125,
     "status": "u",
     "news": "Has joined Konyaspor permanently",
@@ -14160,7 +14202,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 0.0,
-     "ownership": 2.0
+     "ownership": 1.8
     }
    },
    {
@@ -14334,7 +14376,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.3,
+    "own": 0.2,
     "minutes": 0,
     "status": "i",
     "news": "Hamstring injury - Unknown return date",
@@ -14344,7 +14386,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 0.0,
-     "ownership": 0.6
+     "ownership": 0.4
     }
    },
    {
@@ -14380,7 +14422,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.5,
+    "own": 0.4,
     "minutes": 0,
     "status": "i",
     "news": "Groin injury - Unknown return date",
@@ -14390,7 +14432,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 0.0,
-     "ownership": 1.0
+     "ownership": 0.8
     }
    },
    {
@@ -14472,7 +14514,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.2,
+    "own": 0.1,
     "minutes": 0,
     "status": "i",
     "news": "Knee injury - Unknown return date",
@@ -14482,7 +14524,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 0.0,
-     "ownership": 0.4
+     "ownership": 0.2
     }
    },
    {
@@ -14495,7 +14537,7 @@
     "reason": "flagged unavailable, so excluded from projections",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 0.7,
+    "own": 0.6,
     "minutes": 0,
     "status": "u",
     "news": "Has joined Wrexham permanently",
@@ -14505,7 +14547,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 0.0,
-     "ownership": 1.4
+     "ownership": 1.2
     }
    },
    {
@@ -15516,17 +15558,17 @@
      "rank": 1
     },
     {
-     "id": 398,
-     "name": "Foden",
-     "pos": "MID",
-     "cost": 7.0,
-     "rank": 2
-    },
-    {
      "id": 481,
      "name": "Anderson",
      "pos": "MID",
      "cost": 6.5,
+     "rank": 2
+    },
+    {
+     "id": 398,
+     "name": "Foden",
+     "pos": "MID",
+     "cost": 7.0,
      "rank": 3
     }
    ]
@@ -16021,7 +16063,7 @@
    },
    "pts": 235,
    "xgi": 23.1,
-   "own": 47.9,
+   "own": 48.3,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -16030,7 +16072,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 47.9
+   "selected_by": 48.3
   },
   {
    "id": 411,
@@ -16052,7 +16094,7 @@
    },
    "pts": 239,
    "xgi": 28.2,
-   "own": 73.3,
+   "own": 72.0,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -16061,7 +16103,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 73.3
+   "selected_by": 72.0
   },
   {
    "id": 397,
@@ -16083,7 +16125,7 @@
    },
    "pts": 202,
    "xgi": 14.2,
-   "own": 28.2,
+   "own": 27.3,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -16092,7 +16134,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 28.2
+   "selected_by": 27.3
   },
   {
    "id": 4,
@@ -16112,7 +16154,7 @@
    "set_pieces": {},
    "pts": 209,
    "xgi": 4.7,
-   "own": 27.4,
+   "own": 28.1,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -16121,7 +16163,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 27.4
+   "selected_by": 28.1
   },
   {
    "id": 480,
@@ -16144,7 +16186,7 @@
    },
    "pts": 188,
    "xgi": 13.7,
-   "own": 11.6,
+   "own": 11.7,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -16153,7 +16195,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.6
+   "selected_by": 11.7
   },
   {
    "id": 106,
@@ -16175,7 +16217,7 @@
    },
    "pts": 181,
    "xgi": 22.4,
-   "own": 16.3,
+   "own": 17.0,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -16184,7 +16226,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 16.3
+   "selected_by": 17.0
   },
   {
    "id": 388,
@@ -16204,7 +16246,7 @@
    "set_pieces": {},
    "pts": 179,
    "xgi": 6.4,
-   "own": 22.4,
+   "own": 21.3,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -16213,7 +16255,38 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.4
+   "selected_by": 21.3
+  },
+  {
+   "id": 481,
+   "name": "Anderson",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 6.5,
+   "projected": 14.7,
+   "ep": 2.3,
+   "per_gw": 4.9,
+   "per_million": 2.26,
+   "rate_per_90": 4.89,
+   "exp_minutes": 88,
+   "start_share": 97,
+   "new_club": true,
+   "joined": "2026-07-02",
+   "set_pieces": {
+    "corners": 2
+   },
+   "pts": 180,
+   "xgi": 7.7,
+   "own": 10.2,
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 10.2
   },
   {
    "id": 13,
@@ -16236,7 +16309,7 @@
    },
    "pts": 184,
    "xgi": 10.5,
-   "own": 21.4,
+   "own": 20.7,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -16245,38 +16318,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 21.4
-  },
-  {
-   "id": 481,
-   "name": "Anderson",
-   "team": "MCI",
-   "pos": "MID",
-   "cost": 6.5,
-   "projected": 14.6,
-   "ep": 2.3,
-   "per_gw": 4.9,
-   "per_million": 2.24,
-   "rate_per_90": 4.86,
-   "exp_minutes": 88,
-   "start_share": 97,
-   "new_club": true,
-   "joined": "2026-07-02",
-   "set_pieces": {
-    "corners": 3
-   },
-   "pts": 180,
-   "xgi": 7.7,
-   "own": 10.8,
-   "fixtures": [
-    "BOU(H)[3]",
-    "CRY(A)[3]",
-    "COV(H)[2]"
-   ],
-   "double": false,
-   "blank": false,
-   "rotation_risk": false,
-   "selected_by": 10.8
+   "selected_by": 20.7
   },
   {
    "id": 356,
@@ -16296,7 +16338,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 5.2,
-   "own": 17.0,
+   "own": 17.4,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -16305,7 +16347,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 17.0
+   "selected_by": 17.4
   },
   {
    "id": 498,
@@ -16325,7 +16367,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 6.2,
-   "own": 10.0,
+   "own": 9.8,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -16334,7 +16376,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.0
+   "selected_by": 9.8
   },
   {
    "id": 368,
@@ -16358,7 +16400,7 @@
    },
    "pts": 160,
    "xgi": 11.6,
-   "own": 42.0,
+   "own": 41.5,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -16367,7 +16409,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 42.0
+   "selected_by": 41.5
   },
   {
    "id": 165,
@@ -16387,7 +16429,7 @@
    "set_pieces": {},
    "pts": 177,
    "xgi": 16.9,
-   "own": 56.9,
+   "own": 58.3,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -16396,7 +16438,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 56.9
+   "selected_by": 58.3
   },
   {
    "id": 55,
@@ -16449,7 +16491,7 @@
    },
    "pts": 168,
    "xgi": 10.7,
-   "own": 7.7,
+   "own": 7.5,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -16458,7 +16500,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 7.7
+   "selected_by": 7.5
   },
   {
    "id": 387,
@@ -16478,7 +16520,7 @@
    "set_pieces": {},
    "pts": 160,
    "xgi": 8.8,
-   "own": 22.1,
+   "own": 21.8,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -16487,7 +16529,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.1
+   "selected_by": 21.8
   },
   {
    "id": 40,
@@ -16509,7 +16551,7 @@
    },
    "pts": 169,
    "xgi": 11.2,
-   "own": 26.3,
+   "own": 26.8,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -16518,7 +16560,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 26.3
+   "selected_by": 26.8
   },
   {
    "id": 12,
@@ -16542,7 +16584,7 @@
    },
    "pts": 157,
    "xgi": 14.7,
-   "own": 10.6,
+   "own": 10.1,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -16551,7 +16593,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.6
+   "selected_by": 10.1
   },
   {
    "id": 229,
@@ -16604,7 +16646,7 @@
    },
    "pts": 147,
    "xgi": 11.2,
-   "own": 12.7,
+   "own": 12.3,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -16613,7 +16655,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.7
+   "selected_by": 12.3
   }
  ],
  "by_value": [
@@ -16635,7 +16677,7 @@
    "set_pieces": {},
    "pts": 179,
    "xgi": 6.4,
-   "own": 22.4,
+   "own": 21.3,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -16644,7 +16686,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.4
+   "selected_by": 21.3
   },
   {
    "id": 112,
@@ -16664,7 +16706,7 @@
    "set_pieces": {},
    "pts": 148,
    "xgi": 4.9,
-   "own": 8.8,
+   "own": 8.9,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -16673,7 +16715,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 8.8
+   "selected_by": 8.9
   },
   {
    "id": 498,
@@ -16693,7 +16735,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 6.2,
-   "own": 10.0,
+   "own": 9.8,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -16702,7 +16744,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.0
+   "selected_by": 9.8
   },
   {
    "id": 82,
@@ -16722,7 +16764,7 @@
    "set_pieces": {},
    "pts": 143,
    "xgi": 0.2,
-   "own": 5.7,
+   "own": 5.8,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -16731,7 +16773,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.7
+   "selected_by": 5.8
   },
   {
    "id": 529,
@@ -16780,7 +16822,7 @@
    "set_pieces": {},
    "pts": 130,
    "xgi": 0.1,
-   "own": 18.4,
+   "own": 18.6,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -16789,7 +16831,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 18.4
+   "selected_by": 18.6
   },
   {
    "id": 204,
@@ -16809,7 +16851,7 @@
    "set_pieces": {},
    "pts": 135,
    "xgi": 4.1,
-   "own": 6.9,
+   "own": 6.8,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -16818,7 +16860,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 6.9
+   "selected_by": 6.8
   },
   {
    "id": 481,
@@ -16826,21 +16868,21 @@
    "team": "MCI",
    "pos": "MID",
    "cost": 6.5,
-   "projected": 14.6,
+   "projected": 14.7,
    "ep": 2.3,
    "per_gw": 4.9,
-   "per_million": 2.24,
-   "rate_per_90": 4.86,
+   "per_million": 2.26,
+   "rate_per_90": 4.89,
    "exp_minutes": 88,
    "start_share": 97,
    "new_club": true,
    "joined": "2026-07-02",
    "set_pieces": {
-    "corners": 3
+    "corners": 2
    },
    "pts": 180,
    "xgi": 7.7,
-   "own": 10.8,
+   "own": 10.2,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -16849,7 +16891,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.8
+   "selected_by": 10.2
   },
   {
    "id": 356,
@@ -16869,7 +16911,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 5.2,
-   "own": 17.0,
+   "own": 17.4,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -16878,7 +16920,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 17.0
+   "selected_by": 17.4
   },
   {
    "id": 61,
@@ -16958,7 +17000,7 @@
    },
    "pts": 113,
    "xgi": 2.7,
-   "own": 23.9,
+   "own": 23.4,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -16967,7 +17009,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 23.9
+   "selected_by": 23.4
   },
   {
    "id": 542,
@@ -16991,7 +17033,7 @@
    },
    "pts": 147,
    "xgi": 11.2,
-   "own": 12.7,
+   "own": 12.3,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -17000,38 +17042,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.7
-  },
-  {
-   "id": 389,
-   "name": "Matheus N.",
-   "team": "MCI",
-   "pos": "DEF",
-   "cost": 6.0,
-   "projected": 12.6,
-   "ep": 2.8,
-   "per_gw": 4.2,
-   "per_million": 2.11,
-   "rate_per_90": 4.84,
-   "exp_minutes": 75,
-   "start_share": 84,
-   "new_club": false,
-   "joined": "2023-09-01",
-   "set_pieces": {
-    "penalties": 5
-   },
-   "pts": 154,
-   "xgi": 2.6,
-   "own": 4.5,
-   "fixtures": [
-    "BOU(H)[3]",
-    "CRY(A)[3]",
-    "COV(H)[2]"
-   ],
-   "double": false,
-   "blank": false,
-   "rotation_risk": false,
-   "selected_by": 4.5
+   "selected_by": 12.3
   },
   {
    "id": 534,
@@ -17053,7 +17064,7 @@
    },
    "pts": 110,
    "xgi": 4.3,
-   "own": 5.5,
+   "own": 5.8,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -17062,7 +17073,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.5
+   "selected_by": 5.8
   },
   {
    "id": 32,
@@ -17115,7 +17126,7 @@
    },
    "pts": 118,
    "xgi": 5.4,
-   "own": 3.2,
+   "own": 3.1,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -17124,7 +17135,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.2
+   "selected_by": 3.1
   },
   {
    "id": 469,
@@ -17147,7 +17158,7 @@
    },
    "pts": 128,
    "xgi": 6.0,
-   "own": 11.7,
+   "own": 11.4,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -17156,7 +17167,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.7
+   "selected_by": 11.4
   },
   {
    "id": 88,
@@ -17176,7 +17187,7 @@
    "set_pieces": {},
    "pts": 113,
    "xgi": 4.2,
-   "own": 3.7,
+   "own": 3.6,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -17185,7 +17196,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.7
+   "selected_by": 3.6
   },
   {
    "id": 250,
@@ -17215,6 +17226,37 @@
    "blank": false,
    "rotation_risk": false,
    "selected_by": 3.3
+  },
+  {
+   "id": 260,
+   "name": "Wilson",
+   "team": "LEE",
+   "pos": "MID",
+   "cost": 6.5,
+   "projected": 13.3,
+   "ep": 2.3,
+   "per_gw": 4.4,
+   "per_million": 2.05,
+   "rate_per_90": 5.69,
+   "exp_minutes": 70,
+   "start_share": 84,
+   "new_club": true,
+   "joined": "2026-07-08",
+   "set_pieces": {
+    "corners": 2
+   },
+   "pts": 168,
+   "xgi": 10.7,
+   "own": 7.5,
+   "fixtures": [
+    "NFO(A)[3]",
+    "BRE(H)[3]",
+    "BHA(A)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 7.5
   }
  ],
  "all_players": [
@@ -17240,7 +17282,7 @@
    },
    "pts": 235,
    "xgi": 23.1,
-   "own": 47.9,
+   "own": 48.3,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -17249,7 +17291,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 47.9
+   "selected_by": 48.3
   },
   {
    "id": 411,
@@ -17271,7 +17313,7 @@
    },
    "pts": 239,
    "xgi": 28.2,
-   "own": 73.3,
+   "own": 72.0,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -17280,7 +17322,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 73.3
+   "selected_by": 72.0
   },
   {
    "id": 397,
@@ -17302,7 +17344,7 @@
    },
    "pts": 202,
    "xgi": 14.2,
-   "own": 28.2,
+   "own": 27.3,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -17311,7 +17353,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 28.2
+   "selected_by": 27.3
   },
   {
    "id": 4,
@@ -17331,7 +17373,7 @@
    "set_pieces": {},
    "pts": 209,
    "xgi": 4.7,
-   "own": 27.4,
+   "own": 28.1,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -17340,7 +17382,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 27.4
+   "selected_by": 28.1
   },
   {
    "id": 480,
@@ -17363,7 +17405,7 @@
    },
    "pts": 188,
    "xgi": 13.7,
-   "own": 11.6,
+   "own": 11.7,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -17372,7 +17414,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.6
+   "selected_by": 11.7
   },
   {
    "id": 106,
@@ -17394,7 +17436,7 @@
    },
    "pts": 181,
    "xgi": 22.4,
-   "own": 16.3,
+   "own": 17.0,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -17403,7 +17445,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 16.3
+   "selected_by": 17.0
   },
   {
    "id": 388,
@@ -17423,7 +17465,7 @@
    "set_pieces": {},
    "pts": 179,
    "xgi": 6.4,
-   "own": 22.4,
+   "own": 21.3,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -17432,7 +17474,38 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.4
+   "selected_by": 21.3
+  },
+  {
+   "id": 481,
+   "name": "Anderson",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 6.5,
+   "projected": 14.7,
+   "ep": 2.3,
+   "per_gw": 4.9,
+   "per_million": 2.26,
+   "rate_per_90": 4.89,
+   "exp_minutes": 88,
+   "start_share": 97,
+   "new_club": true,
+   "joined": "2026-07-02",
+   "set_pieces": {
+    "corners": 2
+   },
+   "pts": 180,
+   "xgi": 7.7,
+   "own": 10.2,
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": false,
+   "selected_by": 10.2
   },
   {
    "id": 13,
@@ -17455,7 +17528,7 @@
    },
    "pts": 184,
    "xgi": 10.5,
-   "own": 21.4,
+   "own": 20.7,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -17464,38 +17537,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 21.4
-  },
-  {
-   "id": 481,
-   "name": "Anderson",
-   "team": "MCI",
-   "pos": "MID",
-   "cost": 6.5,
-   "projected": 14.6,
-   "ep": 2.3,
-   "per_gw": 4.9,
-   "per_million": 2.24,
-   "rate_per_90": 4.86,
-   "exp_minutes": 88,
-   "start_share": 97,
-   "new_club": true,
-   "joined": "2026-07-02",
-   "set_pieces": {
-    "corners": 3
-   },
-   "pts": 180,
-   "xgi": 7.7,
-   "own": 10.8,
-   "fixtures": [
-    "BOU(H)[3]",
-    "CRY(A)[3]",
-    "COV(H)[2]"
-   ],
-   "double": false,
-   "blank": false,
-   "rotation_risk": false,
-   "selected_by": 10.8
+   "selected_by": 20.7
   },
   {
    "id": 356,
@@ -17515,7 +17557,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 5.2,
-   "own": 17.0,
+   "own": 17.4,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -17524,7 +17566,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 17.0
+   "selected_by": 17.4
   },
   {
    "id": 498,
@@ -17544,7 +17586,7 @@
    "set_pieces": {},
    "pts": 175,
    "xgi": 6.2,
-   "own": 10.0,
+   "own": 9.8,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -17553,7 +17595,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.0
+   "selected_by": 9.8
   },
   {
    "id": 368,
@@ -17577,7 +17619,7 @@
    },
    "pts": 160,
    "xgi": 11.6,
-   "own": 42.0,
+   "own": 41.5,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -17586,7 +17628,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 42.0
+   "selected_by": 41.5
   },
   {
    "id": 165,
@@ -17606,7 +17648,7 @@
    "set_pieces": {},
    "pts": 177,
    "xgi": 16.9,
-   "own": 56.9,
+   "own": 58.3,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -17615,7 +17657,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 56.9
+   "selected_by": 58.3
   },
   {
    "id": 55,
@@ -17668,7 +17710,7 @@
    },
    "pts": 168,
    "xgi": 10.7,
-   "own": 7.7,
+   "own": 7.5,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -17677,7 +17719,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 7.7
+   "selected_by": 7.5
   },
   {
    "id": 387,
@@ -17697,7 +17739,7 @@
    "set_pieces": {},
    "pts": 160,
    "xgi": 8.8,
-   "own": 22.1,
+   "own": 21.8,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -17706,7 +17748,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.1
+   "selected_by": 21.8
   },
   {
    "id": 40,
@@ -17728,7 +17770,7 @@
    },
    "pts": 169,
    "xgi": 11.2,
-   "own": 26.3,
+   "own": 26.8,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -17737,7 +17779,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 26.3
+   "selected_by": 26.8
   },
   {
    "id": 12,
@@ -17761,7 +17803,7 @@
    },
    "pts": 157,
    "xgi": 14.7,
-   "own": 10.6,
+   "own": 10.1,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -17770,7 +17812,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.6
+   "selected_by": 10.1
   },
   {
    "id": 229,
@@ -17823,7 +17865,7 @@
    },
    "pts": 147,
    "xgi": 11.2,
-   "own": 12.7,
+   "own": 12.3,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -17832,7 +17874,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.7
+   "selected_by": 12.3
   },
   {
    "id": 427,
@@ -17856,7 +17898,7 @@
    },
    "pts": 148,
    "xgi": 17.0,
-   "own": 27.6,
+   "own": 28.8,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -17865,38 +17907,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 27.6
-  },
-  {
-   "id": 389,
-   "name": "Matheus N.",
-   "team": "MCI",
-   "pos": "DEF",
-   "cost": 6.0,
-   "projected": 12.6,
-   "ep": 2.8,
-   "per_gw": 4.2,
-   "per_million": 2.11,
-   "rate_per_90": 4.84,
-   "exp_minutes": 75,
-   "start_share": 84,
-   "new_club": false,
-   "joined": "2023-09-01",
-   "set_pieces": {
-    "penalties": 5
-   },
-   "pts": 154,
-   "xgi": 2.6,
-   "own": 4.5,
-   "fixtures": [
-    "BOU(H)[3]",
-    "CRY(A)[3]",
-    "COV(H)[2]"
-   ],
-   "double": false,
-   "blank": false,
-   "rotation_risk": false,
-   "selected_by": 4.5
+   "selected_by": 28.8
   },
   {
    "id": 155,
@@ -17920,7 +17931,7 @@
    },
    "pts": 157,
    "xgi": 18.5,
-   "own": 5.5,
+   "own": 5.4,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -17929,7 +17940,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.5
+   "selected_by": 5.4
   },
   {
    "id": 1,
@@ -17949,7 +17960,7 @@
    "set_pieces": {},
    "pts": 162,
    "xgi": 0.1,
-   "own": 31.4,
+   "own": 32.8,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -17958,7 +17969,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 31.4
+   "selected_by": 32.8
   },
   {
    "id": 112,
@@ -17978,7 +17989,7 @@
    "set_pieces": {},
    "pts": 148,
    "xgi": 4.9,
-   "own": 8.8,
+   "own": 8.9,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -17987,7 +17998,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 8.8
+   "selected_by": 8.9
   },
   {
    "id": 61,
@@ -18036,7 +18047,7 @@
    "set_pieces": {},
    "pts": 143,
    "xgi": 10.3,
-   "own": 11.9,
+   "own": 11.7,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -18045,7 +18056,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.9
+   "selected_by": 11.7
   },
   {
    "id": 346,
@@ -18067,7 +18078,7 @@
    },
    "pts": 142,
    "xgi": 16.6,
-   "own": 25.6,
+   "own": 26.1,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -18076,7 +18087,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 25.6
+   "selected_by": 26.1
   },
   {
    "id": 452,
@@ -18099,7 +18110,7 @@
    },
    "pts": 154,
    "xgi": 10.6,
-   "own": 10.2,
+   "own": 9.6,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -18108,7 +18119,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.2
+   "selected_by": 9.6
   },
   {
    "id": 82,
@@ -18128,7 +18139,7 @@
    "set_pieces": {},
    "pts": 143,
    "xgi": 0.2,
-   "own": 5.7,
+   "own": 5.8,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -18137,7 +18148,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.7
+   "selected_by": 5.8
   },
   {
    "id": 236,
@@ -18188,7 +18199,7 @@
    "set_pieces": {},
    "pts": 154,
    "xgi": 3.3,
-   "own": 11.0,
+   "own": 10.8,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -18197,7 +18208,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.0
+   "selected_by": 10.8
   },
   {
    "id": 371,
@@ -18278,7 +18289,7 @@
    },
    "pts": 135,
    "xgi": 13.1,
-   "own": 8.7,
+   "own": 8.3,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -18287,7 +18298,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 8.7
+   "selected_by": 8.3
   },
   {
    "id": 335,
@@ -18339,7 +18350,7 @@
    "set_pieces": {},
    "pts": 135,
    "xgi": 0.1,
-   "own": 11.1,
+   "own": 10.5,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -18348,7 +18359,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.1
+   "selected_by": 10.5
   },
   {
    "id": 95,
@@ -18399,7 +18410,7 @@
    "set_pieces": {},
    "pts": 135,
    "xgi": 5.0,
-   "own": 2.7,
+   "own": 2.5,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -18408,7 +18419,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.7
+   "selected_by": 2.5
   },
   {
    "id": 367,
@@ -18431,7 +18442,7 @@
    },
    "pts": 131,
    "xgi": 13.0,
-   "own": 3.3,
+   "own": 3.5,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -18440,7 +18451,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.3
+   "selected_by": 3.5
   },
   {
    "id": 398,
@@ -18448,22 +18459,22 @@
    "team": "MCI",
    "pos": "MID",
    "cost": 7.0,
-   "projected": 10.7,
+   "projected": 10.6,
    "ep": 2.5,
-   "per_gw": 3.6,
-   "per_million": 1.53,
-   "rate_per_90": 5.71,
+   "per_gw": 3.5,
+   "per_million": 1.52,
+   "rate_per_90": 5.67,
    "exp_minutes": 55,
    "start_share": 61,
    "new_club": false,
    "joined": "2016-12-05",
    "set_pieces": {
     "direct_fk": 3,
-    "corners": 2
+    "corners": 3
    },
    "pts": 131,
    "xgi": 10.8,
-   "own": 5.9,
+   "own": 5.4,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -18472,7 +18483,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.9
+   "selected_by": 5.4
   },
   {
    "id": 68,
@@ -18557,7 +18568,7 @@
    },
    "pts": 124,
    "xgi": 4.7,
-   "own": 5.0,
+   "own": 4.9,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -18566,7 +18577,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.0
+   "selected_by": 4.9
   },
   {
    "id": 338,
@@ -18648,7 +18659,7 @@
    },
    "pts": 125,
    "xgi": 14.1,
-   "own": 2.5,
+   "own": 2.8,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -18657,7 +18668,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.5
+   "selected_by": 2.8
   },
   {
    "id": 469,
@@ -18680,7 +18691,7 @@
    },
    "pts": 128,
    "xgi": 6.0,
-   "own": 11.7,
+   "own": 11.4,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -18689,7 +18700,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.7
+   "selected_by": 11.4
   },
   {
    "id": 201,
@@ -18709,7 +18720,7 @@
    "set_pieces": {},
    "pts": 136,
    "xgi": 6.4,
-   "own": 11.3,
+   "own": 11.1,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -18718,7 +18729,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.3
+   "selected_by": 11.1
   },
   {
    "id": 109,
@@ -18738,7 +18749,7 @@
    "set_pieces": {},
    "pts": 130,
    "xgi": 0.1,
-   "own": 18.4,
+   "own": 18.6,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -18747,7 +18758,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 18.4
+   "selected_by": 18.6
   },
   {
    "id": 204,
@@ -18767,7 +18778,7 @@
    "set_pieces": {},
    "pts": 135,
    "xgi": 4.1,
-   "own": 6.9,
+   "own": 6.8,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -18776,7 +18787,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 6.9
+   "selected_by": 6.8
   },
   {
    "id": 226,
@@ -18890,7 +18901,7 @@
    },
    "pts": 125,
    "xgi": 12.0,
-   "own": 14.9,
+   "own": 14.8,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -18899,7 +18910,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 14.9
+   "selected_by": 14.8
   },
   {
    "id": 25,
@@ -18921,7 +18932,7 @@
    },
    "pts": 128,
    "xgi": 14.2,
-   "own": 12.8,
+   "own": 11.8,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -18930,7 +18941,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 12.8
+   "selected_by": 11.8
   },
   {
    "id": 337,
@@ -19100,7 +19111,7 @@
    "set_pieces": {},
    "pts": 126,
    "xgi": 13.8,
-   "own": 2.4,
+   "own": 2.3,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -19109,7 +19120,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.4
+   "selected_by": 2.3
   },
   {
    "id": 400,
@@ -19131,7 +19142,7 @@
    },
    "pts": 120,
    "xgi": 8.7,
-   "own": 6.5,
+   "own": 6.4,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -19140,7 +19151,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 6.5
+   "selected_by": 6.4
   },
   {
    "id": 202,
@@ -19223,7 +19234,7 @@
    },
    "pts": 113,
    "xgi": 2.7,
-   "own": 23.9,
+   "own": 23.4,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -19232,7 +19243,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 23.9
+   "selected_by": 23.4
   },
   {
    "id": 527,
@@ -19254,7 +19265,7 @@
    },
    "pts": 119,
    "xgi": 10.1,
-   "own": 2.1,
+   "own": 2.3,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -19263,7 +19274,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.1
+   "selected_by": 2.3
   },
   {
    "id": 445,
@@ -19283,7 +19294,7 @@
    "set_pieces": {},
    "pts": 126,
    "xgi": 5.8,
-   "own": 2.0,
+   "own": 1.9,
    "fixtures": [
     "LIV(H)[4]",
     "TOT(A)[3]",
@@ -19292,7 +19303,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.0
+   "selected_by": 1.9
   },
   {
    "id": 503,
@@ -19372,7 +19383,7 @@
    "set_pieces": {},
    "pts": 120,
    "xgi": 0.1,
-   "own": 5.0,
+   "own": 4.9,
    "fixtures": [
     "BHA(A)[3]",
     "ARS(H)[4]",
@@ -19381,7 +19392,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.0
+   "selected_by": 4.9
   },
   {
    "id": 417,
@@ -19401,7 +19412,7 @@
    "set_pieces": {},
    "pts": 111,
    "xgi": 4.5,
-   "own": 3.1,
+   "own": 3.0,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -19410,7 +19421,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.1
+   "selected_by": 3.0
   },
   {
    "id": 471,
@@ -19430,7 +19441,7 @@
    "set_pieces": {},
    "pts": 119,
    "xgi": 1.5,
-   "own": 2.3,
+   "own": 2.2,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -19439,7 +19450,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.3
+   "selected_by": 2.2
   },
   {
    "id": 534,
@@ -19461,7 +19472,7 @@
    },
    "pts": 110,
    "xgi": 4.3,
-   "own": 5.5,
+   "own": 5.8,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -19470,7 +19481,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.5
+   "selected_by": 5.8
   },
   {
    "id": 32,
@@ -19523,7 +19534,7 @@
    },
    "pts": 114,
    "xgi": 15.7,
-   "own": 6.4,
+   "own": 6.3,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -19532,7 +19543,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 6.4
+   "selected_by": 6.3
   },
   {
    "id": 113,
@@ -19554,7 +19565,7 @@
    },
    "pts": 118,
    "xgi": 5.4,
-   "own": 3.2,
+   "own": 3.1,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -19563,7 +19574,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.2
+   "selected_by": 3.1
   },
   {
    "id": 412,
@@ -19583,7 +19594,7 @@
    "set_pieces": {},
    "pts": 109,
    "xgi": 0.0,
-   "own": 19.2,
+   "own": 18.8,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -19592,7 +19603,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 19.2
+   "selected_by": 18.8
   },
   {
    "id": 154,
@@ -19615,7 +19626,7 @@
    },
    "pts": 114,
    "xgi": 13.0,
-   "own": 10.9,
+   "own": 10.8,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -19624,7 +19635,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.9
+   "selected_by": 10.8
   },
   {
    "id": 390,
@@ -19673,7 +19684,7 @@
    "set_pieces": {},
    "pts": 113,
    "xgi": 4.2,
-   "own": 3.7,
+   "own": 3.6,
    "fixtures": [
     "TOT(H)[3]",
     "LEE(A)[3]",
@@ -19682,7 +19693,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.7
+   "selected_by": 3.6
   },
   {
    "id": 250,
@@ -19733,7 +19744,7 @@
    },
    "pts": 117,
    "xgi": 12.1,
-   "own": 7.3,
+   "own": 6.9,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -19742,7 +19753,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 7.3
+   "selected_by": 6.9
   },
   {
    "id": 96,
@@ -19797,7 +19808,7 @@
    },
    "pts": 115,
    "xgi": 4.2,
-   "own": 8.3,
+   "own": 8.7,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -19806,7 +19817,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 8.3
+   "selected_by": 8.7
   },
   {
    "id": 57,
@@ -19826,7 +19837,7 @@
    "set_pieces": {},
    "pts": 124,
    "xgi": 0.0,
-   "own": 3.7,
+   "own": 3.6,
    "fixtures": [
     "MCI(A)[5]",
     "EVE(H)[3]",
@@ -19835,7 +19846,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.7
+   "selected_by": 3.6
   },
   {
    "id": 491,
@@ -19857,7 +19868,7 @@
    },
    "pts": 114,
    "xgi": 7.7,
-   "own": 5.4,
+   "own": 5.3,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -19866,7 +19877,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.4
+   "selected_by": 5.3
   },
   {
    "id": 463,
@@ -19979,7 +19990,7 @@
    },
    "pts": 112,
    "xgi": 9.0,
-   "own": 0.5,
+   "own": 0.6,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -19988,7 +19999,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 0.5
+   "selected_by": 0.6
   },
   {
    "id": 41,
@@ -20071,7 +20082,7 @@
    },
    "pts": 113,
    "xgi": 7.8,
-   "own": 3.0,
+   "own": 2.7,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -20080,7 +20091,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.0
+   "selected_by": 2.7
   },
   {
    "id": 329,
@@ -20100,7 +20111,7 @@
    "set_pieces": {},
    "pts": 109,
    "xgi": 2.0,
-   "own": 2.1,
+   "own": 2.2,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -20109,7 +20120,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 2.1
+   "selected_by": 2.2
   },
   {
    "id": 336,
@@ -20187,7 +20198,7 @@
    "set_pieces": {},
    "pts": 110,
    "xgi": 3.8,
-   "own": 4.1,
+   "own": 4.0,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -20196,7 +20207,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.1
+   "selected_by": 4.0
   },
   {
    "id": 102,
@@ -20245,7 +20256,7 @@
    "set_pieces": {},
    "pts": 105,
    "xgi": 0.1,
-   "own": 1.5,
+   "own": 1.6,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -20254,7 +20265,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 1.5
+   "selected_by": 1.6
   },
   {
    "id": 8,
@@ -20274,7 +20285,7 @@
    "set_pieces": {},
    "pts": 109,
    "xgi": 4.1,
-   "own": 18.3,
+   "own": 22.6,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -20283,7 +20294,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 18.3
+   "selected_by": 22.6
   },
   {
    "id": 261,
@@ -20338,7 +20349,7 @@
    },
    "pts": 103,
    "xgi": 7.1,
-   "own": 3.1,
+   "own": 3.2,
    "fixtures": [
     "BHA(A)[3]",
     "ARS(H)[4]",
@@ -20347,7 +20358,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.1
+   "selected_by": 3.2
   },
   {
    "id": 453,
@@ -20549,7 +20560,7 @@
    "set_pieces": {},
    "pts": 100,
    "xgi": 1.9,
-   "own": 15.7,
+   "own": 15.4,
    "fixtures": [
     "BHA(A)[3]",
     "ARS(H)[4]",
@@ -20558,7 +20569,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 15.7
+   "selected_by": 15.4
   },
   {
    "id": 497,
@@ -20578,7 +20589,7 @@
    "set_pieces": {},
    "pts": 96,
    "xgi": 0.0,
-   "own": 22.3,
+   "own": 22.1,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -20587,7 +20598,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 22.3
+   "selected_by": 22.1
   },
   {
    "id": 327,
@@ -20697,7 +20708,7 @@
    "set_pieces": {},
    "pts": 90,
    "xgi": 1.6,
-   "own": 10.5,
+   "own": 11.2,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -20706,7 +20717,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 10.5
+   "selected_by": 11.2
   },
   {
    "id": 127,
@@ -20786,7 +20797,7 @@
    "set_pieces": {},
    "pts": 92,
    "xgi": 6.7,
-   "own": 15.9,
+   "own": 15.7,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -20795,7 +20806,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 15.9
+   "selected_by": 15.7
   },
   {
    "id": 431,
@@ -20817,7 +20828,7 @@
    },
    "pts": 91,
    "xgi": 10.2,
-   "own": 1.7,
+   "own": 1.6,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -20826,7 +20837,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 1.7
+   "selected_by": 1.6
   },
   {
    "id": 249,
@@ -21051,7 +21062,7 @@
    "set_pieces": {},
    "pts": 96,
    "xgi": 0.2,
-   "own": 1.2,
+   "own": 1.3,
    "fixtures": [
     "LIV(H)[4]",
     "TOT(A)[3]",
@@ -21060,7 +21071,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 1.2
+   "selected_by": 1.3
   },
   {
    "id": 144,
@@ -21283,7 +21294,7 @@
    "set_pieces": {},
    "pts": 85,
    "xgi": 2.2,
-   "own": 4.8,
+   "own": 4.6,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -21292,7 +21303,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.8
+   "selected_by": 4.6
   },
   {
    "id": 516,
@@ -21343,7 +21354,7 @@
    },
    "pts": 88,
    "xgi": 5.8,
-   "own": 0.1,
+   "own": 0.2,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -21352,7 +21363,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 0.1
+   "selected_by": 0.2
   },
   {
    "id": 549,
@@ -21495,7 +21506,7 @@
    },
    "pts": 84,
    "xgi": 5.7,
-   "own": 1.4,
+   "own": 1.5,
    "fixtures": [
     "AVL(H)[3]",
     "CHE(A)[4]",
@@ -21504,7 +21515,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 1.4
+   "selected_by": 1.5
   },
   {
    "id": 545,
@@ -21556,7 +21567,7 @@
    },
    "pts": 81,
    "xgi": 4.6,
-   "own": 4.2,
+   "own": 4.1,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -21565,7 +21576,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 4.2
+   "selected_by": 4.1
   },
   {
    "id": 9,
@@ -21585,7 +21596,7 @@
    "set_pieces": {},
    "pts": 87,
    "xgi": 2.0,
-   "own": 3.7,
+   "own": 3.2,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -21594,36 +21605,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.7
-  },
-  {
-   "id": 373,
-   "name": "C.Jones",
-   "team": "LIV",
-   "pos": "MID",
-   "cost": 5.5,
-   "projected": 6.6,
-   "ep": 2.0,
-   "per_gw": 2.2,
-   "per_million": 1.19,
-   "rate_per_90": 3.79,
-   "exp_minutes": 51,
-   "start_share": 47,
-   "new_club": false,
-   "joined": "2018-04-06",
-   "set_pieces": {},
-   "pts": 81,
-   "xgi": 5.0,
-   "own": 0.2,
-   "fixtures": [
-    "NEW(A)[3]",
-    "NFO(H)[3]",
-    "IPS(A)[2]"
-   ],
-   "double": false,
-   "blank": false,
-   "rotation_risk": true,
-   "selected_by": 0.2
+   "selected_by": 3.2
   },
   {
    "id": 472,
@@ -21645,7 +21627,7 @@
    },
    "pts": 83,
    "xgi": 1.2,
-   "own": 0.9,
+   "own": 1.0,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -21654,7 +21636,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 0.9
+   "selected_by": 1.0
   },
   {
    "id": 391,
@@ -21674,7 +21656,7 @@
    "set_pieces": {},
    "pts": 79,
    "xgi": 3.0,
-   "own": 13.8,
+   "own": 12.9,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -21683,7 +21665,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 13.8
+   "selected_by": 12.9
   },
   {
    "id": 484,
@@ -21734,7 +21716,7 @@
    "set_pieces": {},
    "pts": 78,
    "xgi": 2.7,
-   "own": 5.7,
+   "own": 4.9,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -21743,7 +21725,36 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 5.7
+   "selected_by": 4.9
+  },
+  {
+   "id": 238,
+   "name": "Grealish",
+   "team": "MCI",
+   "pos": "MID",
+   "cost": 6.5,
+   "projected": 6.4,
+   "ep": 2.3,
+   "per_gw": 2.1,
+   "per_million": 0.99,
+   "rate_per_90": 4.37,
+   "exp_minutes": 43,
+   "start_share": 47,
+   "new_club": false,
+   "joined": "2021-08-05",
+   "set_pieces": {},
+   "pts": 79,
+   "xgi": 5.4,
+   "own": 0.1,
+   "fixtures": [
+    "BOU(H)[3]",
+    "CRY(A)[3]",
+    "COV(H)[2]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": true,
+   "selected_by": 0.1
   },
   {
    "id": 457,
@@ -21796,7 +21807,7 @@
    },
    "pts": 78,
    "xgi": 4.9,
-   "own": 0.5,
+   "own": 0.6,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -21805,7 +21816,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.5
+   "selected_by": 0.6
   },
   {
    "id": 536,
@@ -21886,7 +21897,7 @@
    },
    "pts": 79,
    "xgi": 3.8,
-   "own": 3.9,
+   "own": 3.8,
    "fixtures": [
     "LIV(H)[4]",
     "TOT(A)[3]",
@@ -21895,7 +21906,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 3.9
+   "selected_by": 3.8
   },
   {
    "id": 262,
@@ -21973,7 +21984,7 @@
    "set_pieces": {},
    "pts": 74,
    "xgi": 5.1,
-   "own": 1.2,
+   "own": 1.1,
    "fixtures": [
     "IPS(A)[2]",
     "FUL(H)[2]",
@@ -21982,7 +21993,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 1.2
+   "selected_by": 1.1
   },
   {
    "id": 211,
@@ -22217,7 +22228,7 @@
    },
    "pts": 74,
    "xgi": 4.9,
-   "own": 2.9,
+   "own": 4.1,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -22226,7 +22237,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 2.9
+   "selected_by": 4.1
   },
   {
    "id": 43,
@@ -22248,7 +22259,7 @@
    },
    "pts": 68,
    "xgi": 4.4,
-   "own": 1.9,
+   "own": 2.0,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -22257,36 +22268,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 1.9
-  },
-  {
-   "id": 458,
-   "name": "Joelinton",
-   "team": "NEW",
-   "pos": "MID",
-   "cost": 5.5,
-   "projected": 5.6,
-   "ep": 2.0,
-   "per_gw": 1.9,
-   "per_million": 1.02,
-   "rate_per_90": 3.37,
-   "exp_minutes": 51,
-   "start_share": 61,
-   "new_club": false,
-   "joined": "2019-07-24",
-   "set_pieces": {},
-   "pts": 73,
-   "xgi": 3.7,
-   "own": 0.1,
-   "fixtures": [
-    "LIV(H)[4]",
-    "TOT(A)[3]",
-    "BOU(H)[3]"
-   ],
-   "double": false,
-   "blank": false,
-   "rotation_risk": false,
-   "selected_by": 0.1
+   "selected_by": 2.0
   },
   {
    "id": 16,
@@ -22308,7 +22290,7 @@
    },
    "pts": 72,
    "xgi": 4.1,
-   "own": 0.3,
+   "own": 0.4,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -22317,7 +22299,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.3
+   "selected_by": 0.4
   },
   {
    "id": 459,
@@ -22397,7 +22379,7 @@
    "set_pieces": {},
    "pts": 72,
    "xgi": 1.8,
-   "own": 0.6,
+   "own": 0.5,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -22406,7 +22388,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.6
+   "selected_by": 0.5
   },
   {
    "id": 213,
@@ -22455,7 +22437,7 @@
    "set_pieces": {},
    "pts": 67,
    "xgi": 1.2,
-   "own": 4.3,
+   "own": 4.2,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -22464,7 +22446,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 4.3
+   "selected_by": 4.2
   },
   {
    "id": 345,
@@ -22515,7 +22497,7 @@
    "set_pieces": {},
    "pts": 63,
    "xgi": 2.0,
-   "own": 2.9,
+   "own": 3.0,
    "fixtures": [
     "NEW(A)[3]",
     "NFO(H)[3]",
@@ -22524,7 +22506,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 2.9
+   "selected_by": 3.0
   },
   {
    "id": 501,
@@ -22724,7 +22706,7 @@
    },
    "pts": 65,
    "xgi": 2.6,
-   "own": 2.4,
+   "own": 2.3,
    "fixtures": [
     "CHE(H)[4]",
     "SUN(A)[3]",
@@ -22733,7 +22715,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 2.4
+   "selected_by": 2.3
   },
   {
    "id": 67,
@@ -22840,7 +22822,7 @@
    "set_pieces": {},
    "pts": 60,
    "xgi": 2.5,
-   "own": 1.2,
+   "own": 1.1,
    "fixtures": [
     "BOU(H)[3]",
     "CRY(A)[3]",
@@ -22849,7 +22831,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 1.2
+   "selected_by": 1.1
   },
   {
    "id": 268,
@@ -23045,7 +23027,7 @@
    },
    "pts": 55,
    "xgi": 2.5,
-   "own": 2.5,
+   "own": 2.7,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -23054,7 +23036,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 2.5
+   "selected_by": 2.7
   },
   {
    "id": 339,
@@ -23164,7 +23146,7 @@
    "set_pieces": {},
    "pts": 51,
    "xgi": 0.8,
-   "own": 0.4,
+   "own": 0.6,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -23173,7 +23155,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.4
+   "selected_by": 0.6
   },
   {
    "id": 89,
@@ -23396,7 +23378,7 @@
    "set_pieces": {},
    "pts": 50,
    "xgi": 2.6,
-   "own": 0.6,
+   "own": 0.5,
    "fixtures": [
     "LEE(H)[2]",
     "LIV(A)[4]",
@@ -23405,7 +23387,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.6
+   "selected_by": 0.5
   },
   {
    "id": 162,
@@ -23425,7 +23407,7 @@
    "set_pieces": {},
    "pts": 47,
    "xgi": 2.9,
-   "own": 1.3,
+   "own": 1.2,
    "fixtures": [
     "HUL(A)[2]",
     "IPS(H)[2]",
@@ -23434,7 +23416,38 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 1.3
+   "selected_by": 1.2
+  },
+  {
+   "id": 446,
+   "name": "Schär",
+   "team": "NEW",
+   "pos": "DEF",
+   "cost": 5.0,
+   "projected": 3.9,
+   "ep": 2.2,
+   "per_gw": 1.3,
+   "per_million": 0.78,
+   "rate_per_90": 4.25,
+   "exp_minutes": 29,
+   "start_share": 29,
+   "new_club": false,
+   "joined": "2018-07-26",
+   "set_pieces": {
+    "direct_fk": 2
+   },
+   "pts": 51,
+   "xgi": 1.6,
+   "own": 0.2,
+   "fixtures": [
+    "LIV(H)[4]",
+    "TOT(A)[3]",
+    "BOU(H)[3]"
+   ],
+   "double": false,
+   "blank": false,
+   "rotation_risk": true,
+   "selected_by": 0.2
   },
   {
    "id": 487,
@@ -23636,7 +23649,7 @@
    },
    "pts": 45,
    "xgi": 3.0,
-   "own": 11.2,
+   "own": 11.0,
    "fixtures": [
     "EVE(A)[3]",
     "MCI(H)[4]",
@@ -23645,7 +23658,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": false,
-   "selected_by": 11.2
+   "selected_by": 11.0
   },
   {
    "id": 526,
@@ -23667,7 +23680,7 @@
    },
    "pts": 40,
    "xgi": 3.3,
-   "own": 2.0,
+   "own": 1.9,
    "fixtures": [
     "BRE(A)[3]",
     "NEW(H)[2]",
@@ -23676,7 +23689,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 2.0
+   "selected_by": 1.9
   },
   {
    "id": 326,
@@ -23696,7 +23709,7 @@
    "set_pieces": {},
    "pts": 43,
    "xgi": 0.0,
-   "own": 0.7,
+   "own": 0.6,
    "fixtures": [
     "NFO(A)[3]",
     "BRE(H)[3]",
@@ -23705,7 +23718,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.7
+   "selected_by": 0.6
   },
   {
    "id": 42,
@@ -23818,7 +23831,7 @@
    },
    "pts": 41,
    "xgi": 3.9,
-   "own": 1.2,
+   "own": 1.1,
    "fixtures": [
     "MCI(A)[5]",
     "EVE(H)[3]",
@@ -23827,7 +23840,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 1.2
+   "selected_by": 1.1
   },
   {
    "id": 35,
@@ -23876,7 +23889,7 @@
    "set_pieces": {},
    "pts": 40,
    "xgi": 0.7,
-   "own": 13.1,
+   "own": 12.4,
    "fixtures": [
     "COV(H)[2]",
     "AVL(A)[4]",
@@ -23885,7 +23898,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 13.1
+   "selected_by": 12.4
   },
   {
    "id": 255,
@@ -24050,7 +24063,7 @@
    "set_pieces": {},
    "pts": 19,
    "xgi": 0.9,
-   "own": 0.8,
+   "own": 0.7,
    "fixtures": [
     "FUL(A)[3]",
     "BHA(H)[2]",
@@ -24059,7 +24072,7 @@
    "double": false,
    "blank": false,
    "rotation_risk": true,
-   "selected_by": 0.8
+   "selected_by": 0.7
   }
  ],
  "budget": 100.0,
@@ -24354,7 +24367,7 @@
    "rationale": "Projected points per million. Spreads budget, strong bench.",
    "cost": 93.0,
    "bank": 7.0,
-   "projected_xi": 153.4,
+   "projected_xi": 153.5,
    "legal": true,
    "violations": [],
    "captain": "Thiago",
@@ -24426,6 +24439,24 @@
      "vice": false
     },
     {
+     "id": 481,
+     "name": "Anderson",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 6.5,
+     "basis": "projected",
+     "projected": 14.7,
+     "estimated": null,
+     "start_share": 97,
+     "new_club": true,
+     "rotation_risk": false,
+     "set_pieces": {
+      "corners": 2
+     },
+     "captain": false,
+     "vice": false
+    },
+    {
      "id": 13,
      "name": "Rice",
      "team": "ARS",
@@ -24440,24 +24471,6 @@
      "set_pieces": {
       "direct_fk": 1,
       "corners": 1
-     },
-     "captain": false,
-     "vice": false
-    },
-    {
-     "id": 481,
-     "name": "Anderson",
-     "team": "MCI",
-     "pos": "MID",
-     "cost": 6.5,
-     "basis": "projected",
-     "projected": 14.6,
-     "estimated": null,
-     "start_share": 97,
-     "new_club": true,
-     "rotation_risk": false,
-     "set_pieces": {
-      "corners": 3
      },
      "captain": false,
      "vice": false
@@ -24630,7 +24643,7 @@
    "rationale": "Caps player price so no single slot eats the budget.",
    "cost": 100.0,
    "bank": 0.0,
-   "projected_xi": 159.8,
+   "projected_xi": 159.9,
    "legal": true,
    "violations": [],
    "captain": "Semenyo",
@@ -24755,6 +24768,24 @@
      "vice": false
     },
     {
+     "id": 481,
+     "name": "Anderson",
+     "team": "MCI",
+     "pos": "MID",
+     "cost": 6.5,
+     "basis": "projected",
+     "projected": 14.7,
+     "estimated": null,
+     "start_share": 97,
+     "new_club": true,
+     "rotation_risk": false,
+     "set_pieces": {
+      "corners": 2
+     },
+     "captain": false,
+     "vice": false
+    },
+    {
      "id": 13,
      "name": "Rice",
      "team": "ARS",
@@ -24769,24 +24800,6 @@
      "set_pieces": {
       "direct_fk": 1,
       "corners": 1
-     },
-     "captain": false,
-     "vice": false
-    },
-    {
-     "id": 481,
-     "name": "Anderson",
-     "team": "MCI",
-     "pos": "MID",
-     "cost": 6.5,
-     "basis": "projected",
-     "projected": 14.6,
-     "estimated": null,
-     "start_share": 97,
-     "new_club": true,
-     "rotation_risk": false,
-     "set_pieces": {
-      "corners": 3
      },
      "captain": false,
      "vice": false
@@ -25181,14 +25194,14 @@
    "key": "differential",
    "label": "Differential",
    "rationale": "Rewards low ownership among players with real projections.",
-   "cost": 93.5,
-   "bank": 6.5,
-   "projected_xi": 89.7,
+   "cost": 93.0,
+   "bank": 7.0,
+   "projected_xi": 94.5,
    "legal": true,
    "violations": [],
-   "captain": "Roefs",
-   "vice": "Stach",
-   "formation": "5-3-2",
+   "captain": "Gravenberch",
+   "vice": "Roefs",
+   "formation": "5-4-1",
    "xi": [
     {
      "id": 529,
@@ -25203,8 +25216,8 @@
      "new_club": false,
      "rotation_risk": false,
      "set_pieces": {},
-     "captain": true,
-     "vice": false
+     "captain": false,
+     "vice": true
     },
     {
      "id": 152,
@@ -25223,9 +25236,9 @@
      "vice": false
     },
     {
-     "id": 230,
-     "name": "Branthwaite",
-     "team": "EVE",
+     "id": 10,
+     "name": "White",
+     "team": "ARS",
      "pos": "DEF",
      "cost": 5.5,
      "basis": "estimated",
@@ -25239,9 +25252,9 @@
      "vice": false
     },
     {
-     "id": 10,
-     "name": "White",
-     "team": "ARS",
+     "id": 230,
+     "name": "Branthwaite",
+     "team": "EVE",
      "pos": "DEF",
      "cost": 5.5,
      "basis": "estimated",
@@ -25287,6 +25300,22 @@
      "vice": false
     },
     {
+     "id": 371,
+     "name": "Gravenberch",
+     "team": "LIV",
+     "pos": "MID",
+     "cost": 6.0,
+     "basis": "projected",
+     "projected": 11.7,
+     "estimated": null,
+     "start_share": 89,
+     "new_club": false,
+     "rotation_risk": false,
+     "set_pieces": {},
+     "captain": true,
+     "vice": false
+    },
+    {
      "id": 335,
      "name": "Stach",
      "team": "LEE",
@@ -25303,7 +25332,7 @@
       "corners": 1
      },
      "captain": false,
-     "vice": true
+     "vice": false
     },
     {
      "id": 429,
@@ -25356,22 +25385,6 @@
      },
      "captain": false,
      "vice": false
-    },
-    {
-     "id": 26,
-     "name": "Havertz",
-     "team": "ARS",
-     "pos": "FWD",
-     "cost": 7.5,
-     "basis": "estimated",
-     "projected": null,
-     "estimated": 6.9,
-     "start_share": null,
-     "new_club": null,
-     "rotation_risk": null,
-     "set_pieces": {},
-     "captain": false,
-     "vice": false
     }
    ],
    "bench": [
@@ -25388,25 +25401,6 @@
      "new_club": null,
      "rotation_risk": null,
      "set_pieces": {},
-     "captain": false,
-     "vice": false
-    },
-    {
-     "id": 157,
-     "name": "Estêvão",
-     "team": "CHE",
-     "pos": "MID",
-     "cost": 6.5,
-     "basis": "estimated",
-     "projected": null,
-     "estimated": 6.9,
-     "start_share": null,
-     "new_club": null,
-     "rotation_risk": null,
-     "set_pieces": {
-      "penalties": 3,
-      "corners": 5
-     },
      "captain": false,
      "vice": false
     },
@@ -25442,6 +25436,22 @@
       "penalties": 2,
       "direct_fk": 2
      },
+     "captain": false,
+     "vice": false
+    },
+    {
+     "id": 26,
+     "name": "Havertz",
+     "team": "ARS",
+     "pos": "FWD",
+     "cost": 7.5,
+     "basis": "estimated",
+     "projected": null,
+     "estimated": 6.9,
+     "start_share": null,
+     "new_club": null,
+     "rotation_risk": null,
+     "set_pieces": {},
      "captain": false,
      "vice": false
     }
@@ -25957,6 +25967,15 @@
    "of": 6
   },
   {
+   "id": 371,
+   "name": "Gravenberch",
+   "team": "LIV",
+   "pos": "MID",
+   "cost": 6.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
    "id": 82,
    "name": "Kelleher",
    "team": "BRE",
@@ -26025,15 +26044,6 @@
    "team": "SUN",
    "pos": "FWD",
    "cost": 5.5,
-   "picked_by": 1,
-   "of": 6
-  },
-  {
-   "id": 157,
-   "name": "Estêvão",
-   "team": "CHE",
-   "pos": "MID",
-   "cost": 6.5,
    "picked_by": 1,
    "of": 6
   },
@@ -26466,5 +26476,5 @@
   "Mid-season signings are understated: minutes spread over 38 games they were not all available for. Check st% before trusting a low number."
  ],
  "players_url": "./players.json",
- "players_count": 292
+ "players_count": 291
 }
