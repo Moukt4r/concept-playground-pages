@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f0">
+  <meta name="description" content="Hvor godt kjenner du Norge? Finn ti norske kommuner på et navnefritt kart. Se avstanden, sank poeng og utfordre en venn i Kommunejakten.">
+  <title>Kommunejakten — et sted i Norge</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preload" href="./fonts/InstrumentSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./vendor/d3.v7.min.js" defer></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <svg class="symbol-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4m0 0c5-5 9 5 14 0v10c-5 5-9-5-14 0"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 3h8v7a4 4 0 0 1-8 0V3Zm0 2H4v3a4 4 0 0 0 4 4m8-7h4v3a4 4 0 0 1-4 4m-4 2v6m-4 1h8"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-5 4H3v8h3l5 4V4Zm4 4a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="i-muted" viewBox="0 0 24 24"><path d="m11 4-5 4H3v8h3l5 4V4Zm5 5 6 6m0-6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 8V3h5m8 0h5v5m0 8v5h-5M8 21H3v-5"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M5 13H3v8h18v-8h-2"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.3 7a8 8 0 0 1 13.3-2L20 7M4 17l1.4 2A8 8 0 0 0 18.7 17"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="M8 5h6a4 4 0 0 1 0 8H9a3 3 0 0 0 0 6h7"/></symbol>
+  </svg>
+  <a class="skip-link" href="#game-panel">Hopp til spillet</a>
+  <div class="site-wrap">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Kommunejakten, forsiden" data-action="home"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg></span><span>Kommune<span class="brand-light">jakten</span><span class="brand-period">.</span></span></a>
+      <nav class="header-actions" aria-label="Spillinnstillinger"><button class="help-button" type="button" data-action="help"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Slik spiller du</span></button><button id="sound-toggle" class="icon-button sound-button" type="button" data-action="sound" aria-label="Slå på lydeffekter" aria-pressed="false" title="Lydeffekter av"><svg class="icon" aria-hidden="true"><use href="#i-muted"/></svg></button></nav>
+    </header>
+    <main id="game-shell" class="game-shell">
+      <section class="sidebar" aria-label="Spillet"><div id="round-strip" class="round-strip" hidden></div><div id="game-panel" class="game-panel" tabindex="-1"><span class="eyebrow"><span class="little-line"></span> EN LITEN NORGESREISE</span><h1>Et sted<br> i <em>Norge.</em></h1><p class="intro-copy">Fra værbitte øyer til dype daler.<br> Du får kommunen. Du setter nålen.</p><div class="loading-note" role="status"><span class="loading-dot"></span> Bretter ut kartet …</div></div></section>
+      <section id="map-card" class="map-card" aria-label="Norgeskart">
+        <div class="map-topline"><span class="map-badge"><span class="status-dot"></span><span id="map-mode-label">DITT NESTE LILLE EVENTYR</span></span><span id="map-coordinate" class="map-coordinate" aria-hidden="true">58°–71° N</span></div>
+        <div id="map-container" class="map-container"><svg id="norway-map" class="norway-map" role="application" tabindex="0" aria-label="Interaktivt kart over Norge" aria-describedby="map-keyboard-help"></svg></div>
+        <div class="map-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 40 48"><path d="M20 2 29 35 20 29 11 35Z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M20 2v27l-9 6Z" fill="currentColor"/></svg></div>
+        <div id="map-callout" class="map-callout"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>Hele Norge. Bare din lokalsans.</span></div>
+        <div id="map-legend" class="map-legend" hidden><span><i class="legend-dot guess-dot"></i> Ditt svar</span><span><i class="legend-dot target-dot"></i> Fasit</span></div>
+        <div class="map-bottomline"><div class="scale-wrap" aria-hidden="true"><div id="map-scale" class="map-scale"></div><span id="map-scale-label">100 km</span></div><div class="map-tools" role="group" aria-label="Kartverktøy"><button type="button" class="map-tool" data-action="zoom-out" aria-label="Zoom ut" title="Zoom ut (−)"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button><button type="button" class="map-tool" data-action="zoom-in" aria-label="Zoom inn" title="Zoom inn (+)"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button><span class="tool-separator"></span><button type="button" class="map-tool" data-action="map-reset" aria-label="Vis hele Norge" title="Vis hele Norge (0)"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></button></div></div>
+        <span class="map-edition" aria-hidden="true">NORGESATLAS / Nº 01</span>
+        <span class="map-attribution"><a href="https://www.kartverket.no/" target="_blank" rel="noopener">© Kartverket</a> · <a href="https://creativecommons.org/licenses/by/4.0/deed.no" target="_blank" rel="noopener">CC BY 4.0</a> · Natural Earth</span>
+        <div id="map-loading" class="map-loading" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a href="../../" class="playground-link">EN DEL AV <strong>PLAYGROUND</strong><span aria-hidden="true">↗</span></a><span class="footer-tagline">Små steder. Store omveier.</span><button type="button" class="source-link" data-action="help"><span data-municipality-count>Alle</span> kommuner <span aria-hidden="true">·</span> Kart & kilder</button></footer>
+  </div>
+  <p id="map-keyboard-help" class="sr-only">Trykk på kartet for å plassere en nål. Med tastatur: fokuser kartet, flytt siktet med piltastene, hold Shift for større steg og trykk Enter eller mellomrom for å velge. Pluss og minus zoomer, 0 viser hele Norge. Bekreft deretter med Lås svaret.</p>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="toast" class="toast" role="status" aria-live="polite" hidden></div><div id="confetti" class="confetti" aria-hidden="true"></div>
+  <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
+    <button type="button" class="icon-button dialog-close" data-action="close-help" aria-label="Lukk spillereglene"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <span class="eyebrow">FØR DU LEGGER UT PÅ TUR</span><h2 id="help-title">Det er lett å spille.<br><em>Litt verre å treffe.</em></h2>
+    <ol class="rules-list"><li><span>01</span><div><strong>Finn kommunen</strong><p>Du får ti ulike norske kommuner. Zoom og dra i det navnefrie kartet. Klikk eller trykk for å sette nålen.</p></div></li><li><span>02</span><div><strong>Stol på lokalsansen</strong><p>Flytt nålen så mye du vil. Trykk «Lås svaret» når du er klar. Først da avslører vi fasiten.</p></div></li><li><span>03</span><div><strong>Sank opptil 10 000 poeng</strong><p>Du får opptil 1000 poeng per kommune. Under én kilometer fra målpunktet gir full pott. Så faller poengene jevnt med avstanden.</p></div></li></ol>
+    <div class="score-examples"><span><b>1 km</b>1000 poeng</span><span><b>50 km</b>721 poeng</span><span><b>150 km</b>370 poeng</span></div>
+    <details class="help-details"><summary>Hva regnes som riktig sted?</summary><p>Fasit er Kartverkets faste referansepunkt i hver kommune. Det er <strong>ikke nødvendigvis sentrum</strong>, og kan ligge i kommunens sjøområde. Vi måler luftlinjen til dette kartpunktet – ikke til kommunegrensen. Kommuneområdet vises forenklet etter svaret.</p><p>Et klikk innenfor en stor kommune gir derfor ikke automatisk full pott. Kartet er ment som et spill, ikke som navigasjon eller en presis grenseavgjørelse.</p><p>Poeng: 1000 × exp(−max(0, kilometer − 1) / 150), avrundet til nærmeste heltall. Ingen tidsbonus eller skjulte multiplikatorer.</p></details>
+    <details class="help-details"><summary>Dagens rute, venner og lagring</summary><p>«Dagens rute» gir alle de samme ti kommunene den dagen, regnet etter norsk tid. «Utfordre en venn» kopierer en lenke til akkurat din rute. Nye tilfeldige ruter trekker ti ulike kommuner fra hele listen.</p><p>Spill og personlig rekord lagres bare i denne nettleseren. Ingen konto, sporing eller offentlig resultatliste. Hvis nettleseren ikke tillater lagring, kan du fortsatt spille. Slett nettleserdata for å nullstille rekord og lagring.</p></details>
+    <details class="help-details"><summary>Kartdata og tilgjengelighet</summary><p>Kommuner og referansepunkter: <a href="https://www.kartverket.no/" target="_blank" rel="noopener">© Kartverket</a> — <a href="https://creativecommons.org/licenses/by/4.0/deed.no" target="_blank" rel="noopener">CC BY 4.0</a>. Uttrekk 05.09.2026, 357 kommuner; datasettets referansedato 01.01.2026. Norske visningsnavn er valgt og koordinater pakket for spillet. <a href="./data/sources.json" target="_blank" rel="noopener">Kilder og bearbeiding</a>.</p><p>Bakgrunnskart: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a> (public domain). Kommuneflater er et grovt illustrasjonskart. Data leveres uten garantier. Spillet er ikke tilknyttet eller godkjent av Kartverket.</p><p>D3: ISC-lisens. Instrument Serif og Manrope: SIL Open Font License. Alt er levert lokalt med spillet; ingen kartnøkkel trengs.</p><p>Tastatur: piltaster flytter siktet, Shift gir større steg, Enter plasserer nålen. +/− zoomer, og 0 viser hele Norge. Animasjoner respekterer «redusert bevegelse». Lyd er valgfritt og avslått som standard.</p></details>
+    <button type="button" class="primary-button" data-action="close-help">Da tar vi en tur <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+  </dialog>
+  <dialog id="restart-dialog" class="confirm-dialog" aria-labelledby="restart-title"><span class="eyebrow">EN NY OMVEI?</span><h2 id="restart-title">Avslutte denne ruten?</h2><p>Du mister fremdriften i den pågående omgangen. Den personlige rekorden din beholdes.</p><div class="dialog-actions"><button type="button" class="secondary-button" data-action="cancel-restart">Spill videre</button><button type="button" class="primary-button" data-action="confirm-restart">Avslutt ruten</button></div></dialog>
+  <noscript><div class="noscript-message">Kommunejakten trenger JavaScript for kartet og poengberegningen. Slå på JavaScript i nettleseren og last siden på nytt.</div></noscript>
+</body>
+</html>

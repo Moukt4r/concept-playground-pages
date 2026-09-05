@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "snapshot": "no-2026-01-01-fetched-2026-09-05",
+  "referenceDate": "2026-01-01",
+  "retrievedAt": "2026-09-05T13:31:59Z",
+  "count": 357,
+  "coordinateSystem": "EPSG:4326; [longitude, latitude]",
+  "targetDefinition": "Kartverkets punktIOmrade. A representative point in the administrative municipality; NOT the town centre or town hall. It may be in the municipal sea area. Scores use great-circle distance to this point.",
+  "municipalities": {
+    "source": "https://api.kartverket.no/kommuneinfo/v1/fylkerkommuner?utkoordsys=4326",
+    "geometrySource": "https://api.kartverket.no/kommuneinfo/v1/kommuner/illustrasjonskart?utkoordsys=4326",
+    "referenceMetadata": "https://kartkatalog.geonorge.no/metadata/administrative-enheter-kommuner/041f1e6e-bdbc-4091-b48f-8a5990f3cc5b",
+    "attribution": "© Kartverket",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "terms": "https://www.kartverket.no/api-og-data/vilkar-for-bruk",
+    "processing": "Flattened counties, retained Norwegian display names, original alias names, IDs and EPSG:4326 coordinates. Rings reversed for D3 where needed; redundant CRS member removed only after checking 4326. Municipal outlines are a coarse illustration, not coastline or precise legal boundaries. No reference points have been moved.",
+    "disclaimer": "Data provided as is. Kommunejakten is not affiliated with or endorsed by Kartverket."
+  },
+  "background": {
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+    "source_sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+    "source_date": "2026-09-05T13:35:39.364239+00:00",
+    "license": "Public domain",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "processing": "Clipped to [-7, 53.5, 37, 72.5]; coordinates rounded to four decimals; clockwise exteriors for D3. Natural Earth is a generalized backdrop, never the source of scored positions.",
+    "output_sha256": "9ec635791aa89ac527680aa636700a5f883adf01df2e665d51bd945e721c7dfb"
+  },
+  "libraries": [
+    {
+      "name": "D3",
+      "version": "7.9.0",
+      "source": "https://github.com/d3/d3",
+      "license": "ISC",
+      "localLicense": "../vendor/LICENSE-d3.txt"
+    }
+  ],
+  "fonts": [
+    {
+      "name": "Instrument Serif",
+      "source": "https://github.com/Instrument/instrument-serif",
+      "license": "SIL Open Font License 1.1",
+      "localLicense": "../fonts/OFL-InstrumentSerif.txt"
+    },
+    {
+      "name": "Manrope",
+      "source": "https://github.com/google/fonts/tree/main/ofl/manrope",
+      "license": "SIL Open Font License 1.1",
+      "localLicense": "../fonts/OFL-Manrope.txt"
+    }
+  ],
+  "sha256": {
+    "municipalities.json": "177d2b536d773ee0a928348277c7ae2375f43e70620560c8a53e4b7d443cd6af",
+    "municipalities.geojson": "be8b0ef6c9eab040185a2ff5e7bc7705596b26b2cc7ff469c4a4805ea5549b3a",
+    "scandinavia.geojson": "9ec635791aa89ac527680aa636700a5f883adf01df2e665d51bd945e721c7dfb"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+  "source_sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+  "source_date": "2026-09-05T13:35:39.364239+00:00",
+  "license": "Public domain",
+  "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "processing": "Clipped to [-7, 53.5, 37, 72.5]; coordinates rounded to four decimals; clockwise exteriors for D3. Natural Earth is a generalized backdrop, never the source of scored positions.",
+  "output_sha256": "9ec635791aa89ac527680aa636700a5f883adf01df2e665d51bd945e721c7dfb"
+}
