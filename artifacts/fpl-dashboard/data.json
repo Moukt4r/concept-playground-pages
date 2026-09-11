@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-09-10T05:30:28+00:00",
- "data_captured_at": "2026-09-10T05:05:10.746537+00:00",
+ "generated_at": "2026-09-11T05:30:23+00:00",
+ "data_captured_at": "2026-09-11T05:05:09.393879+00:00",
  "start_gw": 4,
  "end_gw": 6,
  "horizon": 3,
@@ -8,7 +8,7 @@
  "gw_name": "Gameweek 4",
  "preseason": true,
  "counts": {
-  "players_total": 654,
+  "players_total": 655,
   "players_with_minutes": 387,
   "players_projected": 0,
   "changed_club": {
@@ -146,7 +146,7 @@
    "regulars": 0,
    "unavailable": 8,
    "new_signings": 5,
-   "total_cost": 177.4,
+   "total_cost": 177.5,
    "cheapest": 4.4,
    "priciest": 9.5,
    "most_expensive": "Saka",
@@ -204,7 +204,7 @@
    "regulars": 0,
    "unavailable": 6,
    "new_signings": 4,
-   "total_cost": 149.5,
+   "total_cost": 149.6,
    "cheapest": 4.0,
    "priciest": 7.4,
    "most_expensive": "Kroupi.Jr",
@@ -260,7 +260,7 @@
    "name": "Brighton",
    "squad_size": 36,
    "regulars": 0,
-   "unavailable": 13,
+   "unavailable": 14,
    "new_signings": 9,
    "total_cost": 180.9,
    "cheapest": 4.0,
@@ -291,9 +291,9 @@
    "regulars": 0,
    "unavailable": 11,
    "new_signings": 10,
-   "total_cost": 178.8,
+   "total_cost": 178.9,
    "cheapest": 4.5,
-   "priciest": 9.6,
+   "priciest": 9.7,
    "most_expensive": "Palmer",
    "goals": 8,
    "assists": 7,
@@ -316,14 +316,14 @@
   {
    "team": "COV",
    "name": "Coventry City",
-   "squad_size": 35,
+   "squad_size": 36,
    "regulars": 0,
-   "unavailable": 10,
-   "new_signings": 10,
-   "total_cost": 161.7,
+   "unavailable": 11,
+   "new_signings": 11,
+   "total_cost": 167.1,
    "cheapest": 4.0,
    "priciest": 5.5,
-   "most_expensive": "Tchaouna",
+   "most_expensive": "Awoniyi",
    "goals": 0,
    "assists": 0,
    "xg": 2.9,
@@ -347,7 +347,7 @@
    "name": "Crystal Palace",
    "squad_size": 36,
    "regulars": 0,
-   "unavailable": 8,
+   "unavailable": 9,
    "new_signings": 11,
    "total_cost": 178.9,
    "cheapest": 4.0,
@@ -407,7 +407,7 @@
    "regulars": 0,
    "unavailable": 3,
    "new_signings": 8,
-   "total_cost": 135.6,
+   "total_cost": 135.5,
    "cheapest": 4.0,
    "priciest": 6.0,
    "most_expensive": "Gonzalo",
@@ -434,9 +434,9 @@
    "name": "Hull City",
    "squad_size": 43,
    "regulars": 0,
-   "unavailable": 15,
+   "unavailable": 14,
    "new_signings": 18,
-   "total_cost": 195.1,
+   "total_cost": 195.2,
    "cheapest": 4.0,
    "priciest": 5.5,
    "most_expensive": "McBurnie",
@@ -456,7 +456,7 @@
    "clean_sheet_rank": null,
    "penalty_taker": "McBurnie",
    "fk_taker": "Giles",
-   "corner_taker": "Giles"
+   "corner_taker": "Slater"
   },
   {
    "team": "IPS",
@@ -485,7 +485,7 @@
    "clean_sheet_rank": null,
    "penalty_taker": "Clarke",
    "fk_taker": "Núñez",
-   "corner_taker": "Núñez"
+   "corner_taker": "Lukić"
   },
   {
    "team": "LEE",
@@ -552,7 +552,7 @@
    "regulars": 0,
    "unavailable": 9,
    "new_signings": 7,
-   "total_cost": 196.2,
+   "total_cost": 196.1,
    "cheapest": 4.0,
    "priciest": 15.5,
    "most_expensive": "Haaland",
@@ -608,7 +608,7 @@
    "name": "Newcastle",
    "squad_size": 29,
    "regulars": 0,
-   "unavailable": 7,
+   "unavailable": 8,
    "new_signings": 8,
    "total_cost": 149.7,
    "cheapest": 4.0,
@@ -697,7 +697,7 @@
    "regulars": 0,
    "unavailable": 7,
    "new_signings": 6,
-   "total_cost": 146.0,
+   "total_cost": 145.9,
    "cheapest": 4.0,
    "priciest": 5.9,
    "most_expensive": "E.Le Fée",
@@ -716,11 +716,67 @@
    "fixtures": [],
    "clean_sheet_rank": null,
    "penalty_taker": "Diarra",
-   "fk_taker": "Xhaka",
+   "fk_taker": "N.Angulo",
    "corner_taker": "E.Le Fée"
   }
  ],
  "news": [
+  {
+   "title": "Premier League: 10 things to look out for this weekend",
+   "link": "https://www.theguardian.com/football/2026/sep/11/premier-league-10-things-to-look-out-for-this-weekend",
+   "source": "Guardian",
+   "published": "Thu, 10 Sep 2026 23:01:48 GMT",
+   "seen_at": "2026-09-11T05:30:22+00:00",
+   "score": 5,
+   "summary": "Mentions N.Jackson, Rogers, João Pedro, Barry, McBurnie, Clarke, Trafford | clubs: CHE, CRY, EVE, FUL, HUL, IPS, LIV, TOT | relevance 5",
+   "teams": [
+    "CHE",
+    "CRY",
+    "EVE",
+    "FUL",
+    "HUL",
+    "IPS",
+    "LIV",
+    "TOT"
+   ],
+   "players": [
+    {
+     "id": 166,
+     "name": "N.Jackson",
+     "team": "AVL"
+    },
+    {
+     "id": 40,
+     "name": "Rogers",
+     "team": "CHE"
+    },
+    {
+     "id": 165,
+     "name": "João Pedro",
+     "team": "CHE"
+    },
+    {
+     "id": 249,
+     "name": "Barry",
+     "team": "EVE"
+    },
+    {
+     "id": 295,
+     "name": "McBurnie",
+     "team": "HUL"
+    },
+    {
+     "id": 313,
+     "name": "Clarke",
+     "team": "IPS"
+    },
+    {
+     "id": 385,
+     "name": "Trafford",
+     "team": "LEE"
+    }
+   ]
+  },
   {
    "title": "Half of Premier League clubs face losing lucrative sponsors if unlicensed gambling firms banned",
    "link": "https://www.theguardian.com/football/2026/sep/08/premier-league-clubs-sponsorship-advertising-deals-unlicensed-gambling-companies-uk-government",
@@ -1822,25 +1878,6 @@
      "team": "LIV"
     }
    ]
-  },
-  {
-   "title": "Man Utd latest: Carrick on 'exciting' Baleba buy and injury issue",
-   "link": "https://www.skysports.com/football/live-blog/11661/13025492/man-utd-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
-   "source": "Sky Sports",
-   "published": "Thu, 27 Aug 2026 13:02:00 BST",
-   "seen_at": "2026-08-29T05:30:57+00:00",
-   "score": 5,
-   "summary": "Mentions Baleba | clubs: MUN | relevance 5",
-   "teams": [
-    "MUN"
-   ],
-   "players": [
-    {
-     "id": 131,
-     "name": "Baleba",
-     "team": "MUN"
-    }
-   ]
   }
  ],
  "chips": {
@@ -2106,14 +2143,14 @@
  "preseason_view": {
   "source": "https://www.premierleague.com/en/news/4606700/premier-league-clubs-summer-2026-friendlies-and-tours",
   "fetched_ok": true,
-  "today": "2026-09-10",
+  "today": "2026-09-11",
   "counts": {
    "fixtures": 110,
    "played": 85,
    "upcoming": 25,
    "clubs": 19,
-   "flagged": 177,
-   "new_signings": 165
+   "flagged": 180,
+   "new_signings": 166
   },
   "minutes_gap": "Minutes per player in pre-season friendlies are not published. Checked 2026-07-31: fbref (Cloudflare challenge), understat, sofascore, worldfootball, transfermarkt and 11v11 all block automated access - five of them name AI agents explicitly - and football-data.org puts Club Friendlies behind a paid tier. Spoofing a browser identity to get around that is not acceptable, so this column is absent rather than empty.",
   "recent": [
@@ -3969,7 +4006,7 @@
     "status_label": "Unavailable",
     "chance": 0,
     "news": "Has joined Al Hilal permanently",
-    "selected_by": 3.3,
+    "selected_by": 3.2,
     "total_points": 0
    },
    {
@@ -3999,19 +4036,6 @@
     "total_points": 0
    },
    {
-    "id": 248,
-    "name": "Beto",
-    "team": "EVE",
-    "pos": "FWD",
-    "cost": 5.4,
-    "status": "u",
-    "status_label": "Unavailable",
-    "chance": 0,
-    "news": "Has joined Fiorentina permanently",
-    "selected_by": 1.1,
-    "total_points": 2
-   },
-   {
     "id": 527,
     "name": "Richarlison",
     "team": "TOT",
@@ -4034,6 +4058,19 @@
     "status_label": "Unavailable",
     "chance": 0,
     "news": "Has joined Como on loan for the rest of the season",
+    "selected_by": 1.0,
+    "total_points": 2
+   },
+   {
+    "id": 248,
+    "name": "Beto",
+    "team": "EVE",
+    "pos": "FWD",
+    "cost": 5.4,
+    "status": "u",
+    "status_label": "Unavailable",
+    "chance": 0,
+    "news": "Has joined Fiorentina permanently",
     "selected_by": 1.0,
     "total_points": 2
    },
@@ -4779,6 +4816,19 @@
     "total_points": 0
    },
    {
+    "id": 219,
+    "name": "J.Rak-Sakyi",
+    "team": "CRY",
+    "pos": "MID",
+    "cost": 4.9,
+    "status": "u",
+    "status_label": "Unavailable",
+    "chance": 0,
+    "news": "has joined  Kasimpasa on loan for the rest of the seaon.",
+    "selected_by": 0.0,
+    "total_points": 0
+   },
+   {
     "id": 220,
     "name": "Cardines",
     "team": "CRY",
@@ -5269,7 +5319,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Hamstring injury - Expected back 21 Nov",
-    "selected_by": 1.6,
+    "selected_by": 1.5,
     "total_points": 7
    },
    {
@@ -5295,7 +5345,7 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Groin injury - Unknown return date",
-    "selected_by": 0.9,
+    "selected_by": 0.8,
     "total_points": 0
    },
    {
@@ -5385,7 +5435,7 @@
     "status": "i",
     "status_label": "Injured",
     "chance": 0,
-    "news": "Foot injury - Unknown return date",
+    "news": "Foot injury - Expected back 7 Nov",
     "selected_by": 0.2,
     "total_points": 0
    },
@@ -5427,6 +5477,19 @@
     "news": "Unspecified injury - Expected back 18 Sep",
     "selected_by": 0.1,
     "total_points": 6
+   },
+   {
+    "id": 135,
+    "name": "Yohanna",
+    "team": "BHA",
+    "pos": "MID",
+    "cost": 4.9,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Unspecified injury - Expected back 10 Oct",
+    "selected_by": 0.1,
+    "total_points": 1
    },
    {
     "id": 180,
@@ -5671,7 +5734,7 @@
     "status": "i",
     "status_label": "Injured",
     "chance": 0,
-    "news": "Hamstring injury - Unknown return date",
+    "news": "Hamstring injury - Expected back 10 Oct",
     "selected_by": 0.0,
     "total_points": 0
    },
@@ -5715,19 +5778,6 @@
     "total_points": 0
    },
    {
-    "id": 652,
-    "name": "Azeez",
-    "team": "BHA",
-    "pos": "MID",
-    "cost": 5.5,
-    "status": "i",
-    "status_label": "Injured",
-    "chance": 0,
-    "news": "Unspecified injury - Expected back 13 Sep",
-    "selected_by": 0.0,
-    "total_points": 0
-   },
-   {
     "id": 177,
     "name": "Kesler-Hayden",
     "team": "COV",
@@ -5737,6 +5787,19 @@
     "status_label": "Injured",
     "chance": 0,
     "news": "Hamstring injury - Unknown return date",
+    "selected_by": 0.0,
+    "total_points": 0
+   },
+   {
+    "id": 187,
+    "name": "Eccles",
+    "team": "COV",
+    "pos": "MID",
+    "cost": 4.9,
+    "status": "i",
+    "status_label": "Injured",
+    "chance": 0,
+    "news": "Unspecified injury - Expected back 12 Oct",
     "selected_by": 0.0,
     "total_points": 0
    },
@@ -6031,12 +6094,12 @@
     "name": "O'Reilly",
     "team": "MCI",
     "pos": "DEF",
-    "cost": 6.5,
+    "cost": 6.4,
     "status": "d",
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Back injury - 75% chance of playing",
-    "selected_by": 14.7,
+    "selected_by": 14.2,
     "total_points": 4
    },
    {
@@ -6049,7 +6112,7 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Thigh injury - 75% chance of playing",
-    "selected_by": 14.4,
+    "selected_by": 13.8,
     "total_points": 28
    },
    {
@@ -6062,7 +6125,7 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Muscular injury - 75% chance of playing",
-    "selected_by": 6.7,
+    "selected_by": 6.6,
     "total_points": 7
    },
    {
@@ -6075,7 +6138,7 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Hamstring injury - 75% chance of playing",
-    "selected_by": 3.5,
+    "selected_by": 3.3,
     "total_points": 13
    },
    {
@@ -6088,7 +6151,7 @@
     "status_label": "Doubtful",
     "chance": 75,
     "news": "Muscular injury - 75% chance of playing",
-    "selected_by": 3.3,
+    "selected_by": 3.2,
     "total_points": 12
    },
    {
@@ -6118,19 +6181,6 @@
     "total_points": 1
    },
    {
-    "id": 152,
-    "name": "Palestra",
-    "team": "CHE",
-    "pos": "DEF",
-    "cost": 5.4,
-    "status": "d",
-    "status_label": "Doubtful",
-    "chance": 75,
-    "news": "Unspecified injury - 75% chance of playing",
-    "selected_by": 1.1,
-    "total_points": 0
-   },
-   {
     "id": 123,
     "name": "Hinshelwood",
     "team": "BHA",
@@ -6142,6 +6192,19 @@
     "news": "Unspecified injury - 50% chance of playing",
     "selected_by": 1.0,
     "total_points": 16
+   },
+   {
+    "id": 152,
+    "name": "Palestra",
+    "team": "CHE",
+    "pos": "DEF",
+    "cost": 5.4,
+    "status": "d",
+    "status_label": "Doubtful",
+    "chance": 75,
+    "news": "Unspecified injury - 75% chance of playing",
+    "selected_by": 1.0,
+    "total_points": 0
    },
    {
     "id": 125,
@@ -6222,17 +6285,17 @@
     "total_points": 0
    },
    {
-    "id": 285,
-    "name": "McNair",
-    "team": "HUL",
-    "pos": "DEF",
-    "cost": 4.0,
+    "id": 652,
+    "name": "Azeez",
+    "team": "BHA",
+    "pos": "MID",
+    "cost": 5.5,
     "status": "d",
     "status_label": "Doubtful",
-    "chance": 75,
-    "news": "Foot injury - 75% chance of playing",
-    "selected_by": 0.1,
-    "total_points": 1
+    "chance": 50,
+    "news": "Hamstring injury - 50% chance of playing",
+    "selected_by": 0.0,
+    "total_points": 0
    },
    {
     "id": 101,
@@ -6259,6 +6322,19 @@
     "news": "Knee injury - 25% chance of playing",
     "selected_by": 0.0,
     "total_points": 0
+   },
+   {
+    "id": 444,
+    "name": "Jaouen",
+    "team": "NEW",
+    "pos": "GKP",
+    "cost": 4.5,
+    "status": "d",
+    "status_label": "Doubtful",
+    "chance": 50,
+    "news": "Ankle injury - 50% chance of playing",
+    "selected_by": 0.0,
+    "total_points": 0
    }
   ],
   "new_signings": [
@@ -6271,7 +6347,7 @@
     "joined": "2026-08-05",
     "total_points": 26,
     "minutes": 270,
-    "selected_by": 9.4,
+    "selected_by": 9.6,
     "status": "a"
    },
    {
@@ -6279,11 +6355,11 @@
     "name": "Mendy",
     "team": "HUL",
     "pos": "DEF",
-    "cost": 4.0,
+    "cost": 4.1,
     "joined": "2026-08-12",
     "total_points": 24,
     "minutes": 191,
-    "selected_by": 7.4,
+    "selected_by": 7.9,
     "status": "a"
    },
    {
@@ -6295,7 +6371,7 @@
     "joined": "2026-07-21",
     "total_points": 19,
     "minutes": 257,
-    "selected_by": 29.2,
+    "selected_by": 30.5,
     "status": "a"
    },
    {
@@ -6307,7 +6383,7 @@
     "joined": "2026-08-01",
     "total_points": 18,
     "minutes": 210,
-    "selected_by": 13.9,
+    "selected_by": 13.6,
     "status": "a"
    },
    {
@@ -6319,7 +6395,7 @@
     "joined": "2026-07-14",
     "total_points": 18,
     "minutes": 270,
-    "selected_by": 3.0,
+    "selected_by": 3.1,
     "status": "a"
    },
    {
@@ -6331,7 +6407,7 @@
     "joined": "2026-09-01",
     "total_points": 16,
     "minutes": 266,
-    "selected_by": 9.9,
+    "selected_by": 9.6,
     "status": "a"
    },
    {
@@ -6367,7 +6443,7 @@
     "joined": "2026-07-17",
     "total_points": 14,
     "minutes": 270,
-    "selected_by": 3.5,
+    "selected_by": 3.6,
     "status": "a"
    },
    {
@@ -6379,7 +6455,7 @@
     "joined": "2026-08-18",
     "total_points": 13,
     "minutes": 270,
-    "selected_by": 3.5,
+    "selected_by": 3.3,
     "status": "d"
    },
    {
@@ -6451,7 +6527,7 @@
     "joined": "2026-07-23",
     "total_points": 11,
     "minutes": 210,
-    "selected_by": 17.2,
+    "selected_by": 16.8,
     "status": "a"
    },
    {
@@ -6463,7 +6539,7 @@
     "joined": "2026-08-03",
     "total_points": 10,
     "minutes": 270,
-    "selected_by": 4.2,
+    "selected_by": 4.1,
     "status": "a"
    },
    {
@@ -6487,7 +6563,7 @@
     "joined": "2026-06-18",
     "total_points": 10,
     "minutes": 270,
-    "selected_by": 7.0,
+    "selected_by": 6.9,
     "status": "a"
    },
    {
@@ -6499,7 +6575,7 @@
     "joined": "2026-08-10",
     "total_points": 9,
     "minutes": 123,
-    "selected_by": 2.3,
+    "selected_by": 2.4,
     "status": "a"
    },
    {
@@ -6547,7 +6623,7 @@
     "joined": "2026-07-06",
     "total_points": 9,
     "minutes": 254,
-    "selected_by": 2.7,
+    "selected_by": 2.6,
     "status": "a"
    },
    {
@@ -6559,7 +6635,7 @@
     "joined": "2026-07-02",
     "total_points": 8,
     "minutes": 233,
-    "selected_by": 4.6,
+    "selected_by": 4.5,
     "status": "a"
    },
    {
@@ -6643,7 +6719,7 @@
     "joined": "2026-07-22",
     "total_points": 7,
     "minutes": 270,
-    "selected_by": 14.7,
+    "selected_by": 14.6,
     "status": "a"
    },
    {
@@ -6715,7 +6791,7 @@
     "joined": "2026-07-01",
     "total_points": 6,
     "minutes": 186,
-    "selected_by": 2.9,
+    "selected_by": 2.8,
     "status": "a"
    },
    {
@@ -6787,7 +6863,7 @@
     "joined": "2026-08-21",
     "total_points": 5,
     "minutes": 101,
-    "selected_by": 13.7,
+    "selected_by": 14.5,
     "status": "a"
    },
    {
@@ -6823,7 +6899,7 @@
     "joined": "2026-08-04",
     "total_points": 5,
     "minutes": 270,
-    "selected_by": 1.0,
+    "selected_by": 0.9,
     "status": "a"
    },
    {
@@ -6943,7 +7019,7 @@
     "joined": "2026-08-28",
     "total_points": 4,
     "minutes": 154,
-    "selected_by": 1.1,
+    "selected_by": 1.2,
     "status": "a"
    },
    {
@@ -6987,7 +7063,7 @@
     "name": "Tchaouna",
     "team": "COV",
     "pos": "MID",
-    "cost": 5.5,
+    "cost": 5.4,
     "joined": "2026-07-11",
     "total_points": 4,
     "minutes": 166,
@@ -7003,7 +7079,7 @@
     "joined": "2026-07-08",
     "total_points": 4,
     "minutes": 127,
-    "selected_by": 3.2,
+    "selected_by": 3.1,
     "status": "a"
    },
    {
@@ -7135,7 +7211,7 @@
     "joined": "2026-07-01",
     "total_points": 3,
     "minutes": 90,
-    "selected_by": 4.8,
+    "selected_by": 4.7,
     "status": "a"
    },
    {
@@ -7363,7 +7439,7 @@
     "joined": "2026-08-31",
     "total_points": 1,
     "minutes": 26,
-    "selected_by": 1.8,
+    "selected_by": 1.9,
     "status": "a"
    },
    {
@@ -7399,7 +7475,7 @@
     "joined": "2026-08-11",
     "total_points": 1,
     "minutes": 1,
-    "selected_by": 0.6,
+    "selected_by": 0.5,
     "status": "a"
    },
    {
@@ -7519,7 +7595,7 @@
     "joined": "2026-08-31",
     "total_points": 1,
     "minutes": 85,
-    "selected_by": 5.9,
+    "selected_by": 5.8,
     "status": "a"
    },
    {
@@ -7531,7 +7607,7 @@
     "joined": "2026-09-01",
     "total_points": 1,
     "minutes": 26,
-    "selected_by": 0.2,
+    "selected_by": 0.3,
     "status": "a"
    },
    {
@@ -7591,7 +7667,7 @@
     "joined": "2026-07-23",
     "total_points": 1,
     "minutes": 5,
-    "selected_by": 2.0,
+    "selected_by": 1.9,
     "status": "a"
    },
    {
@@ -7640,7 +7716,7 @@
     "total_points": 1,
     "minutes": 12,
     "selected_by": 0.1,
-    "status": "a"
+    "status": "i"
    },
    {
     "id": 650,
@@ -7724,7 +7800,7 @@
     "total_points": 0,
     "minutes": 0,
     "selected_by": 0.0,
-    "status": "i"
+    "status": "d"
    },
    {
     "id": 648,
@@ -7855,7 +7931,7 @@
     "joined": "2026-07-01",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 17.8,
+    "selected_by": 17.9,
     "status": "a"
    },
    {
@@ -7880,6 +7956,18 @@
     "total_points": 0,
     "minutes": 0,
     "selected_by": 0.1,
+    "status": "a"
+   },
+   {
+    "id": 655,
+    "name": "Gboho",
+    "team": "COV",
+    "pos": "MID",
+    "cost": 5.5,
+    "joined": "2026-09-01",
+    "total_points": 0,
+    "minutes": 0,
+    "selected_by": 0.0,
     "status": "a"
    },
    {
@@ -7964,7 +8052,7 @@
     "total_points": 0,
     "minutes": 0,
     "selected_by": 0.0,
-    "status": "a"
+    "status": "d"
    },
    {
     "id": 303,
@@ -7987,7 +8075,7 @@
     "joined": "2026-06-27",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 6.3,
+    "selected_by": 6.2,
     "status": "a"
    },
    {
@@ -8095,7 +8183,7 @@
     "joined": "2026-07-01",
     "total_points": 0,
     "minutes": 0,
-    "selected_by": 1.1,
+    "selected_by": 1.0,
     "status": "d"
    },
    {
@@ -8251,14 +8339,14 @@
  },
  "unrated_view": {
   "summary": {
-   "total_players": 654,
+   "total_players": 655,
    "projected": 0,
-   "unrated": 654,
-   "promoted_club_players": 654,
-   "with_set_piece_duty": 135,
-   "owned_over_1pct": 186,
+   "unrated": 655,
+   "promoted_club_players": 655,
+   "with_set_piece_duty": 134,
+   "owned_over_1pct": 183,
    "by_reason": {
-    "promoted club - played outside the Premier League last season": 654
+    "promoted club - played outside the Premier League last season": 655
    },
    "note": "These players have no projection because a per-90 rate needs minutes, and they have too few. `signal` is a 0-100 role indicator built only from price, FPL's own expected points, set-piece duty and ownership - it is not points and must never be compared with the projected column."
   },
@@ -8277,7 +8365,7 @@
      "corners": 1
     },
     "ep": 9.0,
-    "own": 45.7,
+    "own": 44.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -8375,7 +8463,7 @@
     "name": "Palmer",
     "team": "CHE",
     "pos": "MID",
-    "cost": 9.6,
+    "cost": 9.7,
     "signal": 89,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
@@ -8383,7 +8471,7 @@
      "direct_fk": 2
     },
     "ep": 7.0,
-    "own": 22.9,
+    "own": 24.2,
     "minutes": 262,
     "status": "a",
     "news": "",
@@ -8462,7 +8550,7 @@
      "corners": 2
     },
     "ep": 7.0,
-    "own": 25.3,
+    "own": 24.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -8488,7 +8576,7 @@
      "corners": 1
     },
     "ep": 8.3,
-    "own": 30.2,
+    "own": 29.9,
     "minutes": 173,
     "status": "a",
     "news": "",
@@ -8514,7 +8602,7 @@
      "corners": 1
     },
     "ep": 4.3,
-    "own": 13.5,
+    "own": 13.4,
     "minutes": 241,
     "status": "a",
     "news": "",
@@ -8539,7 +8627,7 @@
      "penalties": 1
     },
     "ep": 3.3,
-    "own": 23.6,
+    "own": 23.2,
     "minutes": 252,
     "status": "a",
     "news": "",
@@ -8550,31 +8638,6 @@
      "price": 22.5,
      "ep": 16.5,
      "ownership": 10.0
-    }
-   },
-   {
-    "id": 569,
-    "name": "Gonzalo",
-    "team": "FUL",
-    "pos": "FWD",
-    "cost": 6.0,
-    "signal": 73,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "penalties": 1
-    },
-    "ep": 3.3,
-    "own": 4.2,
-    "minutes": 270,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 25.3,
-     "price": 22.5,
-     "ep": 16.5,
-     "ownership": 8.4
     }
    },
    {
@@ -8589,7 +8652,7 @@
      "penalties": 1
     },
     "ep": 4.0,
-    "own": 5.6,
+    "own": 5.8,
     "minutes": 237,
     "status": "a",
     "news": "",
@@ -8600,6 +8663,31 @@
      "price": 16.5,
      "ep": 20.0,
      "ownership": 10.0
+    }
+   },
+   {
+    "id": 569,
+    "name": "Gonzalo",
+    "team": "FUL",
+    "pos": "FWD",
+    "cost": 6.0,
+    "signal": 72,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "penalties": 1
+    },
+    "ep": 3.3,
+    "own": 4.1,
+    "minutes": 270,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 25.3,
+     "price": 22.5,
+     "ep": 16.5,
+     "ownership": 8.2
     }
    },
    {
@@ -8614,7 +8702,7 @@
      "penalties": 1
     },
     "ep": 1.3,
-    "own": 11.8,
+    "own": 11.6,
     "minutes": 262,
     "status": "a",
     "news": "",
@@ -8624,33 +8712,6 @@
      "set_pieces": 25.3,
      "price": 30.0,
      "ep": 6.5,
-     "ownership": 10.0
-    }
-   },
-   {
-    "id": 542,
-    "name": "E.Le Fée",
-    "team": "SUN",
-    "pos": "MID",
-    "cost": 5.9,
-    "signal": 71,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "penalties": 2,
-     "direct_fk": 2,
-     "corners": 1
-    },
-    "ep": 4.3,
-    "own": 5.0,
-    "minutes": 258,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 19.8,
-     "price": 21.0,
-     "ep": 20.0,
      "ownership": 10.0
     }
    },
@@ -8666,7 +8727,7 @@
      "penalties": 2
     },
     "ep": 7.7,
-    "own": 21.0,
+    "own": 21.7,
     "minutes": 243,
     "status": "a",
     "news": "",
@@ -8691,7 +8752,7 @@
      "penalties": 2
     },
     "ep": 4.3,
-    "own": 17.7,
+    "own": 17.4,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -8732,6 +8793,33 @@
     }
    },
    {
+    "id": 542,
+    "name": "E.Le Fée",
+    "team": "SUN",
+    "pos": "MID",
+    "cost": 5.9,
+    "signal": 67,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "penalties": 2,
+     "direct_fk": 3,
+     "corners": 1
+    },
+    "ep": 4.3,
+    "own": 4.8,
+    "minutes": 258,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 16.4,
+     "price": 21.0,
+     "ep": 20.0,
+     "ownership": 9.6
+    }
+   },
+   {
     "id": 464,
     "name": "Wissa",
     "team": "NEW",
@@ -8743,7 +8831,7 @@
      "penalties": 2
     },
     "ep": 4.3,
-    "own": 17.1,
+    "own": 17.3,
     "minutes": 261,
     "status": "a",
     "news": "",
@@ -8770,7 +8858,7 @@
      "corners": 1
     },
     "ep": 7.0,
-    "own": 3.2,
+    "own": 3.3,
     "minutes": 268,
     "status": "a",
     "news": "",
@@ -8780,7 +8868,33 @@
      "set_pieces": 14.7,
      "price": 22.5,
      "ep": 20.0,
-     "ownership": 6.4
+     "ownership": 6.6
+    }
+   },
+   {
+    "id": 398,
+    "name": "Foden",
+    "team": "MCI",
+    "pos": "MID",
+    "cost": 7.0,
+    "signal": 63,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 2,
+     "corners": 2
+    },
+    "ep": 3.7,
+    "own": 4.5,
+    "minutes": 195,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 5.9,
+     "price": 30.0,
+     "ep": 18.5,
+     "ownership": 9.0
     }
    },
    {
@@ -8835,32 +8949,6 @@
     }
    },
    {
-    "id": 398,
-    "name": "Foden",
-    "team": "MCI",
-    "pos": "MID",
-    "cost": 7.0,
-    "signal": 61,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 2,
-     "corners": 3
-    },
-    "ep": 3.7,
-    "own": 4.6,
-    "minutes": 195,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 3.4,
-     "price": 30.0,
-     "ep": 18.5,
-     "ownership": 9.2
-    }
-   },
-   {
     "id": 449,
     "name": "Hall",
     "team": "NEW",
@@ -8873,7 +8961,7 @@
      "corners": 1
     },
     "ep": 6.0,
-    "own": 12.1,
+    "own": 12.5,
     "minutes": 269,
     "status": "a",
     "news": "",
@@ -8896,7 +8984,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 4.7,
-    "own": 6.9,
+    "own": 6.8,
     "minutes": 227,
     "status": "a",
     "news": "",
@@ -8919,7 +9007,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 5.0,
-    "own": 24.6,
+    "own": 24.5,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -8965,7 +9053,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 5.3,
-    "own": 7.6,
+    "own": 7.7,
     "minutes": 257,
     "status": "a",
     "news": "",
@@ -8988,7 +9076,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 7.0,
-    "own": 72.5,
+    "own": 72.7,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -9011,7 +9099,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 5.0,
-    "own": 38.9,
+    "own": 39.0,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -9036,7 +9124,7 @@
      "corners": 3
     },
     "ep": 6.3,
-    "own": 29.2,
+    "own": 30.5,
     "minutes": 257,
     "status": "a",
     "news": "",
@@ -9061,7 +9149,7 @@
      "penalties": 2
     },
     "ep": 5.0,
-    "own": 3.9,
+    "own": 3.8,
     "minutes": 267,
     "status": "a",
     "news": "",
@@ -9071,7 +9159,7 @@
      "set_pieces": 10.1,
      "price": 22.5,
      "ep": 20.0,
-     "ownership": 7.8
+     "ownership": 7.6
     }
    },
    {
@@ -9084,7 +9172,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 7.0,
-    "own": 11.3,
+    "own": 11.4,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -9102,16 +9190,15 @@
     "name": "Ødegaard",
     "team": "ARS",
     "pos": "MID",
-    "cost": 6.6,
+    "cost": 6.7,
     "signal": 60,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
      "penalties": 3,
-     "direct_fk": 4,
-     "corners": 4
+     "direct_fk": 4
     },
     "ep": 8.0,
-    "own": 14.3,
+    "own": 15.6,
     "minutes": 221,
     "status": "a",
     "news": "",
@@ -9136,7 +9223,7 @@
      "penalties": 1
     },
     "ep": 2.7,
-    "own": 2.0,
+    "own": 1.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -9146,7 +9233,7 @@
      "set_pieces": 25.3,
      "price": 15.0,
      "ep": 13.5,
-     "ownership": 4.0
+     "ownership": 3.8
     }
    },
    {
@@ -9163,7 +9250,7 @@
      "corners": 3
     },
     "ep": 3.0,
-    "own": 8.3,
+    "own": 8.2,
     "minutes": 242,
     "status": "a",
     "news": "",
@@ -9173,6 +9260,80 @@
      "set_pieces": 3.4,
      "price": 30.0,
      "ep": 15.0,
+     "ownership": 10.0
+    }
+   },
+   {
+    "id": 8,
+    "name": "Calafiori",
+    "team": "ARS",
+    "pos": "DEF",
+    "cost": 5.8,
+    "signal": 57,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 7.3,
+    "own": 48.3,
+    "minutes": 236,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 27.0,
+     "ep": 20.0,
+     "ownership": 10.0
+    }
+   },
+   {
+    "id": 454,
+    "name": "Elanga",
+    "team": "NEW",
+    "pos": "MID",
+    "cost": 6.1,
+    "signal": 57,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 2
+    },
+    "ep": 6.0,
+    "own": 11.0,
+    "minutes": 232,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 2.5,
+     "price": 24.0,
+     "ep": 20.0,
+     "ownership": 10.0
+    }
+   },
+   {
+    "id": 69,
+    "name": "Scott",
+    "team": "BOU",
+    "pos": "MID",
+    "cost": 6.1,
+    "signal": 57,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 4,
+     "corners": 2
+    },
+    "ep": 8.0,
+    "own": 5.0,
+    "minutes": 266,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 2.5,
+     "price": 24.0,
+     "ep": 20.0,
      "ownership": 10.0
     }
    },
@@ -9188,7 +9349,7 @@
      "corners": 3
     },
     "ep": 3.7,
-    "own": 17.2,
+    "own": 16.8,
     "minutes": 210,
     "status": "a",
     "news": "",
@@ -9198,29 +9359,6 @@
      "set_pieces": 0.0,
      "price": 28.5,
      "ep": 18.5,
-     "ownership": 10.0
-    }
-   },
-   {
-    "id": 8,
-    "name": "Calafiori",
-    "team": "ARS",
-    "pos": "DEF",
-    "cost": 5.7,
-    "signal": 56,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 7.3,
-    "own": 47.9,
-    "minutes": 236,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 25.5,
-     "ep": 20.0,
      "ownership": 10.0
     }
    },
@@ -9271,32 +9409,6 @@
     }
    },
    {
-    "id": 544,
-    "name": "Xhaka",
-    "team": "SUN",
-    "pos": "MID",
-    "cost": 5.5,
-    "signal": 55,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 1,
-     "corners": 2
-    },
-    "ep": 6.0,
-    "own": 4.4,
-    "minutes": 270,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 10.9,
-     "price": 15.0,
-     "ep": 20.0,
-     "ownership": 8.8
-    }
-   },
-   {
     "id": 313,
     "name": "Clarke",
     "team": "IPS",
@@ -9307,7 +9419,7 @@
     "set_pieces": {
      "penalties": 1,
      "direct_fk": 3,
-     "corners": 3
+     "corners": 4
     },
     "ep": 2.7,
     "own": 0.2,
@@ -9321,31 +9433,6 @@
      "price": 15.0,
      "ep": 13.5,
      "ownership": 0.4
-    }
-   },
-   {
-    "id": 454,
-    "name": "Elanga",
-    "team": "NEW",
-    "pos": "MID",
-    "cost": 6.1,
-    "signal": 54,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 4
-    },
-    "ep": 6.0,
-    "own": 11.0,
-    "minutes": 232,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 24.0,
-     "ep": 20.0,
-     "ownership": 10.0
     }
    },
    {
@@ -9398,32 +9485,6 @@
     }
    },
    {
-    "id": 69,
-    "name": "Scott",
-    "team": "BOU",
-    "pos": "MID",
-    "cost": 6.0,
-    "signal": 54,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 4,
-     "corners": 2
-    },
-    "ep": 8.0,
-    "own": 4.6,
-    "minutes": 266,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 2.5,
-     "price": 22.5,
-     "ep": 20.0,
-     "ownership": 9.2
-    }
-   },
-   {
     "id": 526,
     "name": "Solanke",
     "team": "TOT",
@@ -9446,31 +9507,6 @@
      "price": 21.0,
      "ep": 5.0,
      "ownership": 2.0
-    }
-   },
-   {
-    "id": 481,
-    "name": "Anderson",
-    "team": "MCI",
-    "pos": "MID",
-    "cost": 6.3,
-    "signal": 52,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 2
-    },
-    "ep": 2.7,
-    "own": 4.6,
-    "minutes": 233,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 2.5,
-     "price": 27.0,
-     "ep": 13.5,
-     "ownership": 9.2
     }
    },
    {
@@ -9509,7 +9545,7 @@
      "corners": 2
     },
     "ep": 3.3,
-    "own": 1.3,
+    "own": 1.4,
     "minutes": 161,
     "status": "a",
     "news": "",
@@ -9519,7 +9555,7 @@
      "set_pieces": 2.5,
      "price": 30.0,
      "ep": 16.5,
-     "ownership": 2.6
+     "ownership": 2.8
     }
    },
    {
@@ -9572,32 +9608,6 @@
     }
    },
    {
-    "id": 469,
-    "name": "N.Williams",
-    "team": "NFO",
-    "pos": "DEF",
-    "cost": 5.0,
-    "signal": 51,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 2,
-     "corners": 2
-    },
-    "ep": 5.0,
-    "own": 8.2,
-    "minutes": 270,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 5.9,
-     "price": 15.0,
-     "ep": 20.0,
-     "ownership": 10.0
-    }
-   },
-   {
     "id": 237,
     "name": "Ndiaye",
     "team": "MCI",
@@ -9607,7 +9617,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 5.3,
-    "own": 9.9,
+    "own": 9.6,
     "minutes": 266,
     "status": "a",
     "news": "",
@@ -9644,28 +9654,28 @@
     }
    },
    {
-    "id": 25,
-    "name": "Gyökeres",
-    "team": "ARS",
-    "pos": "FWD",
-    "cost": 7.3,
+    "id": 481,
+    "name": "Anderson",
+    "team": "MCI",
+    "pos": "MID",
+    "cost": 6.3,
     "signal": 50,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "penalties": 2
+     "corners": 3
     },
-    "ep": 0.3,
-    "own": 4.0,
-    "minutes": 12,
+    "ep": 2.7,
+    "own": 4.5,
+    "minutes": 233,
     "status": "a",
     "news": "",
-    "new_club": false,
+    "new_club": true,
     "promoted": true,
     "components": {
-     "set_pieces": 10.1,
-     "price": 30.0,
-     "ep": 1.5,
-     "ownership": 8.0
+     "set_pieces": 0.0,
+     "price": 27.0,
+     "ep": 13.5,
+     "ownership": 9.0
     }
    },
    {
@@ -9714,6 +9724,31 @@
      "price": 15.0,
      "ep": 20.0,
      "ownership": 3.4
+    }
+   },
+   {
+    "id": 25,
+    "name": "Gyökeres",
+    "team": "ARS",
+    "pos": "FWD",
+    "cost": 7.2,
+    "signal": 49,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "penalties": 2
+    },
+    "ep": 0.3,
+    "own": 3.9,
+    "minutes": 12,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 10.1,
+     "price": 30.0,
+     "ep": 1.5,
+     "ownership": 7.8
     }
    },
    {
@@ -9770,6 +9805,82 @@
     }
    },
    {
+    "id": 472,
+    "name": "Murillo",
+    "team": "NFO",
+    "pos": "DEF",
+    "cost": 5.5,
+    "signal": 49,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 2
+    },
+    "ep": 4.3,
+    "own": 1.6,
+    "minutes": 269,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 3.4,
+     "price": 22.5,
+     "ep": 20.0,
+     "ownership": 3.2
+    }
+   },
+   {
+    "id": 166,
+    "name": "N.Jackson",
+    "team": "AVL",
+    "pos": "FWD",
+    "cost": 6.5,
+    "signal": 49,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "penalties": 2
+    },
+    "ep": 1.3,
+    "own": 1.2,
+    "minutes": 154,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 10.1,
+     "price": 30.0,
+     "ep": 6.5,
+     "ownership": 2.4
+    }
+   },
+   {
+    "id": 544,
+    "name": "Xhaka",
+    "team": "SUN",
+    "pos": "MID",
+    "cost": 5.5,
+    "signal": 49,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 2,
+     "corners": 2
+    },
+    "ep": 6.0,
+    "own": 4.3,
+    "minutes": 270,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 5.9,
+     "price": 15.0,
+     "ep": 20.0,
+     "ownership": 8.6
+    }
+   },
+   {
     "id": 211,
     "name": "Yeremy",
     "team": "CRY",
@@ -9805,7 +9916,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.8,
-    "own": 1.8,
+    "own": 1.9,
     "minutes": 26,
     "status": "a",
     "news": "",
@@ -9815,7 +9926,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 14.0,
-     "ownership": 3.6
+     "ownership": 3.8
     }
    },
    {
@@ -9830,7 +9941,7 @@
      "direct_fk": 1
     },
     "ep": 6.0,
-    "own": 2.2,
+    "own": 2.1,
     "minutes": 267,
     "status": "a",
     "news": "",
@@ -9840,7 +9951,7 @@
      "set_pieces": 8.4,
      "price": 15.0,
      "ep": 20.0,
-     "ownership": 4.4
+     "ownership": 4.2
     }
    },
    {
@@ -9853,7 +9964,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 6.0,
-    "own": 13.9,
+    "own": 13.6,
     "minutes": 210,
     "status": "a",
     "news": "",
@@ -9862,6 +9973,32 @@
     "components": {
      "set_pieces": 0.0,
      "price": 18.0,
+     "ep": 20.0,
+     "ownership": 10.0
+    }
+   },
+   {
+    "id": 469,
+    "name": "N.Williams",
+    "team": "NFO",
+    "pos": "DEF",
+    "cost": 5.0,
+    "signal": 48,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 3,
+     "corners": 2
+    },
+    "ep": 5.0,
+    "own": 8.2,
+    "minutes": 270,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 2.5,
+     "price": 15.0,
      "ep": 20.0,
      "ownership": 10.0
     }
@@ -9876,7 +10013,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.3,
-    "own": 3.8,
+    "own": 3.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -9886,7 +10023,32 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 16.5,
-     "ownership": 7.6
+     "ownership": 7.8
+    }
+   },
+   {
+    "id": 453,
+    "name": "Barnes",
+    "team": "NEW",
+    "pos": "MID",
+    "cost": 6.0,
+    "signal": 47,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 3
+    },
+    "ep": 5.7,
+    "own": 2.1,
+    "minutes": 270,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 22.5,
+     "ep": 20.0,
+     "ownership": 4.2
     }
    },
    {
@@ -9922,7 +10084,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 4.3,
-    "own": 2.3,
+    "own": 2.2,
     "minutes": 180,
     "status": "a",
     "news": "",
@@ -9932,32 +10094,7 @@
      "set_pieces": 0.0,
      "price": 22.5,
      "ep": 20.0,
-     "ownership": 4.6
-    }
-   },
-   {
-    "id": 453,
-    "name": "Barnes",
-    "team": "NEW",
-    "pos": "MID",
-    "cost": 6.0,
-    "signal": 46,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 5
-    },
-    "ep": 5.7,
-    "own": 2.0,
-    "minutes": 270,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 22.5,
-     "ep": 20.0,
-     "ownership": 4.0
+     "ownership": 4.4
     }
    },
    {
@@ -10007,28 +10144,29 @@
     }
    },
    {
-    "id": 472,
-    "name": "Murillo",
-    "team": "NFO",
-    "pos": "DEF",
-    "cost": 5.5,
+    "id": 260,
+    "name": "Wilson",
+    "team": "LEE",
+    "pos": "MID",
+    "cost": 6.3,
     "signal": 46,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "direct_fk": 3
+     "direct_fk": 2,
+     "corners": 2
     },
-    "ep": 4.3,
-    "own": 1.6,
-    "minutes": 269,
+    "ep": 1.3,
+    "own": 3.1,
+    "minutes": 127,
     "status": "a",
     "news": "",
-    "new_club": false,
+    "new_club": true,
     "promoted": true,
     "components": {
-     "set_pieces": 0.0,
-     "price": 22.5,
-     "ep": 20.0,
-     "ownership": 3.2
+     "set_pieces": 5.9,
+     "price": 27.0,
+     "ep": 6.5,
+     "ownership": 6.2
     }
    },
    {
@@ -10044,7 +10182,7 @@
      "corners": 2
     },
     "ep": 7.0,
-    "own": 20.1,
+    "own": 20.6,
     "minutes": 243,
     "status": "a",
     "news": "",
@@ -10256,7 +10394,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 4.8,
+    "own": 4.7,
     "minutes": 90,
     "status": "a",
     "news": "",
@@ -10266,7 +10404,7 @@
      "set_pieces": 0.0,
      "price": 28.5,
      "ep": 5.0,
-     "ownership": 9.6
+     "ownership": 9.4
     }
    },
    {
@@ -10279,7 +10417,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 4.7,
-    "own": 3.5,
+    "own": 3.6,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -10289,32 +10427,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 20.0,
-     "ownership": 7.0
-    }
-   },
-   {
-    "id": 260,
-    "name": "Wilson",
-    "team": "LEE",
-    "pos": "MID",
-    "cost": 6.3,
-    "signal": 42,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 2
-    },
-    "ep": 1.3,
-    "own": 3.2,
-    "minutes": 127,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 2.5,
-     "price": 27.0,
-     "ep": 6.5,
-     "ownership": 6.4
+     "ownership": 7.2
     }
    },
    {
@@ -10327,7 +10440,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.0,
-    "own": 2.3,
+    "own": 2.4,
     "minutes": 123,
     "status": "a",
     "news": "",
@@ -10337,30 +10450,7 @@
      "set_pieces": 0.0,
      "price": 21.0,
      "ep": 15.0,
-     "ownership": 4.6
-    }
-   },
-   {
-    "id": 532,
-    "name": "Ballard",
-    "team": "SUN",
-    "pos": "DEF",
-    "cost": 4.9,
-    "signal": 41,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 4.0,
-    "own": 3.5,
-    "minutes": 270,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 13.5,
-     "ep": 20.0,
-     "ownership": 7.0
+     "ownership": 4.8
     }
    },
    {
@@ -10373,7 +10463,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 7.7,
+    "own": 7.5,
     "minutes": 219,
     "status": "a",
     "news": "",
@@ -10384,33 +10474,6 @@
      "price": 21.0,
      "ep": 10.0,
      "ownership": 10.0
-    }
-   },
-   {
-    "id": 261,
-    "name": "Iwobi",
-    "team": "FUL",
-    "pos": "MID",
-    "cost": 5.5,
-    "signal": 41,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "penalties": 3,
-     "direct_fk": 1,
-     "corners": 1
-    },
-    "ep": 2.0,
-    "own": 0.8,
-    "minutes": 262,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 14.7,
-     "price": 15.0,
-     "ep": 10.0,
-     "ownership": 1.6
     }
    },
    {
@@ -10446,7 +10509,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 6.0,
-    "own": 3.0,
+    "own": 3.1,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -10456,7 +10519,57 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 20.0,
-     "ownership": 6.0
+     "ownership": 6.2
+    }
+   },
+   {
+    "id": 532,
+    "name": "Ballard",
+    "team": "SUN",
+    "pos": "DEF",
+    "cost": 4.9,
+    "signal": 40,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 4.0,
+    "own": 3.4,
+    "minutes": 270,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 13.5,
+     "ep": 20.0,
+     "ownership": 6.8
+    }
+   },
+   {
+    "id": 261,
+    "name": "Iwobi",
+    "team": "FUL",
+    "pos": "MID",
+    "cost": 5.4,
+    "signal": 40,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "penalties": 3,
+     "direct_fk": 1,
+     "corners": 1
+    },
+    "ep": 2.0,
+    "own": 0.8,
+    "minutes": 262,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 14.7,
+     "price": 13.5,
+     "ep": 10.0,
+     "ownership": 1.6
     }
    },
    {
@@ -10469,7 +10582,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.3,
-    "own": 7.0,
+    "own": 6.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -10532,29 +10645,6 @@
     }
    },
    {
-    "id": 166,
-    "name": "N.Jackson",
-    "team": "AVL",
-    "pos": "FWD",
-    "cost": 6.5,
-    "signal": 39,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 1.3,
-    "own": 1.1,
-    "minutes": 154,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 30.0,
-     "ep": 6.5,
-     "ownership": 2.2
-    }
-   },
-   {
     "id": 572,
     "name": "Tzolakis",
     "team": "HUL",
@@ -10564,7 +10654,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 8.7,
-    "own": 9.4,
+    "own": 9.6,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -10587,7 +10677,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 4.3,
-    "own": 1.4,
+    "own": 1.5,
     "minutes": 75,
     "status": "a",
     "news": "",
@@ -10597,7 +10687,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 20.0,
-     "ownership": 2.8
+     "ownership": 3.0
     }
    },
    {
@@ -10633,7 +10723,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 5.3,
-    "own": 5.8,
+    "own": 6.0,
     "minutes": 253,
     "status": "a",
     "news": "",
@@ -10775,7 +10865,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 4.3,
-    "own": 4.9,
+    "own": 4.8,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -10785,7 +10875,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 20.0,
-     "ownership": 9.8
+     "ownership": 9.6
     }
    },
    {
@@ -10812,32 +10902,6 @@
     }
    },
    {
-    "id": 282,
-    "name": "Giles",
-    "team": "HUL",
-    "pos": "DEF",
-    "cost": 4.0,
-    "signal": 37,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 1,
-     "corners": 1
-    },
-    "ep": 6.7,
-    "own": 1.3,
-    "minutes": 264,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 14.7,
-     "price": 0.0,
-     "ep": 20.0,
-     "ownership": 2.6
-    }
-   },
-   {
     "id": 127,
     "name": "Gomez",
     "team": "BHA",
@@ -10849,7 +10913,7 @@
      "direct_fk": 5
     },
     "ep": 4.3,
-    "own": 4.9,
+    "own": 4.8,
     "minutes": 265,
     "status": "a",
     "news": "",
@@ -10859,7 +10923,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 20.0,
-     "ownership": 9.8
+     "ownership": 9.6
     }
    },
    {
@@ -10989,7 +11053,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.0,
-    "own": 3.1,
+    "own": 3.0,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -10999,7 +11063,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 15.0,
-     "ownership": 6.2
+     "ownership": 6.0
     }
    },
    {
@@ -11028,6 +11092,32 @@
     }
    },
    {
+    "id": 286,
+    "name": "Belloumi",
+    "team": "HUL",
+    "pos": "MID",
+    "cost": 5.0,
+    "signal": 35,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 2,
+     "corners": 2
+    },
+    "ep": 4.7,
+    "own": 1.0,
+    "minutes": 253,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 5.9,
+     "price": 7.5,
+     "ep": 20.0,
+     "ownership": 2.0
+    }
+   },
+   {
     "id": 452,
     "name": "Bruno G.",
     "team": "ARS",
@@ -11037,7 +11127,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
      "penalties": 4,
-     "corners": 5
+     "corners": 4
     },
     "ep": 0.3,
     "own": 1.8,
@@ -11102,31 +11192,6 @@
     }
    },
    {
-    "id": 14,
-    "name": "Eze",
-    "team": "ARS",
-    "pos": "MID",
-    "cost": 6.4,
-    "signal": 35,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 3
-    },
-    "ep": 0.7,
-    "own": 1.3,
-    "minutes": 59,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 28.5,
-     "ep": 3.5,
-     "ownership": 2.6
-    }
-   },
-   {
     "id": 371,
     "name": "Gravenberch",
     "team": "LIV",
@@ -11182,7 +11247,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 12.2,
+    "own": 11.8,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -11192,6 +11257,31 @@
      "set_pieces": 0.0,
      "price": 13.5,
      "ep": 11.5,
+     "ownership": 10.0
+    }
+   },
+   {
+    "id": 290,
+    "name": "Slater",
+    "team": "HUL",
+    "pos": "MID",
+    "cost": 4.5,
+    "signal": 35,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 1
+    },
+    "ep": 3.7,
+    "own": 5.3,
+    "minutes": 270,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 6.3,
+     "price": 0.0,
+     "ep": 18.5,
      "ownership": 10.0
     }
    },
@@ -11216,6 +11306,31 @@
      "price": 22.5,
      "ep": 11.0,
      "ownership": 0.0
+    }
+   },
+   {
+    "id": 14,
+    "name": "Eze",
+    "team": "ARS",
+    "pos": "MID",
+    "cost": 6.4,
+    "signal": 34,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 3
+    },
+    "ep": 0.7,
+    "own": 1.2,
+    "minutes": 59,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 28.5,
+     "ep": 3.5,
+     "ownership": 2.4
     }
    },
    {
@@ -11324,7 +11439,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.7,
-    "own": 12.2,
+    "own": 12.0,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -11414,11 +11529,9 @@
     "cost": 5.4,
     "signal": 34,
     "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 6
-    },
+    "set_pieces": {},
     "ep": 3.0,
-    "own": 2.7,
+    "own": 2.6,
     "minutes": 254,
     "status": "a",
     "news": "",
@@ -11428,33 +11541,7 @@
      "set_pieces": 0.0,
      "price": 13.5,
      "ep": 15.0,
-     "ownership": 5.4
-    }
-   },
-   {
-    "id": 286,
-    "name": "Belloumi",
-    "team": "HUL",
-    "pos": "MID",
-    "cost": 5.0,
-    "signal": 33,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 2,
-     "corners": 3
-    },
-    "ep": 4.7,
-    "own": 1.0,
-    "minutes": 253,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 3.4,
-     "price": 7.5,
-     "ep": 20.0,
-     "ownership": 2.0
+     "ownership": 5.2
     }
    },
    {
@@ -11492,7 +11579,7 @@
      "penalties": 4
     },
     "ep": 1.3,
-    "own": 2.7,
+    "own": 2.6,
     "minutes": 211,
     "status": "a",
     "news": "",
@@ -11502,7 +11589,7 @@
      "set_pieces": 0.0,
      "price": 21.0,
      "ep": 6.5,
-     "ownership": 5.4
+     "ownership": 5.2
     }
    },
    {
@@ -11540,7 +11627,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.3,
-    "own": 5.9,
+    "own": 5.8,
     "minutes": 85,
     "status": "a",
     "news": "",
@@ -11551,6 +11638,31 @@
      "price": 21.0,
      "ep": 1.5,
      "ownership": 10.0
+    }
+   },
+   {
+    "id": 551,
+    "name": "N.Angulo",
+    "team": "SUN",
+    "pos": "MID",
+    "cost": 5.0,
+    "signal": 33,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 1
+    },
+    "ep": 3.3,
+    "own": 0.1,
+    "minutes": 185,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 8.4,
+     "price": 7.5,
+     "ep": 16.5,
+     "ownership": 0.2
     }
    },
    {
@@ -11686,7 +11798,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.0,
-    "own": 1.1,
+    "own": 1.0,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -11696,32 +11808,7 @@
      "set_pieces": 0.0,
      "price": 15.0,
      "ep": 15.0,
-     "ownership": 2.2
-    }
-   },
-   {
-    "id": 534,
-    "name": "Hume",
-    "team": "SUN",
-    "pos": "DEF",
-    "cost": 4.5,
-    "signal": 32,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 3
-    },
-    "ep": 3.0,
-    "own": 4.5,
-    "minutes": 195,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 7.5,
-     "ep": 15.0,
-     "ownership": 9.0
+     "ownership": 2.0
     }
    },
    {
@@ -11734,7 +11821,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.0,
-    "own": 18.6,
+    "own": 18.5,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -11770,32 +11857,6 @@
      "price": 28.5,
      "ep": 1.5,
      "ownership": 2.0
-    }
-   },
-   {
-    "id": 309,
-    "name": "Núñez",
-    "team": "IPS",
-    "pos": "MID",
-    "cost": 5.0,
-    "signal": 32,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 1,
-     "corners": 1
-    },
-    "ep": 2.0,
-    "own": 0.1,
-    "minutes": 140,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 14.7,
-     "price": 7.5,
-     "ep": 10.0,
-     "ownership": 0.2
     }
    },
    {
@@ -11880,7 +11941,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 8.3,
-    "own": 11.4,
+    "own": 11.6,
     "minutes": 243,
     "status": "a",
     "news": "",
@@ -11903,7 +11964,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 7.3,
-    "own": 1.6,
+    "own": 1.7,
     "minutes": 217,
     "status": "a",
     "news": "",
@@ -11913,7 +11974,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 20.0,
-     "ownership": 3.2
+     "ownership": 3.4
     }
    },
    {
@@ -11949,7 +12010,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 7.7,
-    "own": 6.2,
+    "own": 6.3,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -11960,6 +12021,57 @@
      "price": 1.5,
      "ep": 20.0,
      "ownership": 10.0
+    }
+   },
+   {
+    "id": 315,
+    "name": "Fatawu",
+    "team": "IPS",
+    "pos": "MID",
+    "cost": 5.5,
+    "signal": 31,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 2
+    },
+    "ep": 2.7,
+    "own": 0.2,
+    "minutes": 225,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 2.5,
+     "price": 15.0,
+     "ep": 13.5,
+     "ownership": 0.4
+    }
+   },
+   {
+    "id": 282,
+    "name": "Giles",
+    "team": "HUL",
+    "pos": "DEF",
+    "cost": 4.0,
+    "signal": 31,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 1,
+     "corners": 3
+    },
+    "ep": 6.7,
+    "own": 1.4,
+    "minutes": 264,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 8.4,
+     "price": 0.0,
+     "ep": 20.0,
+     "ownership": 2.8
     }
    },
    {
@@ -11974,7 +12086,7 @@
      "corners": 3
     },
     "ep": 7.0,
-    "own": 1.7,
+    "own": 1.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -11984,7 +12096,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 20.0,
-     "ownership": 3.4
+     "ownership": 3.8
     }
    },
    {
@@ -11996,7 +12108,7 @@
     "signal": 31,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "corners": 6
+     "corners": 5
     },
     "ep": 0.7,
     "own": 0.2,
@@ -12013,27 +12125,25 @@
     }
    },
    {
-    "id": 290,
-    "name": "Slater",
+    "id": 586,
+    "name": "Mendy",
     "team": "HUL",
-    "pos": "MID",
-    "cost": 4.5,
+    "pos": "DEF",
+    "cost": 4.1,
     "signal": 31,
     "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 2
-    },
-    "ep": 3.7,
-    "own": 5.2,
-    "minutes": 270,
+    "set_pieces": {},
+    "ep": 8.0,
+    "own": 7.9,
+    "minutes": 191,
     "status": "a",
     "news": "",
-    "new_club": false,
+    "new_club": true,
     "promoted": true,
     "components": {
-     "set_pieces": 2.5,
-     "price": 0.0,
-     "ep": 18.5,
+     "set_pieces": 0.0,
+     "price": 1.5,
+     "ep": 20.0,
      "ownership": 10.0
     }
    },
@@ -12060,6 +12170,31 @@
      "price": 15.0,
      "ep": 11.5,
      "ownership": 0.6
+    }
+   },
+   {
+    "id": 534,
+    "name": "Hume",
+    "team": "SUN",
+    "pos": "DEF",
+    "cost": 4.4,
+    "signal": 30,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 3
+    },
+    "ep": 3.0,
+    "own": 4.3,
+    "minutes": 195,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 6.0,
+     "ep": 15.0,
+     "ownership": 8.6
     }
    },
    {
@@ -12132,29 +12267,6 @@
     }
    },
    {
-    "id": 586,
-    "name": "Mendy",
-    "team": "HUL",
-    "pos": "DEF",
-    "cost": 4.0,
-    "signal": 30,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 8.0,
-    "own": 7.4,
-    "minutes": 191,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 20.0,
-     "ownership": 10.0
-    }
-   },
-   {
     "id": 233,
     "name": "Mykolenko",
     "team": "EVE",
@@ -12175,31 +12287,6 @@
      "price": 7.5,
      "ep": 18.5,
      "ownership": 3.8
-    }
-   },
-   {
-    "id": 502,
-    "name": "Robertson",
-    "team": "TOT",
-    "pos": "DEF",
-    "cost": 4.5,
-    "signal": 30,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 1
-    },
-    "ep": 2.0,
-    "own": 2.9,
-    "minutes": 186,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 6.3,
-     "price": 7.5,
-     "ep": 10.0,
-     "ownership": 5.8
     }
    },
    {
@@ -12235,7 +12322,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 5.0,
-    "own": 8.8,
+    "own": 8.9,
     "minutes": 257,
     "status": "a",
     "news": "",
@@ -12304,7 +12391,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 4.3,
-    "own": 0.9,
+    "own": 0.8,
     "minutes": 247,
     "status": "a",
     "news": "",
@@ -12314,32 +12401,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 20.0,
-     "ownership": 1.8
-    }
-   },
-   {
-    "id": 315,
-    "name": "Fatawu",
-    "team": "IPS",
-    "pos": "MID",
-    "cost": 5.5,
-    "signal": 29,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 5
-    },
-    "ep": 2.7,
-    "own": 0.2,
-    "minutes": 225,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 15.0,
-     "ep": 13.5,
-     "ownership": 0.4
+     "ownership": 1.6
     }
    },
    {
@@ -12401,7 +12463,7 @@
     "signal": 29,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "corners": 3
+     "corners": 5
     },
     "ep": 2.7,
     "own": 0.1,
@@ -12443,6 +12505,31 @@
     }
    },
    {
+    "id": 502,
+    "name": "Robertson",
+    "team": "TOT",
+    "pos": "DEF",
+    "cost": 4.5,
+    "signal": 29,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 1
+    },
+    "ep": 2.0,
+    "own": 2.8,
+    "minutes": 186,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 6.3,
+     "price": 7.5,
+     "ep": 10.0,
+     "ownership": 5.6
+    }
+   },
+   {
     "id": 305,
     "name": "Davis",
     "team": "IPS",
@@ -12451,8 +12538,7 @@
     "signal": 28,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "direct_fk": 2,
-     "corners": 6
+     "direct_fk": 2
     },
     "ep": 3.0,
     "own": 5.1,
@@ -12469,26 +12555,51 @@
     }
    },
    {
-    "id": 357,
-    "name": "Frimpong",
-    "team": "LIV",
-    "pos": "DEF",
-    "cost": 5.4,
+    "id": 198,
+    "name": "Henderson",
+    "team": "CRY",
+    "pos": "GKP",
+    "cost": 5.0,
     "signal": 28,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
-    "ep": 0.3,
-    "own": 2.5,
-    "minutes": 160,
+    "ep": 1.7,
+    "own": 2.0,
+    "minutes": 270,
     "status": "a",
     "news": "",
     "new_club": false,
     "promoted": true,
     "components": {
      "set_pieces": 0.0,
-     "price": 21.0,
-     "ep": 1.5,
-     "ownership": 5.0
+     "price": 15.0,
+     "ep": 8.5,
+     "ownership": 4.0
+    }
+   },
+   {
+    "id": 267,
+    "name": "Lukić",
+    "team": "IPS",
+    "pos": "MID",
+    "cost": 5.0,
+    "signal": 28,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 1
+    },
+    "ep": 2.7,
+    "own": 0.1,
+    "minutes": 252,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 6.3,
+     "price": 7.5,
+     "ep": 13.5,
+     "ownership": 0.2
     }
    },
    {
@@ -12526,7 +12637,7 @@
      "corners": 3
     },
     "ep": 2.3,
-    "own": 13.7,
+    "own": 13.4,
     "minutes": 252,
     "status": "a",
     "news": "",
@@ -12588,6 +12699,29 @@
     }
    },
    {
+    "id": 357,
+    "name": "Frimpong",
+    "team": "LIV",
+    "pos": "DEF",
+    "cost": 5.4,
+    "signal": 27,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.3,
+    "own": 2.4,
+    "minutes": 160,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 21.0,
+     "ep": 1.5,
+     "ownership": 4.8
+    }
+   },
+   {
     "id": 160,
     "name": "Garnacho",
     "team": "AVL",
@@ -12611,54 +12745,6 @@
     }
    },
    {
-    "id": 198,
-    "name": "Henderson",
-    "team": "CRY",
-    "pos": "GKP",
-    "cost": 5.0,
-    "signal": 27,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 1.7,
-    "own": 1.9,
-    "minutes": 270,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 15.0,
-     "ep": 8.5,
-     "ownership": 3.8
-    }
-   },
-   {
-    "id": 457,
-    "name": "J.Murphy",
-    "team": "NEW",
-    "pos": "MID",
-    "cost": 5.9,
-    "signal": 27,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 2
-    },
-    "ep": 0.7,
-    "own": 0.1,
-    "minutes": 35,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 2.5,
-     "price": 21.0,
-     "ep": 3.5,
-     "ownership": 0.2
-    }
-   },
-   {
     "id": 254,
     "name": "Robinson",
     "team": "FUL",
@@ -12670,7 +12756,7 @@
      "penalties": 2
     },
     "ep": 1.3,
-    "own": 1.5,
+    "own": 1.4,
     "minutes": 249,
     "status": "a",
     "news": "",
@@ -12680,7 +12766,7 @@
      "set_pieces": 10.1,
      "price": 7.5,
      "ep": 6.5,
-     "ownership": 3.0
+     "ownership": 2.8
     }
    },
    {
@@ -12753,29 +12839,6 @@
     }
    },
    {
-    "id": 17,
-    "name": "Merino",
-    "team": "ARS",
-    "pos": "MID",
-    "cost": 5.9,
-    "signal": 26,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 0.7,
-    "own": 0.5,
-    "minutes": 46,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 21.0,
-     "ep": 3.5,
-     "ownership": 1.0
-    }
-   },
-   {
     "id": 369,
     "name": "Ngumoha",
     "team": "LIV",
@@ -12799,6 +12862,32 @@
     }
    },
    {
+    "id": 309,
+    "name": "Núñez",
+    "team": "IPS",
+    "pos": "MID",
+    "cost": 5.0,
+    "signal": 26,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 1,
+     "corners": 3
+    },
+    "ep": 2.0,
+    "own": 0.1,
+    "minutes": 140,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 8.4,
+     "price": 7.5,
+     "ep": 10.0,
+     "ownership": 0.2
+    }
+   },
+   {
     "id": 183,
     "name": "Rudoni",
     "team": "COV",
@@ -12808,7 +12897,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
      "direct_fk": 1,
-     "corners": 4
+     "corners": 5
     },
     "ep": 2.0,
     "own": 0.1,
@@ -12896,6 +12985,29 @@
     }
    },
    {
+    "id": 655,
+    "name": "Gboho",
+    "team": "COV",
+    "pos": "MID",
+    "cost": 5.5,
+    "signal": 25,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 2.0,
+    "own": 0.0,
+    "minutes": 0,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 15.0,
+     "ep": 10.0,
+     "ownership": 0.0
+    }
+   },
+   {
     "id": 9,
     "name": "Hincapie",
     "team": "ARS",
@@ -12919,6 +13031,31 @@
     }
    },
    {
+    "id": 457,
+    "name": "J.Murphy",
+    "team": "NEW",
+    "pos": "MID",
+    "cost": 5.9,
+    "signal": 25,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 4
+    },
+    "ep": 0.7,
+    "own": 0.1,
+    "minutes": 35,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 21.0,
+     "ep": 3.5,
+     "ownership": 0.2
+    }
+   },
+   {
     "id": 214,
     "name": "Kamada",
     "team": "CRY",
@@ -12930,7 +13067,7 @@
      "corners": 3
     },
     "ep": 3.3,
-    "own": 0.3,
+    "own": 0.4,
     "minutes": 268,
     "status": "a",
     "news": "",
@@ -12940,7 +13077,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 16.5,
-     "ownership": 0.6
+     "ownership": 0.8
     }
    },
    {
@@ -12976,7 +13113,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.7,
-    "own": 13.7,
+    "own": 14.5,
     "minutes": 101,
     "status": "a",
     "news": "",
@@ -13012,6 +13149,29 @@
      "price": 13.5,
      "ep": 8.5,
      "ownership": 2.8
+    }
+   },
+   {
+    "id": 17,
+    "name": "Merino",
+    "team": "ARS",
+    "pos": "MID",
+    "cost": 5.9,
+    "signal": 25,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.7,
+    "own": 0.4,
+    "minutes": 46,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 21.0,
+     "ep": 3.5,
+     "ownership": 0.8
     }
    },
    {
@@ -13096,7 +13256,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.3,
-    "own": 2.0,
+    "own": 1.9,
     "minutes": 166,
     "status": "a",
     "news": "",
@@ -13106,7 +13266,7 @@
      "set_pieces": 0.0,
      "price": 13.5,
      "ep": 6.5,
-     "ownership": 4.0
+     "ownership": 3.8
     }
    },
    {
@@ -13119,7 +13279,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.3,
-    "own": 0.6,
+    "own": 0.5,
     "minutes": 1,
     "status": "a",
     "news": "",
@@ -13129,7 +13289,7 @@
      "set_pieces": 0.0,
      "price": 21.0,
      "ep": 1.5,
-     "ownership": 1.2
+     "ownership": 1.0
     }
    },
    {
@@ -13251,31 +13411,6 @@
     }
    },
    {
-    "id": 267,
-    "name": "Lukić",
-    "team": "IPS",
-    "pos": "MID",
-    "cost": 5.0,
-    "signal": 24,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 2
-    },
-    "ep": 2.7,
-    "own": 0.1,
-    "minutes": 252,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 2.5,
-     "price": 7.5,
-     "ep": 13.5,
-     "ownership": 0.2
-    }
-   },
-   {
     "id": 562,
     "name": "Maeda",
     "team": "IPS",
@@ -13319,31 +13454,6 @@
      "price": 15.0,
      "ep": 6.5,
      "ownership": 2.4
-    }
-   },
-   {
-    "id": 551,
-    "name": "N.Angulo",
-    "team": "SUN",
-    "pos": "MID",
-    "cost": 5.0,
-    "signal": 24,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 3
-    },
-    "ep": 3.3,
-    "own": 0.1,
-    "minutes": 185,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 7.5,
-     "ep": 16.5,
-     "ownership": 0.2
     }
    },
    {
@@ -13425,7 +13535,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.7,
-    "own": 2.8,
+    "own": 3.0,
     "minutes": 167,
     "status": "a",
     "news": "",
@@ -13435,7 +13545,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 18.5,
-     "ownership": 5.6
+     "ownership": 6.0
     }
    },
    {
@@ -13447,7 +13557,7 @@
     "signal": 23,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "direct_fk": 3
+     "direct_fk": 4
     },
     "ep": 1.7,
     "own": 0.6,
@@ -13473,7 +13583,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 2.8,
+    "own": 2.7,
     "minutes": 216,
     "status": "a",
     "news": "",
@@ -13483,7 +13593,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 10.0,
-     "ownership": 5.6
+     "ownership": 5.4
     }
    },
    {
@@ -13684,7 +13794,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 14.7,
+    "own": 14.6,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -13710,7 +13820,7 @@
      "corners": 2
     },
     "ep": 7.0,
-    "own": 14.4,
+    "own": 13.8,
     "minutes": 250,
     "status": "d",
     "news": "Thigh injury - 75% chance of playing",
@@ -13767,31 +13877,6 @@
      "price": 15.0,
      "ep": 6.5,
      "ownership": 0.6
-    }
-   },
-   {
-    "id": 190,
-    "name": "Tchaouna",
-    "team": "COV",
-    "pos": "MID",
-    "cost": 5.5,
-    "signal": 22,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 5
-    },
-    "ep": 1.3,
-    "own": 0.1,
-    "minutes": 166,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 15.0,
-     "ep": 6.5,
-     "ownership": 0.2
     }
    },
    {
@@ -14171,6 +14256,31 @@
     }
    },
    {
+    "id": 190,
+    "name": "Tchaouna",
+    "team": "COV",
+    "pos": "MID",
+    "cost": 5.4,
+    "signal": 20,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "corners": 3
+    },
+    "ep": 1.3,
+    "own": 0.1,
+    "minutes": 166,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 13.5,
+     "ep": 6.5,
+     "ownership": 0.2
+    }
+   },
+   {
     "id": 506,
     "name": "Udogie",
     "team": "TOT",
@@ -14226,7 +14336,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.0,
-    "own": 11.0,
+    "own": 10.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -14316,9 +14426,7 @@
     "cost": 5.0,
     "signal": 19,
     "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 5
-    },
+    "set_pieces": {},
     "ep": 2.3,
     "own": 0.2,
     "minutes": 157,
@@ -14388,7 +14496,7 @@
     "signal": 19,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "corners": 3
+     "corners": 4
     },
     "ep": 1.0,
     "own": 0.1,
@@ -14419,7 +14527,7 @@
     "own": 0.2,
     "minutes": 0,
     "status": "i",
-    "news": "Foot injury - Unknown return date",
+    "news": "Foot injury - Expected back 7 Nov",
     "new_club": false,
     "promoted": true,
     "components": {
@@ -14581,7 +14689,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 0.3,
+    "own": 0.4,
     "minutes": 69,
     "status": "a",
     "news": "",
@@ -14591,7 +14699,7 @@
      "set_pieces": 0.0,
      "price": 6.0,
      "ep": 11.5,
-     "ownership": 0.6
+     "ownership": 0.8
     }
    },
    {
@@ -14627,7 +14735,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.7,
-    "own": 0.5,
+    "own": 0.4,
     "minutes": 15,
     "status": "a",
     "news": "",
@@ -14637,7 +14745,7 @@
      "set_pieces": 0.0,
      "price": 13.5,
      "ep": 3.5,
-     "ownership": 1.0
+     "ownership": 0.8
     }
    },
    {
@@ -14650,7 +14758,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 2.3,
-    "own": 3.1,
+    "own": 3.0,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -14660,7 +14768,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 11.5,
-     "ownership": 6.2
+     "ownership": 6.0
     }
    },
    {
@@ -14673,7 +14781,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.7,
-    "own": 1.0,
+    "own": 0.9,
     "minutes": 270,
     "status": "a",
     "news": "",
@@ -14683,7 +14791,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 8.5,
-     "ownership": 2.0
+     "ownership": 1.8
     }
    },
    {
@@ -15176,12 +15284,12 @@
     "name": "O'Reilly",
     "team": "MCI",
     "pos": "DEF",
-    "cost": 6.5,
+    "cost": 6.4,
     "signal": 16,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 1.0,
-    "own": 14.7,
+    "own": 14.2,
     "minutes": 150,
     "status": "d",
     "news": "Back injury - 75% chance of playing",
@@ -15203,7 +15311,8 @@
     "signal": 16,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
-     "penalties": 1
+     "penalties": 1,
+     "direct_fk": 4
     },
     "ep": 0.0,
     "own": 0.4,
@@ -15440,7 +15549,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.3,
-    "own": 0.0,
+    "own": 0.1,
     "minutes": 1,
     "status": "a",
     "news": "",
@@ -15450,7 +15559,7 @@
      "set_pieces": 0.0,
      "price": 13.5,
      "ep": 1.5,
-     "ownership": 0.0
+     "ownership": 0.2
     }
    },
    {
@@ -15463,7 +15572,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 3.0,
-    "own": 3.3,
+    "own": 3.2,
     "minutes": 168,
     "status": "d",
     "news": "Muscular injury - 75% chance of playing",
@@ -15473,7 +15582,7 @@
      "set_pieces": 0.0,
      "price": 21.0,
      "ep": 15.0,
-     "ownership": 6.6
+     "ownership": 6.4
     }
    },
    {
@@ -15626,7 +15735,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.3,
-    "own": 0.2,
+    "own": 0.1,
     "minutes": 31,
     "status": "a",
     "news": "",
@@ -15636,7 +15745,7 @@
      "set_pieces": 0.0,
      "price": 13.5,
      "ep": 1.5,
-     "ownership": 0.4
+     "ownership": 0.2
     }
    },
    {
@@ -16092,7 +16201,7 @@
      "penalties": 2
     },
     "ep": 0.0,
-    "own": 0.9,
+    "own": 0.8,
     "minutes": 0,
     "status": "i",
     "news": "Groin injury - Unknown return date",
@@ -16102,7 +16211,7 @@
      "set_pieces": 10.1,
      "price": 27.0,
      "ep": 0.0,
-     "ownership": 1.8
+     "ownership": 1.6
     }
    },
    {
@@ -16374,7 +16483,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 3.3,
+    "own": 3.2,
     "minutes": 0,
     "status": "u",
     "news": "Has joined Al Hilal permanently",
@@ -16384,7 +16493,7 @@
      "set_pieces": 0.0,
      "price": 30.0,
      "ep": 0.0,
-     "ownership": 6.6
+     "ownership": 6.4
     }
    },
    {
@@ -16468,7 +16577,7 @@
      "corners": 4
     },
     "ep": 0.3,
-    "own": 8.8,
+    "own": 8.7,
     "minutes": 16,
     "status": "a",
     "news": "",
@@ -16634,7 +16743,7 @@
      "corners": 1
     },
     "ep": 1.7,
-    "own": 6.7,
+    "own": 6.6,
     "minutes": 251,
     "status": "d",
     "news": "Muscular injury - 75% chance of playing",
@@ -16655,9 +16764,7 @@
     "cost": 5.0,
     "signal": 11,
     "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "corners": 6
-    },
+    "set_pieces": {},
     "ep": 0.7,
     "own": 0.0,
     "minutes": 4,
@@ -16703,9 +16810,11 @@
     "cost": 4.5,
     "signal": 11,
     "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
+    "set_pieces": {
+     "direct_fk": 3
+    },
     "ep": 3.2,
-    "own": 3.5,
+    "own": 3.3,
     "minutes": 270,
     "status": "d",
     "news": "Hamstring injury - 75% chance of playing",
@@ -16715,7 +16824,7 @@
      "set_pieces": 0.0,
      "price": 7.5,
      "ep": 16.0,
-     "ownership": 7.0
+     "ownership": 6.6
     }
    },
    {
@@ -16799,7 +16908,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.7,
-    "own": 0.6,
+    "own": 0.5,
     "minutes": 90,
     "status": "a",
     "news": "",
@@ -16809,7 +16918,7 @@
      "set_pieces": 0.0,
      "price": 6.0,
      "ep": 3.5,
-     "ownership": 1.2
+     "ownership": 1.0
     }
    },
    {
@@ -16879,32 +16988,6 @@
      "price": 7.5,
      "ep": 3.5,
      "ownership": 0.0
-    }
-   },
-   {
-    "id": 339,
-    "name": "Longstaff",
-    "team": "LEE",
-    "pos": "MID",
-    "cost": 4.9,
-    "signal": 11,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {
-     "direct_fk": 2,
-     "corners": 3
-    },
-    "ep": 0.3,
-    "own": 0.1,
-    "minutes": 8,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 3.4,
-     "price": 6.0,
-     "ep": 1.5,
-     "ownership": 0.2
     }
    },
    {
@@ -17101,7 +17184,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 17.8,
+    "own": 17.9,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -17170,7 +17253,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 6.3,
+    "own": 6.2,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -18203,29 +18286,6 @@
     }
    },
    {
-    "id": 444,
-    "name": "Jaouen",
-    "team": "NEW",
-    "pos": "GKP",
-    "cost": 4.5,
-    "signal": 8,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 0.0,
-    "own": 0.0,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 7.5,
-     "ep": 0.0,
-     "ownership": 0.0
-    }
-   },
-   {
     "id": 92,
     "name": "Ji-soo",
     "team": "BRE",
@@ -18341,6 +18401,32 @@
     }
    },
    {
+    "id": 339,
+    "name": "Longstaff",
+    "team": "LEE",
+    "pos": "MID",
+    "cost": 4.9,
+    "signal": 8,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {
+     "direct_fk": 3,
+     "corners": 3
+    },
+    "ep": 0.3,
+    "own": 0.1,
+    "minutes": 8,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 6.0,
+     "ep": 1.5,
+     "ownership": 0.2
+    }
+   },
+   {
     "id": 612,
     "name": "Methalie",
     "team": "SUN",
@@ -18373,7 +18459,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 1.1,
+    "own": 1.0,
     "minutes": 0,
     "status": "d",
     "news": "Unspecified injury - 75% chance of playing",
@@ -18383,7 +18469,7 @@
      "set_pieces": 0.0,
      "price": 21.0,
      "ep": 0.0,
-     "ownership": 2.2
+     "ownership": 2.0
     }
    },
    {
@@ -18640,29 +18726,6 @@
     }
    },
    {
-    "id": 135,
-    "name": "Yohanna",
-    "team": "BHA",
-    "pos": "MID",
-    "cost": 4.9,
-    "signal": 8,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 0.3,
-    "own": 0.1,
-    "minutes": 12,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 6.0,
-     "ep": 1.5,
-     "ownership": 0.2
-    }
-   },
-   {
     "id": 431,
     "name": "Amad",
     "team": "MUN",
@@ -18688,6 +18751,29 @@
     }
    },
    {
+    "id": 652,
+    "name": "Azeez",
+    "team": "BHA",
+    "pos": "MID",
+    "cost": 5.5,
+    "signal": 7,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 1.0,
+    "own": 0.0,
+    "minutes": 0,
+    "status": "d",
+    "news": "Hamstring injury - 50% chance of playing",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 15.0,
+     "ep": 5.0,
+     "ownership": 0.0
+    }
+   },
+   {
     "id": 58,
     "name": "Forster",
     "team": "BOU",
@@ -18697,7 +18783,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 3.4,
+    "own": 3.5,
     "minutes": 0,
     "status": "a",
     "news": "",
@@ -18707,7 +18793,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 0.0,
-     "ownership": 6.8
+     "ownership": 7.0
     }
    },
    {
@@ -18817,7 +18903,7 @@
     "own": 0.0,
     "minutes": 0,
     "status": "i",
-    "news": "Hamstring injury - Unknown return date",
+    "news": "Hamstring injury - Expected back 10 Oct",
     "new_club": false,
     "promoted": true,
     "components": {
@@ -18837,7 +18923,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.3,
-    "own": 2.8,
+    "own": 2.7,
     "minutes": 66,
     "status": "a",
     "news": "",
@@ -18847,7 +18933,7 @@
      "set_pieces": 0.0,
      "price": 0.0,
      "ep": 1.5,
-     "ownership": 5.6
+     "ownership": 5.4
     }
    },
    {
@@ -18917,29 +19003,6 @@
      "price": 6.0,
      "ep": 0.0,
      "ownership": 0.2
-    }
-   },
-   {
-    "id": 187,
-    "name": "Eccles",
-    "team": "COV",
-    "pos": "MID",
-    "cost": 4.9,
-    "signal": 6,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 0.0,
-    "own": 0.0,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 6.0,
-     "ep": 0.0,
-     "ownership": 0.0
     }
    },
    {
@@ -19058,29 +19121,6 @@
     }
    },
    {
-    "id": 219,
-    "name": "J.Rak-Sakyi",
-    "team": "CRY",
-    "pos": "MID",
-    "cost": 4.9,
-    "signal": 6,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 0.0,
-    "own": 0.0,
-    "minutes": 0,
-    "status": "a",
-    "news": "",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 6.0,
-     "ep": 0.0,
-     "ownership": 0.0
-    }
-   },
-   {
     "id": 213,
     "name": "Lerma",
     "team": "CRY",
@@ -19150,17 +19190,17 @@
     }
    },
    {
-    "id": 556,
-    "name": "Targett",
+    "id": 638,
+    "name": "Norton-Cuffy",
     "team": "HUL",
     "pos": "DEF",
     "cost": 4.0,
     "signal": 6,
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
-    "ep": 0.3,
-    "own": 2.0,
-    "minutes": 5,
+    "ep": 1.0,
+    "own": 0.3,
+    "minutes": 26,
     "status": "a",
     "news": "",
     "new_club": true,
@@ -19168,8 +19208,8 @@
     "components": {
      "set_pieces": 0.0,
      "price": 0.0,
-     "ep": 1.5,
-     "ownership": 4.0
+     "ep": 5.0,
+     "ownership": 0.6
     }
    },
    {
@@ -19288,29 +19328,6 @@
     }
    },
    {
-    "id": 652,
-    "name": "Azeez",
-    "team": "BHA",
-    "pos": "MID",
-    "cost": 5.5,
-    "signal": 5,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 0.0,
-    "own": 0.0,
-    "minutes": 0,
-    "status": "i",
-    "news": "Unspecified injury - Expected back 13 Sep",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 15.0,
-     "ep": 0.0,
-     "ownership": 0.0
-    }
-   },
-   {
     "id": 44,
     "name": "Bailey",
     "team": "AVL",
@@ -19366,7 +19383,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 1.1,
+    "own": 1.0,
     "minutes": 31,
     "status": "u",
     "news": "Has joined Fiorentina permanently",
@@ -19376,7 +19393,7 @@
      "set_pieces": 0.0,
      "price": 13.5,
      "ep": 0.0,
-     "ownership": 2.2
+     "ownership": 2.0
     }
    },
    {
@@ -19817,29 +19834,6 @@
     }
    },
    {
-    "id": 638,
-    "name": "Norton-Cuffy",
-    "team": "HUL",
-    "pos": "DEF",
-    "cost": 4.0,
-    "signal": 5,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 1.0,
-    "own": 0.2,
-    "minutes": 26,
-    "status": "a",
-    "news": "",
-    "new_club": true,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 5.0,
-     "ownership": 0.4
-    }
-   },
-   {
     "id": 22,
     "name": "Nwaneri",
     "team": "ARS",
@@ -19895,7 +19889,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {
      "penalties": 3,
-     "corners": 4
+     "corners": 5
     },
     "ep": 0.0,
     "own": 0.1,
@@ -19978,6 +19972,29 @@
      "price": 13.5,
      "ep": 0.0,
      "ownership": 2.0
+    }
+   },
+   {
+    "id": 556,
+    "name": "Targett",
+    "team": "HUL",
+    "pos": "DEF",
+    "cost": 4.0,
+    "signal": 5,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.3,
+    "own": 1.9,
+    "minutes": 5,
+    "status": "a",
+    "news": "",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 1.5,
+     "ownership": 3.8
     }
    },
    {
@@ -20743,6 +20760,29 @@
     }
    },
    {
+    "id": 444,
+    "name": "Jaouen",
+    "team": "NEW",
+    "pos": "GKP",
+    "cost": 4.5,
+    "signal": 3,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.0,
+    "own": 0.0,
+    "minutes": 0,
+    "status": "d",
+    "news": "Ankle injury - 50% chance of playing",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 7.5,
+     "ep": 0.0,
+     "ownership": 0.0
+    }
+   },
+   {
     "id": 293,
     "name": "Kamara",
     "team": "HUL",
@@ -21099,7 +21139,7 @@
     "reason": "promoted club - played outside the Premier League last season",
     "set_pieces": {},
     "ep": 0.0,
-    "own": 1.6,
+    "own": 1.5,
     "minutes": 123,
     "status": "i",
     "news": "Hamstring injury - Expected back 21 Nov",
@@ -21109,7 +21149,7 @@
      "set_pieces": 0.0,
      "price": 6.0,
      "ep": 0.0,
-     "ownership": 3.2
+     "ownership": 3.0
     }
    },
    {
@@ -21481,6 +21521,29 @@
     }
    },
    {
+    "id": 187,
+    "name": "Eccles",
+    "team": "COV",
+    "pos": "MID",
+    "cost": 4.9,
+    "signal": 2,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.0,
+    "own": 0.0,
+    "minutes": 0,
+    "status": "i",
+    "news": "Unspecified injury - Expected back 12 Oct",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 6.0,
+     "ep": 0.0,
+     "ownership": 0.0
+    }
+   },
+   {
     "id": 407,
     "name": "Echeverri",
     "team": "MCI",
@@ -21596,6 +21659,29 @@
     }
    },
    {
+    "id": 219,
+    "name": "J.Rak-Sakyi",
+    "team": "CRY",
+    "pos": "MID",
+    "cost": 4.9,
+    "signal": 2,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.0,
+    "own": 0.0,
+    "minutes": 0,
+    "status": "u",
+    "news": "has joined  Kasimpasa on loan for the rest of the seaon.",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 6.0,
+     "ep": 0.0,
+     "ownership": 0.0
+    }
+   },
+   {
     "id": 251,
     "name": "Lecomte",
     "team": "FUL",
@@ -21639,6 +21725,29 @@
      "price": 6.0,
      "ep": 0.0,
      "ownership": 0.0
+    }
+   },
+   {
+    "id": 285,
+    "name": "McNair",
+    "team": "HUL",
+    "pos": "DEF",
+    "cost": 4.0,
+    "signal": 2,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.3,
+    "own": 0.1,
+    "minutes": 26,
+    "status": "a",
+    "news": "",
+    "new_club": false,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 0.0,
+     "ep": 1.5,
+     "ownership": 0.2
     }
    },
    {
@@ -21823,6 +21932,29 @@
      "price": 0.0,
      "ep": 0.0,
      "ownership": 2.2
+    }
+   },
+   {
+    "id": 135,
+    "name": "Yohanna",
+    "team": "BHA",
+    "pos": "MID",
+    "cost": 4.9,
+    "signal": 2,
+    "reason": "promoted club - played outside the Premier League last season",
+    "set_pieces": {},
+    "ep": 0.0,
+    "own": 0.1,
+    "minutes": 12,
+    "status": "i",
+    "news": "Unspecified injury - Expected back 10 Oct",
+    "new_club": true,
+    "promoted": true,
+    "components": {
+     "set_pieces": 0.0,
+     "price": 6.0,
+     "ep": 0.0,
+     "ownership": 0.2
     }
    },
    {
@@ -23252,29 +23384,6 @@
     }
    },
    {
-    "id": 285,
-    "name": "McNair",
-    "team": "HUL",
-    "pos": "DEF",
-    "cost": 4.0,
-    "signal": 0,
-    "reason": "promoted club - played outside the Premier League last season",
-    "set_pieces": {},
-    "ep": 0.2,
-    "own": 0.1,
-    "minutes": 26,
-    "status": "d",
-    "news": "Foot injury - 75% chance of playing",
-    "new_club": false,
-    "promoted": true,
-    "components": {
-     "set_pieces": 0.0,
-     "price": 0.0,
-     "ep": 1.0,
-     "ownership": 0.2
-    }
-   },
-   {
     "id": 252,
     "name": "McNally",
     "team": "FUL",
@@ -24028,14 +24137,14 @@
      "id": 25,
      "name": "Gyökeres",
      "pos": "FWD",
-     "cost": 7.3,
+     "cost": 7.2,
      "rank": 2
     },
     {
      "id": 15,
      "name": "Ødegaard",
      "pos": "MID",
-     "cost": 6.6,
+     "cost": 6.7,
      "rank": 3
     }
    ],
@@ -24095,6 +24204,13 @@
      "pos": "MID",
      "cost": 5.9,
      "rank": 1
+    },
+    {
+     "id": 166,
+     "name": "N.Jackson",
+     "pos": "FWD",
+     "cost": 6.5,
+     "rank": 2
     }
    ],
    "direct_fk": [
@@ -24262,7 +24378,7 @@
      "id": 69,
      "name": "Scott",
      "pos": "MID",
-     "cost": 6.0,
+     "cost": 6.1,
      "rank": 2
     },
     {
@@ -24353,7 +24469,7 @@
      "id": 154,
      "name": "Palmer",
      "pos": "MID",
-     "cost": 9.6,
+     "cost": 9.7,
      "rank": 1
     },
     {
@@ -24376,7 +24492,7 @@
      "id": 154,
      "name": "Palmer",
      "pos": "MID",
-     "cost": 9.6,
+     "cost": 9.7,
      "rank": 2
     },
     {
@@ -24468,8 +24584,8 @@
      "rank": 2
     },
     {
-     "id": 584,
-     "name": "Hamer",
+     "id": 190,
+     "name": "Tchaouna",
      "pos": "MID",
      "cost": 5.4,
      "rank": 3
@@ -24613,7 +24729,7 @@
      "id": 261,
      "name": "Iwobi",
      "pos": "MID",
-     "cost": 5.5,
+     "cost": 5.4,
      "rank": 3
     }
    ],
@@ -24622,7 +24738,7 @@
      "id": 261,
      "name": "Iwobi",
      "pos": "MID",
-     "cost": 5.5,
+     "cost": 5.4,
      "rank": 1
     }
    ],
@@ -24631,7 +24747,7 @@
      "id": 261,
      "name": "Iwobi",
      "pos": "MID",
-     "cost": 5.5,
+     "cost": 5.4,
      "rank": 1
     },
     {
@@ -24679,24 +24795,24 @@
    ],
    "corners": [
     {
-     "id": 282,
-     "name": "Giles",
-     "pos": "DEF",
-     "cost": 4.0,
-     "rank": 1
-    },
-    {
      "id": 290,
      "name": "Slater",
      "pos": "MID",
      "cost": 4.5,
-     "rank": 2
+     "rank": 1
     },
     {
      "id": 286,
      "name": "Belloumi",
      "pos": "MID",
      "cost": 5.0,
+     "rank": 2
+    },
+    {
+     "id": 282,
+     "name": "Giles",
+     "pos": "DEF",
+     "cost": 4.0,
      "rank": 3
     }
    ]
@@ -24751,24 +24867,24 @@
    ],
    "corners": [
     {
-     "id": 309,
-     "name": "Núñez",
+     "id": 267,
+     "name": "Lukić",
      "pos": "MID",
      "cost": 5.0,
      "rank": 1
     },
     {
-     "id": 267,
-     "name": "Lukić",
+     "id": 315,
+     "name": "Fatawu",
      "pos": "MID",
-     "cost": 5.0,
+     "cost": 5.5,
      "rank": 2
     },
     {
-     "id": 313,
-     "name": "Clarke",
+     "id": 309,
+     "name": "Núñez",
      "pos": "MID",
-     "cost": 5.5,
+     "cost": 5.0,
      "rank": 3
     }
    ]
@@ -24807,17 +24923,17 @@
      "rank": 1
     },
     {
+     "id": 260,
+     "name": "Wilson",
+     "pos": "MID",
+     "cost": 6.3,
+     "rank": 2
+    },
+    {
      "id": 339,
      "name": "Longstaff",
      "pos": "MID",
      "cost": 4.9,
-     "rank": 2
-    },
-    {
-     "id": 337,
-     "name": "Aaronson",
-     "pos": "MID",
-     "cost": 5.4,
      "rank": 3
     }
    ],
@@ -24960,17 +25076,17 @@
      "rank": 1
     },
     {
-     "id": 481,
-     "name": "Anderson",
-     "pos": "MID",
-     "cost": 6.3,
-     "rank": 2
-    },
-    {
      "id": 398,
      "name": "Foden",
      "pos": "MID",
      "cost": 7.0,
+     "rank": 2
+    },
+    {
+     "id": 481,
+     "name": "Anderson",
+     "pos": "MID",
+     "cost": 6.3,
      "rank": 3
     }
    ]
@@ -25079,6 +25195,13 @@
      "pos": "DEF",
      "cost": 5.0,
      "rank": 2
+    },
+    {
+     "id": 593,
+     "name": "Dedić",
+     "pos": "DEF",
+     "cost": 4.5,
+     "rank": 3
     }
    ],
    "corners": [
@@ -25090,17 +25213,17 @@
      "rank": 1
     },
     {
-     "id": 457,
-     "name": "J.Murphy",
+     "id": 454,
+     "name": "Elanga",
      "pos": "MID",
-     "cost": 5.9,
+     "cost": 6.1,
      "rank": 2
     },
     {
-     "id": 459,
-     "name": "L.Miley",
+     "id": 453,
+     "name": "Barnes",
      "pos": "MID",
-     "cost": 5.5,
+     "cost": 6.0,
      "rank": 3
     }
    ]
@@ -25139,17 +25262,17 @@
      "rank": 1
     },
     {
-     "id": 469,
-     "name": "N.Williams",
-     "pos": "DEF",
-     "cost": 5.0,
-     "rank": 2
-    },
-    {
      "id": 472,
      "name": "Murillo",
      "pos": "DEF",
      "cost": 5.5,
+     "rank": 2
+    },
+    {
+     "id": 469,
+     "name": "N.Williams",
+     "pos": "DEF",
+     "cost": 5.0,
      "rank": 3
     }
    ],
@@ -25197,24 +25320,24 @@
    ],
    "direct_fk": [
     {
+     "id": 551,
+     "name": "N.Angulo",
+     "pos": "MID",
+     "cost": 5.0,
+     "rank": 1
+    },
+    {
      "id": 544,
      "name": "Xhaka",
      "pos": "MID",
      "cost": 5.5,
-     "rank": 1
+     "rank": 2
     },
     {
      "id": 542,
      "name": "E.Le Fée",
      "pos": "MID",
      "cost": 5.9,
-     "rank": 2
-    },
-    {
-     "id": 551,
-     "name": "N.Angulo",
-     "pos": "MID",
-     "cost": 5.0,
      "rank": 3
     }
    ],
@@ -25237,7 +25360,7 @@
      "id": 534,
      "name": "Hume",
      "pos": "DEF",
-     "cost": 4.5,
+     "cost": 4.4,
      "rank": 3
     }
    ]
@@ -25451,8 +25574,8 @@
    "key": "balanced",
    "label": "Balanced",
    "rationale": "Straight projected points. No thumb on the scale.",
-   "cost": 86.3,
-   "bank": 13.7,
+   "cost": 86.4,
+   "bank": 13.6,
    "projected_xi": 114.2,
    "legal": true,
    "violations": [],
@@ -25612,7 +25735,7 @@
      "set_pieces": {
       "penalties": 1,
       "direct_fk": 3,
-      "corners": 3
+      "corners": 4
      },
      "captain": false,
      "vice": false
@@ -25690,7 +25813,7 @@
      "name": "Mendy",
      "team": "HUL",
      "pos": "DEF",
-     "cost": 4.0,
+     "cost": 4.1,
      "basis": "projected",
      "projected": 1.8,
      "estimated": null,
@@ -25723,14 +25846,14 @@
    "key": "value",
    "label": "Value",
    "rationale": "Projected points per million. Spreads budget, strong bench.",
-   "cost": 81.3,
-   "bank": 18.7,
-   "projected_xi": 112.1,
+   "cost": 82.3,
+   "bank": 17.7,
+   "projected_xi": 112.7,
    "legal": true,
    "violations": [],
    "captain": "Cherki",
    "vice": "Isidor",
-   "formation": "3-4-3",
+   "formation": "3-5-2",
    "xi": [
     {
      "id": 572,
@@ -25868,8 +25991,24 @@
      "set_pieces": {
       "penalties": 1,
       "direct_fk": 3,
-      "corners": 3
+      "corners": 4
      },
+     "captain": false,
+     "vice": false
+    },
+    {
+     "id": 371,
+     "name": "Gravenberch",
+     "team": "LIV",
+     "pos": "MID",
+     "cost": 5.9,
+     "basis": "estimated",
+     "projected": null,
+     "estimated": 6.9,
+     "start_share": null,
+     "new_club": null,
+     "rotation_risk": null,
+     "set_pieces": {},
      "captain": false,
      "vice": false
     },
@@ -25904,22 +26043,6 @@
      "set_pieces": {
       "penalties": 2
      },
-     "captain": false,
-     "vice": false
-    },
-    {
-     "id": 634,
-     "name": "Fernandez-Pardo",
-     "team": "NEW",
-     "pos": "FWD",
-     "cost": 6.0,
-     "basis": "estimated",
-     "projected": null,
-     "estimated": 6.3,
-     "start_share": null,
-     "new_club": null,
-     "rotation_risk": null,
-     "set_pieces": {},
      "captain": false,
      "vice": false
     }
@@ -25962,7 +26085,7 @@
      "name": "Mendy",
      "team": "HUL",
      "pos": "DEF",
-     "cost": 4.0,
+     "cost": 4.1,
      "basis": "projected",
      "projected": 1.8,
      "estimated": null,
@@ -25974,21 +26097,18 @@
      "vice": false
     },
     {
-     "id": 309,
-     "name": "Núñez",
-     "team": "IPS",
-     "pos": "MID",
-     "cost": 5.0,
+     "id": 634,
+     "name": "Fernandez-Pardo",
+     "team": "NEW",
+     "pos": "FWD",
+     "cost": 6.0,
      "basis": "estimated",
      "projected": null,
-     "estimated": 6.0,
+     "estimated": 6.3,
      "start_share": null,
      "new_club": null,
      "rotation_risk": null,
-     "set_pieces": {
-      "direct_fk": 1,
-      "corners": 1
-     },
+     "set_pieces": {},
      "captain": false,
      "vice": false
     }
@@ -25998,8 +26118,8 @@
    "key": "even",
    "label": "Even spread",
    "rationale": "Caps player price so no single slot eats the budget.",
-   "cost": 86.3,
-   "bank": 13.7,
+   "cost": 86.4,
+   "bank": 13.6,
    "projected_xi": 114.2,
    "legal": true,
    "violations": [],
@@ -26159,7 +26279,7 @@
      "set_pieces": {
       "penalties": 1,
       "direct_fk": 3,
-      "corners": 3
+      "corners": 4
      },
      "captain": false,
      "vice": false
@@ -26237,7 +26357,7 @@
      "name": "Mendy",
      "team": "HUL",
      "pos": "DEF",
-     "cost": 4.0,
+     "cost": 4.1,
      "basis": "projected",
      "projected": 1.8,
      "estimated": null,
@@ -26270,9 +26390,9 @@
    "key": "safe",
    "label": "Low risk",
    "rationale": "Punishes rotation risk and new-club uncertainty.",
-   "cost": 84.9,
-   "bank": 15.1,
-   "projected_xi": 111.8,
+   "cost": 87.9,
+   "bank": 12.1,
+   "projected_xi": 114.2,
    "legal": true,
    "violations": [],
    "captain": "Cherki",
@@ -26401,6 +26521,22 @@
      "vice": false
     },
     {
+     "id": 627,
+     "name": "Barcola",
+     "team": "LIV",
+     "pos": "MID",
+     "cost": 8.0,
+     "basis": "estimated",
+     "projected": null,
+     "estimated": 8.4,
+     "start_share": null,
+     "new_club": null,
+     "rotation_risk": null,
+     "set_pieces": {},
+     "captain": false,
+     "vice": false
+    },
+    {
      "id": 313,
      "name": "Clarke",
      "team": "IPS",
@@ -26415,26 +26551,7 @@
      "set_pieces": {
       "penalties": 1,
       "direct_fk": 3,
-      "corners": 3
-     },
-     "captain": false,
-     "vice": false
-    },
-    {
-     "id": 309,
-     "name": "Núñez",
-     "team": "IPS",
-     "pos": "MID",
-     "cost": 5.0,
-     "basis": "estimated",
-     "projected": null,
-     "estimated": 6.0,
-     "start_share": null,
-     "new_club": null,
-     "rotation_risk": null,
-     "set_pieces": {
-      "direct_fk": 1,
-      "corners": 1
+      "corners": 4
      },
      "captain": false,
      "vice": false
@@ -26710,7 +26827,7 @@
      "set_pieces": {
       "penalties": 1,
       "direct_fk": 3,
-      "corners": 3
+      "corners": 4
      },
      "captain": false,
      "vice": false
@@ -26790,14 +26907,14 @@
      "pos": "DEF",
      "cost": 4.0,
      "basis": "projected",
-     "projected": 1.6,
+     "projected": 1.5,
      "estimated": null,
      "start_share": 8,
      "new_club": false,
      "rotation_risk": true,
      "set_pieces": {
       "direct_fk": 1,
-      "corners": 1
+      "corners": 3
      },
      "captain": false,
      "vice": false
@@ -26824,8 +26941,8 @@
    "key": "fixtures",
    "label": "Fixture-led",
    "rationale": "Leans harder on the next few opponents.",
-   "cost": 89.9,
-   "bank": 10.1,
+   "cost": 90.0,
+   "bank": 10.0,
    "projected_xi": 114.2,
    "legal": true,
    "violations": [],
@@ -26985,7 +27102,7 @@
      "set_pieces": {
       "penalties": 1,
       "direct_fk": 3,
-      "corners": 3
+      "corners": 4
      },
      "captain": false,
      "vice": false
@@ -27063,7 +27180,7 @@
      "name": "Calafiori",
      "team": "ARS",
      "pos": "DEF",
-     "cost": 5.7,
+     "cost": 5.8,
      "basis": "projected",
      "projected": 1.8,
      "estimated": null,
@@ -27185,6 +27302,15 @@
    "of": 6
   },
   {
+   "id": 627,
+   "name": "Barcola",
+   "team": "LIV",
+   "pos": "MID",
+   "cost": 8.0,
+   "picked_by": 5,
+   "of": 6
+  },
+  {
    "id": 1,
    "name": "Raya",
    "team": "ARS",
@@ -27203,15 +27329,6 @@
    "of": 6
   },
   {
-   "id": 627,
-   "name": "Barcola",
-   "team": "LIV",
-   "pos": "MID",
-   "cost": 8.0,
-   "picked_by": 4,
-   "of": 6
-  },
-  {
    "id": 279,
    "name": "Ajayi",
    "team": "HUL",
@@ -27225,17 +27342,8 @@
    "name": "Mendy",
    "team": "HUL",
    "pos": "DEF",
-   "cost": 4.0,
+   "cost": 4.1,
    "picked_by": 3,
-   "of": 6
-  },
-  {
-   "id": 309,
-   "name": "Núñez",
-   "team": "IPS",
-   "pos": "MID",
-   "cost": 5.0,
-   "picked_by": 2,
    "of": 6
   },
   {
@@ -27252,7 +27360,7 @@
    "name": "Calafiori",
    "team": "ARS",
    "pos": "DEF",
-   "cost": 5.7,
+   "cost": 5.8,
    "picked_by": 1,
    "of": 6
   },
@@ -27289,6 +27397,15 @@
    "team": "AVL",
    "pos": "GKP",
    "cost": 5.0,
+   "picked_by": 1,
+   "of": 6
+  },
+  {
+   "id": 371,
+   "name": "Gravenberch",
+   "team": "LIV",
+   "pos": "MID",
+   "cost": 5.9,
    "picked_by": 1,
    "of": 6
   },
@@ -27645,5 +27762,5 @@
   "Mid-season signings are understated: minutes spread over 38 games they were not all available for. Check st% before trusting a low number."
  ],
  "players_url": "./players.json",
- "players_count": 220
+ "players_count": 221
 }
